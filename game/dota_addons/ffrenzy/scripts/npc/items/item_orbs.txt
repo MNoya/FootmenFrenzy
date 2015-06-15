@@ -18,7 +18,7 @@
 	"UIDropSound"					"Item.DropGemShop"
 	"WorldDropSound"				"Item.DropGemWorld"
 
-	"ItemCost"						"800"
+	"ItemCost"						"750"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	"ItemQuality"					"artifact"
 	"ItemKillable"                  "1"
@@ -473,7 +473,7 @@
     "AbilityTextureName" 			"item_orb_of_lightning"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-   	"ItemCost"						"375"
+   	"ItemCost"						"750"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
@@ -497,7 +497,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"purge_chance"			"25"
+			"purge_chance"			"15"
 		}
 		"03"
 		{

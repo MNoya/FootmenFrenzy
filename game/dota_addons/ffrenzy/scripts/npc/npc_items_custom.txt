@@ -30,7 +30,7 @@
 		"UIDropSound"					"Item.DropGemShop"
 		"WorldDropSound"				"Item.DropGemWorld"
 	
-		"ItemCost"						"800"
+		"ItemCost"						"750"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"ItemQuality"					"artifact"
 		"ItemKillable"                  "1"
@@ -485,7 +485,7 @@
 	    "AbilityTextureName" 			"item_orb_of_lightning"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
-	   	"ItemCost"						"375"
+	   	"ItemCost"						"750"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"ItemKillable"                  "1"
 		"ItemSellable"                  "1"
@@ -509,7 +509,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"purge_chance"			"25"
+				"purge_chance"			"15"
 			}
 			"03"
 			{
@@ -5445,6 +5445,49 @@
 				"Name"			"upgrade_undead_training"
 				"Level"			"20"
 			}
+		}
+	}
+	//=================================================================================================================
+	// Claws of Attack
+	//=================================================================================================================
+	"item_claws_of_attack"
+	{
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		//"BaseClass"						"item_blades_of_attack"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityTextureName" 			"item_claws_of_attack"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"						"500"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"20"
+			}
+			
 		}
 	}
 }
