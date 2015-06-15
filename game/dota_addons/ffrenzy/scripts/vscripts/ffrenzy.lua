@@ -799,6 +799,9 @@ function GameMode:OnPlayerPickHero(keys)
         Timers:CreateTimer(function()
             FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             PlayerResource:SetCameraTarget(playerID, building)
+            Timers:CreateTimer(2, function() 
+                PlayerResource:SetCameraTarget(playerID, nil)
+            end)
             
             -- Teach the epic spawn_footman ability
             building:AddAbility("spawn_footman")
