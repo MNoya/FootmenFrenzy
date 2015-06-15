@@ -1558,7 +1558,7 @@
 		"Ability2"					"upgrade_tier1_nightelf"
 		"Ability3"					"upgrade_tier1_orc"
 		"Ability4"					"upgrade_tier1_undead"
-		"Ability5"					"spawn_footman"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats

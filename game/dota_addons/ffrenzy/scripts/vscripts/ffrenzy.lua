@@ -783,16 +783,32 @@ function GameMode:OnPlayerPickHero(keys)
 
     -- Define where to put the player/team
     -- Choose a Position
-    local origin = hero:GetAbsOrigin() -- Spawn position
-    local fv = hero:GetForwardVector() -- Vector the hero is facing
-    local distance = 300
-    local position = origin + fv * distance
+    local position_name = "player_position_"..playerID
+    local base_position_entity = Entities:FindByName(nil, position_name)
+    if base_position_entity then
+        local base_position = base_position_entity:GetAbsOrigin()
 
-    local building = CreateUnitByName("human_barracks", position, true, hero, hero, hero:GetTeamNumber())
-    building:SetOwner(hero)
-    building:SetControllableByPlayer(playerID, true)
-    building:SetAbsOrigin(position)
-    building:RemoveModifierByName("modifier_invulnerable")
+        -- Create the base building
+        local building = CreateUnitByName("human_barracks", base_position, true, hero, hero, hero:GetTeamNumber())
+        building:RemoveModifierByName("modifier_invulnerable")
+        building:SetOwner(hero)
+        building:SetControllableByPlayer(playerID, true)
+        building:SetAbsOrigin(base_position)
+
+        -- Move the hero close by
+        Timers:CreateTimer(function()
+            FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
+            PlayerResource:SetCameraTarget(playerID, building)
+            
+            -- Teach the epic spawn_footman ability
+            building:AddAbility("spawn_footman")
+            local ability = building:FindAbilityByName("spawn_footman")
+            ability:SetLevel(1)
+
+        end)
+    else
+        print("No Base Position found for player "..playerID)   
+    end
 
 
 end

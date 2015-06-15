@@ -33,6 +33,7 @@ function Precache( context )
 
 	----------------------
 	PrecacheUnitByNameSync("human_barracks", context)
+	PrecacheUnitByNameSync("human_footman", context)
 	PrecacheUnitByNameSync("human_scout_tower", context)
 	
 end

@@ -1,3 +1,4 @@
+-- Deprecated, using info_targets on the map instead
 function SpawnPosition(trigger)
 	if trigger.activator:GetPlayerOwnerID() == 0 then
 		trigger.activator:SetAbsOrigin(Vector(-3000, -1700, 100))
