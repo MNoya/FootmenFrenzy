@@ -1,0 +1,20 @@
+# Cache crap that Valve autogenerates
+*.bin
+
+# Ignore map overviews
+content/dota_addons/theblackroad3/materials/overviews/*
+game/dota_addons/theblackroad3/materials/overviews/*
+game/dota_addons/theblackroad3/resource/overviews/*
+
+
+# Ignore all compiled particles
+*.vpcf_c
+
+#Ignore all compiled mats
+*.vmat_c
+
+#Ignore all compiled sounds
+*.vsndevts_c
+
+# Map Files
+*.vpk
