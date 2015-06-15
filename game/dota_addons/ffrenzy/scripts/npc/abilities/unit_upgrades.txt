@@ -38,10 +38,13 @@
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-	"01"
+	"AbilitySpecial"
 	{
-		"var_type"				"FIELD_INTEGER"
-		"bonus_armor"			"2"
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"2"
+		}
 	}
 
 	"Modifiers"
@@ -83,7 +86,7 @@
 
 	"Modifiers"
 	{
-		"modifier_human_training"
+		"modifier_upgrade_human_training"
 		{
 			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"OnCreated"
@@ -112,15 +115,18 @@
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-	"01"
+	"AbilitySpecial"
 	{
-		"var_type"				"FIELD_INTEGER"
-		"bonus_range"			"10"
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_attack_range"		"15"
+		}
 	}
 
 	"Modifiers"
 	{
-		"modifier_nightelf_training"
+		"modifier_upgrade_nightelf_training"
 		{
 			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	
 			"Properties"
@@ -157,7 +163,7 @@
 
 	"Modifiers"
 	{
-		"modifier_orc_training"
+		"modifier_upgrade_orc_training"
 		{
 			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"OnCreated"
@@ -171,7 +177,7 @@
 			}
 			"Properties"
 			{
-			    "modifier_orc_training" "%bonus_damage" 
+			    "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" "%bonus_damage" 
 			}
 		}
 	}
@@ -198,7 +204,7 @@
 
 	"Modifiers"
 	{
-		"modifier_undead_training"
+		"modifier_upgrade_undead_training"
 		{
 			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"

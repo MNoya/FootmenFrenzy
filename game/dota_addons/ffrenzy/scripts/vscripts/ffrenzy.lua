@@ -381,7 +381,7 @@ function GameMode:OnGameRulesStateChange(keys)
                     GameMode:OnAllPlayersLoaded()
                     return
                 end
-                return 1
+                return 0.5
             end})
     elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
         GameMode:OnGameInProgress()
@@ -401,9 +401,19 @@ function GameMode:OnNPCSpawned(keys)
 
     if npc:IsCreature() then
         Timers:CreateTimer(function()
+            --print("Unit Spawned, Applying Upgrades...")
             ApplyUpgrade(npc, "upgrade_weapon")
             ApplyUpgrade(npc, "upgrade_armor")
             -- And then check for the race upgrades
+            if StringStartsWith(npc:GetUnitName(), "human") then
+                 ApplyUpgrade(npc, "upgrade_human_training")
+            elseif StringStartsWith(npc:GetUnitName(), "nightelf") then
+                ApplyUpgrade(npc, "upgrade_nightelf_training")
+            elseif StringStartsWith(npc:GetUnitName(), "orc") then
+                ApplyUpgrade(npc, "upgrade_orc_training")
+            elseif StringStartsWith(npc:GetUnitName(), "undead") then
+                ApplyUpgrade(npc, "upgrade_undead_training")
+            end
         end)
     end
 end
@@ -641,4 +651,34 @@ function GameMode:OnEntityKilled( keys )
         end     
     end]]
 
+end
+
+-- Custom Corpse Mechanic
+function LeavesCorpse( unit )
+    
+    -- Heroes don't leave corpses (includes illusions)
+    if unit:IsHero() then
+        return false
+
+    -- Ignore buildings 
+    elseif unit.GetInvulnCount ~= nil then
+        return false
+
+    -- Ignore custom buildings
+    elseif unit:FindAbilityByName("ability_building") then
+        return false
+
+    -- Ignore units that start with dummy keyword   
+    elseif string.find(unit:GetUnitName(), "dummy") then
+        return false
+
+    -- Ignore units that were specifically set to leave no corpse
+    elseif unit.no_corpse then
+        return false
+
+    -- Leave corpse
+    else
+        print("Leave corpse")
+        return true
+    end
 end

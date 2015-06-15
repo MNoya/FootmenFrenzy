@@ -32,6 +32,10 @@ end
 -- OnEntitySpawned, check its name and apply upgrades for the player that owns it
 function ApplyUpgrade(unit, upgrade_name)
 	local player = unit:GetPlayerOwner()
+	if not player then
+		print("ERROR UNIT HAS NO PLAYER OWNER")
+		return
+	end
 	local upgrades = player.upgrades
 	local upgrade_level = 0
 

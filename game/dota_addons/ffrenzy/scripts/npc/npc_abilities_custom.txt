@@ -15012,6 +15012,44 @@
 			"modifier_spawn_footman"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"human_footman"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15068,6 +15106,44 @@
 			"modifier_spawn_rifleman"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"human_rifleman"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15123,6 +15199,44 @@
 			"modifier_spawn_militia"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"human_militia"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15178,6 +15292,44 @@
 			"modifier_spawn_spell_breaker"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"human_spell_breaker"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15233,6 +15385,44 @@
 			"modifier_spawn_knight"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"human_knight"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15288,6 +15478,44 @@
 			"modifier_spawn_siege_engine"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"human_siege_engine"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15344,6 +15572,44 @@
 			"modifier_spawn_archer"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"nightelf_archer"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15399,6 +15665,44 @@
 			"modifier_spawn_huntress"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"nightelf_huntress"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15454,6 +15758,44 @@
 			"modifier_spawn_druid_of_the_talon"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"nightelf_druid_of_the_talon"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15509,6 +15851,44 @@
 			"modifier_spawn_dryad"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"nightelf_dryad"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15564,6 +15944,44 @@
 			"modifier_spawn_glaive_thrower"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"nightelf_glaive_thrower"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15620,6 +16038,44 @@
 			"modifier_spawn_grunt"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"orc_grunt"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15675,6 +16131,44 @@
 			"modifier_spawn_troll_headhunter"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"orc_troll_headhunter"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15730,6 +16224,44 @@
 			"modifier_spawn_raider"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"orc_raider"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15785,6 +16317,44 @@
 			"modifier_spawn_tauren"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"orc_tauren"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15840,6 +16410,44 @@
 			"modifier_spawn_kodo_beast"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"orc_kodo_beast"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15896,6 +16504,44 @@
 			"modifier_spawn_ghoul"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"undead_ghoul"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -15951,6 +16597,44 @@
 			"modifier_spawn_crypt_fiend"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"undead_crypt_fiend"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -16006,6 +16690,44 @@
 			"modifier_spawn_skeletal_mage"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"undead_skeletal_mage"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -16061,6 +16783,44 @@
 			"modifier_spawn_abomination"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"undead_abomination"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -16116,6 +16876,44 @@
 			"modifier_spawn_meat_wagon"
 			{
 				"Passive"			"1"
+				"OnCreated"
+				{
+					"SpawnUnit"
+					{
+						"UnitName"		"undead_meat_wagon"
+						"Target"
+						{
+							"Center"		    "CASTER"
+							"ScriptSelectPoints"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "GetInitialRallyPoint"
+								"Target"		"CASTER"
+								"Count"			"1"
+							}
+						}
+						"UnitCount"		"1"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"    "buildings/rally_point.lua"
+								"Function"      "MoveToRallyPoint"
+							}
+						}
+					}
+				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
@@ -17364,10 +18162,13 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
-		"01"
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			"2"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"2"
+			}
 		}
 	
 		"Modifiers"
@@ -17409,7 +18210,7 @@
 	
 		"Modifiers"
 		{
-			"modifier_human_training"
+			"modifier_upgrade_human_training"
 			{
 				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"OnCreated"
@@ -17438,15 +18239,18 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
-		"01"
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_range"			"10"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_range"		"15"
+			}
 		}
 	
 		"Modifiers"
 		{
-			"modifier_nightelf_training"
+			"modifier_upgrade_nightelf_training"
 			{
 				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	
 				"Properties"
@@ -17483,7 +18287,7 @@
 	
 		"Modifiers"
 		{
-			"modifier_orc_training"
+			"modifier_upgrade_orc_training"
 			{
 				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"OnCreated"
@@ -17497,7 +18301,7 @@
 				}
 				"Properties"
 				{
-				    "modifier_orc_training" "%bonus_damage" 
+				    "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" "%bonus_damage" 
 				}
 			}
 		}
@@ -17524,7 +18328,7 @@
 	
 		"Modifiers"
 		{
-			"modifier_undead_training"
+			"modifier_upgrade_undead_training"
 			{
 				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"

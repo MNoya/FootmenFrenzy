@@ -58,6 +58,10 @@ function MoveToRallyPoint( event )
 	local hero = player:GetAssignedHero()
 	target:SetOwner(hero)
 	table.insert(player.units, target)
+
+	-- Put the passive skill on cooldown (just for looks)
+	local ability = event.ability
+	ability:StartCooldown(10)
 end
 
 function GetInitialRallyPoint( event )
