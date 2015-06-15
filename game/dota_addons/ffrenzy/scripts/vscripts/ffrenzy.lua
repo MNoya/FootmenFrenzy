@@ -142,7 +142,7 @@ mode = nil
 -- This function is called 1 to 2 times as the player connects initially but before they
 -- have completely connected
 function GameMode:PlayerConnect(keys)
-    print('[FFrenzy] PlayerConnect')
+    --print('[FFrenzy] PlayerConnect')
     --DeepPrintTable(keys)
 
     if keys.bot == 1 then
@@ -153,7 +153,7 @@ end
 
 -- This function is called once when the player fully connects and becomes "Ready" during Loading
 function GameMode:OnConnectFull(keys)
-    print ('[FFrenzy] OnConnectFull')
+    --print('[FFrenzy] OnConnectFull')
     --DeepPrintTable(keys)
     GameMode:CaptureGameMode()
 
@@ -390,13 +390,21 @@ end
 
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
-    print("[FFrenzy] NPC Spawned")
+    --print("[FFrenzy] NPC Spawned")
     --DeepPrintTable(keys)
     local npc = EntIndexToHScript(keys.entindex)
 
     if npc:IsRealHero() and npc.bFirstSpawned == nil then
         npc.bFirstSpawned = true
         GameMode:OnHeroInGame(npc)
+    end
+
+    if npc:IsCreature() then
+        Timers:CreateTimer(function()
+            ApplyUpgrade(npc, "upgrade_weapon")
+            ApplyUpgrade(npc, "upgrade_armor")
+            -- And then check for the race upgrades
+        end)
     end
 end
 
@@ -411,7 +419,7 @@ end
 
 -- An item was picked up off the ground
 function GameMode:OnItemPickedUp(keys)
-    print ( '[FFrenzy] OnItemPurchased' )
+    --print ( '[FFrenzy] OnItemPurchased' )
     --DeepPrintTable(keys)
 
     local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
@@ -423,13 +431,13 @@ end
 -- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change
 -- state as necessary
 function GameMode:OnPlayerReconnect(keys)
-    print ( '[FFrenzy] OnPlayerReconnect' )
+    --print ( '[FFrenzy] OnPlayerReconnect' )
     --DeepPrintTable(keys)
 end
 
 -- An item was purchased by a player
 function GameMode:OnItemPurchased( keys )
-    print ( '[FFrenzy] OnItemPurchased' )
+    --print ( '[FFrenzy] OnItemPurchased' )
     --DeepPrintTable(keys)
 
     -- The playerID of the hero who is buying something
@@ -446,7 +454,7 @@ end
 
 -- An ability was used by a player
 function GameMode:OnAbilityUsed(keys)
-    print('[FFrenzy] AbilityUsed')
+    --print('[FFrenzy] AbilityUsed')
     --DeepPrintTable(keys)
 
     local player = EntIndexToHScript(keys.PlayerID)
@@ -455,7 +463,7 @@ end
 
 -- A non-player entity (necro-book, chen creep, etc) used an ability
 function GameMode:OnNonPlayerUsedAbility(keys)
-    print('[FFrenzy] OnNonPlayerUsedAbility')
+    --print('[FFrenzy] OnNonPlayerUsedAbility')
     --DeepPrintTable(keys)
 
     local abilityname=  keys.abilityname
@@ -463,7 +471,7 @@ end
 
 -- A player changed their name
 function GameMode:OnPlayerChangedName(keys)
-    print('[FFrenzy] OnPlayerChangedName')
+    --print('[FFrenzy] OnPlayerChangedName')
     --DeepPrintTable(keys)
 
     local newName = keys.newname
@@ -472,7 +480,7 @@ end
 
 -- A player leveled up an ability
 function GameMode:OnPlayerLearnedAbility( keys)
-    print ('[FFrenzy] OnPlayerLearnedAbility')
+    --print ('[FFrenzy] OnPlayerLearnedAbility')
     --DeepPrintTable(keys)
 
     local player = EntIndexToHScript(keys.player)
@@ -481,7 +489,7 @@ end
 
 -- A channelled ability finished by either completing or being interrupted
 function GameMode:OnAbilityChannelFinished(keys)
-    print ('[FFrenzy] OnAbilityChannelFinished')
+    --print ('[FFrenzy] OnAbilityChannelFinished')
     --DeepPrintTable(keys)
 
     local abilityname = keys.abilityname
@@ -490,7 +498,7 @@ end
 
 -- A player leveled up
 function GameMode:OnPlayerLevelUp(keys)
-    print ('[FFrenzy] OnPlayerLevelUp')
+    --print ('[FFrenzy] OnPlayerLevelUp')
     --DeepPrintTable(keys)
 
     local player = EntIndexToHScript(keys.player)
@@ -499,7 +507,7 @@ end
 
 -- A player last hit a creep, a tower, or a hero
 function GameMode:OnLastHit(keys)
-    print ('[FFrenzy] OnLastHit')
+    --print ('[FFrenzy] OnLastHit')
     --DeepPrintTable(keys)
 
     local isFirstBlood = keys.FirstBlood == 1
@@ -510,7 +518,7 @@ end
 
 -- A tree was cut down by tango, quelling blade, etc
 function GameMode:OnTreeCut(keys)
-    print ('[FFrenzy] OnTreeCut')
+    --print ('[FFrenzy] OnTreeCut')
     --DeepPrintTable(keys)
 
     local treeX = keys.tree_x
@@ -519,7 +527,7 @@ end
 
 -- A player took damage from a tower
 function GameMode:OnPlayerTakeTowerDamage(keys)
-    print ('[FFrenzy] OnPlayerTakeTowerDamage')
+    --print ('[FFrenzy] OnPlayerTakeTowerDamage')
     --DeepPrintTable(keys)
 
     local player = PlayerResource:GetPlayer(keys.PlayerID)

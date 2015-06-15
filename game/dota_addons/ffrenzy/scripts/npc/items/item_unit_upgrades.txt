@@ -30,7 +30,7 @@
 "item_upgrade_weapon2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon2"
+	"AbilityTextureName"			"item_upgrade_weapon1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -49,6 +49,474 @@
 			"Function"		"UpgradeFinished"
 			"Name"			"upgrade_weapon"
 			"Level"			"2"
+		}
+	}
+}
+
+"item_upgrade_weapon3"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"3"
+		}
+	}
+}
+
+"item_upgrade_weapon4"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"250"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"4"
+		}
+	}
+}
+
+"item_upgrade_weapon5"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"5"
+		}
+	}
+}
+
+"item_upgrade_weapon6"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"350"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"6"
+		}
+	}
+}
+
+"item_upgrade_weapon7"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"7"
+		}
+	}
+}
+
+"item_upgrade_weapon8"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"450"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"8"
+		}
+	}
+}
+
+"item_upgrade_weapon9"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"9"
+		}
+	}
+}
+
+"item_upgrade_weapon10"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"550"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"10"
+		}
+	}
+}
+
+"item_upgrade_weapon11"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"600"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"11"
+		}
+	}
+}
+
+"item_upgrade_weapon12"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"650"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"12"
+		}
+	}
+}
+
+"item_upgrade_weapon13"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"13"
+		}
+	}
+}
+
+"item_upgrade_weapon14"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"750"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"14"
+		}
+	}
+}
+
+"item_upgrade_weapon15"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"800"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"15"
+		}
+	}
+}
+
+"item_upgrade_weapon16"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"850"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"16"
+		}
+	}
+}
+
+"item_upgrade_weapon17"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"900"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"17"
+		}
+	}
+}
+
+"item_upgrade_weapon18"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"950"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"18"
+		}
+	}
+}
+
+"item_upgrade_weapon19"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"19"
+		}
+	}
+}
+
+"item_upgrade_weapon20"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_weapon1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_weapon"
+			"Level"			"20"
 		}
 	}
 }
@@ -82,7 +550,7 @@
 "item_upgrade_armor2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor2"
+	"AbilityTextureName"			"item_upgrade_armor1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -101,6 +569,474 @@
 			"Function"		"UpgradeFinished"
 			"Name"			"upgrade_armor"
 			"Level"			"2"
+		}
+	}
+}
+
+"item_upgrade_armor3"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"3"
+		}
+	}
+}
+
+"item_upgrade_armor4"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"250"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"4"
+		}
+	}
+}
+
+"item_upgrade_armor5"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"5"
+		}
+	}
+}
+
+"item_upgrade_armor6"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"350"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"6"
+		}
+	}
+}
+
+"item_upgrade_armor7"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"7"
+		}
+	}
+}
+
+"item_upgrade_armor8"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"450"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"8"
+		}
+	}
+}
+
+"item_upgrade_armor9"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"9"
+		}
+	}
+}
+
+"item_upgrade_armor10"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"550"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"10"
+		}
+	}
+}
+
+"item_upgrade_armor11"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"600"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"11"
+		}
+	}
+}
+
+"item_upgrade_armor12"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"650"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"12"
+		}
+	}
+}
+
+"item_upgrade_armor13"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"13"
+		}
+	}
+}
+
+"item_upgrade_armor14"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"750"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"14"
+		}
+	}
+}
+
+"item_upgrade_armor15"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"800"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"15"
+		}
+	}
+}
+
+"item_upgrade_armor16"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"850"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"16"
+		}
+	}
+}
+
+"item_upgrade_armor17"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"900"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"17"
+		}
+	}
+}
+
+"item_upgrade_armor18"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"950"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"18"
+		}
+	}
+}
+
+"item_upgrade_armor19"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"19"
+		}
+	}
+}
+
+"item_upgrade_armor20"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_armor1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_armor"
+			"Level"			"20"
 		}
 	}
 }
@@ -134,7 +1070,7 @@
 "item_upgrade_human_training2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_human_training2"
+	"AbilityTextureName"			"item_upgrade_human_training1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -153,6 +1089,474 @@
 			"Function"		"UpgradeFinished"
 			"Name"			"upgrade_human_training"
 			"Level"			"2"
+		}
+	}
+}
+
+"item_upgrade_human_training3"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"3"
+		}
+	}
+}
+
+"item_upgrade_human_training4"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"250"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"4"
+		}
+	}
+}
+
+"item_upgrade_human_training5"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"5"
+		}
+	}
+}
+
+"item_upgrade_human_training6"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"350"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"6"
+		}
+	}
+}
+
+"item_upgrade_human_training7"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"7"
+		}
+	}
+}
+
+"item_upgrade_human_training8"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"450"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"8"
+		}
+	}
+}
+
+"item_upgrade_human_training9"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"9"
+		}
+	}
+}
+
+"item_upgrade_human_training10"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"550"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"10"
+		}
+	}
+}
+
+"item_upgrade_human_training11"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"600"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"11"
+		}
+	}
+}
+
+"item_upgrade_human_training12"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"650"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"12"
+		}
+	}
+}
+
+"item_upgrade_human_training13"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"13"
+		}
+	}
+}
+
+"item_upgrade_human_training14"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"750"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"14"
+		}
+	}
+}
+
+"item_upgrade_human_training15"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"800"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"15"
+		}
+	}
+}
+
+"item_upgrade_human_training16"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"850"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"16"
+		}
+	}
+}
+
+"item_upgrade_human_training17"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"900"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"17"
+		}
+	}
+}
+
+"item_upgrade_human_training18"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"950"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"18"
+		}
+	}
+}
+
+"item_upgrade_human_training19"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"19"
+		}
+	}
+}
+
+"item_upgrade_human_training20"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_human_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_human_training"
+			"Level"			"20"
 		}
 	}
 }
@@ -186,7 +1590,7 @@
 "item_upgrade_nightelf_training2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_nightelf_training2"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -205,6 +1609,474 @@
 			"Function"		"UpgradeFinished"
 			"Name"			"upgrade_nightelf_training"
 			"Level"			"2"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training3"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"3"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training4"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"250"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"4"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training5"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"5"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training6"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"350"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"6"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training7"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"7"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training8"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"450"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"8"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training9"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"9"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training10"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"550"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"10"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training11"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"600"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"11"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training12"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"650"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"12"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training13"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"13"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training14"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"750"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"14"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training15"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"800"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"15"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training16"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"850"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"16"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training17"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"900"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"17"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training18"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"950"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"18"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training19"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"19"
+		}
+	}
+}
+
+"item_upgrade_nightelf_training20"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_nightelf_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_nightelf_training"
+			"Level"			"20"
 		}
 	}
 }
@@ -238,7 +2110,7 @@
 "item_upgrade_orc_training2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_orc_training2"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -257,6 +2129,474 @@
 			"Function"		"UpgradeFinished"
 			"Name"			"upgrade_orc_training"
 			"Level"			"2"
+		}
+	}
+}
+
+"item_upgrade_orc_training3"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"3"
+		}
+	}
+}
+
+"item_upgrade_orc_training4"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"250"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"4"
+		}
+	}
+}
+
+"item_upgrade_orc_training5"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"5"
+		}
+	}
+}
+
+"item_upgrade_orc_training6"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"350"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"6"
+		}
+	}
+}
+
+"item_upgrade_orc_training7"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"7"
+		}
+	}
+}
+
+"item_upgrade_orc_training8"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"450"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"8"
+		}
+	}
+}
+
+"item_upgrade_orc_training9"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"9"
+		}
+	}
+}
+
+"item_upgrade_orc_training10"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"550"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"10"
+		}
+	}
+}
+
+"item_upgrade_orc_training11"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"600"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"11"
+		}
+	}
+}
+
+"item_upgrade_orc_training12"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"650"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"12"
+		}
+	}
+}
+
+"item_upgrade_orc_training13"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"13"
+		}
+	}
+}
+
+"item_upgrade_orc_training14"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"750"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"14"
+		}
+	}
+}
+
+"item_upgrade_orc_training15"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"800"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"15"
+		}
+	}
+}
+
+"item_upgrade_orc_training16"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"850"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"16"
+		}
+	}
+}
+
+"item_upgrade_orc_training17"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"900"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"17"
+		}
+	}
+}
+
+"item_upgrade_orc_training18"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"950"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"18"
+		}
+	}
+}
+
+"item_upgrade_orc_training19"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"19"
+		}
+	}
+}
+
+"item_upgrade_orc_training20"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_orc_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_orc_training"
+			"Level"			"20"
 		}
 	}
 }
@@ -290,7 +2630,7 @@
 "item_upgrade_undead_training2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_undead_training2"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -309,6 +2649,474 @@
 			"Function"		"UpgradeFinished"
 			"Name"			"upgrade_undead_training"
 			"Level"			"2"
+		}
+	}
+}
+
+"item_upgrade_undead_training3"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"3"
+		}
+	}
+}
+
+"item_upgrade_undead_training4"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"250"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"4"
+		}
+	}
+}
+
+"item_upgrade_undead_training5"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"5"
+		}
+	}
+}
+
+"item_upgrade_undead_training6"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"350"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"6"
+		}
+	}
+}
+
+"item_upgrade_undead_training7"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"7"
+		}
+	}
+}
+
+"item_upgrade_undead_training8"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"450"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"8"
+		}
+	}
+}
+
+"item_upgrade_undead_training9"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"9"
+		}
+	}
+}
+
+"item_upgrade_undead_training10"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"550"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"10"
+		}
+	}
+}
+
+"item_upgrade_undead_training11"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"600"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"11"
+		}
+	}
+}
+
+"item_upgrade_undead_training12"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"650"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"12"
+		}
+	}
+}
+
+"item_upgrade_undead_training13"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"13"
+		}
+	}
+}
+
+"item_upgrade_undead_training14"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"750"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"14"
+		}
+	}
+}
+
+"item_upgrade_undead_training15"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"800"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"15"
+		}
+	}
+}
+
+"item_upgrade_undead_training16"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"850"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"16"
+		}
+	}
+}
+
+"item_upgrade_undead_training17"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"900"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"17"
+		}
+	}
+}
+
+"item_upgrade_undead_training18"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"950"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"18"
+		}
+	}
+}
+
+"item_upgrade_undead_training19"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"19"
+		}
+	}
+}
+
+"item_upgrade_undead_training20"
+{
+    "BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_upgrade_undead_training1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		// Add Upgrade and Swap the ability for the next upgrade
+		"RunScript"
+		{
+			"ScriptFile"	"upgrades.lua"
+			"Function"		"UpgradeFinished"
+			"Name"			"upgrade_undead_training"
+			"Level"			"20"
 		}
 	}
 }

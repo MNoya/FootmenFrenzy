@@ -1,6 +1,8 @@
 -- Required files to be visible from anywhere
 require( 'timers' )
 require( 'ffrenzy' )
+require( 'upgrades' )
+require( 'utilities' )
 
 function Precache( context )
 	print("[ffrenzy] Performing pre-load precache")

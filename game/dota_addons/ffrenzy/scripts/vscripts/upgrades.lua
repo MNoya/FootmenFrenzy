@@ -7,6 +7,8 @@ function UpgradeFinished( event )
 	local upgrade_name = event.Name
 
 	player.upgrades[upgrade_name] = upgrade_level
+	print("Upgrade Finished: "..upgrade_name..upgrade_level)
+	--DeepPrintTable(player.upgrades)
 
 	-- Upgrade all units
 	for _,unit in pairs(player.units) do
@@ -45,8 +47,8 @@ function ApplyUpgrade(unit, upgrade_name)
 	-- The ability level and stacks are updated to the current upgrade level
 	if ability then
 		ability:SetLevel(upgrade_level)
-		ability:ApplyDataDrivenModifier( target, target, modifierName, {} )
-		target:SetModifierStackCount( modifierName, ability, upgrade_level )
+		--ability:ApplyDataDrivenModifier( unit, unit, modifierName, {} )
+		unit:SetModifierStackCount( modifierName, ability, upgrade_level )
 	else
 		-- If it can't find the ability it means the unit might not benefit from the upgrade
 		local unit_name = unit:GetUnitName()
@@ -58,8 +60,8 @@ function ApplyUpgrade(unit, upgrade_name)
 			unit:AddAbility(upgrade_name)
 			local new_ability = unit:FindAbilityByName(upgrade_name)
 			new_ability:SetLevel(upgrade_level)
-			ability:ApplyDataDrivenModifier( target, target, modifierName, {} )
-			target:SetModifierStackCount( modifierName, ability, upgrade_level )
+			new_ability:ApplyDataDrivenModifier( unit, unit, modifierName, {} )
+			unit:SetModifierStackCount( modifierName, ability, upgrade_level )
 		end
 	end
 end
@@ -98,10 +100,4 @@ end
 
 function IsUndead( unit_name )
 	return StringStartsWith( unit_name, "undead")
-end
-
-function StringStartsWith( fullstring, substring )
-	local strlen = string.len(substring)
-	local first_characters = string.sub(fullstring, 1 , strlen)
-	return (first_characters == substring)
 end
