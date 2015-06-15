@@ -1,0 +1,442 @@
+
+//=================================================================================
+// 									ORC UNITS									 //
+//=================================================================================
+
+//=================================================================================
+// Tier 1: Grunt
+//=================================================================================
+"orc_grunt"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/axe/axe.vmdl"
+	"ModelScale"				"1"
+	"Level"						"3"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Asal
+	"Ability2"					""	 //Reference: Aion
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"1"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"18.0"
+	"AttackDamageMax"			"21.0"
+	"AttackRate"				"1.6"
+	"AttackAnimationPoint"		"0.33"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"100"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"26.0"
+	"BountyGoldMax"				"38.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"32"
+	"FormationRank"				"0"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"270"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"700"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"2"		}
+			"Wearable2"		{	"ItemDef"		"3"		}
+			"Wearable3" 	{	"ItemDef"		"4"		}
+			"Wearable4"		{	"ItemDef"		"5"		}
+		}
+	}
+}
+
+//=================================================================================
+// Tier 2: Troll Headhunter
+//=================================================================================
+"orc_troll_headhunter"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/huskar/huskar.vmdl"
+	"ModelScale"				"1"
+	"Level"						"2"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Sbsk
+	"Ability2"					""	 //Reference: Aion
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"23.0"
+	"AttackDamageMax"			"27.0"
+	"AttackRate"				"2.31"
+	"AttackAnimationPoint"		"0.31"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"450"
+	"ProjectileModel"			""	 //Add projectile
+	"ProjectileSpeed"			"1200"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"26.0"
+	"BountyGoldMax"				"38.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"32"
+	"FormationRank"				"2"
+			
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"270"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"350"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"268"		}
+			"Wearable2"		{	"ItemDef"		"269"		}
+			"Wearable3" 	{	"ItemDef"		"270"		}
+			"Wearable4"		{	"ItemDef"		"271"		}
+			"Wearable5"		{	"ItemDef"		"272"		}
+		}
+	}
+}
+
+//=================================================================================
+// Tier 3: Raider
+//=================================================================================
+"orc_raider"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/chen/chen.vmdl"
+	"ModelScale"				"1"
+	"Level"						"3"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Aens
+	"Ability2"					""	 //Reference: Asal
+	"Ability3"					""	 //Reference: Aion
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"1"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"23.0"
+	"AttackDamageMax"			"27.0"
+	"AttackRate"				"1.85"
+	"AttackAnimationPoint"		"0.5"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"100"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"32"
+	"FormationRank"				"0"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"350"
+	"MovementTurnRate"			"0.5"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"610"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"220"		}
+			"Wearable2"		{	"ItemDef"		"221"		}
+			"Wearable3" 	{	"ItemDef"		"222"		}
+			"Wearable4"		{	"ItemDef"		"223"		}
+			"Wearable5"		{	"ItemDef"		"224"		}
+			"Wearable6"		{	"ItemDef"		"225"		}
+		}
+	}
+}
+
+//=================================================================================
+// Tier 4: Tauren
+//=================================================================================
+"orc_tauren"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/earthshaker/earthshaker.vmdl"
+	"ModelScale"				"1"
+	"Level"						"5"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Awar
+	"Ability2"					""	 //Reference: Aion
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"3"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"30.0"
+	"AttackDamageMax"			"36.0"
+	"AttackRate"				"1.9"
+	"AttackAnimationPoint"		"0.467"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"100"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"38.0"
+	"BountyGoldMax"				"54.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"48"
+	"FormationRank"				"0"
+			
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"270"
+	"MovementTurnRate"			"0.5"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"1300"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"459"		} //Totem
+			"Wearable2"		{	"ItemDef"		"460"		} //Bracers
+			"Wearable3" 	{	"ItemDef"		"461"		} //Belt
+			"Wearable4"		{	"ItemDef"		"5640"		} //Helm of Impasse
+		}
+	}
+}
+
+
+//=================================================================================
+// Tier 5: Kodo Beast
+//=================================================================================
+"orc_kodo_beast"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/courier/smeevil_mammoth/smeevil_mammoth.vmdl"
+	"ModelScale"				"1.7"
+	"Level"						"4"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Aakb
+	"Ability2"					""	 //Reference: Advc
+	"Ability3"					""	 //Reference: Adev
+	"Ability4"					""	 //Reference: Apak
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"1"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"16.0"
+	"AttackDamageMax"			"20.0"
+	"AttackRate"				"1.44"
+	"AttackAnimationPoint"		"0.85"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"500"
+	"ProjectileModel"			""	 //Add projectile
+	"ProjectileSpeed"			"1200"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"48"
+	"FormationRank"				"2"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"220"
+	"MovementTurnRate"			"0.5"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"1000"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+	}
+}

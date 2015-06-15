@@ -1,0 +1,80 @@
+// Far Seer Far Sight
+// Author: Noya
+// Date: 24.1.2015.
+// Notes: Reveals the area of the map that is cast upon. Also reveals invisible units.
+//Level	Duration	Cooldown	Mana Cost	Range	Area of Effect	Allowed Targets	Effect	Hero Level Req
+//1	8 sec.	N/A	75	Unlimited	60	N/A	Reveals Map	1
+//2	8 sec.	N/A	60	Unlimited	180	N/A	Reveals Map	3
+//3	8 sec.	N/A	50	Unlimited	400	N/A	Reveals Map	5
+"far_seer_far_sight"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"far_seer_far_sight"
+	"MaxLevel" 						"4"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"0.0"
+
+	"AbilityManaCost"				"75 60 50 0"
+
+	"precache"
+	{
+		"particle" 	"particles/items_fx/dust_of_appearance.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"reveal_radius"	"600 1800 4000"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"duration"		"8"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/far_seer/far_sight.lua"
+			"Function"		"FarSight"
+			"Target"		"POINT"
+		}
+
+		"CreateThinker"
+		{
+			"ModifierName"	"modifier_far_sight"
+			"Target" 		"POINT"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_far_sight"
+		{	
+			"IsHidden"			"1"
+			"Duration"			"%duration"
+			"Aura"          	"modifier_far_sight_vision"
+			"Aura_Radius"   	"%reveal_radius"
+			"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types"    	"DOTA_UNIT_TARGET_ALL"
+		}
+
+		"modifier_far_sight_vision"
+		{
+			"States"
+			{
+				"MODIFIER_STATE_INVISIBLE"		"MODIFIER_STATE_VALUE_DISABLED"
+			}
+		}
+	}
+	
+}

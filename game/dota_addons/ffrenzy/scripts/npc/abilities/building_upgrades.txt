@@ -1,0 +1,890 @@
+// Building Upgrades
+
+// TOWERS
+"upgrade_guard_tower"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_guard_tower"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"200"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_guard_tower"
+		}
+	}
+}
+"upgrade_cannon_tower"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_cannon_tower"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"300"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_cannon_tower"
+		}
+	}
+}
+"upgrade_arcane_tower"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_arcane_tower"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_guard_tower"
+		}
+	}
+}
+
+// HUMAN
+"upgrade_tier1_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier1"
+		}
+	}
+}
+"side_upgrade_tier1_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"100"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier1"
+		}
+	}
+}
+
+"upgrade_tier2_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier2"
+		}
+	}
+}
+"side_upgrade_tier2_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier2"
+		}
+	}
+}
+
+"upgrade_tier3_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier3"
+		}
+	}
+}
+"side_upgrade_tier3_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier3"
+		}
+	}
+}
+
+"upgrade_tier4_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"4000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier4"
+		}
+	}
+}
+"side_upgrade_tier4_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier4"
+		}
+	}
+}
+
+"upgrade_tier5_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"10000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier5"
+		}
+	}
+}
+"side_upgrade_tier5_human"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_human"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"human_base_tier5"
+		}
+	}
+}
+// END HUMAN
+
+// NIGHT ELF
+"upgrade_tier1_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier1"
+		}
+	}
+}
+"side_upgrade_tier1_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"100"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier1"
+		}
+	}
+}
+
+"upgrade_tier2_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier2"
+		}
+	}
+}
+"side_upgrade_tier2_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier2"
+		}
+	}
+}
+
+"upgrade_tier3_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier3"
+		}
+	}
+}
+"side_upgrade_tier3_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier3"
+		}
+	}
+}
+
+"upgrade_tier4_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"4000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier4"
+		}
+	}
+}
+"side_upgrade_tier4_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier4"
+		}
+	}
+}
+
+"upgrade_tier5_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"10000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier5"
+		}
+	}
+}
+"side_upgrade_tier5_nightelf"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_nightelf"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"nightelf_base_tier5"
+		}
+	}
+}
+// END NIGHT ELF
+
+// ORC
+"upgrade_tier1_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier1"
+		}
+	}
+}
+"side_upgrade_tier1_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"100"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier1"
+		}
+	}
+}
+
+"upgrade_tier2_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier2"
+		}
+	}
+}
+"side_upgrade_tier2_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier2"
+		}
+	}
+}
+
+"upgrade_tier3_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier3"
+		}
+	}
+}
+"side_upgrade_tier3_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier3"
+		}
+	}
+}
+
+"upgrade_tier4_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"4000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier4"
+		}
+	}
+}
+"side_upgrade_tier4_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier4"
+		}
+	}
+}
+
+"upgrade_tier5_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"10000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier5"
+		}
+	}
+}
+"side_upgrade_tier5_orc"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_orc"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"orc_base_tier5"
+		}
+	}
+}
+// END ORC
+
+// UNDEAD
+"upgrade_tier1_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"500"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier1"
+		}
+	}
+}
+"side_upgrade_tier1_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier1_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"100"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier1"
+		}
+	}
+}
+
+"upgrade_tier2_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier2"
+		}
+	}
+}
+"side_upgrade_tier2_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier2_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"400"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier2"
+		}
+	}
+}
+
+"upgrade_tier3_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier3"
+		}
+	}
+}
+"side_upgrade_tier3_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier3_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"700"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier3"
+		}
+	}
+}
+
+"upgrade_tier4_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"4000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier4"
+		}
+	}
+}
+"side_upgrade_tier4_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier4_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"1000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier4"
+		}
+	}
+}
+
+"upgrade_tier5_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"10000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier5"
+		}
+	}
+}
+"side_upgrade_tier5_undead"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_tier5_undead"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	"AbilityGoldCost"				"2000"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"buildings/upgrades.lua"
+			"Function"		"UpgradeBuilding"
+			"UnitName"		"undead_base_tier5"
+		}
+	}
+}

@@ -1,0 +1,1435 @@
+//=================================================================================
+// TIER 1 BUILDINGS (3500 HP, 7 Armor, 6-15 Damage)
+//=================================================================================
+// models/props_structures/good_barracks_ranged001.vmdl
+// models/items/furion/treant_flower_1.vmdl
+// ??
+// models/props_structures/bad_barracks001_melee.vmdl
+"human_base_tier1"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/good_barracks_ranged001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier2_human"
+	"Ability2"					"side_upgrade_tier1_nightelf"
+	"Ability3"					"side_upgrade_tier1_orc"
+	"Ability4"					"side_upgrade_tier1_undead"
+	"Ability5"					"spawn_rifleman"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"7"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"6"
+	"AttackDamageMax"			"15"
+	"StatusHealth"				"3500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"nightelf_base_tier1"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/furion/treant_flower_1.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier2_nightelf"
+	"Ability2"					"side_upgrade_tier1_human"
+	"Ability3"					"side_upgrade_tier1_orc"
+	"Ability4"					"side_upgrade_tier1_undead"
+	"Ability5"					"spawn_archer"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"7"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"6"
+	"AttackDamageMax"			"15"
+	"StatusHealth"				"3500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"orc_base_tier1"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/good_barracks_ranged001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier2_orc"
+	"Ability2"					"side_upgrade_tier1_human"
+	"Ability3"					"side_upgrade_tier1_nightelf"
+	"Ability4"					"side_upgrade_tier1_undead"
+	"Ability5"					"spawn_grunt"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"7"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"6"
+	"AttackDamageMax"			"15"
+	"StatusHealth"				"3500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"undead_base_tier1"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/bad_barracks001_melee.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier2_undead"
+	"Ability2"					"side_upgrade_tier1_human"
+	"Ability3"					"side_upgrade_tier1_nightelf"
+	"Ability4"					"side_upgrade_tier1_orc"
+	"Ability5"					"spawn_ghoul"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"7"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"6"
+	"AttackDamageMax"			"15"
+	"StatusHealth"				"3500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+
+//=================================================================================
+// TIER 2 BUILDINGS (5000 HP, 12 Armor, 31-40 Damage)
+//=================================================================================
+// models/props_structures/tower_good2.vmdl
+// models/items/furion/treant/father_treant/father_treant.vmdl
+// models/props_structures/bad_column001.vmdl
+// models/props_structures/bad_barracks001_ranged.vmdl
+"human_base_tier2"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/tower_good2.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier3_human"
+	"Ability2"					"side_upgrade_tier2_nightelf"
+	"Ability3"					"side_upgrade_tier2_orc"
+	"Ability4"					"side_upgrade_tier2_undead"
+	"Ability5"					"spawn_militia"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"12"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"31"
+	"AttackDamageMax"			"40"
+	"StatusHealth"				"5000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"nightelf_base_tier2"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/furion/treant/father_treant/father_treant.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier3_nightelf"
+	"Ability2"					"side_upgrade_tier2_human"
+	"Ability3"					"side_upgrade_tier2_orc"
+	"Ability4"					"side_upgrade_tier2_undead"
+	"Ability5"					"spawn_huntress"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"12"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"31"
+	"AttackDamageMax"			"40"
+	"StatusHealth"				"5000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"orc_base_tier2"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/bad_column001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier3_orc"
+	"Ability2"					"side_upgrade_tier2_human"
+	"Ability3"					"side_upgrade_tier2_nightelf"
+	"Ability4"					"side_upgrade_tier2_undead"
+	"Ability5"					"spawn_troll_headhunter"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"12"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"31"
+	"AttackDamageMax"			"40"
+	"StatusHealth"				"5000"
+	"StatusHealthRegen"			"0"
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"undead_base_tier2"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/bad_barracks001_ranged.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier3_undead"
+	"Ability2"					"side_upgrade_tier2_human"
+	"Ability3"					"side_upgrade_tier2_nightelf"
+	"Ability4"					"side_upgrade_tier2_orc"
+	"Ability5"					"spawn_crypt_fiend"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"12"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"31"
+	"AttackDamageMax"			"40"
+	"StatusHealth"				"5000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}	
+
+//=================================================================================
+// TIER 3 BUILDINGS (7500 HP, 15 Armor, 46-55 Damage)
+//=================================================================================
+// models/props_structures/good_ancient001.vmdl
+// models/items/furion/treant/furion_treant_nelum_red/furion_treant_nelum_red.vmdl
+// models/props_structures/bad_ancient001.vmdl
+// models/heroes/undying/undying_tower.vmdl
+"human_base_tier3"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/good_ancient001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier4_human"
+	"Ability2"					"side_upgrade_tier3_nightelf"
+	"Ability3"					"side_upgrade_tier3_orc"
+	"Ability4"					"side_upgrade_tier3_undead"
+	"Ability5"					"spawn_spell_breaker"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"15"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"46"
+	"AttackDamageMax"			"55"
+	"StatusHealth"				"7500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"nightelf_base_tier3"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/furion/treant/furion_treant_nelum_red/furion_treant_nelum_red.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier4_nightelf"
+	"Ability2"					"side_upgrade_tier3_human"
+	"Ability3"					"side_upgrade_tier3_orc"
+	"Ability4"					"side_upgrade_tier3_undead"
+	"Ability5"					"spawn_druid_of_the_talon"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"15"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"46"
+	"AttackDamageMax"			"55"
+	"StatusHealth"				"7500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"orc_base_tier3"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/bad_ancient001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier4_orc"
+	"Ability2"					"side_upgrade_tier3_human"
+	"Ability3"					"side_upgrade_tier3_nightelf"
+	"Ability4"					"side_upgrade_tier3_undead"
+	"Ability5"					"spawn_raider"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"15"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"46"
+	"AttackDamageMax"			"55"
+	"StatusHealth"				"7500"
+	"StatusHealthRegen"			"0"
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"undead_base_tier3"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/heroes/undying/undying_tower.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier4_undead"
+	"Ability2"					"side_upgrade_tier3_human"
+	"Ability3"					"side_upgrade_tier3_nightelf"
+	"Ability4"					"side_upgrade_tier3_orc"
+	"Ability5"					"spawn_skeletal_mage"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"15"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"46"
+	"AttackDamageMax"			"55"
+	"StatusHealth"				"7500"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+//=================================================================================
+// TIER 4 BUILDINGS (10000 HP, 17 Armor, 61-70 Damage)
+//=================================================================================
+// models/props_structures/good_ancient001_dest_lvl1.vmdl
+// models/items/furion/treant/primeval_treant/primeval_treant.vmdl
+// models/props_structures/bad_barracks001_destruction.vmdl
+// models/items/undying/idol_of_ruination/idol_tower.vmdl
+"human_base_tier4"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/good_ancient001_dest_lvl1.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier5_human"
+	"Ability2"					"side_upgrade_tier4_nightelf"
+	"Ability3"					"side_upgrade_tier4_orc"
+	"Ability4"					"side_upgrade_tier4_undead"
+	"Ability5"					"spawn_knight"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"17"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"61"
+	"AttackDamageMax"			"70"
+	"StatusHealth"				"10000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"nightelf_base_tier4"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/furion/treant/primeval_treant/primeval_treant.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier5_nightelf"
+	"Ability2"					"side_upgrade_tier4_human"
+	"Ability3"					"side_upgrade_tier4_orc"
+	"Ability4"					"side_upgrade_tier4_undead"
+	"Ability5"					"spawn_dryad"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"17"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"61"
+	"AttackDamageMax"			"70"
+	"StatusHealth"				"10000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"orc_base_tier4"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/bad_barracks001_destruction.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier5_orc"
+	"Ability2"					"side_upgrade_tier4_human"
+	"Ability3"					"side_upgrade_tier4_nightelf"
+	"Ability4"					"side_upgrade_tier4_undead"
+	"Ability5"					"spawn_tauren"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"17"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"61"
+	"AttackDamageMax"			"70"
+	"StatusHealth"				"10000"
+	"StatusHealthRegen"			"0"
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"undead_base_tier4"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/undying/idol_of_ruination/idol_tower.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier5_undead"
+	"Ability2"					"side_upgrade_tier4_human"
+	"Ability3"					"side_upgrade_tier4_nightelf"
+	"Ability4"					"side_upgrade_tier4_orc"
+	"Ability5"					"spawn_abomination"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"17"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"61"
+	"AttackDamageMax"			"70"
+	"StatusHealth"				"10000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+//=================================================================================
+// TIER 5 BUILDINGS (15000 HP, 20 Armor, 76-90 Damage)
+//=================================================================================
+// models/props_structures/good_ancient001.vmdl + Glow
+// models/items/furion/treant/eternalseasons_treant/eternalseasons_treant.vmdl
+// models/props_structures/bad_ancient002.vmdl
+// models/items/undying/idol_of_ruination/idol_tower_gold.vmdl
+"human_base_tier5"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/good_ancient001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					""
+	"Ability2"					"side_upgrade_tier5_nightelf"
+	"Ability3"					"side_upgrade_tier5_orc"
+	"Ability4"					"side_upgrade_tier5_undead"
+	"Ability5"					"spawn_siege_engine"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"20"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"76"
+	"AttackDamageMax"			"90"
+	"StatusHealth"				"15000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"nightelf_base_tier5"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/furion/treant/eternalseasons_treant/eternalseasons_treant.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					""
+	"Ability2"					"side_upgrade_tier5_human"
+	"Ability3"					"side_upgrade_tier5_orc"
+	"Ability4"					"side_upgrade_tier5_undead"
+	"Ability5"					"spawn_glaive_thrower"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"20"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"76"
+	"AttackDamageMax"			"90"
+	"StatusHealth"				"15000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"orc_base_tier5"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/bad_ancient002.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					""
+	"Ability2"					"side_upgrade_tier5_human"
+	"Ability3"					"side_upgrade_tier5_nightelf"
+	"Ability4"					"side_upgrade_tier5_undead"
+	"Ability5"					"spawn_kodo_beast"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"20"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"76"
+	"AttackDamageMax"			"90"
+	"StatusHealth"				"15000"
+	"StatusHealthRegen"			"0"
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}
+
+"undead_base_tier5"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/items/undying/idol_of_ruination/idol_tower_gold.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					""
+	"Ability2"					"side_upgrade_tier5_human"
+	"Ability3"					"side_upgrade_tier5_nightelf"
+	"Ability4"					"side_upgrade_tier5_orc"
+	"Ability5"					"spawn_meat_wagon"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"20"
+	"MagicalResistance"			"0"
+	"AttackDamageMin"			"76"
+	"AttackDamageMax"			"90"
+	"StatusHealth"				"15000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"0"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+}

@@ -1,0 +1,10 @@
+"item_filler"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_filler"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"ItemDroppable" 				"0"
+	"ItemPurchasable" 				"0"
+	"ItemSellable"					"0"
+}

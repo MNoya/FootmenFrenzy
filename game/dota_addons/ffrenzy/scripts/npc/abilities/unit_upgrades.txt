@@ -1,0 +1,210 @@
+// These abilities apply and show the current level of upgrade on the unit.
+// The modifier is stacked and increased every time the player researches a new rank of the upgrade
+"upgrade_weapon"
+{
+    "BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_weapon"
+	"MaxLevel" 						"20"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"2"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_upgrade_weapon"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" "%bonus_damage"
+			}
+		}
+	}
+}
+
+"upgrade_armor"
+{
+    "BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_armor"
+	"MaxLevel" 						"20"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"01"
+	{
+		"var_type"				"FIELD_INTEGER"
+		"bonus_armor"			"2"
+	}
+
+	"Modifiers"
+	{
+		"modifier_upgrade_armor"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+			}
+		}
+	}
+}
+
+// Human Upgrade: +Health +MS
+"upgrade_human_training"
+{
+    "BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_human_training"
+	"MaxLevel" 						"20"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"30"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"	"10"
+		}
+	}
+
+
+	"Modifiers"
+	{
+		"modifier_human_training"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"OnCreated"
+			{
+				// Add Health through lua because MODIFIER_PROPERTY_HEALTH_BONUS doesn't work on npc_dota_creature zzz
+				"RunScript"
+				{
+					"ScriptFile"	"upgrades.lua"
+					"Function"		"ApplyHealthBonus"
+				}
+			}
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_movement_speed" 
+			}
+		}
+	}
+}
+
+// Night Elf Upgrade: +Range
+"upgrade_nightelf_training"
+{
+    "BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_nightelf_training"
+	"MaxLevel" 						"20"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"01"
+	{
+		"var_type"				"FIELD_INTEGER"
+		"bonus_range"			"10"
+	}
+
+	"Modifiers"
+	{
+		"modifier_nightelf_training"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS" "%bonus_attack_range"
+			}
+		}
+	}
+}
+
+// Orc Upgrade: +Health +Damage
+"upgrade_orc_training"
+{
+    "BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_orc_training"
+	"MaxLevel" 						"20"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"15"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"2"
+		}
+	}
+
+
+	"Modifiers"
+	{
+		"modifier_orc_training"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"OnCreated"
+			{
+				// Add Health through lua because MODIFIER_PROPERTY_HEALTH_BONUS doesn't work on npc_dota_creature zzz
+				"RunScript"
+				{
+					"ScriptFile"	"upgrades.lua"
+					"Function"		"ApplyHealthBonus"
+				}
+			}
+			"Properties"
+			{
+			    "modifier_orc_training" "%bonus_damage" 
+			}
+		}
+	}
+}
+
+// Undead Upgrade: +AS
+"upgrade_undead_training"
+{
+    "BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"upgrade_undead_training"
+	"MaxLevel" 						"20"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"10"
+		}
+	}
+
+
+	"Modifiers"
+	{
+		"modifier_undead_training"
+		{
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+			}
+		}
+	}
+}

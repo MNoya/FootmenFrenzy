@@ -1,0 +1,60 @@
+// Alchemist Transmute
+// Author: Noya
+// Date: 25.01.2015.
+// Description: Kills a target unit instantly, transforming it into gold which is added to your available gold! Transmute cannot be used on Heroes, or creeps above level 5.
+// Notes: 
+//Level	Duration	Cooldown	Mana Cost	Range	Area of Effect	Allowed Targets	Effect	Hero Level Req
+//N/A	Instant	45 sec.	150	65	Unit	Air, Ground, Enemy, Neutral, Non Hero	Kills Unit, Gains Gold Depending on Unit	6
+"alchemist_transmute"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"alchemist_transmute"
+	"MaxLevel"						"3"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+	"AbilityCastRange"				"650"
+	"AbilityCooldown"				"45.0"
+
+	"AbilityManaCost"				"150"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"gold_bounty_multiplier"	"5 10 15"	//Placeholder until unit prices are done.
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"DOTA_Item.Hand_Of_Midas"
+			"Target" 		"TARGET"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"        "particles/items2_fx/hand_of_midas.vpcf"
+			"EffectAttachType"	"follow_origiin"
+			"Target"            "TARGET"
+			"ControlPointEntities"
+			{
+				"TARGET"	"attach_hitloc"
+				"CASTER"	"attach_hitloc"
+			}
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/alchemist/transmute.lua"
+			"Function"				"Transmute"
+		}	
+	}
+}

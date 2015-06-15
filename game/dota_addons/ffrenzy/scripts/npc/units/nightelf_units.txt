@@ -1,0 +1,455 @@
+
+//=================================================================================
+// 									NIGHTELF UNITS								 //
+//=================================================================================
+
+//=================================================================================
+// Tier 1: Archer
+//=================================================================================
+"nightelf_archer"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/windrunner/windrunner.vmdl"
+	"ModelScale"				"0.8"
+	"Level"						"2"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Aco2
+	"Ability2"					""	 //Reference: Ashm
+	"Ability3"					""	 //Reference: Aien
+	"Ability4"					""	 //Reference: Ault
+	"Ability5"					""	 //Reference: Aegr
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"16.0"
+	"AttackDamageMax"			"18.0"
+	"AttackRate"				"1.5"
+	"AttackAnimationPoint"		"0.72"
+	"AttackAcquisitionRange"	"800"
+	"AttackRange"				"500"
+	"ProjectileModel"			"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
+	"ProjectileSpeed"			"900"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"26.0"
+	"BountyGoldMax"				"38.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"32"
+	"FormationRank"				"2"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"270"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"245"
+	"StatusHealthRegen"			"0.5"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"21"		}
+			"Wearable2"		{	"ItemDef"		"22"		}
+			"Wearable3" 	{	"ItemDef"		"23"		}
+			"Wearable4"		{	"ItemDef"		"24"		}
+			"Wearable5"		{	"ItemDef"		"25"		}
+		}
+	}
+}
+
+//=================================================================================
+// Tier 2: Huntress
+//=================================================================================
+"nightelf_huntress"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/luna/luna.vmdl"
+	"ModelScale"				"0.7"
+	"Level"						"3"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Aesn
+	"Ability2"					""	 //Reference: Ashm
+	"Ability3"					""	 //Reference: Amgl
+	"Ability4"					""	 //Reference: Aien
+	"Ability5"					""	 //Reference: Ault
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"2"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"16.0"
+	"AttackDamageMax"			"18.0"
+	"AttackRate"				"1.8"
+	"AttackAnimationPoint"		"0.46"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"225"
+	"ProjectileModel"			"particles/units/heroes/hero_luna/luna_base_attack.vpcf"
+	"ProjectileSpeed"			"900"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"32"
+	"FormationRank"				"0"
+			
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"350"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"600"
+	"StatusHealthRegen"			"0.5"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"448"		}
+			"Wearable2"		{	"ItemDef"		"449"		}
+			"Wearable3" 	{	"ItemDef"		"450"		}
+			"Wearable4"		{	"ItemDef"		"451"		}
+			"Wearable5"		{	"ItemDef"		"452"		}
+			"Wearable6"		{	"ItemDef"		"453"		}
+		}
+	}
+}
+
+//=================================================================================
+// Tier 3: Druid of the Talon
+//=================================================================================
+"nightelf_druid_of_the_talon"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/furion/furion.vmdl"
+	"ModelScale"				"0.6"
+	"Level"						"2"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Arav
+	"Ability2"					""	 //Reference: Afa2
+	"Ability3"					""	 //Reference: Ault
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"35.0"
+	"AttackDamageMax"			"41.0"
+	"AttackRate"				"1.75"
+	"AttackAnimationPoint"		"0.6"
+	"AttackAcquisitionRange"	"600"
+	"AttackRange"				"600"
+	"ProjectileModel"			""	 //Add projectile
+	"ProjectileSpeed"			"900"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"26.0"
+	"BountyGoldMax"				"38.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	"RingRadius"				"40"
+	"CollisionSize"				"8"
+	"FormationRank"				"2"
+			
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND" //_FLY in Crow Form
+	"MovementSpeed"				"350"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"300"
+	"StatusHealthRegen"			"1"
+	"StatusMana"				"200"
+	"StatusManaRegen"			"200"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1600"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"	 //MAGIC - Attacks deal magic damage, ignores physical armor
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"	{ "ItemDef"	"29" } //Staff
+			"Wearable2" { "ItemDef"	"30" } //Horns
+			"Wearable3" { "ItemDef"	"31" } //Beard
+			"Wearable4"	{ "ItemDef"	"32" } //Cape
+			"Wearable5"	{ "ItemDef"	"33" } //Necklace
+			"Wearable6"	{ "ItemDef" "49" } //Bracers
+		}
+	}
+}
+
+//=================================================================================
+// Tier 4: Dryad
+//=================================================================================
+"nightelf_dryad"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/enchantress/enchantress.vmdl"
+	"ModelScale"				"0.7"
+	"Level"						"3"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Aadm
+	"Ability2"					""	 //Reference: Amim
+	"Ability3"					""	 //Reference: Aspo
+	"Ability4"					""	 //Reference: Aien
+	"Ability5"					""	 //Reference: Ault
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"17.0"
+	"AttackDamageMax"			"19.0"
+	"AttackRate"				"2"
+	"AttackAnimationPoint"		"0.3"
+	"AttackAcquisitionRange"	"800"
+	"AttackRange"				"500"
+	"ProjectileModel"			""	 //Add projectile
+	"ProjectileSpeed"			"1000"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"32"
+	"FormationRank"				"2"
+
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"350"
+	"MovementTurnRate"			"0.5"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"435"
+	"StatusHealthRegen"			"0.5"
+	"StatusMana"				"200"
+	"StatusManaRegen"			"200"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"286"		}
+			"Wearable2"		{	"ItemDef"		"287"		}
+			"Wearable3" 	{	"ItemDef"		"288"		}
+			"Wearable4"		{	"ItemDef"		"289"		}
+			"Wearable5"		{	"ItemDef"		"290"		}
+		}
+	}
+}
+
+//=================================================================================
+// Tier 5: Glaive Thrower
+//=================================================================================
+"nightelf_glaive_thrower"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
+	"ModelScale"				"0.7"
+	"Level"						"2"
+	"HealthBarOffset"			"140"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"4"
+	"Ability1"					""	 //Reference: Aimp
+	"Ability2"					""	 //Reference: Ault
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"2"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"36.0"
+	"AttackDamageMax"			"53.0"
+	"AttackRate"				"3.5"
+	"AttackAnimationPoint"		"0.1"
+	"AttackAcquisitionRange"	"1150"
+	"AttackRange"				"1150"
+	"ProjectileModel"			""	 //Add projectile
+	"ProjectileSpeed"			"1400"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"48"
+	"FormationRank"				"3"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"220"
+	"MovementTurnRate"			"0.4"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"300"
+	"StatusHealthRegen"			"0"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"1200"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+	}
+}

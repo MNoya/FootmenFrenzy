@@ -1,0 +1,173 @@
+//Tier    Human           Orc             Undead          Night-Elf           Cost    Cost to Switch Race
+//Tier 1  Riflemen        Grunts          Ghouls          Archers             500g    100g
+//Tier 2  Militia         Peons           Crypt Fiends    Huntresses          1000g   400g
+//Tier 3  Spell Breakers  Raiders         Skeletal Mages  Druids of the Talon 2000g   700g
+//Tier 4  Knights         Tauren          Abominations    Dryads              4000g   1000g
+//Tier 5  Steam Tanks     Kodo Beasts     Meatwagons      War Glaives         10000g  2000g
+
+//=================================================================================
+// 									BASIC UNITS									 //
+//=================================================================================
+
+//=================================================================================
+// Creature: Footman
+// Abilities: Defend
+//=================================================================================
+"human_footman"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/dragon_knight/dragon_knight.vmdl"
+	"ModelScale"				"0.8"
+	"Level"						"2"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"SelectionGroup"            "Human_Footmen"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"Ability1"					"human_defend"
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"2"
+	"MagicalResistance"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"12.0"
+	"AttackDamageMax"			"13.0"
+	"AttackRate"				"1.35"
+	"AttackAnimationPoint"		"0.5"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"90"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"26.0"
+	"BountyGoldMax"				"38.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"70"
+	"CollisionSize"				"31"
+	"FormationRank"				"0"
+	
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"270"
+	"MovementTurnRate"			"0.6"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"420"
+	"StatusHealthRegen"			"0.25"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1400"
+	"VisionNighttimeRange"		"800"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	// Creature Data
+	//----------------------------------------------------------------
+	"Creature"
+	{
+		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"63"		}
+			"Wearable2"		{	"ItemDef"		"64"		}
+			"Wearable3" 	{	"ItemDef"		"65"		}
+			"Wearable4"		{	"ItemDef"		"66"		}
+			"Wearable5"		{	"ItemDef"		"67"		}
+			"Wearable6"		{	"ItemDef"		"68"		}
+		}
+	}
+}
+
+//=================================================================================
+// Building: Barracks (Initial Base 3000HP 5 Armor No Attack)
+//=================================================================================
+"human_barracks"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_building"
+	"Model"						"models/props_structures/good_barracks_melee001.vmdl"
+	"ModelScale"				"1"
+	"Level"						"1"
+	"HealthBarOffset"			"140"
+	"HasInventory"				"1"
+	"ConsideredHero"			"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"upgrade_tier1_human"
+	"Ability2"					"upgrade_tier1_nightelf"
+	"Ability3"					"upgrade_tier1_orc"
+	"Ability4"					"upgrade_tier1_undead"
+	"Ability5"					"spawn_footman"
+	"Ability6"					"ability_building"
+	
+	// Stats
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"5"
+	"MagicalResistance"			"0"
+	"StatusHealth"				"3000"
+	"StatusHealthRegen"			"0"
+	
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
+	
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyGoldMin"				"0.0"
+	"BountyGoldMax"				"0.0"
+	
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+	"RingRadius"				"220"
+	"CollisionSize"				"144"
+			
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"150"
+	
+	// Status
+	//----------------------------------------------------------------
+	"StatusMana"				"100"
+	"StatusManaRegen"			"0"
+	
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"900"
+	"VisionNighttimeRange"		"600"
+	
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"	
+}
