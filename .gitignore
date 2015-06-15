@@ -2,9 +2,9 @@
 *.bin
 
 # Ignore map overviews
-content/dota_addons/theblackroad3/materials/overviews/*
-game/dota_addons/theblackroad3/materials/overviews/*
-game/dota_addons/theblackroad3/resource/overviews/*
+content/dota_addons/ffrenzy/materials/overviews/*
+game/dota_addons/ffrenzy/materials/overviews/*
+game/dota_addons/ffrenzy/resource/overviews/*
 
 
 # Ignore all compiled particles
