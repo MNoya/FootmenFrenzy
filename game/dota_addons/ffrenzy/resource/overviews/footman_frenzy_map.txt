@@ -1,0 +1,8 @@
+footman_frenzy_map
+{
+	material materials/overviews/footman_frenzy_map.vmat
+	pos_x -3924
+	pos_y 3920
+	scale 7.711
+}
+
