@@ -3,11 +3,11 @@
 	
 	//Team Shop
 	//Periaple of Vitality - 2500 gold (+1,000 hp)
-	//Ankh of Reincarnation - 700 gold (aiegis)
+	//Ankh of Reincarnation - 700 gold (aiegis)///////////////////////////////////////////////////////////needs to be done
 	//Shield of the Gods - 1400 (+350 hp, +8 armor)
 	//Runed Bracers - 1400 gold (+33% spell resist, +25% evasion)
 	//Amulet of Spell Shield - 500 gold (linkens sphere with 2 min cooldown)
-	//Claws of Ultimate Devastations - 3500 gold (+100 dmg)
+	//Claws of Ultimate Devastation - 3500 gold (+100 dmg)
 	//Pipe of the Gods - 6000 gold (+5000% mana regen)
 	//Plate of the Stormlord - 1500 gold (+12 armor, 15% chance to purge on hit)
 	
@@ -34,11 +34,6 @@
 
 	"consumables"
 	{
-		//"item"		"item_smoke_of_deceit"
-	}
-
-	"attributes"
-	{
 		"item"			"item_crown_of_kings"
 		"item"			"item_belt_of_giant_strength"
 		"item"			"item_boots_of_quelthalas"
@@ -51,7 +46,7 @@
 		"item"			"item_medallion_of_glim"
 	}
 
-	"weapons_armor"
+	"attributes"
 	{
 		"item"			"item_claws_of_attack"
 		"item"			"item_orb_of_frost"
@@ -60,6 +55,13 @@
 		"item"			"item_totem_of_might"
 		"item"			"item_maul_of_corruption"
 		"item"			"item_berserkers_axe"
+	}
+
+	"weapons_armor"
+	{
+		"item"			"item_periapt_of_vitality"
+		"item"			"item_shield_of_the_gods"
+		"item"			"item_runed_bracers"
 	}
 	
 	"misc"

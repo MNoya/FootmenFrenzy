@@ -2957,6 +2957,203 @@
 	{
 		
 	}
+	///////////////////////////////////////////////////
+	//Use Id's 1040-1054
+	//////////////////////////////////////////////////
+	
+	
+	//=================================================================================================================
+	// Periapt of Vitality
+	//=================================================================================================================
+	"item_periapt_of_vitality"
+	{
+		"ID"							"1040"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_periapt_of_vitality"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		"ItemCost"						"2500"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"				"1000"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_periapt_of_vitality"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_hp"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Shield of the Gods
+	//=================================================================================================================
+	"item_shield_of_the_gods"
+	{
+		"ID"							"1041"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_shield_of_the_gods"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		"ItemCost"						"1400"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"				"350"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"8"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_shield_of_the_gods"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_hp"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Runed Bracers
+	//=================================================================================================================
+	"item_runed_bracers"
+	{
+		"ID"							"1042"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_runed_bracers"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		"ItemCost"						"1400"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_resist"			"33"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"evasion"				"25"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_runed_bracers"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" 			"%spell_resist"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT" 					"%evasion"
+				}
+			}
+		}
+	}
 	// 3 Upgrades are accessed through Items in the base inventory.
 	// 100 gold +50 gold cost each rank, 20 levels.
 	
