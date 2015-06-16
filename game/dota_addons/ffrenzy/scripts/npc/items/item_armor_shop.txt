@@ -1,12 +1,18 @@
+///////////////////////////////////////////////////
+//Use Id's 1026-1039
+//////////////////////////////////////////////////
+
 	//=================================================================================================================
 	// Crown of Kings
 	//=================================================================================================================
 	"item_crown_of_kings"
 	{
+		"ID"							"1026"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -35,21 +41,26 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intelligence"	"7"
+				"bonus_all_stats"		"7"
 			}
 			
-			"02"
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_crown_of_kings_datadriven"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"7"
-			}
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"7"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+				}
 			}
-			
 		}
 	}
 	
@@ -59,10 +70,12 @@
 	//=================================================================================================================
 	"item_belt_of_giant_strength"
 	{
+		"ID"							"1027"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -95,6 +108,21 @@
 			}
 			
 		}
+		
+		"Modifiers"
+		{
+			"modifier_item_belt_of_giant_strength_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_strength"
+				}
+			}
+		}
 	}
 	
 	//=================================================================================================================
@@ -102,10 +130,12 @@
 	//=================================================================================================================
 	"item_boots_of_quelthalas"
 	{
+		"ID"							"1028"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -138,6 +168,21 @@
 			}
 			
 		}
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_of_quelthalas_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agility"
+				}
+			}
+		}
 	}
 	
 	//=================================================================================================================
@@ -145,10 +190,12 @@
 	//=================================================================================================================
 	"item_wizards_robe"
 	{
+		"ID"							"1029"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -181,6 +228,21 @@
 			}
 			
 		}
+		
+		"Modifiers"
+		{
+			"modifier_item_wizards_robe_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLIGENCE_BONUS"		"%bonus_intelligence"
+				}
+			}
+		}
 	}
 	
 	
@@ -189,10 +251,12 @@
 	//=================================================================================================================
 	"item_quaithes_mask"
 	{
+		"ID"							"1030"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -221,9 +285,24 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana_regen_pct"	"100"
+				"bonus_mana_regen_percentage"	"100"
 			}
 			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_quaithes_mask_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
+				}
+			}
 		}
 	}
 	
@@ -233,10 +312,12 @@
 	//=================================================================================================================
 	"item_circlet_of_royalty"
 	{
+		"ID"							"1031"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -265,21 +346,26 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intelligence"	"2"
+				"bonus_all_stats"		"2"
 			}
 			
-			"02"
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_circlet_of_royalty_datadriven"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"2"
-			}
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"2"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+				}
 			}
-			
 		}
 	}
 	
@@ -289,10 +375,12 @@
 	//=================================================================================================================
 	"item_precept_of_mana"
 	{
+		"ID"							"1032"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -324,5 +412,209 @@
 				"bonus_mana"			"200"
 			}
 			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_precept_of_mana_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"			"%bonus_mana"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Ring of Regeneration
+	//=================================================================================================================
+	"item_ring_of_regeneration"
+	{
+		"ID"							"1033"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityTextureName" 			"item_ring_of_regeneration"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"						"350"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"3"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_ring_of_regeneration_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_health_regen"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Ring of Protection
+	//=================================================================================================================
+	"item_ring_of_steel"
+	{
+		"ID"							"1034"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityTextureName" 			"item_ring_of_steel"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"						"200"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"6"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_ring_of_steel_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				}
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Medallion of Glim
+	//=================================================================================================================
+	"item_medallion_of_glim"
+	{
+		"ID"							"1035"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityTextureName" 			"item_medallion_of_glim"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"						"350"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"4"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"100"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_medallion_of_glim_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+					"MODIFIER_PROPERTY_MANA_BONUS"						"%bonus_mana"
+				}
+			}
 		}
 	}

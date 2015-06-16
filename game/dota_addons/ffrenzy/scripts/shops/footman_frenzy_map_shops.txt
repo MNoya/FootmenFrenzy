@@ -21,7 +21,7 @@
 	//Precept of Mana - 450 gold (+200 mana)
 	//Ring of Regeneration - 350 gold (+3 hp regen per second)
 	//Ring of Protection - 200 gold (+6 armor)
-	//Medallion of Glim - 350 gold
+	//Medallion of Glim - 350 gold (+4 armor, +100 mana)
 	
 	//Weapons Shop
 	//Claws of Attack - 500 gold (+20 dmg)
@@ -46,6 +46,9 @@
 		"item"			"item_quaithes_mask"
 		"item"			"item_circlet_of_royalty"
 		"item"			"item_precept_of_mana"
+		"item"			"item_ring_of_regeneration"
+		"item"			"item_ring_of_steel"
+		"item"			"item_medallion_of_glim"
 	}
 
 	"weapons_armor"

@@ -5,8 +5,15 @@
 // Elf:		Venom
 // Undead: 	Corruption
 
+
+
+///////////////////////////////////////
+//Used Id's 1001-1010
+///////////////////////////////////////
+
 "item_orb_of_frost"
 {
+	"ID"							"1001"
    	"BaseClass" 					"item_datadriven"
    	"AbilityTextureName" 			"item_orb_of_frost"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -97,6 +104,7 @@
 
 "item_orb_of_fire"
 {
+	"ID"							"1002"
 	"BaseClass" 					"item_datadriven"
     "AbilityTextureName" 			"item_orb_of_fire"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -176,6 +184,7 @@
 
 "item_orb_of_venom_wc3"
 {
+	"ID"							"1003"
 	"BaseClass" 					"item_datadriven"
     "AbilityTextureName" 			"item_orb_of_venom_wc3"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -278,6 +287,7 @@
 
 "item_orb_of_corruption"
 {
+	"ID"							"1004"
 	"BaseClass" 					"item_datadriven"
     "AbilityTextureName" 			"item_orb_of_corruption"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -362,6 +372,7 @@
 
 "item_orb_of_darkness"
 {
+	"ID"							"1005"
 	"BaseClass" 					"item_datadriven"
     "AbilityTextureName" 			"item_orb_of_darkness"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -469,6 +480,7 @@
 
 "item_orb_of_lightning"
 {
+	"ID"							"1006"
 	"BaseClass" 					"item_datadriven"
     "AbilityTextureName" 			"item_orb_of_lightning"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

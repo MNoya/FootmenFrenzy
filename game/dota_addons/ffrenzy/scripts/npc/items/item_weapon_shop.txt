@@ -1,12 +1,19 @@
+/////////////////////////////////////////////////
+//Use Id's 1011-1025
+/////////////////////////////////////////////////
+
+
 	//=================================================================================================================
 	// Claws of Attack
 	//=================================================================================================================
 	"item_claws_of_attack"
 	{
+		"ID"							"1011"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -39,6 +46,21 @@
 			}
 			
 		}
+		
+		"Modifiers"
+		{
+			"modifier_item_claws_of_attack_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+			}
+		}
 	}
 	
 	
@@ -47,10 +69,12 @@
 	//=================================================================================================================
 	"item_scourge_bone_chimes"
 	{
+		"ID"							"1012"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -75,19 +99,57 @@
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
-		{
-			"01"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"Range"					"900"
+				"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900"
 			}
-			
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"lifesteal_percent"		"15"
+				"var_type"					"FIELD_INTEGER"
+				"lifesteal_aura_percent"	"15"
 			}
 			
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_scourge_bone_chimes_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			}
+			"modifier_item_scourge_bone_chimes_datadriven_lifesteal_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+				
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"items/item_scourge_bone_chimes.lua"
+						"Function"				"modifier_item_scourge_bone_chimes_datadriven_lifesteal_aura_on_attack_landed"
+					}
+				}
+			}
+			"modifier_item_scourge_bone_chimes_datadriven_lifesteal_aura_lifesteal"
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+				
+				"OnDealDamage"
+				{
+					"Lifesteal"
+					{
+						"Target"			"ATTACKER"
+						"LifestealPercent"	"%lifesteal_aura_percent"
+					}
+				}
+			}
 		}
 	}
 	
@@ -97,10 +159,12 @@
 	//=================================================================================================================
 	"item_totem_of_might"
 	{
+		"ID"							"1013"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -139,6 +203,22 @@
 			}
 			
 		}
+		
+		"Modifiers"
+		{
+			"modifier_item_totem_of_might_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agility"
+				}
+			}
+		}
 	}
 	
 	
@@ -147,10 +227,12 @@
 	//=================================================================================================================
 	"item_maul_of_corruption"
 	{
+		"ID"							"1014"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -185,9 +267,62 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor_reduction"		"5"
+				"corruption_armor"		"-5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"corruption_duration"	"10.0"
 			}
 			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_maul_of_corruption_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"						"%bonus_damage"
+				}
+			
+				"Orb"
+				{
+					"Priority"				"DOTA_ORB_PRIORITY_ITEM"
+					"ProjectileName"		"particles/items_fx/desolator_projectile.vpcf"
+					"CastAttack"			"0"
+				}
+	
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"Target"			"TARGET"
+						"ModifierName"		"modifier_item_maul_of_corruption_datadriven_corruption"
+					}
+				
+					"FireSound"
+					{
+						"EffectName"		"Item_Desolator.Target"
+						"Target"			"TARGET"
+					}
+				}
+			}
+			"modifier_item_maul_of_corruption_datadriven_corruption"
+			{
+				"Duration"				"%corruption_duration"
+				"Passive"				"0"
+				"IsHidden"				"0"
+			
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%corruption_armor"
+				}
+			}
 		}
 	}
 	
@@ -197,10 +332,12 @@
 	//=================================================================================================================
 	"item_berserkers_axe"
 	{
+		"ID"							"1015"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -229,9 +366,88 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_damage"			"10"
+				"cleave_damage_percent"	"10"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"cleave_radius"					"250"
 			}
 			
+		}
+		
+		"Modifiers"
+		{
+		"modifier_item_berserkers_axe_datadriven"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_berserkers_axe.lua"
+					"Function"			"modifier_item_berserkers_axe_datadriven_on_created"
+				}
+			}
+			
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_berserkers_axe.lua"
+					"Function"			"modifier_item_berserkers_axe_datadriven_on_destroy"
+				}
+			}
+			
+			//Continually check to see if the hero this modifier is on has switched from ranged
+			//to melee, in which case they should be given cleave modifier(s).
+			"ThinkInterval" ".03"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_berserkers_axe.lua"
+					"Function"			"modifier_item_berserkers_axe_datadriven_on_interval_think"
+				}
+			}
+		}
+		"modifier_item_berserkers_axe_datadriven_cleave"  //Only melee units can cleave, so only melee units should get this modifier.
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"OnAttackLanded"
+			{
+				"CleaveAttack"
+				{
+					"CleavePercent"		"%cleave_damage_percent"
+					"CleaveRadius"		"%cleave_radius"
+					"CleaveEffect"		"particles/items_fx/battlefury_cleave.vpcf"
+				}
+				
+				"FireSound"
+				{
+					"EffectName"				"DOTA_Item.BattleFury"
+					"Target"					"TARGET"
+				}
+			}
+			
+			//Continually check to see if the hero this modifier is on is still melee 
+			//(since some units, like Troll Warlord, can switch between ranged/melee forms).
+			"ThinkInterval" ".03"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_berserkers_axe.lua"
+					"Function"			"modifier_item_berserkers_axe_datadriven_cleave_on_interval_think"
+				}
+			}
+		}
 		}
 	}
