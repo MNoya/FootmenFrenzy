@@ -14,7 +14,7 @@
 	"Ability2" 					"alchemist_chemical_rage_warcraft"
 	"Ability3" 					"alchemist_acid_bomb"
 	"Ability4" 					"alchemist_transmute"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

@@ -14,7 +14,7 @@
 	"Ability2" 					"pandaren_drunken_haze"
 	"Ability3" 					"pandaren_drunken_brawler"
 	"Ability4" 					"pandaren_storm_earth_fire"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

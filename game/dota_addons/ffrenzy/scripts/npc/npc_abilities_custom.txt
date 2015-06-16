@@ -501,12 +501,6 @@
 					}
 	
 					"RunScript"
-					{
-						"ScriptFile"	"heroes/hero_name/ability_name.lua"
-						"Function"		"HealingSprayCast"
-					}										
-					
-					"RunScript"
 			    	{
 			    		"ScriptFile"	"heroes/alchemist/healing_spray.lua"
 						"Function"		"HealingSprayWave"
@@ -2495,7 +2489,7 @@
 					}
 				}
 	
-				"UnitCount"			"%boar_3_count"
+				"UnitCount"			"%boar_4_count"
 				"Duration"			"%duration"
 	
 				"GrantsGold"		"1"
@@ -7440,7 +7434,7 @@
 					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_FLYING"	"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_FLYING"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_NOT_ON_MINIMAP"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"

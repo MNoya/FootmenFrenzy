@@ -14,7 +14,7 @@
 	"Ability2" 					"potm_searing_arrows"
 	"Ability3" 					"potm_trueshot_aura"
 	"Ability4" 					"potm_starfall"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

@@ -14,7 +14,7 @@
 	"Ability2"					"lich_frost_armor_warcraft"
 	"Ability3" 					"lich_dark_ritual_warcraft"
 	"Ability4" 					"lich_death_and_decay"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

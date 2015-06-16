@@ -14,7 +14,7 @@
 	"Ability2" 					"blademaster_mirror_image"
 	"Ability3" 					"blademaster_critical_strike"
 	"Ability4" 					"blademaster_bladestorm"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

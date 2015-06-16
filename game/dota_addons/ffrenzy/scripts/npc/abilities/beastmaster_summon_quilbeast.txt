@@ -219,7 +219,7 @@
 				}
 			}
 
-			"UnitCount"			"%boar_3_count"
+			"UnitCount"			"%boar_4_count"
 			"Duration"			"%duration"
 
 			"GrantsGold"		"1"

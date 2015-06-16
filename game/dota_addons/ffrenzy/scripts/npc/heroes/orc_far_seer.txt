@@ -14,7 +14,7 @@
 	"Ability2" 					"far_seer_chain_lightning"
 	"Ability3" 					"far_seer_feral_spirit"
 	"Ability4" 					"far_seer_earthquake"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

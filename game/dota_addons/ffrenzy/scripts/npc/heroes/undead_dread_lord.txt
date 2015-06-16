@@ -14,7 +14,7 @@
 	"Ability2" 					"dread_lord_sleep"
 	"Ability3" 					"dread_lord_vampiric_aura"
 	"Ability4" 					"dread_lord_inferno"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

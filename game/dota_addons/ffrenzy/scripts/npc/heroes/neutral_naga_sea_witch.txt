@@ -14,7 +14,7 @@
 	"Ability2" 					"naga_sea_witch_frost_arrows"
 	"Ability3" 					"naga_sea_witch_mana_shield"
 	"Ability4" 					"naga_sea_witch_tornado"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

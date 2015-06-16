@@ -16,7 +16,7 @@
 	"Ability2" 					"blood_mage_banish"
 	"Ability3" 					"blood_mage_siphon_mana"
 	"Ability4" 					"blood_mage_phoenix"
-	"Ability5" 					""
+	"Ability5"					"attribute_bonus"
 	"Ability6" 					""
 	
 	// Armor

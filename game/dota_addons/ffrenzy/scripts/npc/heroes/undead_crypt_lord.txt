@@ -14,7 +14,7 @@
 	"Ability2"					"crypt_lord_spiked_carapace"
 	"Ability3"					"crypt_lord_carrion_beetles"
 	"Ability4"					"crypt_lord_locust_swarm"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

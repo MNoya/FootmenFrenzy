@@ -623,7 +623,7 @@ function GameMode:OnNPCSpawned(keys)
     end
 
     if npc:IsCreature() then
-        Timers:CreateTimer(function()
+        Timers:CreateTimer(0.05, function()
             --print("Unit Spawned, Applying Upgrades...")
             ApplyUpgrade(npc, "upgrade_weapon")
             ApplyUpgrade(npc, "upgrade_armor")
@@ -864,7 +864,7 @@ function GameMode:OnEntityKilled( keys )
             -- Remove itself after the corpse duration
             Timers:CreateTimer(CORPSE_DURATION, function()
                 if corpse and IsValidEntity(corpse) then
-                    print("removing corpse")
+                    --print("removing corpse")
                     corpse:RemoveSelf()
                 end
             end)
@@ -931,7 +931,7 @@ function LeavesCorpse( unit )
 
     -- Leave corpse
     else
-        print("Leave corpse")
+        --print("Leave corpse")
         return true
     end
 end

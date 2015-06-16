@@ -14,7 +14,7 @@
 	"Ability2" 					"dark_ranger_black_arrow"
 	"Ability3" 					"dark_ranger_life_drain"
 	"Ability4" 					"dark_ranger_charm"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

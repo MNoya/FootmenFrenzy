@@ -12,7 +12,7 @@
 	"Ability2" 					"tauren_chieftain_war_stomp"
 	"Ability3" 					"tauren_chieftain_endurance_aura"
 	"Ability4" 					"tauren_chieftain_reincarnation"
-	"Ability5" 					""
+	"Ability5"					"attribute_bonus"
 	"Ability6" 					""
 
 	

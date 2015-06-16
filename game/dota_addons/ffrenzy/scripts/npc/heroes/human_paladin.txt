@@ -14,7 +14,7 @@
 	"Ability2" 					"paladin_devotion_aura"
 	"Ability3" 					"paladin_divine_shield"
 	"Ability4" 					"paladin_resurrection"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

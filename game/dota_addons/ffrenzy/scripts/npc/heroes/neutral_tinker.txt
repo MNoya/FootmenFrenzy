@@ -15,8 +15,8 @@
 	"Ability2" 					"tinker_cluster_rockets"
 	"Ability3" 					"tinker_engineering_upgrade"
 	"Ability4" 					"tinker_robo_goblin"
-	"Ability5" 					"tinker_normal_form"
-	"Ability6"					""
+	"Ability5"					"attribute_bonus"
+	"Ability6"					"tinker_normal_form"
 
 	// Armor
 	//----------------------------------------------------------------

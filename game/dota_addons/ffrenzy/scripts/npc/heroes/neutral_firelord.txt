@@ -16,7 +16,7 @@
 	"Ability2" 					"firelord_summon_lava_spawn"
 	"Ability3" 					"firelord_incinerate"
 	"Ability4" 					"firelord_volcano"
-	"Ability5" 					""
+	"Ability5"					"attribute_bonus"
 	"Ability6" 					""
 	
 	// Armor

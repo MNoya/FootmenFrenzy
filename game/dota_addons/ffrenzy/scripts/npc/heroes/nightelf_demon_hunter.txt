@@ -14,7 +14,7 @@
 	"Ability2" 					"demon_hunter_immolation"
 	"Ability3" 					"demon_hunter_evasion"
 	"Ability4" 					"demon_hunter_demon_form"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

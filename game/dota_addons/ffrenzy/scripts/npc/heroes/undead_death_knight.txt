@@ -14,7 +14,7 @@
 	"Ability2" 					"death_knight_death_pact"
 	"Ability3" 					"death_knight_unholy_aura"
 	"Ability4" 					"death_knight_animate_dead"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

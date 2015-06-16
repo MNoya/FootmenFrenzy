@@ -13,7 +13,7 @@
 	"Ability2" 					"mountain_king_thunder_clap"
 	"Ability3" 					"mountain_king_bash"
 	"Ability4" 					"mountain_king_avatar"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

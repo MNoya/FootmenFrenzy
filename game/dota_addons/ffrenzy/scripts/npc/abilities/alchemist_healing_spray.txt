@@ -149,12 +149,6 @@
 				}
 
 				"RunScript"
-				{
-					"ScriptFile"	"heroes/hero_name/ability_name.lua"
-					"Function"		"HealingSprayCast"
-				}										
-				
-				"RunScript"
 		    	{
 		    		"ScriptFile"	"heroes/alchemist/healing_spray.lua"
 					"Function"		"HealingSprayWave"

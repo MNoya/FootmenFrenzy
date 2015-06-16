@@ -13,7 +13,7 @@
 	"Ability2" 					"pit_lord_howl_of_terror"
 	"Ability3" 					"pit_lord_cleaving_attack"
 	"Ability4" 					"pit_lord_doom"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor

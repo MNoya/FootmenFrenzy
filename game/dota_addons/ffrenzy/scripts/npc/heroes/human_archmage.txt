@@ -15,7 +15,7 @@
 	"Ability2" 					"archmage_summon_water_elemental"
 	"Ability3" 					"archmage_brilliance_aura"
 	"Ability4" 					"archmage_mass_teleport"
-	"Ability5" 					""
+	"Ability5"					"attribute_bonus"
 	"Ability6" 					""
 	"Ability10"					""
 	

@@ -33,7 +33,9 @@ end
 function ApplyUpgrade(unit, upgrade_name)
 	local player = unit:GetPlayerOwner()
 	if not player then
-		print("ERROR UNIT HAS NO PLAYER OWNER")
+		if not string.find(unit:GetUnitName(), "dummy") then
+			print("ERROR UNIT "..unit:GetUnitName().." HAS NO PLAYER OWNER")
+		end
 		return
 	end
 	local upgrades = player.upgrades

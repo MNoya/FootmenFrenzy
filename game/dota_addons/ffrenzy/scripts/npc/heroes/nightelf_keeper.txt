@@ -14,7 +14,7 @@
 	"Ability2" 					"keeper_force_of_nature"
 	"Ability3" 					"keeper_thorns_aura"
 	"Ability4" 					"keeper_tranquility"
-	"Ability5"					""
+	"Ability5"					"attribute_bonus"
 	"Ability6"					""
 	
 	// Armor
