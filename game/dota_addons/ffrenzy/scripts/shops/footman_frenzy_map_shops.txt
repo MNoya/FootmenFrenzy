@@ -30,7 +30,7 @@
 	//Scourge Bone Chimes - 450 gold (15% lifesteal for melee units in 900 aoe)
 	//Totem of Might - 1200 gold (+10 agi, +5 attack)
 	//Maul of Corruption - 850 gold (+5 attack, -5 armor(like desolator))
-	//Berserker's Axe - 200 gold (adds 10% cleave damage life battlefurry)
+	//Berserker's Axe - 200 gold (adds 10% cleave damage like battlefurry)
 
 	"consumables"
 	{
@@ -39,7 +39,7 @@
 
 	"attributes"
 	{
-		//"item"		"item_branches"
+		"item"			"item_crown_of_kings"
 	}
 
 	"weapons_armor"
@@ -48,6 +48,10 @@
 		"item"			"item_claws_of_attack"
 		"item"			"item_orb_of_frost"
 		"item"			"item_orb_of_lightning"
+		"item"			"item_scourge_bone_chimes"
+		"item"			"item_totem_of_might"
+		"item"			"item_maul_of_corruption"
+		"item"			"item_berserkers_axe"
 	}
 	
 	"misc"

@@ -1010,7 +1010,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"archmage_summon_water_elemental"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCooldown"				"20"
@@ -1031,23 +1031,28 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"20 35 45"
+				"damage"				"20 35 45 55"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lvl1_unit_count"		"1 0 0"
+				"lvl1_unit_count"		"1 0 0 0"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lvl2_unit_count"		"0 1 0"
+				"lvl2_unit_count"		"0 1 0 0"
 			}			
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lvl3_unit_count"		"0 0 1"
-			}		
+				"lvl3_unit_count"		"0 0 1 0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lvl4_unit_count"		"0 0 0 1"
+			}			
 		}
 	
 		"precache"
@@ -1122,6 +1127,36 @@
 			{
 				"UnitName"		"npc_water_elemental_3"
 				"UnitCount"		"%lvl3_unit_count"
+				"SpawnRadius"	"100"
+				"Duration"		"%duration"
+				"Target"		"CASTER"
+				"GrantsGold" 	"1"
+		        "GrantsXP" 		"1"
+				"OnSpawn"
+				{
+					"AttachEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_morphling/morphling_replicate_finish.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"			"TARGET"
+					}
+					"FireSound"
+					{
+						"EffectName" "Hero_Morphling.Replicate"
+						"Target"			"CASTER"
+					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_summoned"
+						"Target" 		"TARGET"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_water_elemental_4"
+				"UnitCount"		"%lvl4_unit_count"
 				"SpawnRadius"	"100"
 				"Duration"		"%duration"
 				"Target"		"CASTER"
@@ -1395,7 +1430,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"beastmaster_summon_bear"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
@@ -1446,17 +1481,22 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_1_count"			"1 0 0"
+				"bear_1_count"			"1 0 0 0"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_2_count"			"0 1 0"
+				"bear_2_count"			"0 1 0 0"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_3_count"			"0 0 1"
+				"bear_3_count"			"0 0 1 0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bear_4_count"			"0 0 0 1"
 			}
 		}
 	
@@ -1558,6 +1598,43 @@
 				}
 	
 				"UnitCount"			"%bear_3_count"
+				"Duration"			"%duration"
+	
+				"GrantsGold"		"1"
+				"GrantsXP"			"1"
+	
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_beastmaster_bear"
+						"Target"		"TARGET"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"			"npc_beastmaster_raging_bear2"
+				"Target"
+				{
+					"Center"				"CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/beastmaster/summon_bear.lua"
+	        			"Function"      "SummonLocation"
+						"Target"		"CASTER"
+					}
+				}
+	
+				"UnitCount"			"%bear_4_count"
 				"Duration"			"%duration"
 	
 				"GrantsGold"		"1"
@@ -1813,7 +1890,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"beastmaster_summon_hawk"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
@@ -1864,17 +1941,22 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_1_count"			"1 0 0"
+				"bird_1_count"			"1 0 0 0"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_2_count"			"0 1 0"
+				"bird_2_count"			"0 1 0 0"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_3_count"			"0 0 1"
+				"bird_3_count"			"0 0 1 0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bird_4_count"			"0 0 0 1"
 			}
 		}
 	
@@ -1976,6 +2058,43 @@
 				}
 	
 				"UnitCount"			"%bird_3_count"
+				"Duration"			"%duration"
+	
+				"GrantsGold"		"1"
+				"GrantsXP"			"1"
+	
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_beastmaster_bird"
+						"Target"		"TARGET"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"			"npc_beastmaster_spirit_hawk2"
+				"Target"
+				{
+					"Center"				"CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/beastmaster/summon_bear.lua"
+	        			"Function"      "SummonLocation"
+						"Target"		"CASTER"
+					}
+				}
+	
+				"UnitCount"			"%bird_4_count"
 				"Duration"			"%duration"
 	
 				"GrantsGold"		"1"
@@ -2168,7 +2287,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"beastmaster_summon_quilbeast"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
@@ -2223,17 +2342,22 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"boar_1_count"			"1 0 0"
+				"boar_1_count"			"1 0 0 0"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"boar_2_count"			"0 1 0"
+				"boar_2_count"			"0 1 0 0"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"boar_3_count"			"0 0 1"
+				"boar_3_count"			"0 0 1 0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"boar_4_count"			"0 0 0 1"
 			}
 		}
 	
@@ -2323,6 +2447,43 @@
 			"SpawnUnit"
 			{
 				"UnitName"			"npc_beastmaster_raging_quilbeast"
+				"Target"
+				{
+					"Center"				"CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/beastmaster/summon_bear.lua"
+	        			"Function"      "SummonLocation"
+						"Target"		"CASTER"
+					}
+				}
+	
+				"UnitCount"			"%boar_3_count"
+				"Duration"			"%duration"
+	
+				"GrantsGold"		"1"
+				"GrantsXP"			"1"
+	
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_beastmaster_boar"
+						"Target"		"TARGET"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"			"npc_beastmaster_raging_quilbeast2"
 				"Target"
 				{
 					"Center"				"CASTER"
@@ -3441,7 +3602,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"blood_mage_phoenix"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -3484,6 +3645,21 @@
 				"var_type"					"FIELD_FLOAT"
 				"negative_regen"			"-5.0"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"phoenix_1_count"			"1 0 0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"phoenix_2_count"			"0 1 0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"phoenix_3_count"			"0 0 1"
+			}
 		}
 	
 		"OnSpellStart"
@@ -3509,10 +3685,82 @@
 						"distance"		"%spawn_distance"
 					}
 				}
-				"UnitCount"		"1"
+				"UnitCount"		"%phoenix_1_count"
 				"GrantsGold"	"1"
 				"GrantsXP"		"1"
-				"SpawnRadius"	"10"
+				"SpawnRadius"	"100"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/blood_mage/phoenix.lua"
+						"Function"		"SetUnitsMoveForward"
+					}				
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_phoenix2"
+				"Target"
+				{
+					"Center"		    "CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/blood_mage/phoenix.lua"
+						"Function"      "SummonLocation"
+						"Target"		"CASTER"
+						"Count"			"1"
+						"distance"		"%spawn_distance"
+					}
+				}
+				"UnitCount"		"%phoenix_2_count"
+				"GrantsGold"	"1"
+				"GrantsXP"		"1"
+				"SpawnRadius"	"100"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/blood_mage/phoenix.lua"
+						"Function"		"SetUnitsMoveForward"
+					}				
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_phoenix3"
+				"Target"
+				{
+					"Center"		    "CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/blood_mage/phoenix.lua"
+						"Function"      "SummonLocation"
+						"Target"		"CASTER"
+						"Count"			"1"
+						"distance"		"%spawn_distance"
+					}
+				}
+				"UnitCount"		"%phoenix_3_count"
+				"GrantsGold"	"1"
+				"GrantsXP"		"1"
+				"SpawnRadius"	"100"
 				"OnSpawn"
 				{
 					"RunScript"
@@ -4708,7 +4956,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"crypt_lord_carrion_beetles"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
@@ -4736,12 +4984,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"beetle_damage"				"8 16 24"
+				"beetle_damage"				"8 16 24 32"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"beetle_hp"					"140 275 410"
+				"beetle_hp"					"140 275 410 500"
 			}
 		}
 	
@@ -5408,17 +5656,22 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dark_minion_1_count"		"1 0 0"
+				"dark_minion_1_count"		"1 0 0 0"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dark_minion_2_count"		"0 1 0"
+				"dark_minion_2_count"		"0 1 0 0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dark_minion_3_count"		"0 0 1"
+				"dark_minion_3_count"		"0 0 1 0"
+			}	
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"dark_minion_4_count"		"0 0 0 1"
 			}	
 		}
 	
@@ -5517,6 +5770,27 @@
 					{
 						"UnitName"		"npc_black_arrow_minion_3"
 						"UnitCount"		"%dark_minion_3_count"
+						"SpawnRadius"	"1"
+						"Duration"		"%duration"
+						"Target"
+						{
+							"Center" 	"UNIT"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+						}	
+						"OnSpawn"
+						{
+							"FireSound"
+							{
+								"EffectName" 	"Hero_Medusa.MysticSnake.Target"
+								"Target"		"CASTER"
+							}
+						}
+					}
+	
+					"SpawnUnit"
+					{
+						"UnitName"		"npc_black_arrow_minion_4"
+						"UnitCount"		"%dark_minion_4_count"
 						"SpawnRadius"	"1"
 						"Duration"		"%duration"
 						"Target"
@@ -6686,7 +6960,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"dread_lord_inferno"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -6726,6 +7000,21 @@
 				"var_type"				"FIELD_FLOAT"
 				"stun_creep_duration"	"4"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inferno_1_count"		"1 0 0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inferno_2_count"		"0 1 0"
+			}	
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"inferno_3_count"		"0 0 1"
+			}
 		}
 	
 		"precache"
@@ -6746,7 +7035,53 @@
 			{
 				"Target"            	"POINT"
 				"UnitName"              "npc_dread_lord_inferno"
-				"UnitCount"             "1"
+				"UnitCount"             "%inferno_1_count"
+				"Duration"				"180"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"    "heroes/dread_lord/inferno.lua"
+	        			"Function"      "RenderInferno"
+					}
+	
+					"FireEffect"
+					{
+						"EffectName"        "particles/custom/warlock_rain_of_chaos_start.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}	
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"Target"            	"POINT"
+				"UnitName"              "npc_dread_lord_inferno2"
+				"UnitCount"             "%inferno_2_count"
+				"Duration"				"180"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"    "heroes/dread_lord/inferno.lua"
+	        			"Function"      "RenderInferno"
+					}
+	
+					"FireEffect"
+					{
+						"EffectName"        "particles/custom/warlock_rain_of_chaos_start.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}	
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"Target"            	"POINT"
+				"UnitName"              "npc_dread_lord_inferno3"
+				"UnitCount"             "%inferno_3_count"
 				"Duration"				"180"
 				"OnSpawn"
 				{
@@ -7608,17 +7943,22 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"wolf_1_count"				"2 0 0"
+				"wolf_1_count"				"2 0 0 0"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"wolf_2_count"				"0 2 0"
+				"wolf_2_count"				"0 2 0 0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"wolf_3_count"				"0 0 2"
+				"wolf_3_count"				"0 0 2 0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"wolf_4_count"				"0 0 0 2"
 			}
 			"07"
 			{
@@ -7762,6 +8102,52 @@
 				
 				"Duration"		"%wolf_duration"
 				"UnitCount"		"%wolf_3_count / 2"
+				"UnitLimit"		"2"
+				"GrantsGold"	"1"
+				"GrantsXP"		"1"
+				"SpawnRadius"	"10"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/far_seer/feral_spirit.lua"
+						"Function"		"SetUnitsMoveForward"
+					}				
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+			
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_feral_spirit"
+						"Target" 		"TARGET"
+						"Duration"		"%duration"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_far_seer_calamity_wolf"
+				"Target"
+				{
+					"Center"		    "CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/far_seer/feral_spirit.lua"
+						"Function"      "GetSummonPoints"
+						"Target"		"CASTER"
+						"Count"			"2"
+						"distance"		"%spawn_distance"
+					}
+				}
+				
+				"Duration"		"%wolf_duration"
+				"UnitCount"		"%wolf_4_count / 2"
 				"UnitLimit"		"2"
 				"GrantsGold"	"1"
 				"GrantsXP"		"1"
@@ -8119,19 +8505,24 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lava_spawn_1_count"		"1 0 0"
+				"lava_spawn_1_count"		"1 0 0 0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lava_spawn_2_count"		"0 1 0"
+				"lava_spawn_2_count"		"0 1 0 0"
 			}
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lava_spawn_3_count"		"0 0 1"
+				"lava_spawn_3_count"		"0 0 1 0"
 			}
 			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"lava_spawn_4_count"		"0 0 0 1"
+			}
+			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"spawn_distance"			"250"
@@ -8264,6 +8655,56 @@
 				
 				"Duration"		"%lava_spawn_duration"
 				"UnitCount"		"%lava_spawn_3_count"
+				"GrantsGold"	"1"
+				"GrantsXP"		"1"
+				"SpawnRadius"	"10"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/firelord/summon_lava_spawn.lua"
+						"Function"		"SetUnitsMoveForward"
+					}				
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+			
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_lava_spawn"
+						"Target" 		"TARGET"
+					}
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_lava_spawn_replicate"
+						"Target" 		"TARGET"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"firelord_lava_spawn4"
+				"Target"
+				{
+					"Center"		    "CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/firelord/summon_lava_spawn.lua"
+						"Function"      "GetSummonPoints"
+						"Target"		"CASTER"
+						"Count"			"1"
+						"distance"		"%spawn_distance"
+					}
+				}
+				
+				"Duration"		"%lava_spawn_duration"
+				"UnitCount"		"%lava_spawn_4_count"
 				"GrantsGold"	"1"
 				"GrantsXP"		"1"
 				"SpawnRadius"	"10"
@@ -8840,7 +9281,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"keeper_force_of_nature"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -8867,7 +9308,7 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"treant_count"	"2 3 4"
+				"treant_count"	"2 3 4 6"
 			}
 			"02"
 			{
@@ -8877,7 +9318,7 @@
 			"03"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"radius"		"150 225 300"
+				"radius"		"150 225 300 375"
 			}
 		}
 	
@@ -10573,7 +11014,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"naga_sea_witch_tornado"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -10587,7 +11028,6 @@
 		"AbilityCooldown"				"120"
 	
 		"AbilityManaCost"				"200"
-		"AbilityDamage"					"75 130 200"
 	
 		"AbilityChannelTime" 			"40"
 		"AoERadius"						"%outside_radius"
@@ -10623,7 +11063,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dps_to_buildings_center"	"50"
+				"dps_to_buildings_center"	"50 75 100"
 			}
 			"05"
 			{
@@ -10765,7 +11205,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dps_to_buildings_center"	"50"
+				"dps_to_buildings_center"	"50 60 70"
 			}
 			"05"
 			{
@@ -11005,340 +11445,6 @@
 						"Damage"		"%dps_to_buildings_outside"
 					}
 				}
-			}
-		}
-	}
-	// Night Elf Buildings
-	// nightelf_ancient_of_war - No requirements
-	// nightelf_ancient_of_lore - Requires Tree of Ages and Hunters Hall
-	// nightelf_ancient_of_wind - Requires Tree of Ages
-	// nightelf_ancient_protector - Requires Hunters Hall
-	// nightelf_chimaera_roost - Requires Tree of Eternity and Ancient of the Wind
-	
-	// Item Abilities
-	// nightelf_tree_of_life - No requirements
-		// nightelf_tree_of_ages - Upgrade
-		// nightelf_tree_of_eternity - Upgrade, Requires Altar of Elders
-	// nightelf_altar_of_elders - No requirements
-	// nightelf_hunters_hall - No requirements
-	// nightelf_moon_well - No requirements
-	// nightelf_ancient_of_wonders - No requirements
-	
-	// nightelf_entangled_gold_mine - Ability through Tree of Life/Ages/Eternity
-	
-	
-	// This ability fills the peasant slot with undroppable build items
-	"build_nightelf_items"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"MaxLevel" 						"1"
-	
-		"OnUpgrade"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"buildings/items.lua"
-				"Function"		"GiveNightElfBuildingItems"
-			}
-		}
-	}
-	
-	"nightelf_build_ancient_of_war"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_of_war"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	
-		"AbilityCastPoint"				"0"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"5"
-		"BuildTime"						"60.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool. 
-		"CancelsBuildingGhost"			"1" //bool
-	
-		"UnitName"						"nightelf_ancient_of_war"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"160"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"60.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"160"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"60"
-			}
-		}
-		
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"abilities.lua"
-				"Function"		"build"
-			}
-		}
-	}
-	
-	"nightelf_build_ancient_of_lore_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_of_lore"
-		"MaxLevel" 						"0"
-	}
-	
-	"nightelf_build_ancient_of_lore"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_of_lore"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityGoldCost"				"180"
-		"AbilityUpgradeGoldCost"		"0"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"5" 
-		"BuildTime"						"70.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool. 
-		"CancelsBuildingGhost"			"1" //bool
-	
-		"UnitName"						"nightelf_ancient_of_lore"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"140"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"70.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"140"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"60"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"abilities.lua"
-				"Function"		"build"
-			}
-		}
-	}
-	
-	
-	"nightelf_build_ancient_of_wind_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_of_wind"
-		"MaxLevel" 						"0"
-	}
-	
-	"nightelf_build_ancient_of_wind"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_of_wind"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityGoldCost"				"180"
-		"AbilityUpgradeGoldCost"		"0"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"5" 
-		"BuildTime"						"70.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool. 
-		"CancelsBuildingGhost"			"1" //bool
-	
-		"UnitName"						"nightelf_ancient_of_wind"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"140"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"70.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"140"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"60"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"abilities.lua"
-				"Function"		"build"
-			}
-		}
-	}
-	
-	"nightelf_build_ancient_protector_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_protector"
-		"MaxLevel" 						"0"
-	}
-	
-	"nightelf_build_ancient_protector"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_ancient_protector"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityGoldCost"				"180"
-		"AbilityUpgradeGoldCost"		"0"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"5" 
-		"BuildTime"						"70.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool. 
-		"CancelsBuildingGhost"			"1" //bool
-	
-		"UnitName"						"nightelf_ancient_protector"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"140"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"70.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"140"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"60"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"abilities.lua"
-				"Function"		"build"
-			}
-		}
-	}
-	
-	"nightelf_build_chimaera_roost_disabled"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_chimaera_roost"
-		"MaxLevel" 						"0"
-	}
-	
-	"nightelf_build_chimaera_roost"
-	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"nightelf_build_chimaera_roost"
-		"MaxLevel" 						"1"
-	
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityGoldCost"				"180"
-		"AbilityUpgradeGoldCost"		"0"
-	
-		// BuildingHelper info
-		"Building"						"1" //bool
-		"BuildingSize"					"5" 
-		"BuildTime"						"70.0"
-		"AbilityCastRange"				"200"
-		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
-		"PlayerCanControl"				"1" //bool. 
-		"CancelsBuildingGhost"			"1" //bool
-	
-		"UnitName"						"nightelf_chimaera_roost"
-		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"140"
-		// End of BuildingHelper info
-	
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"70.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"140"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"60"
-			}
-		}
-	
-		"OnSpellStart"
-		{
-			"RunScript"
-			{
-				"ScriptFile"	"abilities.lua"
-				"Function"		"build"
 			}
 		}
 	}
@@ -12871,7 +12977,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pit_lord_doom"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -12992,7 +13098,7 @@
 							"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
 						}
 						"Duration"		"%doom_guard_duration"
-						"UnitCount"		"1"
+						"UnitCount"		"%doom_guard_1_count"
 						"UnitLimit"		"0"
 						"GrantsGold"	"1"
 						"GrantsXP"		"1"
@@ -13020,7 +13126,85 @@
 								"Target"			"TARGET"
 							}			
 						}
-					}				
+					}
+	
+					"SpawnUnit"
+					{
+						"UnitName"		"npc_doom_guard2"
+						"Target"
+						{
+							"Center" 	"UNIT"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+						}
+						"Duration"		"%doom_guard_duration"
+						"UnitCount"		"%doom_guard_2_count"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+					
+							"FireEffect"
+							{
+								"EffectName"        "particles/units/heroes/hero_doom_bringer/doom_bringer_lvl_death.vpcf"
+								"EffectAttachType"  "follow_origin"
+								"Target"            "TARGET"
+							}
+	
+							"FireEffect"
+							{
+								"EffectName"        "particles/econ/items/doom/doom_f2p_death_effect/doom_bringer_f2p_death.vpcf"
+								"EffectAttachType"  "follow_origin"
+								"Target"			"TARGET"
+							}			
+						}
+					}	
+	
+					"SpawnUnit"
+					{
+						"UnitName"		"npc_doom_guard3"
+						"Target"
+						{
+							"Center" 	"UNIT"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+						}
+						"Duration"		"%doom_guard_duration"
+						"UnitCount"		"%doom_guard_3_count"
+						"UnitLimit"		"0"
+						"GrantsGold"	"1"
+						"GrantsXP"		"1"
+						"SpawnRadius"	"10"
+						"OnSpawn"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_phased"
+								"Target"		"TARGET"
+								"Duration"		"0.03"
+							}
+					
+							"FireEffect"
+							{
+								"EffectName"        "particles/units/heroes/hero_doom_bringer/doom_bringer_lvl_death.vpcf"
+								"EffectAttachType"  "follow_origin"
+								"Target"            "TARGET"
+							}
+	
+							"FireEffect"
+							{
+								"EffectName"        "particles/econ/items/doom/doom_f2p_death_effect/doom_bringer_f2p_death.vpcf"
+								"EffectAttachType"  "follow_origin"
+								"Target"			"TARGET"
+							}			
+						}
+					}	
 				}		
 			}
 		}	
@@ -13905,19 +14089,24 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"owl_1_count"				"1 0 0"
+				"owl_1_count"				"1 0 0 0"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"owl_2_count"				"0 1 0"
+				"owl_2_count"				"0 1 0 0"
 			}
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"owl_3_count"				"0 0 1"
+				"owl_3_count"				"0 0 1 0"
 			}
 			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"owl_4_count"				"0 0 0 1"
+			}
+			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"spawn_distance"			"150"
@@ -14034,6 +14223,49 @@
 				
 				"Duration"		"%owl_duration"
 				"UnitCount"		"%owl_3_count"
+				"UnitLimit"		"0"
+				"GrantsGold"	"0"
+				"GrantsXP"		"0"
+				"SpawnRadius"	"10"
+				"OnSpawn"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/potm/scout.lua"
+						"Function"		"SetUnitsMoveForward"
+					}				
+	
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+			
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_owl_scout"
+						"Target" 		"TARGET"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_potm_owl_4"
+				"Target"
+				{
+					"Center"				"CASTER"
+					"ScriptSelectPoints"
+					{
+						"ScriptFile"    "heroes/potm/scout.lua"
+	        			"Function"      "SummonLocation"
+						"Target"		"CASTER"
+					}
+				}
+				
+				"Duration"		"%owl_duration"
+				"UnitCount"		"%owl_4_count"
 				"UnitLimit"		"0"
 				"GrantsGold"	"0"
 				"GrantsXP"		"0"
@@ -14872,7 +15104,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"shadow_hunter_serpent_ward"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
@@ -14910,17 +15142,22 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"plague_ward_1_count"	"1 0 0"
+				"plague_ward_1_count"	"1 0 0 0"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"plague_ward_2_count"	"0 1 0"
+				"plague_ward_2_count"	"0 1 0 0"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"plague_ward_3_count"	"0 0 1"
+				"plague_ward_3_count"	"0 0 1 0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"plague_ward_4_count"	"0 0 0 1"
 			}
 		}
 	
@@ -14980,6 +15217,27 @@
 				"UnitName"			"npc_serpent_ward_3"
 				"Target"			"POINT"
 				"UnitCount"			"%plague_ward_3_count"
+				"Duration"			"%duration"
+	
+				"GrantsGold"		"1"
+				"GrantsXP"			"1"
+	
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"			"npc_serpent_ward_4"
+				"Target"			"POINT"
+				"UnitCount"			"%plague_ward_4_count"
 				"Duration"			"%duration"
 	
 				"GrantsGold"		"1"
@@ -17610,7 +17868,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tinker_pocket_factory"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
@@ -17724,12 +17982,12 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"				"3"
+		"MaxLevel"				"4"
 	
 		"AbilityCastRange"		"100"
 		"AbilityCastPoint"		"0.0"
 	
-		"AbilityDamage"			"30 60 80"
+		"AbilityDamage"			"30 60 80 100"
 	
 		"AbilitySpecial"
 		{
@@ -18384,6 +18642,21 @@
 				"var_type"	"FIELD_INTEGER"
 				"duration"	"180"
 			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"avatar_1_count"			"1 0 0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"avatar_2_count"			"0 1 0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"avatar_3_count"			"0 0 1"
+			}
 		}
 	
 		"OnSpellStart"
@@ -18391,7 +18664,41 @@
 			"SpawnUnit"
 			{
 				"UnitName"		"npc_avatar_of_vengeance"
-				"UnitCount"		"1"
+				"UnitCount"		"%avatar_1_count"
+				"SpawnRadius"	"100"
+				"Duration"		"%duration"
+				"Target"		"CASTER"
+				"OnSpawn"
+				{
+					"FireSound"
+					{
+						"EffectName" "Hero_Spectre.Haunt"
+						"Target"	 "CASTER"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_avatar_of_vengeance2"
+				"UnitCount"		"%avatar_2_count"
+				"SpawnRadius"	"100"
+				"Duration"		"%duration"
+				"Target"		"CASTER"
+				"OnSpawn"
+				{
+					"FireSound"
+					{
+						"EffectName" "Hero_Spectre.Haunt"
+						"Target"	 "CASTER"
+					}
+				}
+			}
+	
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_avatar_of_vengeance3"
+				"UnitCount"		"%avatar_3_count"
 				"SpawnRadius"	"100"
 				"Duration"		"%duration"
 				"Target"		"CASTER"

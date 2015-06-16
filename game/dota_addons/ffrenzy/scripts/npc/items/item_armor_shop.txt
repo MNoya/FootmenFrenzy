@@ -1,0 +1,54 @@
+	//=================================================================================================================
+	// Crown of Kings
+	//=================================================================================================================
+	"item_crown_of_kings"
+	{
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityTextureName" 			"item_crown_of_kings"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemCost"						"1150"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"7"
+			}
+			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"7"
+			}
+			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"7"
+			}
+			
+		}
+	}
