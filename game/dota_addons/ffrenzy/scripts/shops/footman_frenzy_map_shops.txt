@@ -40,11 +40,16 @@
 	"attributes"
 	{
 		"item"			"item_crown_of_kings"
+		"item"			"item_belt_of_giant_strength"
+		"item"			"item_boots_of_quelthalas"
+		"item"			"item_wizards_robe"
+		"item"			"item_quaithes_mask"
+		"item"			"item_circlet_of_royalty"
+		"item"			"item_precept_of_mana"
 	}
 
 	"weapons_armor"
 	{
-		//"item"		"item_ring_of_protection"
 		"item"			"item_claws_of_attack"
 		"item"			"item_orb_of_frost"
 		"item"			"item_orb_of_lightning"
