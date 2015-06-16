@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"keeper_force_of_nature"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -37,7 +37,7 @@
 		"01"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"treant_count"	"2 3 4"
+			"treant_count"	"2 3 4 6"
 		}
 		"02"
 		{
@@ -47,7 +47,7 @@
 		"03"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"radius"		"150 225 300"
+			"radius"		"150 225 300 375"
 		}
 	}
 

@@ -8,7 +8,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"pit_lord_doom"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -129,7 +129,7 @@
 						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
 					}
 					"Duration"		"%doom_guard_duration"
-					"UnitCount"		"1"
+					"UnitCount"		"%doom_guard_1_count"
 					"UnitLimit"		"0"
 					"GrantsGold"	"1"
 					"GrantsXP"		"1"
@@ -157,7 +157,85 @@
 							"Target"			"TARGET"
 						}			
 					}
-				}				
+				}
+
+				"SpawnUnit"
+				{
+					"UnitName"		"npc_doom_guard2"
+					"Target"
+					{
+						"Center" 	"UNIT"
+						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+					}
+					"Duration"		"%doom_guard_duration"
+					"UnitCount"		"%doom_guard_2_count"
+					"UnitLimit"		"0"
+					"GrantsGold"	"1"
+					"GrantsXP"		"1"
+					"SpawnRadius"	"10"
+					"OnSpawn"
+					{
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_phased"
+							"Target"		"TARGET"
+							"Duration"		"0.03"
+						}
+				
+						"FireEffect"
+						{
+							"EffectName"        "particles/units/heroes/hero_doom_bringer/doom_bringer_lvl_death.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"            "TARGET"
+						}
+
+						"FireEffect"
+						{
+							"EffectName"        "particles/econ/items/doom/doom_f2p_death_effect/doom_bringer_f2p_death.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"			"TARGET"
+						}			
+					}
+				}	
+
+				"SpawnUnit"
+				{
+					"UnitName"		"npc_doom_guard3"
+					"Target"
+					{
+						"Center" 	"UNIT"
+						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+					}
+					"Duration"		"%doom_guard_duration"
+					"UnitCount"		"%doom_guard_3_count"
+					"UnitLimit"		"0"
+					"GrantsGold"	"1"
+					"GrantsXP"		"1"
+					"SpawnRadius"	"10"
+					"OnSpawn"
+					{
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_phased"
+							"Target"		"TARGET"
+							"Duration"		"0.03"
+						}
+				
+						"FireEffect"
+						{
+							"EffectName"        "particles/units/heroes/hero_doom_bringer/doom_bringer_lvl_death.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"            "TARGET"
+						}
+
+						"FireEffect"
+						{
+							"EffectName"        "particles/econ/items/doom/doom_f2p_death_effect/doom_bringer_f2p_death.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"			"TARGET"
+						}			
+					}
+				}	
 			}		
 		}
 	}	

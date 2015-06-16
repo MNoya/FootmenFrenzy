@@ -44,6 +44,21 @@
 			"var_type"	"FIELD_INTEGER"
 			"duration"	"180"
 		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"avatar_1_count"			"1 0 0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"avatar_2_count"			"0 1 0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"avatar_3_count"			"0 0 1"
+		}
 	}
 
 	"OnSpellStart"
@@ -51,7 +66,41 @@
 		"SpawnUnit"
 		{
 			"UnitName"		"npc_avatar_of_vengeance"
-			"UnitCount"		"1"
+			"UnitCount"		"%avatar_1_count"
+			"SpawnRadius"	"100"
+			"Duration"		"%duration"
+			"Target"		"CASTER"
+			"OnSpawn"
+			{
+				"FireSound"
+				{
+					"EffectName" "Hero_Spectre.Haunt"
+					"Target"	 "CASTER"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_avatar_of_vengeance2"
+			"UnitCount"		"%avatar_2_count"
+			"SpawnRadius"	"100"
+			"Duration"		"%duration"
+			"Target"		"CASTER"
+			"OnSpawn"
+			{
+				"FireSound"
+				{
+					"EffectName" "Hero_Spectre.Haunt"
+					"Target"	 "CASTER"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_avatar_of_vengeance3"
+			"UnitCount"		"%avatar_3_count"
 			"SpawnRadius"	"100"
 			"Duration"		"%duration"
 			"Target"		"CASTER"

@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"shadow_hunter_serpent_ward"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
@@ -48,17 +48,22 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"plague_ward_1_count"	"1 0 0"
+			"plague_ward_1_count"	"1 0 0 0"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"plague_ward_2_count"	"0 1 0"
+			"plague_ward_2_count"	"0 1 0 0"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"plague_ward_3_count"	"0 0 1"
+			"plague_ward_3_count"	"0 0 1 0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"plague_ward_4_count"	"0 0 0 1"
 		}
 	}
 
@@ -118,6 +123,27 @@
 			"UnitName"			"npc_serpent_ward_3"
 			"Target"			"POINT"
 			"UnitCount"			"%plague_ward_3_count"
+			"Duration"			"%duration"
+
+			"GrantsGold"		"1"
+			"GrantsXP"			"1"
+
+			"OnSpawn"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"			"npc_serpent_ward_4"
+			"Target"			"POINT"
+			"UnitCount"			"%plague_ward_4_count"
 			"Duration"			"%duration"
 
 			"GrantsGold"		"1"

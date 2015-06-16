@@ -52,19 +52,24 @@
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"owl_1_count"				"1 0 0"
+			"owl_1_count"				"1 0 0 0"
 		}
 		"06"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"owl_2_count"				"0 1 0"
+			"owl_2_count"				"0 1 0 0"
 		}
 		"07"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"owl_3_count"				"0 0 1"
+			"owl_3_count"				"0 0 1 0"
 		}
 		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"owl_4_count"				"0 0 0 1"
+		}
+		"09"
 		{
 			"var_type"					"FIELD_INTEGER"
 			"spawn_distance"			"150"
@@ -181,6 +186,49 @@
 			
 			"Duration"		"%owl_duration"
 			"UnitCount"		"%owl_3_count"
+			"UnitLimit"		"0"
+			"GrantsGold"	"0"
+			"GrantsXP"		"0"
+			"SpawnRadius"	"10"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/potm/scout.lua"
+					"Function"		"SetUnitsMoveForward"
+				}				
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+		
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_owl_scout"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_potm_owl_4"
+			"Target"
+			{
+				"Center"				"CASTER"
+				"ScriptSelectPoints"
+				{
+					"ScriptFile"    "heroes/potm/scout.lua"
+        			"Function"      "SummonLocation"
+					"Target"		"CASTER"
+				}
+			}
+			
+			"Duration"		"%owl_duration"
+			"UnitCount"		"%owl_4_count"
 			"UnitLimit"		"0"
 			"GrantsGold"	"0"
 			"GrantsXP"		"0"

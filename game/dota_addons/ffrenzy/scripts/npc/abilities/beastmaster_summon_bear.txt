@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"beastmaster_summon_bear"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
@@ -61,17 +61,22 @@
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_1_count"			"1 0 0"
+			"bear_1_count"			"1 0 0 0"
 		}
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_2_count"			"0 1 0"
+			"bear_2_count"			"0 1 0 0"
 		}
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_3_count"			"0 0 1"
+			"bear_3_count"			"0 0 1 0"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bear_4_count"			"0 0 0 1"
 		}
 	}
 
@@ -173,6 +178,43 @@
 			}
 
 			"UnitCount"			"%bear_3_count"
+			"Duration"			"%duration"
+
+			"GrantsGold"		"1"
+			"GrantsXP"			"1"
+
+			"OnSpawn"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_beastmaster_bear"
+					"Target"		"TARGET"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"			"npc_beastmaster_raging_bear2"
+			"Target"
+			{
+				"Center"				"CASTER"
+				"ScriptSelectPoints"
+				{
+					"ScriptFile"    "heroes/beastmaster/summon_bear.lua"
+        			"Function"      "SummonLocation"
+					"Target"		"CASTER"
+				}
+			}
+
+			"UnitCount"			"%bear_4_count"
 			"Duration"			"%duration"
 
 			"GrantsGold"		"1"

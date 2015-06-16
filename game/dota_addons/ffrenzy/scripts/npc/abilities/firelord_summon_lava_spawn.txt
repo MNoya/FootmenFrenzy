@@ -54,19 +54,24 @@
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"lava_spawn_1_count"		"1 0 0"
+			"lava_spawn_1_count"		"1 0 0 0"
 		}
 		"06"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"lava_spawn_2_count"		"0 1 0"
+			"lava_spawn_2_count"		"0 1 0 0"
 		}
 		"07"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"lava_spawn_3_count"		"0 0 1"
+			"lava_spawn_3_count"		"0 0 1 0"
 		}
 		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"lava_spawn_4_count"		"0 0 0 1"
+		}
+		"09"
 		{
 			"var_type"					"FIELD_INTEGER"
 			"spawn_distance"			"250"
@@ -199,6 +204,56 @@
 			
 			"Duration"		"%lava_spawn_duration"
 			"UnitCount"		"%lava_spawn_3_count"
+			"GrantsGold"	"1"
+			"GrantsXP"		"1"
+			"SpawnRadius"	"10"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/firelord/summon_lava_spawn.lua"
+					"Function"		"SetUnitsMoveForward"
+				}				
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+		
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_lava_spawn"
+					"Target" 		"TARGET"
+				}
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_lava_spawn_replicate"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"firelord_lava_spawn4"
+			"Target"
+			{
+				"Center"		    "CASTER"
+				"ScriptSelectPoints"
+				{
+					"ScriptFile"    "heroes/firelord/summon_lava_spawn.lua"
+					"Function"      "GetSummonPoints"
+					"Target"		"CASTER"
+					"Count"			"1"
+					"distance"		"%spawn_distance"
+				}
+			}
+			
+			"Duration"		"%lava_spawn_duration"
+			"UnitCount"		"%lava_spawn_4_count"
 			"GrantsGold"	"1"
 			"GrantsXP"		"1"
 			"SpawnRadius"	"10"

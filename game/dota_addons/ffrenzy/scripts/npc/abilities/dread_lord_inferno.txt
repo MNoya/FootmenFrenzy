@@ -8,7 +8,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"dread_lord_inferno"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -48,6 +48,21 @@
 			"var_type"				"FIELD_FLOAT"
 			"stun_creep_duration"	"4"
 		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"inferno_1_count"		"1 0 0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"inferno_2_count"		"0 1 0"
+		}	
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"inferno_3_count"		"0 0 1"
+		}
 	}
 
 	"precache"
@@ -68,7 +83,53 @@
 		{
 			"Target"            	"POINT"
 			"UnitName"              "npc_dread_lord_inferno"
-			"UnitCount"             "1"
+			"UnitCount"             "%inferno_1_count"
+			"Duration"				"180"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"    "heroes/dread_lord/inferno.lua"
+        			"Function"      "RenderInferno"
+				}
+
+				"FireEffect"
+				{
+					"EffectName"        "particles/custom/warlock_rain_of_chaos_start.vpcf"
+					"EffectAttachType"  "follow_origin"
+					"Target"            "TARGET"
+				}	
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"Target"            	"POINT"
+			"UnitName"              "npc_dread_lord_inferno2"
+			"UnitCount"             "%inferno_2_count"
+			"Duration"				"180"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"    "heroes/dread_lord/inferno.lua"
+        			"Function"      "RenderInferno"
+				}
+
+				"FireEffect"
+				{
+					"EffectName"        "particles/custom/warlock_rain_of_chaos_start.vpcf"
+					"EffectAttachType"  "follow_origin"
+					"Target"            "TARGET"
+				}	
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"Target"            	"POINT"
+			"UnitName"              "npc_dread_lord_inferno3"
+			"UnitCount"             "%inferno_3_count"
 			"Duration"				"180"
 			"OnSpawn"
 			{

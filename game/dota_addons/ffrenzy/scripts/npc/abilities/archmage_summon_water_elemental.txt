@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"archmage_summon_water_elemental"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityCooldown"				"20"
@@ -31,23 +31,28 @@
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"damage"				"20 35 45"
+			"damage"				"20 35 45 55"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lvl1_unit_count"		"1 0 0"
+			"lvl1_unit_count"		"1 0 0 0"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lvl2_unit_count"		"0 1 0"
+			"lvl2_unit_count"		"0 1 0 0"
 		}			
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"lvl3_unit_count"		"0 0 1"
-		}		
+			"lvl3_unit_count"		"0 0 1 0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lvl4_unit_count"		"0 0 0 1"
+		}			
 	}
 
 	"precache"
@@ -122,6 +127,36 @@
 		{
 			"UnitName"		"npc_water_elemental_3"
 			"UnitCount"		"%lvl3_unit_count"
+			"SpawnRadius"	"100"
+			"Duration"		"%duration"
+			"Target"		"CASTER"
+			"GrantsGold" 	"1"
+	        "GrantsXP" 		"1"
+			"OnSpawn"
+			{
+				"AttachEffect"
+				{
+					"EffectName"		"particles/units/heroes/hero_morphling/morphling_replicate_finish.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"			"TARGET"
+				}
+				"FireSound"
+				{
+					"EffectName" "Hero_Morphling.Replicate"
+					"Target"			"CASTER"
+				}
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_summoned"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_water_elemental_4"
+			"UnitCount"		"%lvl4_unit_count"
 			"SpawnRadius"	"100"
 			"Duration"		"%duration"
 			"Target"		"CASTER"

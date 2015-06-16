@@ -9,7 +9,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"blood_mage_phoenix"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -52,6 +52,21 @@
 			"var_type"					"FIELD_FLOAT"
 			"negative_regen"			"-5.0"
 		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"phoenix_1_count"			"1 0 0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"phoenix_2_count"			"0 1 0"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"phoenix_3_count"			"0 0 1"
+		}
 	}
 
 	"OnSpellStart"
@@ -77,10 +92,82 @@
 					"distance"		"%spawn_distance"
 				}
 			}
-			"UnitCount"		"1"
+			"UnitCount"		"%phoenix_1_count"
 			"GrantsGold"	"1"
 			"GrantsXP"		"1"
-			"SpawnRadius"	"10"
+			"SpawnRadius"	"100"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/blood_mage/phoenix.lua"
+					"Function"		"SetUnitsMoveForward"
+				}				
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_phoenix2"
+			"Target"
+			{
+				"Center"		    "CASTER"
+				"ScriptSelectPoints"
+				{
+					"ScriptFile"    "heroes/blood_mage/phoenix.lua"
+					"Function"      "SummonLocation"
+					"Target"		"CASTER"
+					"Count"			"1"
+					"distance"		"%spawn_distance"
+				}
+			}
+			"UnitCount"		"%phoenix_2_count"
+			"GrantsGold"	"1"
+			"GrantsXP"		"1"
+			"SpawnRadius"	"100"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/blood_mage/phoenix.lua"
+					"Function"		"SetUnitsMoveForward"
+				}				
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_phoenix3"
+			"Target"
+			{
+				"Center"		    "CASTER"
+				"ScriptSelectPoints"
+				{
+					"ScriptFile"    "heroes/blood_mage/phoenix.lua"
+					"Function"      "SummonLocation"
+					"Target"		"CASTER"
+					"Count"			"1"
+					"distance"		"%spawn_distance"
+				}
+			}
+			"UnitCount"		"%phoenix_3_count"
+			"GrantsGold"	"1"
+			"GrantsXP"		"1"
+			"SpawnRadius"	"100"
 			"OnSpawn"
 			{
 				"RunScript"

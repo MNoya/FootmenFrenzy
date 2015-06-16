@@ -48,17 +48,22 @@
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"wolf_1_count"				"2 0 0"
+			"wolf_1_count"				"2 0 0 0"
 		}
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"wolf_2_count"				"0 2 0"
+			"wolf_2_count"				"0 2 0 0"
 		}
 		"06"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"wolf_3_count"				"0 0 2"
+			"wolf_3_count"				"0 0 2 0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"wolf_4_count"				"0 0 0 2"
 		}
 		"07"
 		{
@@ -202,6 +207,52 @@
 			
 			"Duration"		"%wolf_duration"
 			"UnitCount"		"%wolf_3_count / 2"
+			"UnitLimit"		"2"
+			"GrantsGold"	"1"
+			"GrantsXP"		"1"
+			"SpawnRadius"	"10"
+			"OnSpawn"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/far_seer/feral_spirit.lua"
+					"Function"		"SetUnitsMoveForward"
+				}				
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_phased"
+					"Target"		"TARGET"
+					"Duration"		"0.03"
+				}
+		
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_feral_spirit"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+			}
+		}
+
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_far_seer_calamity_wolf"
+			"Target"
+			{
+				"Center"		    "CASTER"
+				"ScriptSelectPoints"
+				{
+					"ScriptFile"    "heroes/far_seer/feral_spirit.lua"
+					"Function"      "GetSummonPoints"
+					"Target"		"CASTER"
+					"Count"			"2"
+					"distance"		"%spawn_distance"
+				}
+			}
+			
+			"Duration"		"%wolf_duration"
+			"UnitCount"		"%wolf_4_count / 2"
 			"UnitLimit"		"2"
 			"GrantsGold"	"1"
 			"GrantsXP"		"1"

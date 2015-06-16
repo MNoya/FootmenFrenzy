@@ -48,17 +48,22 @@
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"dark_minion_1_count"		"1 0 0"
+			"dark_minion_1_count"		"1 0 0 0"
 		}
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"dark_minion_2_count"		"0 1 0"
+			"dark_minion_2_count"		"0 1 0 0"
 		}
 		"06"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"dark_minion_3_count"		"0 0 1"
+			"dark_minion_3_count"		"0 0 1 0"
+		}	
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"dark_minion_4_count"		"0 0 0 1"
 		}	
 	}
 
@@ -157,6 +162,27 @@
 				{
 					"UnitName"		"npc_black_arrow_minion_3"
 					"UnitCount"		"%dark_minion_3_count"
+					"SpawnRadius"	"1"
+					"Duration"		"%duration"
+					"Target"
+					{
+						"Center" 	"UNIT"
+						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
+					}	
+					"OnSpawn"
+					{
+						"FireSound"
+						{
+							"EffectName" 	"Hero_Medusa.MysticSnake.Target"
+							"Target"		"CASTER"
+						}
+					}
+				}
+
+				"SpawnUnit"
+				{
+					"UnitName"		"npc_black_arrow_minion_4"
+					"UnitCount"		"%dark_minion_4_count"
 					"SpawnRadius"	"1"
 					"Duration"		"%duration"
 					"Target"

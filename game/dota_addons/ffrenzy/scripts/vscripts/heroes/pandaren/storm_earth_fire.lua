@@ -15,12 +15,21 @@ function PrimalSplit( event )
 	-- Set the unit names to create
 	-- EARTH
 	local unit_name_earth = event.unit_name_earth
+	if level > 1 then
+		unit_name_earth = unit_name_earth..level
+	end
 
 	-- STORM
 	local unit_name_storm = event.unit_name_storm
+	if level > 1 then
+		unit_name_storm = unit_name_storm..level
+	end
 
 	-- FIRE
 	local unit_name_fire = event.unit_name_fire
+	if level > 1 then
+		unit_name_fire = unit_name_fire..level
+	end
 
 	-- Set the positions
 	local forwardV = caster:GetForwardVector()
