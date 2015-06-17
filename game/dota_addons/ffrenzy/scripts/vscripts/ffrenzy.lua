@@ -785,8 +785,14 @@ function GameMode:OnPlayerPickHero(keys)
     -- Choose a Position
     local position_name = "player_position_"..playerID
     local base_position_entity = Entities:FindByName(nil, position_name)
+	local tower_a_position_name = "tower_a_player_"..playerID
+    local tower_a_position_entity = Entities:FindByName(nil, tower_a_position_name)
+	local tower_b_position_name = "tower_b_player_"..playerID
+    local tower_b_position_entity = Entities:FindByName(nil, tower_b_position_name)
     if base_position_entity then
         local base_position = base_position_entity:GetAbsOrigin()
+		local tower_a_position = tower_a_position_entity:GetAbsOrigin()
+		local tower_b_position = tower_b_position_entity:GetAbsOrigin()
 
         -- Create the base building
         local building = CreateUnitByName("human_barracks", base_position, true, hero, hero, hero:GetTeamNumber())
@@ -794,6 +800,18 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetOwner(hero)
         building:SetControllableByPlayer(playerID, true)
         building:SetAbsOrigin(base_position)
+		
+		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
+        tower:RemoveModifierByName("modifier_invulnerable")
+        tower:SetOwner(hero)
+        tower:SetControllableByPlayer(playerID, true)
+        tower:SetAbsOrigin(tower_a_position)
+		
+		local tower2 = CreateUnitByName("human_scout_tower", tower_b_position, true, hero, hero, hero:GetTeamNumber())
+        tower2:RemoveModifierByName("modifier_invulnerable")
+        tower2:SetOwner(hero)
+        tower2:SetControllableByPlayer(playerID, true)
+        tower2:SetAbsOrigin(tower_b_position)
 
         -- Move the hero close by
         Timers:CreateTimer(function()

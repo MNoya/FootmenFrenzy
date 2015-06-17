@@ -279,7 +279,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/earthshaker/earthshaker.vmdl"
-	"ModelScale"				"0.8"
+	"ModelScale"				"0.9"
 	"Level"						"5"
 	"HealthBarOffset"			"140"
 	

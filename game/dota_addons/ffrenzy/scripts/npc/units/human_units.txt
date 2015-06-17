@@ -187,7 +187,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/silencer/silencer.vmdl"
-	"ModelScale"				"0.8"
+	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"

@@ -97,7 +97,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/weaver/weaver.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.8"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
 	
@@ -188,7 +188,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/pugna/pugna.vmdl"
-	"ModelScale"				"0.8"
+	"ModelScale"				"0.7"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	
@@ -277,7 +277,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/pudge/pudge.vmdl"
-	"ModelScale"				"0.9"
+	"ModelScale"				"1"
 	"Level"						"4"
 	"HealthBarOffset"			"140"
 	

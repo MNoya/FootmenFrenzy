@@ -211,7 +211,7 @@
 	"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 	"SoundSet"					"Hero_DoomBringer"			
 	"IdleSoundLoop"				"Hero_DoomBringer.IdleLoop"
-+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
 	"IsAncient"					"1"
 	"ConsideredHero"			"1"
 	
