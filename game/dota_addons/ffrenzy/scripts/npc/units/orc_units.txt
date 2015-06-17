@@ -12,7 +12,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/axe/axe.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
 	
@@ -99,7 +99,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/huskar/huskar.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.7"
 	"Level"						"2"
 	"HealthBarOffset"			"140"
 	
@@ -189,7 +189,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/chen/chen.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
 	
@@ -279,7 +279,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/earthshaker/earthshaker.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.8"
 	"Level"						"5"
 	"HealthBarOffset"			"140"
 	

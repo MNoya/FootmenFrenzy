@@ -1,0 +1,124 @@
+
+///////////////////////////////////
+human
+
+footmen
+12-13 dmg
+fast AS
+450 hp
+2 armor
+
+riflemen
+17-23 dmg
+fast attack speed
+500 range
+520 hp
+0 armor
+
+militia
+20-21 dmg
+fast attack speed
+425 hp
+3 armor
+2 at a time
+
+spell breaker
+16-18 dmg
+600 hp
+2 armor
+2 at a time
+feedback passive - 3 mana break
+
+knights
+32-40 dmg
+900 hp
+5 armor
+feedback passive
+bash passive - 35% chance for 25 bonus dmg and 2 sec stun
+
+///////////////////////////////////
+orc
+
+grunt
+26-29 dmg
+average attack speed
+725 hp
+2 armor
+
+head hunter
+26-30 dmg
+average attack speed
+450 range
+450 hp
+0 armor
+
+raider
+33-37 dmg
+fast AS
+700 hp
+0 armor
+
+tauren
+41-44 dmg
+average AS
+1300 hp
+3 armor
+pulverize - 25% chance to do 180 aoe dmg
+
+
+///////////////////////////////////
+undead
+
+16-18 dmg
+fast attack speed
+330 hp
+1 armor
+
+crypt fiend 
+21-26 dmg
+average attack speed
+550 range
+550 hp
+0 armor
+
+skeletal mage
+16-17 dmg
+fast AS
+500 range
+350 hp
+0 armor
+2 at a time
+
+aboms
+46-52 dmg
+fast AS
+1150 hp
+2 armor
+
+///////////////////////////////////
+night elf
+
+archer
+12-14 dmg
+average attack speed
+400 range
+300 hp
+0 armor
+
+
+huntress
+21-23 dmg
+250 range
+average attack speed
+575 hp
+2 armor
+moon glaive - bouncing attacks
+
+dryad
+26-28 dmg
+average attack speed
+400 range
+550 hp
+0 armor
+2 at a time
+
