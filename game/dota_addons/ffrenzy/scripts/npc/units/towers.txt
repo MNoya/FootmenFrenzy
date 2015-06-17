@@ -83,8 +83,9 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"human_magic_sentry"
-	"Ability2"					""
+	"Ability1"					"upgrade_cannon_tower"
+	"Ability2"					"upgrade_arcane_tower"
+	"Ability3"					"human_magic_sentry"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -95,8 +96,8 @@
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"23.0"
-	"AttackDamageMax"			"27.0"
+	"AttackDamageMin"			"76.0"
+	"AttackDamageMax"			"80.0"
 	"AttackRate"				"0.9"
 	"AttackAnimationPoint"		"0.3"
 	"AttackAcquisitionRange"	"700"
@@ -156,9 +157,9 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"human_magic_sentry"
-	"Ability2"					""//aoe attack
-	"Ability6"					""
+	"Ability1"					"upgrade_arcane_tower"
+	"Ability2"					"human_magic_sentry"
+	"Ability3"					""//aoe attack
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -244,8 +245,8 @@
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"8.0"
-	"AttackDamageMax"			"10.0"
+	"AttackDamageMin"			"118.0"
+	"AttackDamageMax"			"130.0"
 	"AttackRate"				"1"
 	"AttackAnimationPoint"		"0.3"
 	"AttackAcquisitionRange"	"800"

@@ -4107,7 +4107,7 @@
 			{
 				"ScriptFile"	"buildings/upgrades.lua"
 				"Function"		"UpgradeBuilding"
-				"UnitName"		"human_guard_tower"
+				"UnitName"		"human_arcane_tower"
 			}
 		}
 	}
@@ -4121,7 +4121,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4141,7 +4141,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4162,7 +4162,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4182,7 +4182,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4223,7 +4223,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"700"
+		"AbilityGoldCost"				"2000"
 	
 		"OnSpellStart"
 		{
@@ -4264,7 +4264,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"4000"
 	
 		"OnSpellStart"
 		{
@@ -4285,7 +4285,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"10000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4305,7 +4305,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"2000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4328,7 +4328,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4348,7 +4348,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4369,7 +4369,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4389,7 +4389,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4430,7 +4430,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"700"
+		"AbilityGoldCost"				"2000"
 	
 		"OnSpellStart"
 		{
@@ -4471,7 +4471,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"4000"
 	
 		"OnSpellStart"
 		{
@@ -4492,7 +4492,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"10000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4512,7 +4512,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"2000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4535,7 +4535,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4555,7 +4555,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4576,7 +4576,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4596,7 +4596,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4637,7 +4637,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"700"
+		"AbilityGoldCost"				"2000"
 	
 		"OnSpellStart"
 		{
@@ -4678,7 +4678,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"4000"
 	
 		"OnSpellStart"
 		{
@@ -4699,7 +4699,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"10000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4719,7 +4719,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"2000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4742,7 +4742,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"500"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4762,7 +4762,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"100"
+		"AbilityGoldCost"				"1050"
 	
 		"OnSpellStart"
 		{
@@ -4783,7 +4783,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4803,7 +4803,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"400"
+		"AbilityGoldCost"				"1400"
 	
 		"OnSpellStart"
 		{
@@ -4844,7 +4844,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"700"
+		"AbilityGoldCost"				"2000"
 	
 		"OnSpellStart"
 		{
@@ -4885,7 +4885,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"1000"
+		"AbilityGoldCost"				"4000"
 	
 		"OnSpellStart"
 		{
@@ -4906,7 +4906,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"10000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
@@ -4926,7 +4926,7 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
-		"AbilityGoldCost"				"2000"
+		"AbilityGoldCost"				"20000"
 	
 		"OnSpellStart"
 		{
