@@ -323,7 +323,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_circlet_of_royalty"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"350"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -386,7 +385,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_precept_of_mana"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"450"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -447,7 +445,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_ring_of_regeneration"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"350"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -508,7 +505,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_ring_of_steel"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"200"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -568,7 +564,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_medallion_of_glim"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"350"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"

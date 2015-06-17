@@ -325,7 +325,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_circlet_of_royalty"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"350"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -388,7 +387,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_precept_of_mana"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"450"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -449,7 +447,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_ring_of_regeneration"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"350"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -510,7 +507,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_ring_of_steel"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"200"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -570,7 +566,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_medallion_of_glim"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"350"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -620,6 +615,358 @@
 				}
 			}
 		}
+	///////////////////////////////////////////////////
+	//Use Id's 1055-1069
+	//////////////////////////////////////////////////
+	
+	
+	//=================================================================================================================
+	// Health Stone
+	//=================================================================================================================
+	"item_health_stone"
+	{
+		"ID"							"1055"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_health_stone"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+		"ItemCost"						"250"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemInitialCharges" 			"1"
+		"ItemPermanent" 				"0"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen"				"1"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_amount"			"900"
+			}
+			
+		}
+		
+		"OnSpellStart"
+		{
+			"Heal"
+			{
+				"Target"        	"CASTER"
+				"HealAmount"		"%heal_amount"
+			}
+			"FireEffect"
+			{
+				"Target"			"CASTER"
+				"EffectName"		"particles/units/heroes/hero_treant/treant_overgrowth_vine_glows_corerope.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+			"FireSound"
+			{
+				"Target" 			"CASTER"
+				"EffectName" 		"DOTA_Item.HealingSalve.Activate"
+			}
+			"SpendCharge"
+			{}		
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_health_stone"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%hp_regen"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Mana Stone
+	//=================================================================================================================
+	"item_mana_stone"
+	{
+		"ID"							"1056"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_mana_stone"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+		"ItemCost"						"250"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemInitialCharges" 			"1"
+		"ItemPermanent" 				"0"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen"				"25"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_restored"			"400"
+			}
+			
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/mana.lua"
+				"Function"			"GiveMana"
+				"Target"			"CASTER"
+				"mana_amount"		"%mana_restored"
+			}
+			"FireEffect"
+			{
+				"Target"				"CASTER"
+				"EffectName"			"particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak_cast.vpcf"
+				"EffectAttachType"		"follow_origin"
+			}
+			"FireSound"
+			{
+				"Target" 		"UNIT"
+				"EffectName" 	"DOTA_Item.ClarityPotion.Activate"
+			}
+			"SpendCharge"
+			{}	
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_mana_stone"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_regen"
+				}
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Potion of Health
+	//=================================================================================================================
+	"item_potion_of_health"
+	{
+		"ID"							"1057"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_flask"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+		"ItemCost"						"125"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemInitialCharges" 			"1"
+		"ItemPermanent" 				"0"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_amount"			"500"
+			}
+			
+		}
+		
+		"OnSpellStart"
+		{
+			"Heal"
+			{
+				"Target"        	"CASTER"
+				"HealAmount"		"%heal_amount"
+			}
+			"FireEffect"
+			{
+				"Target"			"CASTER"
+				"EffectName"		"particles/units/heroes/hero_treant/treant_overgrowth_vine_glows_corerope.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+			"FireSound"
+			{
+				"Target" 			"CASTER"
+				"EffectName" 		"DOTA_Item.HealingSalve.Activate"
+			}
+			"SpendCharge"
+			{}		
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_potion_of_health"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Potion of Mana
+	//=================================================================================================================
+	"item_potion_of_mana"
+	{
+		"ID"							"1058"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_clarity"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+		"ItemCost"						"100"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemInitialCharges" 			"1"
+		"ItemPermanent" 				"0"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_restored"			"400"
+			}
+			
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/mana.lua"
+				"Function"			"GiveMana"
+				"Target"			"CASTER"
+				"mana_amount"		"%mana_restored"
+			}
+			"FireEffect"
+			{
+				"Target"				"CASTER"
+				"EffectName"			"particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak_cast.vpcf"
+				"EffectAttachType"		"follow_origin"
+			}
+			"FireSound"
+			{
+				"Target" 		"UNIT"
+				"EffectName" 	"DOTA_Item.ClarityPotion.Activate"
+			}
+			"SpendCharge"
+			{}	
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_mana_stone"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+			}
+		}
+	}
 	"item_filler"
 	{
 		"BaseClass"             		"item_datadriven"
@@ -2978,7 +3325,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 			
 		"AbilityTextureName" 			"item_periapt_of_vitality"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 		"ItemCost"						"2500"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -3038,7 +3384,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 			
 		"AbilityTextureName" 			"item_shield_of_the_gods"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 		"ItemCost"						"1400"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -3105,7 +3450,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 			
 		"AbilityTextureName" 			"item_runed_bracers"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 		"ItemCost"						"1400"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -3150,6 +3494,374 @@
 				{
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" 			"%spell_resist"
 					"MODIFIER_PROPERTY_EVASION_CONSTANT" 					"%evasion"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Amulet of Spell Shield
+	//=================================================================================================================
+	"item_amulet_of_spell_shield"
+	{
+		"ID"							"1043"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_amulet_of_spell_shield"
+	
+		"ItemCost"						"500"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_cooldown"		"120"
+			}
+			
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/item_sphere.lua"
+				"Function"			"item_sphere_datadriven_on_spell_start"
+				"Duration"			"%block_cooldown"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_sphere_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%bonus_health_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"OnCreated"
+				{			
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_sphere.lua"
+						"Function"			"modifier_item_sphere_datadriven_on_created"
+					}
+				}
+				
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_sphere.lua"
+						"Function"			"modifier_item_sphere_datadriven_on_destroy"
+					}
+				}
+				
+				"ThinkInterval" 		".03"
+				"OnIntervalThink"
+				{
+					//Check if the caster has the correct number of Linken's modifiers on them.  If they have less than they are
+					//supposed to, we can assume that a sphere was popped due to an enemy's targeted spell, and put the player's 
+					//Linken's Spheres on cooldown.
+					"RunScript"
+					{
+						"ScriptFile"			"items/item_sphere.lua"
+						"Function"				"modifier_item_sphere_datadriven_on_interval_think"
+					}
+				}
+			}
+			//A modifier that is applied to a unit when they receive the modifier_item_sphere_target modifier.
+			//So long as they still have that modifier, this one will remain and provide a public face on the modifier icon bar.
+			//This modifier deletes itself when modifier_item_sphere_target no longer exists on the unit.
+			"modifier_item_sphere_datadriven_icon"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				
+				"ThinkInterval" 		".03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"items/item_sphere.lua"
+						"Function"				"modifier_item_sphere_datadriven_icon_on_interval_think"
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	//=================================================================================================================
+	// Claws of Ultimate Devastation
+	//=================================================================================================================
+	"item_claws_of_ultimate_devastation"
+	{
+		"ID"							"1044"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_claws_of_ultimate_devastation"
+	
+		"ItemCost"						"3500"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"100"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_claws_of_ultimate_devastation"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" "%bonus_damage"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Pipe of the Gods
+	//=================================================================================================================
+	"item_pipe_of_the_gods"
+	{
+		"ID"							"1045"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_pipe_of_the_gods"
+	
+		"ItemCost"						"3500"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen_percentage"	"5000"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_pipe_of_the_gods"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
+				}
+			}
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Plate of the Storm Lord
+	//=================================================================================================================
+	"item_plate_of_the_storm_lord"
+	{
+		"ID"							"1046"
+	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass" 					"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"AbilityTextureName" 			"item_plate_of_the_storm_lord"
+	
+		"ItemCost"						"1500"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemShopTags"					"weapons_armor"
+		"ItemQuality"					"weapons_armor"
+	
+		
+		"UIPickupSound"					"Item.PickUpGemShop"
+		"UIDropSound"					"Item.DropGemShop"
+		"WorldDropSound"				"Item.DropGemWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"purge_chance"			"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movespeed_slow"		"-50"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"3"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_to_summons"		"150"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_plate_of_the_storm_lord"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+		
+				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+				}
+	
+				"Orb"
+				{
+					"Priority"			"DOTA_ORB_PRIORITY_ABILITY"
+					"ProjectileName"    "particles/units/heroes/hero_brewmaster/brewmaster_storm_attack.vpcf"
+				}
+	
+				"OnOrbImpact"
+				{
+					"Random"
+					{
+						"Chance"			"%purge_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_item_plate_of_the_storm_lord_purge"
+								"Target" 		"TARGET"
+								"Duration"		"%duration"
+							}
+							"FireEffect"
+							{
+								"EffectName"        "particles/generic_gameplay/generic_purge.vpcf"
+								"EffectAttachType"  "attach_hitloc"
+								"Target"            "TARGET"
+							}
+							"RunScript"
+							{
+								"ScriptFile"	"items/orb_of_lightning.lua"
+								"Function"		"Purge"
+							}
+							"RunScript"
+							{
+								"ScriptFile"	"items/orb_of_lightning.lua"
+								"Function"		"SummonDamage"
+							}
+						}
+					}
+				}
+			}
+	
+			"modifier_item_plate_of_the_storm_lord_purge"
+			{
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movespeed_slow"
 				}
 			}
 		}
@@ -6297,7 +7009,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_claws_of_attack"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"500"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -6351,14 +7062,13 @@
 	
 			// General
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AURA"
 			"BaseClass" 					"item_datadriven"
 	
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_scourge_bone_chimes"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"450"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -6448,7 +7158,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_totem_of_might"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"1200"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -6516,7 +7225,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_maul_of_corruption"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"850"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -6621,7 +7329,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_berserkers_axe"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"850"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"

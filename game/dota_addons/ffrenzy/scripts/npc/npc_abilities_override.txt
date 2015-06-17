@@ -3,7 +3,13 @@
 {
 	"Version"		"1"
 	
-	
+	//=================================================================================================================
+	// Dust of Appearance
+	//=================================================================================================================
+	"item_dust"
+	{
+		"ItemCost"						"100"
+	}
   
 	// -----------------------------------------------------------
 	// - UNCOMMENT ANY ITEM YOU DON'T WANT TO APPEAR IN THE SHOP -
@@ -49,7 +55,7 @@
 	"item_ghost"			"REMOVE"
 	"item_clarity"			"REMOVE"
 	"item_flask"			"REMOVE"
-	"item_dust"			"REMOVE"
+	//"item_dust"			"REMOVE"
 	"item_bottle"			"REMOVE"
 	"item_ward_observer"			"REMOVE"
 	"item_ward_sentry"			"REMOVE"

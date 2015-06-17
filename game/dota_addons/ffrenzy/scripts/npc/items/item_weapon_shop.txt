@@ -19,7 +19,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_claws_of_attack"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"500"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -73,14 +72,13 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AURA"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_scourge_bone_chimes"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"450"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -170,7 +168,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_totem_of_might"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"1200"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -238,7 +235,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_maul_of_corruption"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"850"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -343,7 +339,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_berserkers_axe"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"850"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"

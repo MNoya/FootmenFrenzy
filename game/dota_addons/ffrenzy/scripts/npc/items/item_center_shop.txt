@@ -1,0 +1,352 @@
+///////////////////////////////////////////////////
+//Use Id's 1055-1069
+//////////////////////////////////////////////////
+
+
+//=================================================================================================================
+// Health Stone
+//=================================================================================================================
+"item_health_stone"
+{
+	"ID"							"1055"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_health_stone"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+	"ItemCost"						"250"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"hp_regen"				"1"
+		}
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_amount"			"900"
+		}
+		
+	}
+	
+	"OnSpellStart"
+	{
+		"Heal"
+		{
+			"Target"        	"CASTER"
+			"HealAmount"		"%heal_amount"
+		}
+		"FireEffect"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"particles/units/heroes/hero_treant/treant_overgrowth_vine_glows_corerope.vpcf"
+			"EffectAttachType"	"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 			"CASTER"
+			"EffectName" 		"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}		
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_health_stone"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%hp_regen"
+			}
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Mana Stone
+//=================================================================================================================
+"item_mana_stone"
+{
+	"ID"							"1056"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_mana_stone"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+	"ItemCost"						"250"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"mana_regen"				"25"
+		}
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"mana_restored"			"400"
+		}
+		
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/mana.lua"
+			"Function"			"GiveMana"
+			"Target"			"CASTER"
+			"mana_amount"		"%mana_restored"
+		}
+		"FireEffect"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak_cast.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 		"UNIT"
+			"EffectName" 	"DOTA_Item.ClarityPotion.Activate"
+		}
+		"SpendCharge"
+		{}	
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_mana_stone"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_regen"
+			}
+		}
+	}
+}
+
+//=================================================================================================================
+// Potion of Health
+//=================================================================================================================
+"item_potion_of_health"
+{
+	"ID"							"1057"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_flask"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+	"ItemCost"						"125"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_amount"			"500"
+		}
+		
+	}
+	
+	"OnSpellStart"
+	{
+		"Heal"
+		{
+			"Target"        	"CASTER"
+			"HealAmount"		"%heal_amount"
+		}
+		"FireEffect"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"particles/units/heroes/hero_treant/treant_overgrowth_vine_glows_corerope.vpcf"
+			"EffectAttachType"	"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 			"CASTER"
+			"EffectName" 		"DOTA_Item.HealingSalve.Activate"
+		}
+		"SpendCharge"
+		{}		
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_potion_of_health"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Potion of Mana
+//=================================================================================================================
+"item_potion_of_mana"
+{
+	"ID"							"1058"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_clarity"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+	"ItemCost"						"100"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"mana_restored"			"400"
+		}
+		
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/mana.lua"
+			"Function"			"GiveMana"
+			"Target"			"CASTER"
+			"mana_amount"		"%mana_restored"
+		}
+		"FireEffect"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"particles/units/heroes/hero_keeper_of_the_light/keeper_mana_leak_cast.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 		"UNIT"
+			"EffectName" 	"DOTA_Item.ClarityPotion.Activate"
+		}
+		"SpendCharge"
+		{}	
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_mana_stone"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+		}
+	}
+}
