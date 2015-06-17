@@ -4116,7 +4116,7 @@
 	"upgrade_tier1_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_human"
+		"AbilityTextureName"			"upgrade_riflemen_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4136,7 +4136,7 @@
 	"side_upgrade_tier1_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_human"
+		"AbilityTextureName"			"upgrade_riflemen_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4157,7 +4157,7 @@
 	"upgrade_tier2_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_human"
+		"AbilityTextureName"			"upgrade_militia_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4177,7 +4177,7 @@
 	"side_upgrade_tier2_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_human"
+		"AbilityTextureName"			"upgrade_militia_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4198,7 +4198,7 @@
 	"upgrade_tier3_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_human"
+		"AbilityTextureName"			"upgrade_spell_breaker_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4218,7 +4218,7 @@
 	"side_upgrade_tier3_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_human"
+		"AbilityTextureName"			"upgrade_spell_breaker_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4239,7 +4239,7 @@
 	"upgrade_tier4_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_human"
+		"AbilityTextureName"			"upgrade_knight_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4259,7 +4259,7 @@
 	"side_upgrade_tier4_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_human"
+		"AbilityTextureName"			"upgrade_knight_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4280,7 +4280,7 @@
 	"upgrade_tier5_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_human"
+		"AbilityTextureName"			"upgrade_siege_engine_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4300,7 +4300,7 @@
 	"side_upgrade_tier5_human"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_human"
+		"AbilityTextureName"			"upgrade_siege_engine_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4323,7 +4323,7 @@
 	"upgrade_tier1_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_nightelf"
+		"AbilityTextureName"			"upgrade_archer_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4343,7 +4343,7 @@
 	"side_upgrade_tier1_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_nightelf"
+		"AbilityTextureName"			"upgrade_archer_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4364,7 +4364,7 @@
 	"upgrade_tier2_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_nightelf"
+		"AbilityTextureName"			"upgrade_huntress_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4384,7 +4384,7 @@
 	"side_upgrade_tier2_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_nightelf"
+		"AbilityTextureName"			"upgrade_huntress_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4405,7 +4405,7 @@
 	"upgrade_tier3_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_nightelf"
+		"AbilityTextureName"			"upgrade_druid_of_the_talon_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4425,7 +4425,7 @@
 	"side_upgrade_tier3_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_nightelf"
+		"AbilityTextureName"			"upgrade_druid_of_the_talon_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4446,7 +4446,7 @@
 	"upgrade_tier4_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_nightelf"
+		"AbilityTextureName"			"upgrade_dryad_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4466,7 +4466,7 @@
 	"side_upgrade_tier4_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_nightelf"
+		"AbilityTextureName"			"upgrade_dryad_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4487,7 +4487,7 @@
 	"upgrade_tier5_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_nightelf"
+		"AbilityTextureName"			"upgrade_glaive_thrower_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4507,7 +4507,7 @@
 	"side_upgrade_tier5_nightelf"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_nightelf"
+		"AbilityTextureName"			"upgrade_glaive_thrower_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4530,7 +4530,7 @@
 	"upgrade_tier1_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_orc"
+		"AbilityTextureName"			"upgrade_grunt_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4550,7 +4550,7 @@
 	"side_upgrade_tier1_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_orc"
+		"AbilityTextureName"			"upgrade_grunt_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4571,7 +4571,7 @@
 	"upgrade_tier2_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_orc"
+		"AbilityTextureName"			"upgrade_troll_headhunter_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4591,7 +4591,7 @@
 	"side_upgrade_tier2_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_orc"
+		"AbilityTextureName"			"upgrade_troll_headhunter_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4612,7 +4612,7 @@
 	"upgrade_tier3_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_orc"
+		"AbilityTextureName"			"upgrade_raider_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4632,7 +4632,7 @@
 	"side_upgrade_tier3_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_orc"
+		"AbilityTextureName"			"upgrade_raider_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4653,7 +4653,7 @@
 	"upgrade_tier4_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_orc"
+		"AbilityTextureName"			"upgrade_tauren_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4673,7 +4673,7 @@
 	"side_upgrade_tier4_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_orc"
+		"AbilityTextureName"			"upgrade_tauren_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4694,7 +4694,7 @@
 	"upgrade_tier5_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_orc"
+		"AbilityTextureName"			"upgrade_kodo_beast_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4714,7 +4714,7 @@
 	"side_upgrade_tier5_orc"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_orc"
+		"AbilityTextureName"			"upgrade_kodo_beast_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4737,7 +4737,7 @@
 	"upgrade_tier1_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_undead"
+		"AbilityTextureName"			"upgrade_ghoul_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4757,7 +4757,7 @@
 	"side_upgrade_tier1_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier1_undead"
+		"AbilityTextureName"			"upgrade_ghoul_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4778,7 +4778,7 @@
 	"upgrade_tier2_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_undead"
+		"AbilityTextureName"			"upgrade_crypt_fiend_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4798,7 +4798,7 @@
 	"side_upgrade_tier2_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier2_undead"
+		"AbilityTextureName"			"upgrade_crypt_fiend_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4819,7 +4819,7 @@
 	"upgrade_tier3_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_undead"
+		"AbilityTextureName"			"upgrade_skeletal_mage_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4839,7 +4839,7 @@
 	"side_upgrade_tier3_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier3_undead"
+		"AbilityTextureName"			"upgrade_skeletal_mage_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4860,7 +4860,7 @@
 	"upgrade_tier4_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_undead"
+		"AbilityTextureName"			"upgrade_abomination_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4880,7 +4880,7 @@
 	"side_upgrade_tier4_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier4_undead"
+		"AbilityTextureName"			"upgrade_abomination_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4901,7 +4901,7 @@
 	"upgrade_tier5_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_undead"
+		"AbilityTextureName"			"upgrade_meat_wagon_up"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -4921,7 +4921,7 @@
 	"side_upgrade_tier5_undead"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_tier5_undead"
+		"AbilityTextureName"			"upgrade_meat_wagon_side"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
