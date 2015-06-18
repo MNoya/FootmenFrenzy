@@ -80,6 +80,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier1"
+			"UnitSpawn"		"spawn_rifleman"
 		}
 	}
 }
@@ -100,6 +101,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier1"
+			"UnitSpawn"		"spawn_rifleman"
 		}
 	}
 }
@@ -121,6 +123,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier2"
+			"UnitSpawn"		"spawn_militia"
 		}
 	}
 }
@@ -141,6 +144,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier2"
+			"UnitSpawn"		"spawn_militia"
 		}
 	}
 }
@@ -162,6 +166,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier3"
+			"UnitSpawn"		"spawn_spell_breaker"
 		}
 	}
 }
@@ -182,6 +187,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier3"
+			"UnitSpawn"		"spawn_spell_breaker"
 		}
 	}
 }
@@ -203,6 +209,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier4"
+			"UnitSpawn"		"spawn_knight"
 		}
 	}
 }
@@ -223,6 +230,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier4"
+			"UnitSpawn"		"spawn_knight"
 		}
 	}
 }
@@ -244,6 +252,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier5"
+			"UnitSpawn"		"spawn_siege_engine"
 		}
 	}
 }
@@ -264,6 +273,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_base_tier5"
+			"UnitSpawn"		"spawn_siege_engine"
 		}
 	}
 }
@@ -287,6 +297,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier1"
+			"UnitSpawn"		"spawn_archer"
 		}
 	}
 }
@@ -307,6 +318,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier1"
+			"UnitSpawn"		"spawn_archer"
 		}
 	}
 }
@@ -328,6 +340,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier2"
+			"UnitSpawn"		"spawn_huntress"
 		}
 	}
 }
@@ -348,6 +361,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier2"
+			"UnitSpawn"		"spawn_huntress"
 		}
 	}
 }
@@ -369,6 +383,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier3"
+			"UnitSpawn"		"spawn_druid_of_the_talon"
 		}
 	}
 }
@@ -389,6 +404,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier3"
+			"UnitSpawn"		"spawn_druid_of_the_talon"
 		}
 	}
 }
@@ -410,6 +426,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier4"
+			"UnitSpawn"		"spawn_dryad"
 		}
 	}
 }
@@ -430,6 +447,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier4"
+			"UnitSpawn"		"spawn_dryad"
 		}
 	}
 }
@@ -451,6 +469,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier5"
+			"UnitSpawn"		"spawn_glaive_thrower"
 		}
 	}
 }
@@ -471,6 +490,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"nightelf_base_tier5"
+			"UnitSpawn"		"spawn_glaive_thrower"
 		}
 	}
 }
@@ -494,6 +514,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier1"
+			"UnitSpawn"		"spawn_grunt"
 		}
 	}
 }
@@ -514,6 +535,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier1"
+			"UnitSpawn"		"spawn_grunt"
 		}
 	}
 }
@@ -535,6 +557,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier2"
+			"UnitSpawn"		"spawn_troll_headhunter"
 		}
 	}
 }
@@ -555,6 +578,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier2"
+			"UnitSpawn"		"spawn_troll_headhunter"
 		}
 	}
 }
@@ -576,6 +600,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier3"
+			"UnitSpawn"		"spawn_raider"
 		}
 	}
 }
@@ -596,6 +621,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier3"
+			"UnitSpawn"		"spawn_raider"
 		}
 	}
 }
@@ -617,6 +643,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier4"
+			"UnitSpawn"		"spawn_tauren"
 		}
 	}
 }
@@ -637,6 +664,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier4"
+			"UnitSpawn"		"spawn_tauren"
 		}
 	}
 }
@@ -658,6 +686,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier5"
+			"UnitSpawn"		"spawn_kodo_beast"
 		}
 	}
 }
@@ -678,6 +707,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"orc_base_tier5"
+			"UnitSpawn"		"spawn_kodo_beast"
 		}
 	}
 }
@@ -701,6 +731,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier1"
+			"UnitSpawn"		"spawn_ghoul"
 		}
 	}
 }
@@ -721,6 +752,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier1"
+			"UnitSpawn"		"spawn_ghoul"
 		}
 	}
 }
@@ -742,6 +774,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier2"
+			"UnitSpawn"		"spawn_crypt_fiend"
 		}
 	}
 }
@@ -762,6 +795,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier2"
+			"UnitSpawn"		"spawn_crypt_fiend"
 		}
 	}
 }
@@ -783,6 +817,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier3"
+			"UnitSpawn"		"spawn_skeletal_mage"
 		}
 	}
 }
@@ -803,6 +838,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier3"
+			"UnitSpawn"		"spawn_skeletal_mage"
 		}
 	}
 }
@@ -824,6 +860,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier4"
+			"UnitSpawn"		"spawn_abomination"
 		}
 	}
 }
@@ -844,6 +881,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier4"
+			"UnitSpawn"		"spawn_abomination"
 		}
 	}
 }
@@ -865,6 +903,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier5"
+			"UnitSpawn"		"spawn_meat_wagon"
 		}
 	}
 }
@@ -885,6 +924,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"undead_base_tier5"
+			"UnitSpawn"		"spawn_meat_wagon"
 		}
 	}
 }

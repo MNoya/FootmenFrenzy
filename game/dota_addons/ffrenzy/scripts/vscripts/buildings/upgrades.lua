@@ -6,6 +6,7 @@
 function UpgradeBuilding( event )
 	local caster = event.caster
 	local new_unit = event.UnitName
+	local spawn_ability = event.UnitSpawn
 	local position = caster:GetAbsOrigin()
 	local hero = caster:GetPlayerOwner():GetAssignedHero()
 	local playerID = hero:GetPlayerID()
@@ -31,6 +32,11 @@ function UpgradeBuilding( event )
 	local newRelativeHP = math.ceil(building:GetMaxHealth() * currentHealthPercentage)
 	if newRelativeHP == 0 then newRelativeHP = 1 end --just incase rounding goes wrong
 	building:SetHealth(newRelativeHP)
+	
+	-- Teach spawn ability
+    building:AddAbility(spawn_ability)
+    local ability = building:FindAbilityByName(spawn_ability)
+    ability:SetLevel(1)
 
 end
 

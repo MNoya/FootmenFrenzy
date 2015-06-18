@@ -377,7 +377,7 @@
 		"Ability2"					"side_upgrade_tier1_nightelf"
 		"Ability3"					"side_upgrade_tier1_orc"
 		"Ability4"					"side_upgrade_tier1_undead"
-		"Ability5"					"spawn_rifleman"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -391,8 +391,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -434,7 +436,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/items/furion/treant_flower_1.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -447,7 +449,7 @@
 		"Ability2"					"side_upgrade_tier1_human"
 		"Ability3"					"side_upgrade_tier1_orc"
 		"Ability4"					"side_upgrade_tier1_undead"
-		"Ability5"					"spawn_archer"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -461,8 +463,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -517,7 +521,7 @@
 		"Ability2"					"side_upgrade_tier1_human"
 		"Ability3"					"side_upgrade_tier1_nightelf"
 		"Ability4"					"side_upgrade_tier1_undead"
-		"Ability5"					"spawn_grunt"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -531,8 +535,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -587,7 +593,7 @@
 		"Ability2"					"side_upgrade_tier1_human"
 		"Ability3"					"side_upgrade_tier1_nightelf"
 		"Ability4"					"side_upgrade_tier1_orc"
-		"Ability5"					"spawn_ghoul"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -601,8 +607,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -651,7 +659,7 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
-		"Model"						"models/props_structures/tower_good2.vmdl"
+		"Model"						"models/props_structures/good_barracks_melee002.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
@@ -665,7 +673,7 @@
 		"Ability2"					"side_upgrade_tier2_nightelf"
 		"Ability3"					"side_upgrade_tier2_orc"
 		"Ability4"					"side_upgrade_tier2_undead"
-		"Ability5"					"spawn_militia"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -679,8 +687,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -722,7 +732,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/items/furion/treant/father_treant/father_treant.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -735,7 +745,7 @@
 		"Ability2"					"side_upgrade_tier2_human"
 		"Ability3"					"side_upgrade_tier2_orc"
 		"Ability4"					"side_upgrade_tier2_undead"
-		"Ability5"					"spawn_huntress"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -749,8 +759,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -792,7 +804,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/bad_column001.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -805,7 +817,7 @@
 		"Ability2"					"side_upgrade_tier2_human"
 		"Ability3"					"side_upgrade_tier2_nightelf"
 		"Ability4"					"side_upgrade_tier2_undead"
-		"Ability5"					"spawn_troll_headhunter"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -819,8 +831,10 @@
 	
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -875,7 +889,7 @@
 		"Ability2"					"side_upgrade_tier2_human"
 		"Ability3"					"side_upgrade_tier2_nightelf"
 		"Ability4"					"side_upgrade_tier2_orc"
-		"Ability5"					"spawn_crypt_fiend"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -889,8 +903,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -939,7 +955,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/good_ancient001.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"0.6"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -952,7 +968,7 @@
 		"Ability2"					"side_upgrade_tier3_nightelf"
 		"Ability3"					"side_upgrade_tier3_orc"
 		"Ability4"					"side_upgrade_tier3_undead"
-		"Ability5"					"spawn_spell_breaker"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -966,8 +982,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1009,7 +1027,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/items/furion/treant/furion_treant_nelum_red/furion_treant_nelum_red.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1022,7 +1040,7 @@
 		"Ability2"					"side_upgrade_tier3_human"
 		"Ability3"					"side_upgrade_tier3_orc"
 		"Ability4"					"side_upgrade_tier3_undead"
-		"Ability5"					"spawn_druid_of_the_talon"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1036,8 +1054,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1079,7 +1099,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/bad_ancient001.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1092,7 +1112,7 @@
 		"Ability2"					"side_upgrade_tier3_human"
 		"Ability3"					"side_upgrade_tier3_nightelf"
 		"Ability4"					"side_upgrade_tier3_undead"
-		"Ability5"					"spawn_raider"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1106,8 +1126,10 @@
 	
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1149,7 +1171,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/heroes/undying/undying_tower.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.3"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1162,7 +1184,7 @@
 		"Ability2"					"side_upgrade_tier3_human"
 		"Ability3"					"side_upgrade_tier3_nightelf"
 		"Ability4"					"side_upgrade_tier3_orc"
-		"Ability5"					"spawn_skeletal_mage"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1176,8 +1198,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1226,7 +1250,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/good_ancient001_dest_lvl1.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"0.6"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1239,7 +1263,7 @@
 		"Ability2"					"side_upgrade_tier4_nightelf"
 		"Ability3"					"side_upgrade_tier4_orc"
 		"Ability4"					"side_upgrade_tier4_undead"
-		"Ability5"					"spawn_knight"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1253,8 +1277,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1296,7 +1322,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/items/furion/treant/primeval_treant/primeval_treant.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.5"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1309,7 +1335,7 @@
 		"Ability2"					"side_upgrade_tier4_human"
 		"Ability3"					"side_upgrade_tier4_orc"
 		"Ability4"					"side_upgrade_tier4_undead"
-		"Ability5"					"spawn_dryad"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1323,8 +1349,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1366,7 +1394,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/bad_barracks001_destruction.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"0.9"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1379,7 +1407,7 @@
 		"Ability2"					"side_upgrade_tier4_human"
 		"Ability3"					"side_upgrade_tier4_nightelf"
 		"Ability4"					"side_upgrade_tier4_undead"
-		"Ability5"					"spawn_tauren"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1393,8 +1421,10 @@
 	
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1436,7 +1466,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_building"
 		"Model"						"models/items/undying/idol_of_ruination/idol_tower.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"1.3"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -1449,7 +1479,7 @@
 		"Ability2"					"side_upgrade_tier4_human"
 		"Ability3"					"side_upgrade_tier4_nightelf"
 		"Ability4"					"side_upgrade_tier4_orc"
-		"Ability5"					"spawn_abomination"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1463,8 +1493,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1526,7 +1558,7 @@
 		"Ability2"					"side_upgrade_tier5_nightelf"
 		"Ability3"					"side_upgrade_tier5_orc"
 		"Ability4"					"side_upgrade_tier5_undead"
-		"Ability5"					"spawn_siege_engine"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1540,8 +1572,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1596,7 +1630,7 @@
 		"Ability2"					"side_upgrade_tier5_human"
 		"Ability3"					"side_upgrade_tier5_orc"
 		"Ability4"					"side_upgrade_tier5_undead"
-		"Ability5"					"spawn_glaive_thrower"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1610,8 +1644,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1666,7 +1702,7 @@
 		"Ability2"					"side_upgrade_tier5_human"
 		"Ability3"					"side_upgrade_tier5_nightelf"
 		"Ability4"					"side_upgrade_tier5_undead"
-		"Ability5"					"spawn_kodo_beast"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1680,8 +1716,10 @@
 	
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1736,7 +1774,7 @@
 		"Ability2"					"side_upgrade_tier5_human"
 		"Ability3"					"side_upgrade_tier5_nightelf"
 		"Ability4"					"side_upgrade_tier5_orc"
-		"Ability5"					"spawn_meat_wagon"
+		"Ability5"					""
 		"Ability6"					"ability_building"
 		
 		// Stats
@@ -1750,8 +1788,10 @@
 		
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -1812,6 +1852,8 @@
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
 		"SelectionGroup"            "Human_Footmen"
+		"SoundSet"					"Hero_DragonKnight"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -4692,6 +4734,8 @@
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
 		"SelectionGroup"            "Human_Riflemen"
+		"SoundSet"					"Hero_Sniper"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -4778,11 +4822,13 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/creeps/lane_creeps/creep_good_melee/creep_good_melee.vmdl"
+		"Model"						"models/heroes/meepo/meepo.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Human_Militia"
+		"SoundSet"					"Hero_Meepo"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -4867,6 +4913,8 @@
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
 		"SelectionGroup"            "Human_Spell_Breakers"
+		"SoundSet"					"Hero_Silencer"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -4959,6 +5007,8 @@
 		"HealthBarOffset"			"180"
 		"HasInventory"				"1"
 		"SelectionGroup"            "Human_Knights"
+		"SoundSet"					"Hero_ChaosKnight"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5285,6 +5335,8 @@
 		"ModelScale"				"0.8"
 		"Level"						"2"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Windrunner"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5378,6 +5430,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Luna"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5471,6 +5525,8 @@
 		"ModelScale"				"0.6"
 		"Level"						"2"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Furion"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5562,6 +5618,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Enchantress"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_enchantress.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5740,6 +5798,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Axe"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5827,6 +5887,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"2"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Huskar"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5917,6 +5979,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Chen"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -6007,6 +6071,8 @@
 		"ModelScale"				"0.9"
 		"Level"						"5"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_EarthShaker"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_earth_shaker.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8195,7 +8261,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"500"
+		"StatusHealth"				"1000"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
@@ -8246,8 +8312,8 @@
 		"AttackDamageMax"			"111.0"
 		"AttackRate"				"2.5"
 		"AttackAnimationPoint"		"0.3"
-		"AttackAcquisitionRange"	"800"
-		"AttackRange"				"800"
+		"AttackAcquisitionRange"	"700"
+		"AttackRange"				"700"
 		"ProjectileModel"			"particles/units/heroes/hero_techies/techies_base_attack.vpcf"
 		"ProjectileSpeed"			"700"
 		
@@ -8269,7 +8335,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"
+		"StatusHealth"				"1250"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
@@ -8344,7 +8410,7 @@
 		
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"500"
+		"StatusHealth"				"1500"
 		"StatusHealthRegen"			"0"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
@@ -8377,6 +8443,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"2"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_LifeStealer"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8463,6 +8531,8 @@
 		"ModelScale"				"0.8"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Weaver"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8554,6 +8624,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Pugna"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8643,6 +8715,8 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"HealthBarOffset"			"140"
+		"SoundSet"					"Hero_Pudge"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
 		
 		// Abilities
 		//----------------------------------------------------------------

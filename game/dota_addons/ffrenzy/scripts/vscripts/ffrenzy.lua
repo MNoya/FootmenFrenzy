@@ -60,11 +60,16 @@ function GameMode:InitGameMode()
     print('[FFrenzy] Starting to load gamemode...')
 
     -- MultiTeam
-    self.m_TeamColors = {}
-    self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 255, 0, 0 }
-    self.m_TeamColors[DOTA_TEAM_BADGUYS] = { 0, 255, 0 }
-    self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 0, 0, 255 }
-    self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 255, 128, 64 }
+    --self.m_TeamColors = {}
+    --self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --		Teal
+    --self.m_TeamColors[DOTA_TEAM_BADGUYS] = { 243, 201, 9 }  --		Yellow
+    --self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 52, 85, 255 }  --		Blue
+    --self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 101, 212, 19 }  --		Green
+	
+	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 )  --		Teal
+	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )  --		Yellow
+	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 52, 85, 255 )  --		Blue
+	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 101, 212, 19 )  --		Green
     
     self.m_VictoryMessages = {}
     self.m_VictoryMessages[DOTA_TEAM_GOODGUYS] = "#VictoryMessage_GoodGuys"
@@ -807,14 +812,18 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetControllableByPlayer(playerID, true)
         building:SetAbsOrigin(base_position)
 		
+		CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		
 		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
-        tower:RemoveModifierByName("modifier_invulnerable")
+		tower:RemoveModifierByName("modifier_invulnerable")
         tower:SetOwner(hero)
         tower:SetControllableByPlayer(playerID, true)
         tower:SetAbsOrigin(tower_a_position)
 		
 		local tower2 = CreateUnitByName("human_scout_tower", tower_b_position, true, hero, hero, hero:GetTeamNumber())
-        tower2:RemoveModifierByName("modifier_invulnerable")
+		tower2:RemoveModifierByName("modifier_invulnerable")
         tower2:SetOwner(hero)
         tower2:SetControllableByPlayer(playerID, true)
         tower2:SetAbsOrigin(tower_b_position)
@@ -883,7 +892,7 @@ function GameMode:OnEntityKilled( keys )
             corpse.unit_name = killedUnit:GetUnitName()
 
             -- Set custom corpse visible
-            Timers:CreateTimer(3, function() corpse:RemoveNoDraw() end)
+            --Timers:CreateTimer(3, function() corpse:RemoveNoDraw() end)
 
             -- Remove itself after the corpse duration
             Timers:CreateTimer(CORPSE_DURATION, function()

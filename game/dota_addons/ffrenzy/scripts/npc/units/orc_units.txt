@@ -15,6 +15,8 @@
 	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
+	"SoundSet"					"Hero_Axe"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -102,6 +104,8 @@
 	"ModelScale"				"0.7"
 	"Level"						"2"
 	"HealthBarOffset"			"140"
+	"SoundSet"					"Hero_Huskar"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -192,6 +196,8 @@
 	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
+	"SoundSet"					"Hero_Chen"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -282,6 +288,8 @@
 	"ModelScale"				"0.9"
 	"Level"						"5"
 	"HealthBarOffset"			"140"
+	"SoundSet"					"Hero_EarthShaker"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_earth_shaker.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------

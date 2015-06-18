@@ -24,6 +24,8 @@
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
 	"SelectionGroup"            "Human_Footmen"
+	"SoundSet"					"Hero_DragonKnight"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------

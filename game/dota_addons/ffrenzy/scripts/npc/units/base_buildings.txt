@@ -24,7 +24,7 @@
 	"Ability2"					"side_upgrade_tier1_nightelf"
 	"Ability3"					"side_upgrade_tier1_orc"
 	"Ability4"					"side_upgrade_tier1_undead"
-	"Ability5"					"spawn_rifleman"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -38,8 +38,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -81,7 +83,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/items/furion/treant_flower_1.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -94,7 +96,7 @@
 	"Ability2"					"side_upgrade_tier1_human"
 	"Ability3"					"side_upgrade_tier1_orc"
 	"Ability4"					"side_upgrade_tier1_undead"
-	"Ability5"					"spawn_archer"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -108,8 +110,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -164,7 +168,7 @@
 	"Ability2"					"side_upgrade_tier1_human"
 	"Ability3"					"side_upgrade_tier1_nightelf"
 	"Ability4"					"side_upgrade_tier1_undead"
-	"Ability5"					"spawn_grunt"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -178,8 +182,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -234,7 +240,7 @@
 	"Ability2"					"side_upgrade_tier1_human"
 	"Ability3"					"side_upgrade_tier1_nightelf"
 	"Ability4"					"side_upgrade_tier1_orc"
-	"Ability5"					"spawn_ghoul"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -248,8 +254,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -298,7 +306,7 @@
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
-	"Model"						"models/props_structures/tower_good2.vmdl"
+	"Model"						"models/props_structures/good_barracks_melee002.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
@@ -312,7 +320,7 @@
 	"Ability2"					"side_upgrade_tier2_nightelf"
 	"Ability3"					"side_upgrade_tier2_orc"
 	"Ability4"					"side_upgrade_tier2_undead"
-	"Ability5"					"spawn_militia"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -326,8 +334,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -369,7 +379,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/items/furion/treant/father_treant/father_treant.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -382,7 +392,7 @@
 	"Ability2"					"side_upgrade_tier2_human"
 	"Ability3"					"side_upgrade_tier2_orc"
 	"Ability4"					"side_upgrade_tier2_undead"
-	"Ability5"					"spawn_huntress"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -396,8 +406,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -439,7 +451,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/bad_column001.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -452,7 +464,7 @@
 	"Ability2"					"side_upgrade_tier2_human"
 	"Ability3"					"side_upgrade_tier2_nightelf"
 	"Ability4"					"side_upgrade_tier2_undead"
-	"Ability5"					"spawn_troll_headhunter"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -466,8 +478,10 @@
 
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -522,7 +536,7 @@
 	"Ability2"					"side_upgrade_tier2_human"
 	"Ability3"					"side_upgrade_tier2_nightelf"
 	"Ability4"					"side_upgrade_tier2_orc"
-	"Ability5"					"spawn_crypt_fiend"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -536,8 +550,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -586,7 +602,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/good_ancient001.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.6"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -599,7 +615,7 @@
 	"Ability2"					"side_upgrade_tier3_nightelf"
 	"Ability3"					"side_upgrade_tier3_orc"
 	"Ability4"					"side_upgrade_tier3_undead"
-	"Ability5"					"spawn_spell_breaker"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -613,8 +629,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -656,7 +674,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/items/furion/treant/furion_treant_nelum_red/furion_treant_nelum_red.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -669,7 +687,7 @@
 	"Ability2"					"side_upgrade_tier3_human"
 	"Ability3"					"side_upgrade_tier3_orc"
 	"Ability4"					"side_upgrade_tier3_undead"
-	"Ability5"					"spawn_druid_of_the_talon"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -683,8 +701,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -726,7 +746,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/bad_ancient001.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -739,7 +759,7 @@
 	"Ability2"					"side_upgrade_tier3_human"
 	"Ability3"					"side_upgrade_tier3_nightelf"
 	"Ability4"					"side_upgrade_tier3_undead"
-	"Ability5"					"spawn_raider"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -753,8 +773,10 @@
 
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -796,7 +818,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/heroes/undying/undying_tower.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.3"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -809,7 +831,7 @@
 	"Ability2"					"side_upgrade_tier3_human"
 	"Ability3"					"side_upgrade_tier3_nightelf"
 	"Ability4"					"side_upgrade_tier3_orc"
-	"Ability5"					"spawn_skeletal_mage"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -823,8 +845,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -873,7 +897,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/good_ancient001_dest_lvl1.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.6"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -886,7 +910,7 @@
 	"Ability2"					"side_upgrade_tier4_nightelf"
 	"Ability3"					"side_upgrade_tier4_orc"
 	"Ability4"					"side_upgrade_tier4_undead"
-	"Ability5"					"spawn_knight"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -900,8 +924,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -943,7 +969,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/items/furion/treant/primeval_treant/primeval_treant.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.5"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -956,7 +982,7 @@
 	"Ability2"					"side_upgrade_tier4_human"
 	"Ability3"					"side_upgrade_tier4_orc"
 	"Ability4"					"side_upgrade_tier4_undead"
-	"Ability5"					"spawn_dryad"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -970,8 +996,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -1013,7 +1041,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/bad_barracks001_destruction.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"0.9"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -1026,7 +1054,7 @@
 	"Ability2"					"side_upgrade_tier4_human"
 	"Ability3"					"side_upgrade_tier4_nightelf"
 	"Ability4"					"side_upgrade_tier4_undead"
-	"Ability5"					"spawn_tauren"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -1040,8 +1068,10 @@
 
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -1083,7 +1113,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_building"
 	"Model"						"models/items/undying/idol_of_ruination/idol_tower.vmdl"
-	"ModelScale"				"1"
+	"ModelScale"				"1.3"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
@@ -1096,7 +1126,7 @@
 	"Ability2"					"side_upgrade_tier4_human"
 	"Ability3"					"side_upgrade_tier4_nightelf"
 	"Ability4"					"side_upgrade_tier4_orc"
-	"Ability5"					"spawn_abomination"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -1110,8 +1140,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -1173,7 +1205,7 @@
 	"Ability2"					"side_upgrade_tier5_nightelf"
 	"Ability3"					"side_upgrade_tier5_orc"
 	"Ability4"					"side_upgrade_tier5_undead"
-	"Ability5"					"spawn_siege_engine"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -1187,8 +1219,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -1243,7 +1277,7 @@
 	"Ability2"					"side_upgrade_tier5_human"
 	"Ability3"					"side_upgrade_tier5_orc"
 	"Ability4"					"side_upgrade_tier5_undead"
-	"Ability5"					"spawn_glaive_thrower"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -1257,8 +1291,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -1313,7 +1349,7 @@
 	"Ability2"					"side_upgrade_tier5_human"
 	"Ability3"					"side_upgrade_tier5_nightelf"
 	"Ability4"					"side_upgrade_tier5_undead"
-	"Ability5"					"spawn_kodo_beast"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -1327,8 +1363,10 @@
 
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------
@@ -1383,7 +1421,7 @@
 	"Ability2"					"side_upgrade_tier5_human"
 	"Ability3"					"side_upgrade_tier5_nightelf"
 	"Ability4"					"side_upgrade_tier5_orc"
-	"Ability5"					"spawn_meat_wagon"
+	"Ability5"					""
 	"Ability6"					"ability_building"
 	
 	// Stats
@@ -1397,8 +1435,10 @@
 	
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
 	
 	// Bounty
 	//----------------------------------------------------------------

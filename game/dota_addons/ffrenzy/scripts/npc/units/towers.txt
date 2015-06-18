@@ -123,7 +123,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"500"
+	"StatusHealth"				"1000"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"0"
 	"StatusManaRegen"			"0"
@@ -174,8 +174,8 @@
 	"AttackDamageMax"			"111.0"
 	"AttackRate"				"2.5"
 	"AttackAnimationPoint"		"0.3"
-	"AttackAcquisitionRange"	"800"
-	"AttackRange"				"800"
+	"AttackAcquisitionRange"	"700"
+	"AttackRange"				"700"
 	"ProjectileModel"			"particles/units/heroes/hero_techies/techies_base_attack.vpcf"
 	"ProjectileSpeed"			"700"
 	
@@ -197,7 +197,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"600"
+	"StatusHealth"				"1250"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"0"
 	"StatusManaRegen"			"0"
@@ -272,7 +272,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"500"
+	"StatusHealth"				"1500"
 	"StatusHealthRegen"			"0"
 	"StatusMana"				"0"
 	"StatusManaRegen"			"0"

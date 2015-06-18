@@ -17,6 +17,8 @@
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
 	"SelectionGroup"            "Human_Riflemen"
+	"SoundSet"					"Hero_Sniper"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -103,11 +105,13 @@
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/creeps/lane_creeps/creep_good_melee/creep_good_melee.vmdl"
+	"Model"						"models/heroes/meepo/meepo.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"SelectionGroup"            "Human_Militia"
+	"SoundSet"					"Hero_Meepo"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -192,6 +196,8 @@
 	"HealthBarOffset"			"140"
 	"HasInventory"				"1"
 	"SelectionGroup"            "Human_Spell_Breakers"
+	"SoundSet"					"Hero_Silencer"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -284,6 +290,8 @@
 	"HealthBarOffset"			"180"
 	"HasInventory"				"1"
 	"SelectionGroup"            "Human_Knights"
+	"SoundSet"					"Hero_ChaosKnight"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
 	
 	// Abilities
 	//----------------------------------------------------------------
