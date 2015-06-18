@@ -143,7 +143,7 @@ function GameMode:InitGameMode()
     self.bSeenWaitForPlayers = false
 
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
-    Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
+    --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
 
     print('[FFrenzy] Done loading gamemode!\n\n')
 end
@@ -372,6 +372,10 @@ end
 function GameMode:OnGameRulesStateChange(keys)
     print("[FFrenzy] GameRules State Changed")
     --DeepPrintTable(keys)
+	
+	if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+		
+	end
 
     -- MultiTeam Thinker
     if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then

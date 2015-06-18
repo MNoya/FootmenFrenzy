@@ -1,4 +1,5 @@
 "AddonInfo"
 {
 	"TeamCount" "4"
+	"MaxPlayers"	"12"
 }
