@@ -788,6 +788,7 @@ end
 function GameMode:OnPlayerPickHero(keys)
     print ('[FFrenzy] OnPlayerPickHero')
     --DeepPrintTable(keys)
+	
 
     local heroClass = keys.hero
     local hero = EntIndexToHScript(keys.heroindex)
@@ -795,6 +796,7 @@ function GameMode:OnPlayerPickHero(keys)
     local playerID = hero:GetPlayerID()
 	local teamID = PlayerResource:GetTeam(playerID)
 	local teamCounter = 0
+	
 	if teamID == 2 then 
 		teamCounter = team_a_counter
 	else 
