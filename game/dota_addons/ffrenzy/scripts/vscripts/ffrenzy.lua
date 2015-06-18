@@ -862,6 +862,8 @@ function GameMode:OnPlayerPickHero(keys)
         tower2:SetOwner(hero)
         tower2:SetControllableByPlayer(playerID, true)
         tower2:SetAbsOrigin(tower_b_position)
+		
+		CreateUnitByName("dummy_vision", Vector(0, 0, 100), true, hero, hero, hero:GetTeamNumber())
 
         -- Move the hero close by
         Timers:CreateTimer(function()
