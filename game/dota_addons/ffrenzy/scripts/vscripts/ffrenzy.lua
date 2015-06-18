@@ -47,6 +47,12 @@ USE_CUSTOM_HERO_LEVELS = false           -- Should we allow heroes to have custo
 MAX_LEVEL = 25                          -- What level should we let heroes get to?
 USE_CUSTOM_XP_VALUES = false             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 
+local team_a_counter = 0
+local team_b_counter = 0
+local team_c_counter = 0
+local team_d_counter = 0
+
+
 -- Generated from template
 if GameMode == nil then
     print ( '[FFrenzy] creating Footman Frenzy game mode' )
@@ -60,11 +66,11 @@ function GameMode:InitGameMode()
     print('[FFrenzy] Starting to load gamemode...')
 
     -- MultiTeam
-    --self.m_TeamColors = {}
-    --self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --		Teal
-    --self.m_TeamColors[DOTA_TEAM_BADGUYS] = { 243, 201, 9 }  --		Yellow
-    --self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 52, 85, 255 }  --		Blue
-    --self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 101, 212, 19 }  --		Green
+    self.m_TeamColors = {}
+    self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --		Teal
+    self.m_TeamColors[DOTA_TEAM_BADGUYS] = { 243, 201, 9 }  --		Yellow
+    self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 52, 85, 255 }  --		Blue
+    self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 101, 212, 19 }  --		Green
 	
 	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 )  --		Teal
 	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )  --		Yellow
@@ -787,6 +793,23 @@ function GameMode:OnPlayerPickHero(keys)
     local hero = EntIndexToHScript(keys.heroindex)
     local player = EntIndexToHScript(keys.player)
     local playerID = hero:GetPlayerID()
+	local teamID = PlayerResource:GetTeam(playerID)
+	local teamCounter = 0
+	if teamID == 2 then 
+		teamCounter = team_a_counter
+	else 
+		if teamID == 3 then
+			teamCounter = team_b_counter
+		else 
+			if teamID == 6 then
+				teamCounter = team_c_counter
+			else 
+				if teamID == 7 then
+					teamCounter = team_d_counter
+				end
+			end
+		end
+	end
 
     -- Initialize Variables for Tracking
     player.units = {} -- This keeps the handle of all the units of the player army
@@ -794,13 +817,15 @@ function GameMode:OnPlayerPickHero(keys)
 
     -- Define where to put the player/team
     -- Choose a Position
-    local position_name = "player_position_"..playerID
+    local position_name = "team_"..teamID.."_player_position_"..teamCounter
     local base_position_entity = Entities:FindByName(nil, position_name)
-	local tower_a_position_name = "tower_a_player_"..playerID
+	local tower_a_position_name = "team_"..teamID.."_tower_a_player_"..teamCounter
     local tower_a_position_entity = Entities:FindByName(nil, tower_a_position_name)
-	local tower_b_position_name = "tower_b_player_"..playerID
+	local tower_b_position_name = "team_"..teamID.."_tower_b_player_"..teamCounter
     local tower_b_position_entity = Entities:FindByName(nil, tower_b_position_name)
+	print ("test 1")
     if base_position_entity then
+	print ("test 2")
         local base_position = base_position_entity:GetAbsOrigin()
 		local tower_a_position = tower_a_position_entity:GetAbsOrigin()
 		local tower_b_position = tower_b_position_entity:GetAbsOrigin()
@@ -813,6 +838,13 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetAbsOrigin(base_position)
 		
 		--test units
+		--hero:HeroLevelUp(true)
+		--hero:HeroLevelUp(true)
+		--hero:HeroLevelUp(true)
+		--hero:HeroLevelUp(true)
+		--hero:HeroLevelUp(true)
+		--hero:HeroLevelUp(true)
+		--hero:HeroLevelUp(true)
 		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
@@ -846,7 +878,20 @@ function GameMode:OnPlayerPickHero(keys)
     else
         print("No Base Position found for player "..playerID)   
     end
-
+	
+	
+	if teamID == 2 then 
+		team_a_counter = team_a_counter + 1
+		else if teamID == 3 then
+			team_b_counter = team_b_counter + 1
+			else if teamID == 6 then
+				team_c_counter = team_c_counter + 1
+				else if teamID == 7 then
+					team_d_counter = team_d_counter + 1
+				end
+			end
+		end
+	end
 
 end
 
