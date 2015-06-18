@@ -1,5 +1,8 @@
 "AddonInfo"
 {
 	"TeamCount" "4"
-	"MaxPlayers"	"12"
+	"footman_frenzy_map"
+	{
+		"MaxPlayers"		"8"
+	}
 }
