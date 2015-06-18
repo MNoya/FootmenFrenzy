@@ -1259,7 +1259,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					"upgrade_tier5_human"
+		"Ability1"					""//upgrade_tier5_human
 		"Ability2"					"side_upgrade_tier4_nightelf"
 		"Ability3"					"side_upgrade_tier4_orc"
 		"Ability4"					"side_upgrade_tier4_undead"
@@ -1331,7 +1331,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					"upgrade_tier5_nightelf"
+		"Ability1"					""//upgrade_tier5_nightelf
 		"Ability2"					"side_upgrade_tier4_human"
 		"Ability3"					"side_upgrade_tier4_orc"
 		"Ability4"					"side_upgrade_tier4_undead"
@@ -1403,7 +1403,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					"upgrade_tier5_orc"
+		"Ability1"					""//upgrade_tier5_orc
 		"Ability2"					"side_upgrade_tier4_human"
 		"Ability3"					"side_upgrade_tier4_nightelf"
 		"Ability4"					"side_upgrade_tier4_undead"
@@ -1475,7 +1475,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"5"
-		"Ability1"					"upgrade_tier5_undead"
+		"Ability1"					""//upgrade_tier5_undead
 		"Ability2"					"side_upgrade_tier4_human"
 		"Ability3"					"side_upgrade_tier4_nightelf"
 		"Ability4"					"side_upgrade_tier4_orc"
@@ -4823,7 +4823,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/heroes/meepo/meepo.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"0.9"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Human_Militia"
@@ -4908,7 +4908,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/heroes/silencer/silencer.vmdl"
-		"ModelScale"				"0.7"
+		"ModelScale"				"0.6"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
 		"HasInventory"				"1"
@@ -8712,7 +8712,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/heroes/pudge/pudge.vmdl"
-		"ModelScale"				"1"
+		"ModelScale"				"0.9"
 		"Level"						"4"
 		"HealthBarOffset"			"140"
 		"SoundSet"					"Hero_Pudge"

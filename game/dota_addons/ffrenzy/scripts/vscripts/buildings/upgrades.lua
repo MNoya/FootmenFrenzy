@@ -34,9 +34,11 @@ function UpgradeBuilding( event )
 	building:SetHealth(newRelativeHP)
 	
 	-- Teach spawn ability
-    building:AddAbility(spawn_ability)
-    local ability = building:FindAbilityByName(spawn_ability)
-    ability:SetLevel(1)
+	if spawn_ability ~= nil then
+		building:AddAbility(spawn_ability)
+		local ability = building:FindAbilityByName(spawn_ability)
+		ability:SetLevel(1)
+	end
 
 end
 

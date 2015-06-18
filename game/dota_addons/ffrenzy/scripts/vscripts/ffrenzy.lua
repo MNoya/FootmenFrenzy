@@ -812,9 +812,10 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetControllableByPlayer(playerID, true)
         building:SetAbsOrigin(base_position)
 		
-		CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-		CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-		CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		--test units
+		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		
 		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
 		tower:RemoveModifierByName("modifier_invulnerable")

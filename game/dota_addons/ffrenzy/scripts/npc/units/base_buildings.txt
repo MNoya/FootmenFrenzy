@@ -906,7 +906,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					"upgrade_tier5_human"
+	"Ability1"					""//upgrade_tier5_human
 	"Ability2"					"side_upgrade_tier4_nightelf"
 	"Ability3"					"side_upgrade_tier4_orc"
 	"Ability4"					"side_upgrade_tier4_undead"
@@ -978,7 +978,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					"upgrade_tier5_nightelf"
+	"Ability1"					""//upgrade_tier5_nightelf
 	"Ability2"					"side_upgrade_tier4_human"
 	"Ability3"					"side_upgrade_tier4_orc"
 	"Ability4"					"side_upgrade_tier4_undead"
@@ -1050,7 +1050,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					"upgrade_tier5_orc"
+	"Ability1"					""//upgrade_tier5_orc
 	"Ability2"					"side_upgrade_tier4_human"
 	"Ability3"					"side_upgrade_tier4_nightelf"
 	"Ability4"					"side_upgrade_tier4_undead"
@@ -1122,7 +1122,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"5"
-	"Ability1"					"upgrade_tier5_undead"
+	"Ability1"					""//upgrade_tier5_undead
 	"Ability2"					"side_upgrade_tier4_human"
 	"Ability3"					"side_upgrade_tier4_nightelf"
 	"Ability4"					"side_upgrade_tier4_orc"

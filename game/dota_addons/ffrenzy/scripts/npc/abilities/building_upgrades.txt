@@ -18,6 +18,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_guard_tower"
+			"UnitSpawn"		""
 		}
 	}
 }
@@ -38,6 +39,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_cannon_tower"
+			"UnitSpawn"		""
 		}
 	}
 }
@@ -58,6 +60,7 @@
 			"ScriptFile"	"buildings/upgrades.lua"
 			"Function"		"UpgradeBuilding"
 			"UnitName"		"human_arcane_tower"
+			"UnitSpawn"		""
 		}
 	}
 }
