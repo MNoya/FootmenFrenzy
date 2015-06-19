@@ -9,6 +9,7 @@
 	"item_dust"
 	{
 		"ItemCost"						"100"
+		"SecretShop" 					"1"
 	}
   
 	// -----------------------------------------------------------
@@ -229,6 +230,14 @@
 	"item_recipe_tranquil_boots"			"REMOVE"
 	"item_tranquil_boots"			"REMOVE"
 	"item_shadow_amulet"			"REMOVE"
+	"item_enchanted_mango"			"REMOVE"
+	"item_moon_shard"			"REMOVE"
+	"item_guardian_greaves"			"REMOVE"
+	"item_glimmer_cape"			"REMOVE"
+	"item_octarine_core"			"REMOVE"
+	"item_silver_edge"			"REMOVE"
+	"item_solar_crest"			"REMOVE"
+	"item_lotus_orb"			"REMOVE"
 	
   
   	"item_halloween_candy_corn"			"REMOVE"

@@ -57,6 +57,15 @@ local team_d_counter = 0
 local testing = false
 local testinglevels = false
 
+local base_0_destroyed = false
+local base_1_destroyed = false
+local base_2_destroyed = false
+local base_3_destroyed = false
+local base_4_destroyed = false
+local base_5_destroyed = false
+local base_6_destroyed = false
+local base_7_destroyed = false
+
 
 -- Generated from template
 if GameMode == nil then
@@ -72,15 +81,15 @@ function GameMode:InitGameMode()
 
     -- MultiTeam
     self.m_TeamColors = {}
-    self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --		Teal
-    self.m_TeamColors[DOTA_TEAM_BADGUYS] = { 243, 201, 9 }  --		Yellow
-    self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 52, 85, 255 }  --		Blue
-    self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 101, 212, 19 }  --		Green
+    self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }	--		Teal
+	self.m_TeamColors[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }		--		Yellow
+	self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 197, 77, 168 }	--      Pink
+	self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }		--		Orange
 	
 	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 )  --		Teal
 	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )  --		Yellow
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 52, 85, 255 )  --		Blue
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 101, 212, 19 )  --		Green
+	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 197, 77, 168 )	--      Pink
+	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 255, 108, 0 )		--		Orange
     
     self.m_VictoryMessages = {}
     self.m_VictoryMessages[DOTA_TEAM_GOODGUYS] = "#VictoryMessage_GoodGuys"
@@ -698,10 +707,10 @@ function GameMode:OnNPCSpawned(keys)
         GameMode:OnHeroInGame(npc)
     end
 	
-	if npc:IsRealHero() and npc.bFirstSpawned == true then
-		Spawn_Position(npc)
+	--if npc:IsRealHero() and npc.bFirstSpawned == true then
+		--Spawn_Position(npc)
 		--FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
-	end
+	--end
 
     if npc:IsCreature() then
         Timers:CreateTimer(0.05, function()
@@ -933,7 +942,7 @@ function GameMode:OnPlayerPickHero(keys)
 
         -- Move the hero close by
         Timers:CreateTimer(function()
-			Spawn_Position(hero)
+			--Spawn_Position(hero)
             --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             PlayerResource:SetCameraTarget(playerID, building)
             Timers:CreateTimer(2, function() 

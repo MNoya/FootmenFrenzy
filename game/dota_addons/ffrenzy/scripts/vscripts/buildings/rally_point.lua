@@ -60,6 +60,7 @@ function MoveToRallyPoint( event )
 	table.insert(player.units, target)
 	local playerID = player:GetPlayerID()
 	target:SetControllableByPlayer(playerID, true)
+	print (target:GetOwner():GetPlayerID())
 
 	-- Put the passive skill on cooldown (just for looks)
 	local ability = event.ability

@@ -27,10 +27,11 @@
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
-	"ItemShopTags"					"consumable"
-	"ItemQuality"					"consumable"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
@@ -118,10 +119,11 @@
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
-	"ItemShopTags"					"consumable"
-	"ItemQuality"					"consumable"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
@@ -210,10 +212,11 @@
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
-	"ItemShopTags"					"consumable"
-	"ItemQuality"					"consumable"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
@@ -292,10 +295,11 @@
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
-	"ItemShopTags"					"consumable"
-	"ItemQuality"					"consumable"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
