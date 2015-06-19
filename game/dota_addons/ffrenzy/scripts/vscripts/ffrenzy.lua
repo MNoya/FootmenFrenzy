@@ -1,5 +1,7 @@
 print ('[FFrenzy] ffrenzy.lua' )
 
+require( 'spawn_area' )
+
 ----------------
 
 CORPSE_MODEL = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_troll_skeleton_fx.vmdl"
@@ -474,7 +476,7 @@ end
 -- Scan the map to see which teams have spawn points
 ---------------------------------------------------------------------------
 function GameMode:GatherValidTeams()
---  print( "GatherValidTeams:" )
+	print( "GatherValidTeams:" )
 
     local foundTeams = {}
     for _, playerStart in pairs( Entities:FindAllByClassname( "info_player_start_dota" ) ) do
@@ -494,7 +496,58 @@ function GameMode:GatherValidTeams()
     for _, team in pairs( self.m_GatheredShuffledTeams ) do
         print( " - " .. team .. " ( " .. GetTeamName( team ) .. " )" )
     end
+	
+	GameRules:SetCustomGameTeamMaxPlayers( 2, 2 )
+	GameRules:SetCustomGameTeamMaxPlayers( 3, 2 )
+	GameRules:SetCustomGameTeamMaxPlayers( 6, 2 )
+	GameRules:SetCustomGameTeamMaxPlayers( 7, 2 )
+	
 end
+
+
+
+--[[function GameMode:GatherValidTeams()
+--	print( "GatherValidTeams:" )
+
+	local foundTeams = {}
+	for _, playerStart in pairs( Entities:FindAllByClassname( "info_player_start_dota" ) ) do
+		foundTeams[  playerStart:GetTeam() ] = true
+	end
+
+	local numTeams = TableCount(foundTeams)
+	print( "GatherValidTeams - Found spawns for a total of " .. numTeams .. " teams" )
+	
+	local foundTeamsList = {}
+	for t, _ in pairs( foundTeams ) do
+		table.insert( foundTeamsList, t )
+	end
+
+	if numTeams == 0 then
+		print( "GatherValidTeams - NO team spawns detected, defaulting to GOOD/BAD" )
+		table.insert( foundTeamsList, DOTA_TEAM_GOODGUYS )
+		table.insert( foundTeamsList, DOTA_TEAM_BADGUYS )
+		numTeams = 2
+	end
+
+	local maxPlayersPerValidTeam = math.floor( 10 / numTeams )
+
+	self.m_GatheredShuffledTeams = ShuffledList( foundTeamsList )
+
+	print( "Final shuffled team list:" )
+	for _, team in pairs( self.m_GatheredShuffledTeams ) do
+		print( " - " .. team .. " ( " .. GetTeamName( team ) .. " )" )
+	end
+
+	print( "Setting up teams:" )
+	for team = 0, (DOTA_TEAM_COUNT-1) do
+		local maxPlayers = 0
+		if ( nil ~= TableFindKey( foundTeamsList, team ) ) then
+			maxPlayers = maxPlayersPerValidTeam
+		end
+		print( " - " .. team .. " ( " .. GetTeamName( team ) .. " ) -> max players = " .. tostring(maxPlayers) )
+		GameRules:SetCustomGameTeamMaxPlayers( team, maxPlayers )
+	end
+end]]
 
 
 ---------------------------------------------------------------------------
@@ -644,6 +697,11 @@ function GameMode:OnNPCSpawned(keys)
         npc.bFirstSpawned = true
         GameMode:OnHeroInGame(npc)
     end
+	
+	if npc:IsRealHero() and npc.bFirstSpawned == true then
+		Spawn_Position(npc)
+		--FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
+	end
 
     if npc:IsCreature() then
         Timers:CreateTimer(0.05, function()
@@ -831,9 +889,7 @@ function GameMode:OnPlayerPickHero(keys)
     local tower_a_position_entity = Entities:FindByName(nil, tower_a_position_name)
 	local tower_b_position_name = "team_"..teamID.."_tower_b_player_"..teamCounter
     local tower_b_position_entity = Entities:FindByName(nil, tower_b_position_name)
-	print ("test 1")
     if base_position_entity then
-	print ("test 2")
         local base_position = base_position_entity:GetAbsOrigin()
 		local tower_a_position = tower_a_position_entity:GetAbsOrigin()
 		local tower_b_position = tower_b_position_entity:GetAbsOrigin()
@@ -877,6 +933,7 @@ function GameMode:OnPlayerPickHero(keys)
 
         -- Move the hero close by
         Timers:CreateTimer(function()
+			Spawn_Position(hero)
             --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             PlayerResource:SetCameraTarget(playerID, building)
             Timers:CreateTimer(2, function() 
