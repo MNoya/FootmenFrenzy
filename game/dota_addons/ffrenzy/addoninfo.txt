@@ -3,6 +3,6 @@
 	"TeamCount" "4"
 	"footman_frenzy_map"
 	{
-		"MaxPlayers"		"4"
+		"MaxPlayers"		"8"
 	}
 }
