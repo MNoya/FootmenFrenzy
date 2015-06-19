@@ -52,12 +52,14 @@ function MoveToRallyPoint( event )
 		Timers:CreateTimer(0.05, function() target:MoveToPosition(position) end)
 		--print(target:GetUnitName().." moving to position",position)
 	end
-
+	
 	-- Add to player.units table
 	local player = caster:GetPlayerOwner()
 	local hero = player:GetAssignedHero()
 	target:SetOwner(hero)
 	table.insert(player.units, target)
+	local playerID = player:GetPlayerID()
+	target:SetControllableByPlayer(playerID, true)
 
 	-- Put the passive skill on cooldown (just for looks)
 	local ability = event.ability

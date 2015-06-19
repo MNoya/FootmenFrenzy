@@ -52,6 +52,9 @@ local team_b_counter = 0
 local team_c_counter = 0
 local team_d_counter = 0
 
+local testing = false
+local testinglevels = false
+
 
 -- Generated from template
 if GameMode == nil then
@@ -349,8 +352,11 @@ function GameMode:OnHeroInGame(hero)
     table.insert(self.vPlayers, hero)
 
     -- This line for example will set the starting gold of every hero to 100 unreliable gold
-    hero:SetGold(99999, false)
-
+    hero:SetGold(0, false)
+	if testing then
+		hero:SetGold(99999, false)
+	end
+	
     -- These lines will create an item and add it to the player, effectively ensuring they start with the item
     local item = CreateItem("item_example_item", hero, hero)
     hero:AddItem(item)
@@ -840,16 +846,20 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetAbsOrigin(base_position)
 		
 		--test units
-		--hero:HeroLevelUp(true)
-		--hero:HeroLevelUp(true)
-		--hero:HeroLevelUp(true)
-		--hero:HeroLevelUp(true)
-		--hero:HeroLevelUp(true)
-		--hero:HeroLevelUp(true)
-		--hero:HeroLevelUp(true)
-		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-		--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		if testing then
+			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+		end
+		if testinglevels then
+				hero:HeroLevelUp(true)
+				hero:HeroLevelUp(true)
+				hero:HeroLevelUp(true)
+				hero:HeroLevelUp(true)
+				hero:HeroLevelUp(true)
+				hero:HeroLevelUp(true)
+				hero:HeroLevelUp(true)
+		end
 		
 		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
 		tower:RemoveModifierByName("modifier_invulnerable")
@@ -867,7 +877,7 @@ function GameMode:OnPlayerPickHero(keys)
 
         -- Move the hero close by
         Timers:CreateTimer(function()
-            FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
+            --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             PlayerResource:SetCameraTarget(playerID, building)
             Timers:CreateTimer(2, function() 
                 PlayerResource:SetCameraTarget(playerID, nil)
