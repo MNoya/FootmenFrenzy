@@ -1,12 +1,4 @@
--Test all hero abilities to make sure they are working properly
-
--Upgrade Icons
-
--Towers
-
--Finish Items
-
--Ensure footmen stats are the same as in wc3
-
--Make sure fountains work for all 4 teams
-
+-set units not controllable by allies
+-get upgrades to work
+-move fountain
+-hero abilities upgrade to 4 levels
