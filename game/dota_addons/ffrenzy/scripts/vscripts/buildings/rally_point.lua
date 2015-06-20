@@ -1,3 +1,35 @@
+function SpawnUnit( event )
+	local caster = event.caster
+	local owner = caster:GetOwner()
+	local player = caster:GetPlayerOwner()
+	local playerID = player:GetPlayerID()
+	local hero = player:GetAssignedHero()
+	local unit_name = event.UnitName
+	local position = GetInitialRallyPoint( event )
+	
+	local unit = CreateUnitByName(unit_name, position, true, owner, owner, caster:GetTeamNumber())
+
+	-- Make sure the unit gets stuck
+	FindClearSpaceForUnit(unit, position, true)
+	unit:AddNewModifier(caster, nil, "modifier_phased", { duration = 0.03 })
+
+	-- Add to player.units table
+	unit:SetOwner(hero)
+	unit:SetControllableByPlayer(playerID, true)
+	table.insert(player.units, unit)
+	
+	-- Put the passive skill on cooldown (just for looks)
+	local ability = event.ability
+	ability:StartCooldown(10)
+
+	-- Move to Rally Point
+	if caster.flag then
+		local position = caster.flag:GetAbsOrigin()
+		Timers:CreateTimer(0.05, function() unit:MoveToPosition(position) end)
+		--print(unit:GetUnitName().." moving to position",position)
+	end
+end
+
 --[[
 	Author: Noya
 	Date: 11.02.2015.
@@ -41,32 +73,6 @@ function SetRallyPoint( event )
 	end)
 end
 
--- Queues a movement command for the spawned unit to the rally point
--- Also adds the unit to the players army and looks for upgrades
-function MoveToRallyPoint( event )
-	local caster = event.caster
-	local target = event.target
-
-	if caster.flag then
-		local position = caster.flag:GetAbsOrigin()
-		Timers:CreateTimer(0.05, function() target:MoveToPosition(position) end)
-		--print(target:GetUnitName().." moving to position",position)
-	end
-	
-	-- Add to player.units table
-	local player = caster:GetPlayerOwner()
-	local hero = player:GetAssignedHero()
-	target:SetOwner(hero)
-	table.insert(player.units, target)
-	local playerID = player:GetPlayerID()
-	target:SetControllableByPlayer(playerID, true)
-	print (target:GetOwner():GetPlayerID())
-
-	-- Put the passive skill on cooldown (just for looks)
-	local ability = event.ability
-	ability:StartCooldown(10)
-end
-
 function GetInitialRallyPoint( event )
 	local caster = event.caster
 
@@ -76,14 +82,12 @@ function GetInitialRallyPoint( event )
 	forwardVec = forwardVec:Normalized()
 	local initial_spawn_position = origin + forwardVec * 220
 
-	local result = {}
 	if initial_spawn_position then
-		table.insert(result,initial_spawn_position)
+		return initial_spawn_position
 	else
 		print("Fail, no initial rally point, this shouldn't happen")
+		return origin
 	end
-
-	return result
 end
 
 

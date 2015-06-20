@@ -89,18 +89,12 @@
 		"modifier_upgrade_human_training"
 		{
 			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
-			"OnCreated"
-			{
-				// Add Health through lua because MODIFIER_PROPERTY_HEALTH_BONUS doesn't work on npc_dota_creature zzz
-				"RunScript"
-				{
-					"ScriptFile"	"upgrades.lua"
-					"Function"		"ApplyHealthBonus"
-				}
-			}
+			
+			// (Health Bonus added is added directly on lua)
+
 			"Properties"
 			{
-			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_movement_speed" 
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_movement_speed"
 			}
 		}
 	}

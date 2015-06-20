@@ -1,7 +1,5 @@
 print ('[FFrenzy] ffrenzy.lua' )
 
-require( 'spawn_area' )
-
 ----------------
 
 CORPSE_MODEL = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_troll_skeleton_fx.vmdl"
@@ -168,6 +166,8 @@ function GameMode:InitGameMode()
     self.nDireKills = 0
 
     self.bSeenWaitForPlayers = false
+
+    GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
 
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
     --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )

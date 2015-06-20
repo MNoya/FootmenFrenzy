@@ -53,6 +53,13 @@ function ApplyUpgrade(unit, upgrade_name)
 	-- The ability level and stacks are updated to the current upgrade level
 	if ability then
 		ability:SetLevel(upgrade_level)
+		-- Extra Health bonus on Human and Orc units
+		if upgrade_name == "upgrade_human_training" then
+			UpdateHealthBonus(unit, 30, upgrade_level)
+		elseif upgrade_name == "upgrade_orc_training" then
+			UpdateHealthBonus(unit, 15, upgrade_level)
+		end
+
 		--ability:ApplyDataDrivenModifier( unit, unit, modifierName, {} )
 		unit:SetModifierStackCount( modifierName, ability, upgrade_level )
 	else
@@ -69,24 +76,27 @@ function ApplyUpgrade(unit, upgrade_name)
 			new_ability:ApplyDataDrivenModifier( unit, unit, modifierName, {} )
 			unit:SetModifierStackCount( modifierName, ability, upgrade_level )
 		end
+
+		-- Extra Health bonus on Human and Orc units
+		if upgrade_name == "upgrade_human_training" then
+			UpdateHealthBonus(unit, 30, upgrade_level)
+		elseif upgrade_name == "upgrade_orc_training" then
+			UpdateHealthBonus(unit, 15, upgrade_level)
+		end
 	end
 end
 
 
 -- Add Health through lua because MODIFIER_PROPERTY_HEALTH_BONUS doesn't work on npc_dota_creature zzz
--- ToDo: Check of OnCreated of MULTIPLE triggers many time or need to remove the health before adding the stacks.
-function ApplyHealthBonus( event )
-	local caster = event.caster
- 	local ability = event.ability
-	local hero = caster:GetOwner()
-	local player = hero:GetPlayerOwner()
-	local upgrades = player.upgrades
-	local bonus_health = event.ability:GetLevelSpecialValueFor("bonus_health", (event.ability:GetLevel() - 1))
-
-	local newHP = caster:GetMaxHealth() + bonus_health
-	caster:SetMaxHealth(newHP)
-	caster:SetHealth(caster:GetHealth() + bonus_health)
-	
+function UpdateHealthBonus(unit, bonus_health, upgrade_level)
+	local unit_name = unit:GetUnitName()
+	local unitUnmodifiedBaseHealth = GameRules.UnitKV[unit_name]["StatusHealth"]
+	local bonus_health_total = bonus_health * upgrade_level
+	local newHP = unitUnmodifiedBaseHealth + bonus_health_total
+	local currentHealthPercentage = unit:GetHealth()/unit:GetMaxHealth()
+	unit:SetMaxHealth(newHP)
+	unit:SetBaseMaxHealth(newHP)
+	unit:SetHealth(math.ceil(newHP * currentHealthPercentage)) -- Keep relative HP
 end
 
 
