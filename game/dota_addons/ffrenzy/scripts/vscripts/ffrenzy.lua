@@ -56,11 +56,13 @@ local team_d_counter = 0
 local testing = true
 local testingUnits = false
 local testingLevels = false
+local testingUnitFormation = false
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
     testing = false
     testingUnits = false
+    testingUnitFormation = false
     testing = false
 end
 
@@ -155,6 +157,9 @@ function GameMode:InitGameMode()
     ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(GameMode, 'OnPlayerPickHero'), self)
     ListenToGameEvent('dota_team_kill_credit', Dynamic_Wrap(GameMode, 'OnTeamKillCredit'), self)
     ListenToGameEvent("player_reconnected", Dynamic_Wrap(GameMode, 'OnPlayerReconnect'), self)
+
+    -- Filter Execute Order
+    GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
 
     -- Change random seed
     local timeTxt = string.gsub(string.gsub(GetSystemTime(), ':', ''), '0','')
@@ -1097,4 +1102,123 @@ function LeavesCorpse( unit )
         --print("Leave corpse")
         return true
     end
+end
+
+
+
+
+
+-- Experimenting with Filter Orders
+function GameMode:FilterExecuteOrder( filterTable )
+    --[[for k, v in pairs( filterTable ) do
+        print("Order: " .. k .. " " .. tostring(v) )
+    end]]
+
+    if not testingUnitFormation then
+        return true
+    end
+
+    local units = filterTable["units"]
+    local order_type = filterTable["order_type"]
+
+    if units and order_type == 1 then
+        
+        local x = tonumber(filterTable["position_x"])
+        local y = tonumber(filterTable["position_y"])
+        local z = tonumber(filterTable["position_z"])
+
+        print("======MOVEMENT ORDER FILTER: ",x,y,z)
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            if not unit.bSkipNextOrderFilter then
+                print("Issuing a New Movement Order to unit index: ",unit_index)
+
+                unit.bSkipNextOrderFilter = true
+                local newX = x + RandomInt(1, 1000)
+                local newY = y + RandomInt(1, 1000)
+                local pos = Vector(newX,newY,z)
+                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false}) 
+                return false
+            else
+                print("Skip this order")
+
+                unit.bSkipNextOrderFilter = false
+                return true
+            end                
+        end
+        return true
+    end
+    print("----------------------------")
+
+    --[[[   VScript ]: DOTA_UNIT_ORDER_ATTACK_MOVE: 3
+[   VScript ]: DOTA_UNIT_ORDER_ATTACK_TARGET: 4
+[   VScript ]: DOTA_UNIT_ORDER_BUYBACK: 23
+[   VScript ]: DOTA_UNIT_ORDER_CAST_NO_TARGET: 8
+[   VScript ]: DOTA_UNIT_ORDER_CAST_POSITION: 5
+[   VScript ]: DOTA_UNIT_ORDER_CAST_RUNE: 26
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TARGET: 6
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TARGET_TREE: 7
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TOGGLE: 9
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TOGGLE_AUTO: 20
+[   VScript ]: DOTA_UNIT_ORDER_DISASSEMBLE_ITEM: 18
+[   VScript ]: DOTA_UNIT_ORDER_DROP_ITEM: 12
+[   VScript ]: DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH: 25
+[   VScript ]: DOTA_UNIT_ORDER_GIVE_ITEM: 13
+[   VScript ]: DOTA_UNIT_ORDER_GLYPH: 24
+[   VScript ]: DOTA_UNIT_ORDER_HOLD_POSITION: 10
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_ITEM: 19
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_TO_DIRECTION: 28
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_TO_POSITION: 1
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_TO_TARGET: 2
+[   VScript ]: DOTA_UNIT_ORDER_NONE: 0
+[   VScript ]: DOTA_UNIT_ORDER_PICKUP_ITEM: 14
+[   VScript ]: DOTA_UNIT_ORDER_PICKUP_RUNE: 15
+[   VScript ]: DOTA_UNIT_ORDER_PING_ABILITY: 27
+[   VScript ]: DOTA_UNIT_ORDER_PURCHASE_ITEM: 16
+[   VScript ]: DOTA_UNIT_ORDER_SELL_ITEM: 17
+[   VScript ]: DOTA_UNIT_ORDER_STOP: 21
+[   VScript ]: DOTA_UNIT_ORDER_TAUNT: 22
+[   VScript ]: DOTA_UNIT_ORDER_TRAIN_ABILITY: 11]]
+   
+
+    --[[if ( self._bGameStarted and Tutorial:GetTimeFrozen() ) then
+        local orderType = filterTable["order_type"]
+        if ( ( self._nActiveAlert == ALERT_FORCE_PURCHASE_ITEMS ) or ( self._nActiveAlert == ALERT_FIRST_PURCHASE ) and orderType == DOTA_UNIT_ORDER_PURCHASE_ITEM ) then
+            self:_ClearAlerts()
+            return true
+        elseif ( self._nActiveAlert == ALERT_FORCE_LEVEL_UP and orderType == DOTA_UNIT_ORDER_TRAIN_ABILITY ) then
+            self:_ClearAlerts()
+            return true         
+        elseif ( self._nActiveAlert == ALERT_NEED_DELIVER_ITEMS and orderType == DOTA_UNIT_ORDER_CAST_NO_TARGET ) then
+            self:_ClearAlerts()
+            return true
+        end     
+
+        print("Aborting order " .. tostring( orderType ) .. " Alert is " .. tostring( self._nActiveAlert ) )
+        return false
+    end
+
+    -- We don't need to prevent any orders if the player is finished with their build
+    if ( not self._bWhiteListEnabled ) then
+        return true
+    end
+
+    -- The player isn't allowed to do actions that may break the tutorial.
+    if ( filterTable["issuer_player_id_const"] == 0 ) then
+        local orderType = filterTable["order_type"]
+        if ( orderType == DOTA_UNIT_ORDER_PICKUP_RUNE ) then
+            self:_IncrementAlert( ALERT_PICKED_UP_RUNE, 1.0 )
+        elseif (orderType == DOTA_UNIT_ORDER_DROP_ITEM or
+                orderType == DOTA_UNIT_ORDER_GIVE_ITEM or
+                orderType == DOTA_UNIT_ORDER_SELL_ITEM or
+                orderType == DOTA_UNIT_ORDER_DISASSEMBLE_ITEM or
+                orderType == DOTA_UNIT_ORDER_BUYBACK or
+                orderType == DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH ) then
+
+            print("Skipping command from" .. tostring(issuer) )
+            return false
+        end
+    end]]
+
+    return true
 end

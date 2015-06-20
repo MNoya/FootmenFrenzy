@@ -41,7 +41,6 @@ function UpgradeBuilding( event )
 	-- Unstuck any units
 	Timers:CreateTimer(0.1, function()
 		local units = FindUnitsInRadius(hero:GetTeamNumber(), position, nil, building:GetHullRadius()*2, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BASIC, 0, 0, false)
-		print(#units)
 		for _,unit in pairs(units) do
 			FindClearSpaceForUnit(unit, unit:GetAbsOrigin(), true)
 		end

@@ -1854,7 +1854,9 @@
 		"SelectionGroup"            "Human_Footmen"
 		"SoundSet"					"Hero_DragonKnight"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
-		
+	
+		"PathfindingSearchDepthScale" "0.5"
+	
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"human_defend"
@@ -4738,6 +4740,8 @@
 		"SoundSet"					"Hero_Sniper"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"human_long_rifles"
@@ -4824,20 +4828,19 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/heroes/meepo/meepo.vmdl"
+		"Model"						"models/heroes/legion_commander/legion_commander.vmdl"
 		"ModelScale"				"0.9"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Human_Militia"
-		"SoundSet"					"Hero_Meepo"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
+		"SoundSet"					"Hero_LegionCommander"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/hero_legion_commander.vsndevts"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"human_back_to_work"	 //Reference: Ahar
-		"Ability2"					"militia_upgrades"	 //Reference: Amil
-		"Ability3"					""	 //Reference: Ahrp
-		"Ability4"					"ability_prevent_attack_flying"
+		"Ability1"					""
 			
 		// Armor
 		//----------------------------------------------------------------
@@ -4898,6 +4901,14 @@
 		"Creature"
 		{
 			"DisableClumpingBehavior"	"1"
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"431"		}
+				"Wearable2"		{	"ItemDef"		"432"		}
+				"Wearable3" 	{	"ItemDef"		"433"		}
+				"Wearable4"		{	"ItemDef"		"434"		}
+				"Wearable5"		{	"ItemDef"		"435"		}
+			}
 		}
 	}
 	
@@ -4918,6 +4929,8 @@
 		"SelectionGroup"            "Human_Spell_Breakers"
 		"SoundSet"					"Hero_Silencer"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+	
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5013,6 +5026,8 @@
 		"SelectionGroup"            "Human_Knights"
 		"SoundSet"					"Hero_ChaosKnight"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+	
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5077,14 +5092,6 @@
 		"Creature"
 		{
 			"DisableClumpingBehavior"	"1"
-			//"AttachWearables"
-			//{
-			//	"Wearable1"		{	"ItemDef"		"5810"		} //"Blades of Voth Domosh"
-			//	"Wearable2"		{	"ItemDef"		"5886"		} //"Stonehall Royal Guard Banners"
-			//	"Wearable3" 	{	"ItemDef"		"5887"		} //"Stonehall Royal Guard Helmet"
-			//	"Wearable4"		{	"ItemDef"		"5885"		} //"Stonehall Royal Guard Arms"
-			//	"Wearable5"		{	"ItemDef"		"6192"		} //"Pauldrons of the Equine Emissary"
-			//}
 			"AttachWearables"	
 			{
 				"Wearable1"		{	"ItemDef"	"181"	}
@@ -5116,6 +5123,8 @@
 		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Human_Siege_Engines"
+	
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5344,6 +5353,8 @@
 		"SoundSet"					"Hero_Windrunner"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -5439,6 +5450,8 @@
 		"HealthBarOffset"			"140"
 		"SoundSet"					"Hero_Luna"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5536,6 +5549,8 @@
 		"SoundSet"					"Hero_Furion"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -5630,6 +5645,8 @@
 		"SoundSet"					"Hero_Enchantress"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_enchantress.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -5723,6 +5740,8 @@
 		"Level"						"2"
 		"HealthBarOffset"			"140"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -5811,6 +5830,8 @@
 		"HealthBarOffset"			"140"
 		"SoundSet"					"Hero_Axe"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5901,6 +5922,8 @@
 		"HealthBarOffset"			"140"
 		"SoundSet"					"Hero_Huskar"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -5995,6 +6018,8 @@
 		"SoundSet"					"Hero_Chen"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -6088,6 +6113,8 @@
 		"SoundSet"					"Hero_EarthShaker"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_earth_shaker.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -6148,7 +6175,9 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		
-		// Creature Data
+		"PathfindingSearchDepthScale" "0.5"
+		
+		// Abilities
 		//----------------------------------------------------------------
 		"Creature"
 		{
@@ -6176,6 +6205,8 @@
 		"ModelScale"				"1.7"
 		"Level"						"4"
 		"HealthBarOffset"			"140"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8163,7 +8194,7 @@
 		"Model"						"models/props_structures/wooden_sentry_tower001.vmdl"
 		"ModelScale"				"0.7"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"200"
 		"HasInventory"				"1"
 		
 		// Abilities
@@ -8232,7 +8263,7 @@
 		"Model"						"models/props_structures/tower_good.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"200"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8306,7 +8337,7 @@
 		"Model"						"models/props_structures/tower001.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"200"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8462,6 +8493,8 @@
 		"SoundSet"					"Hero_LifeStealer"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -8550,6 +8583,8 @@
 		"HealthBarOffset"			"140"
 		"SoundSet"					"Hero_Weaver"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8645,6 +8680,8 @@
 		"SoundSet"					"Hero_Pugna"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -8737,6 +8774,8 @@
 		"SoundSet"					"Hero_Pudge"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
 		
+		"PathfindingSearchDepthScale" "0.5"
+		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -8827,6 +8866,8 @@
 		"ModelScale"				"1"
 		"Level"						"2"
 		"HealthBarOffset"			"140"
+		
+		"PathfindingSearchDepthScale" "0.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
