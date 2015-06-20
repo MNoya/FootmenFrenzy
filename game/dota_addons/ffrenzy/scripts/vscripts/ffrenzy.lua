@@ -52,8 +52,17 @@ local team_b_counter = 0
 local team_c_counter = 0
 local team_d_counter = 0
 
-local testing = false
-local testinglevels = false
+-- Change these at will
+local testing = true
+local testingUnits = false
+local testingLevels = false
+
+-- Making sure the testing values never go to the main client
+if not Convars:GetBool("developer") then
+    testing = false
+    testingUnits = false
+    testing = false
+end
 
 local base_0_destroyed = false
 local base_1_destroyed = false
@@ -65,7 +74,6 @@ local base_6_destroyed = false
 local base_7_destroyed = false
 
 
--- Generated from template
 if GameMode == nil then
     print ( '[FFrenzy] creating Footman Frenzy game mode' )
     GameMode = class({})
@@ -911,19 +919,15 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetAbsOrigin(base_position)
 		
 		--test units
-		if testing then
+		if testingUnits then
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		end
-		if testinglevels then
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
+		if testingLevels then
+            for i=1,24 do
+                hero:HeroLevelUp(true)
+            end
 		end
 		
 		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
@@ -1004,7 +1008,7 @@ function GameMode:OnEntityKilled( keys )
     local player = killedUnit:GetPlayerOwner()
 
     -- If the unit is supposed to leave a corpse, create a dummy_unit to use abilities on it.
-    Timers:CreateTimer(1, function() 
+    Timers:CreateTimer(1, function()
     if LeavesCorpse( killedUnit ) then
             -- Create and set model
             local corpse = CreateUnitByName("dummy_unit", killedUnit:GetAbsOrigin(), true, nil, nil, killedUnit:GetTeamNumber())
