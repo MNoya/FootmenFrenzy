@@ -1123,7 +1123,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
             local ownerID = unit:GetPlayerOwnerID()
-            print("OwnerID:",ownerID,"Issuer:",issuer)
+            --print("OwnerID:",ownerID,"Issuer:",issuer)
             if (ownerID ~= issuer and not PlayerResource:AreUnitsSharedWithPlayerID(ownerID, issuer)) then
                 print("Player "..issuer.." tried to execute order "..order_type.." on units of Player "..ownerID.." - Denied.")
                 return false
@@ -1132,51 +1132,122 @@ function GameMode:FilterExecuteOrder( filterTable )
     end
 
     if not testingUnitFormation then
-        return true
+        --return true
     end
 
-    if units and order_type == 1 then
+    local numUnits = 0
+    if units then
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            if not unit:IsBuilding() then
+                numUnits = numUnits + 1
+            end
+        end
+    end
+
+    if units and order_type == 1 and numUnits > 1 then
         
         local x = tonumber(filterTable["position_x"])
         local y = tonumber(filterTable["position_y"])
         local z = tonumber(filterTable["position_z"])
+        local initialGoal = Vector(x,y,z)
 
+        ------------------------------------------------
+        --        Keep-Center Unit Formation          --
+        ------------------------------------------------
         --Find the center point of the selected units by dividing the "total" by the number of units selected
-        local total = Vector(0,0,0)
-        local unit_count = 0
+        --[[ local total = Vector(0,0,0)
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
             -- If unit is a building, don't consider it
             if not unit:IsBuilding() then
                 total = total + unit:GetAbsOrigin()
-                unit_count = unit_count + 1
             end
         end
-        local center = total/unit_count
-        print("Center: ",center," #Units:",unit_count)
+        local center = total/numUnits
+        --print("Center: ",center," #Units:",unit_count)
 
+         Keep the current offset to the center
+        startVector = unit:GetAbsOrigin() - center 
+        local newX = x + startVector.x
+        local newY = y + startVector.y
+        local pos = Vector(newX,newY,z)]]
 
-        print("======MOVEMENT ORDER FILTER: ",x,y,z)
+        ------------------------------------------------
+        --           Grid Unit Formation              --
+        ------------------------------------------------
+        local navPoints = {}
+        local origin
+        for n,unit_index in pairs(units) do
+            if n == "0" then
+                local unit = EntIndexToHScript(unit_index)
+                origin = unit:GetAbsOrigin()
+            end
+        end
+
+        local point = Vector(x,y,z)
+
+        DebugDrawCircle(point, Vector(0,255,0), 100, 18, true, 3)
+
+        local unitsPerRow = math.floor(math.sqrt(numUnits))
+        local unitsPerColumn = math.floor(numUnits / unitsPerRow)
+        local remainder = numUnits % unitsPerRow
+        print(numUnits.." units = "..unitsPerRow.."x"..unitsPerColumn.." with a remainder of "..remainder)
+
+        local even = (unitsPerRow % 2 == 0)
+        local start = ((unitsPerRow-1) * -.5)
+
+        local curX = start
+        local curY = 0
+
+        local offsetX = 100
+        local offsetY = 100
+        local forward = (point-origin):Normalized()
+        local right = RotatePosition(Vector(0,0,0), QAngle(0,90,0), forward)
+
+        for i=1,unitsPerRow do
+          for j=1,unitsPerColumn do
+            print ('grid point (' .. curX .. ', ' .. curY .. ')')
+            local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
+            DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+            navPoints[#navPoints+1] = newPoint
+            curX = curX + 1
+          end
+          curX = start
+          curY = curY - 1
+        end
+
+        local curX = ((remainder-1) * -.5)
+
+        for i=1,remainder do 
+          print ('grid point (' .. curX .. ', ' .. curY .. ')')
+          local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
+          DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+          navPoints[#navPoints+1] = newPoint
+          curX = curX + 1
+        end
+
+        for i=1,#navPoints do 
+            local point = navPoints[i]
+            print(i,navPoints[i])
+        end
+
+        ---------------------------------------------------
+
+        --print("======MOVEMENT ORDER FILTER: ",x,y,z)
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
-            if not unit.bSkipNextOrderFilter then
-                print("Issuing a New Movement Order to unit index: ",unit_index)
+            if not unit:IsBuilding() then
+                --print("Issuing a New Movement Order to unit index: ",unit_index)
 
-                unit.bSkipNextOrderFilter = true
-                startVector = unit:GetAbsOrigin() - center -- Keep the current offset to the center
-                local newX = x + startVector.x
-                local newY = y + startVector.y
-                local pos = Vector(newX,newY,z)
-                --DebugDrawCircle(pos, Vector(0,0,255), 255, 20, true, 3)
+                local pos = navPoints[tonumber(n)+1]
+                print("Unit Number "..n.." moving to ", pos)
+                
+                --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
                 ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false})
-            else
-                print("Skip this order")
-
-                unit.bSkipNextOrderFilter = false
-                return true
-            end            
+            end 
         end
-        DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
+        --DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
         return false
     end
     print("----------------------------")
