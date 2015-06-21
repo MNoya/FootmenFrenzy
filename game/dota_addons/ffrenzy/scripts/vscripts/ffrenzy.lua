@@ -1114,12 +1114,26 @@ function GameMode:FilterExecuteOrder( filterTable )
         print("Order: " .. k .. " " .. tostring(v) )
     end]]
 
+    local units = filterTable["units"]
+    local order_type = filterTable["order_type"]
+    local issuer = filterTable["issuer_player_id_const"]
+
+    -- Drop orders for players that don't own this unit
+    if issuer ~= -1 then
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            local ownerID = unit:GetPlayerOwnerID()
+            print("OwnerID:",ownerID,"Issuer:",issuer)
+            if (ownerID ~= issuer and not PlayerResource:AreUnitsSharedWithPlayerID(ownerID, issuer)) then
+                print("Player "..issuer.." tried to execute order "..order_type.." on units of Player "..ownerID.." - Denied.")
+                return false
+            end
+        end
+    end
+
     if not testingUnitFormation then
         return true
     end
-
-    local units = filterTable["units"]
-    local order_type = filterTable["order_type"]
 
     if units and order_type == 1 then
         
@@ -1154,7 +1168,7 @@ function GameMode:FilterExecuteOrder( filterTable )
                 local newY = y + startVector.y
                 local pos = Vector(newX,newY,z)
                 --DebugDrawCircle(pos, Vector(0,0,255), 255, 20, true, 3)
-                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false}) 
+                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false})
             else
                 print("Skip this order")
 
