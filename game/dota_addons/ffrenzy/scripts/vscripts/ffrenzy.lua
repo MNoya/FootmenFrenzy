@@ -1127,6 +1127,21 @@ function GameMode:FilterExecuteOrder( filterTable )
         local y = tonumber(filterTable["position_y"])
         local z = tonumber(filterTable["position_z"])
 
+        --Find the center point of the selected units by dividing the "total" by the number of units selected
+        local total = Vector(0,0,0)
+        local unit_count = 0
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            -- If unit is a building, don't consider it
+            if not unit:IsBuilding() then
+                total = total + unit:GetAbsOrigin()
+                unit_count = unit_count + 1
+            end
+        end
+        local center = total/unit_count
+        print("Center: ",center," #Units:",unit_count)
+
+
         print("======MOVEMENT ORDER FILTER: ",x,y,z)
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
@@ -1134,19 +1149,21 @@ function GameMode:FilterExecuteOrder( filterTable )
                 print("Issuing a New Movement Order to unit index: ",unit_index)
 
                 unit.bSkipNextOrderFilter = true
-                local newX = x + RandomInt(1, 1000)
-                local newY = y + RandomInt(1, 1000)
+                startVector = unit:GetAbsOrigin() - center -- Keep the current offset to the center
+                local newX = x + startVector.x
+                local newY = y + startVector.y
                 local pos = Vector(newX,newY,z)
+                --DebugDrawCircle(pos, Vector(0,0,255), 255, 20, true, 3)
                 ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false}) 
-                return false
             else
                 print("Skip this order")
 
                 unit.bSkipNextOrderFilter = false
                 return true
-            end                
+            end            
         end
-        return true
+        DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
+        return false
     end
     print("----------------------------")
 

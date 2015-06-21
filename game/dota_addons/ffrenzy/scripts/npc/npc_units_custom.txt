@@ -8203,6 +8203,7 @@
 		"Ability1"					"upgrade_guard_tower"
 		"Ability2"					"upgrade_cannon_tower"
 		"Ability3"					"upgrade_arcane_tower"
+		"Ability4"					"ability_building"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8229,7 +8230,7 @@
 		
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND" //So it doesn't get "Can't move" if selected
 		"MovementSpeed"				"0"
 		
 		// Status
@@ -8271,6 +8272,7 @@
 		"Ability1"					"upgrade_cannon_tower"
 		"Ability2"					"upgrade_arcane_tower"
 		"Ability3"					"human_magic_sentry"
+		"Ability4"					"ability_building"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8303,7 +8305,7 @@
 		
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"0"
 		
 		// Status
@@ -8345,6 +8347,7 @@
 		"Ability1"					"upgrade_arcane_tower"
 		"Ability2"					"human_magic_sentry"
 		"Ability3"					""//aoe attack
+		"Ability4"					"ability_building"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8377,7 +8380,7 @@
 		
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"0"
 		
 		// Status
@@ -8412,6 +8415,7 @@
 		"ModelScale"				"1"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
+		"Ability4"					"ability_building"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8452,7 +8456,7 @@
 		
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"0"
 		
 		// Status
