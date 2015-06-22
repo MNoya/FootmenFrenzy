@@ -874,9 +874,10 @@ function GameMode:OnPlayerPickHero(keys)
 		
 		--test units
 		if testingUnits then
-			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			local testunit = CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 2)
+			testunit:NoTeamSelect()
+			--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		end
 		if testingLevels then
             for i=1,24 do
@@ -1075,6 +1076,7 @@ function GameMode:FilterExecuteOrder( filterTable )
             --print("OwnerID:",ownerID,"Issuer:",issuer)
             if (ownerID ~= issuer and not PlayerResource:AreUnitsSharedWithPlayerID(ownerID, issuer)) then
                 print("Player "..issuer.." tried to execute order "..order_type.." on units of Player "..ownerID.." - Denied.")
+				
                 return false
             end
         end

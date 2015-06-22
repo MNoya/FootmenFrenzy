@@ -981,6 +981,32 @@
 		"ItemPurchasable" 				"0"
 		"ItemSellable"					"0"
 	}
+	"item_apply_modifiers"
+	{
+	    // General
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ID"                            "2099"  // unique ID number for this item.  Do not change this once 
+	    "BaseClass"                     "item_datadriven"
+	    "ItemBaseLevel"                 "1"
+	
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "9999"
+	    "AbilityCastPoint"                      "0.0"    
+	
+	        "Modifiers"
+	       {
+	             "modifier_make_unselectable"
+	             {
+	                 "Passive"               "1"
+	                 "IsHidden"              "1"
+	                 "States"
+	                 {
+	                         "MODIFIER_STATE_UNSELECTABLE"
+	                  }
+	             }
+	        }   
+	}
 	// ToDo: Add "Attacks become ranged when attacking Air units" mechanic
 	// Each Races Orb:
 	// Human: 	Fire
