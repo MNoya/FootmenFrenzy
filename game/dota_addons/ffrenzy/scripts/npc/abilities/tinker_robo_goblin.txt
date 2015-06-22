@@ -12,7 +12,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"tinker_robo_goblin"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -35,17 +35,17 @@
 		"01"
 		{	
 			"var_type"				"FIELD_INTEGER"
-			"extra_str"				"5"
+			"extra_str"				"5 8 11"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"extra_armor"			"1"
+			"extra_armor"			"1 2 3"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"extra_dmg_to_buildings"	"3.5"
+			"extra_dmg_to_buildings"	"3.5 5 7.5"
 		}
 		"04"
 		{

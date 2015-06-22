@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"pandaren_drunken_brawler"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -26,7 +26,7 @@
 		"01"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"miss_chance"	"7 14 21"
+			"miss_chance"	"7 14 21 28"
 		}
 		"02"
 		{
@@ -36,7 +36,7 @@
 		"02"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"crit_bonus"	"200 300 400"
+			"crit_bonus"	"200 300 400 500"
 		}
 	}
 

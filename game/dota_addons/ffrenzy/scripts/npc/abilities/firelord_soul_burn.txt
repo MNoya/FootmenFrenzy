@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"firelord_soul_burn"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -35,17 +35,17 @@
 		"01"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"damage_per_second"	"7 14 21"
+			"damage_per_second"	"7 14 21 28"
 		}
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"hero_duration"		"6 7 8"
+			"hero_duration"		"6 7 8 9"
 		}
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"creep_duration"	"14 16 18"
+			"creep_duration"	"14 16 18 20"
 		}
 		"04"
 		{

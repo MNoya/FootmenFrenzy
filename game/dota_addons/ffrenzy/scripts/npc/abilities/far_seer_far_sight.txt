@@ -31,7 +31,7 @@
 		"01"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"reveal_radius"	"600 1800 4000"
+			"reveal_radius"	"600 1800 4000 8000"
 		}
 		"02"
 		{

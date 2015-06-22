@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"tinker_cluster_rockets"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23,10 +23,10 @@
 	"AbilityCooldown"				"6.0"
 
 	"AbilityManaCost"				"70"
-	"AbilityDamage"					"35 65 100"
+	"AbilityDamage"					"35 65 95 125"
 
 	"AOERadius"						"%radius"
-	"AbilityChannelTime"			"0.5 1.0 1.5"
+	"AbilityChannelTime"			"0.5 1.0 1.5 2.0"
 
 	"precache"
 	{
@@ -42,7 +42,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"radius"				"230 260 290"
+			"radius"				"230 260 290 320"
 		}
 		"02"
 		{

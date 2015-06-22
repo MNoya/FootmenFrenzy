@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"lich_frost_nova_warcraft"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -54,17 +54,17 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"aoe_damage"			"50 100 150"
+			"aoe_damage"			"50 100 150 200"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"slow_hero_duration"	"2 3 4"
+			"slow_hero_duration"	"2 3 4 5"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"slow_creep_duration"	"4 6 8"
+			"slow_creep_duration"	"4 6 8 10"
 		}
 	}
 

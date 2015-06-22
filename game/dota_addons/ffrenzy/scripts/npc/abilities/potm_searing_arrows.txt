@@ -13,7 +13,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"potm_searing_arrows"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -22,10 +22,10 @@
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 
 	"AbilityCastPoint"          	"0"
-    "AbilityCastRange"          	"600 700 700"
+    "AbilityCastRange"          	"600 700 700 700"
 
 	"AbilityManaCost"				"8"
-	"AbilityDamage"					"10 20 30"
+	"AbilityDamage"					"10 20 30 40"
 
 	"precache"
 	{
@@ -39,7 +39,7 @@
 		"01"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"bonus_range"		"0 100 100"
+			"bonus_range"		"0 100 100 100"
 		}
 	}
 

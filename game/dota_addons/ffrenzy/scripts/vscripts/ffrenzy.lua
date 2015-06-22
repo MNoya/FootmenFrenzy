@@ -55,7 +55,7 @@ local team_d_counter = 0
 -- Change these at will
 local testing = true
 local testingUnits = false
-local testingLevels = false
+local testingLevels = true
 local testingUnitFormation = false
 
 -- Making sure the testing values never go to the main client

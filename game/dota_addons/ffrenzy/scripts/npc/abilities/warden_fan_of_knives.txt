@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"warden_fan_of_knives"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -18,12 +18,12 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 
-	"AbilityCastRange"				"400 500 600"
+	"AbilityCastRange"				"400 500 600 700"
 	"AbilityCastPoint"				"0.3"
 	"AbilityCooldown"				"9.0"
 
 	"AbilityManacost" 				"100"
-	"AbilityDamage"					"75 125 190"
+	"AbilityDamage"					"75 125 190 265"
 
 	"precache"
 	{
@@ -36,7 +36,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"radius"				"400 500 600"
+			"radius"				"400 500 600 700"
 		}
 	}
 

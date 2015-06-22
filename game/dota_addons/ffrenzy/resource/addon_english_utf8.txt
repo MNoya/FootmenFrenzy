@@ -1070,5 +1070,223 @@
 		"DOTA_Tooltip_ability_warden_shadow_strike_move_speed_slow"                       "MOVE SPEED SLOW:"
 		
 		
+		
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		////   Non Hero Abilities
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		
+		
+		"DOTA_Tooltip_ability_human_magic_sentry"                                         "Human Magic Sentry"
+		"DOTA_Tooltip_ability_human_magic_sentry_Description"                             "Gives True Sight"
+		
+		
+		
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		////   Building upgrades
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		"DOTA_Tooltip_ability_upgrade_guard_tower"                                        "Upgrade Guard Tower"
+		"DOTA_Tooltip_ability_upgrade_guard_tower_Description"                            "<font color='#ffad33'>1000</font> HP\nWeak Single Target Attack\nTrue Sight"
+
+		"DOTA_Tooltip_ability_upgrade_cannon_tower"                                       "Upgrade Cannon Tower"
+		"DOTA_Tooltip_ability_upgrade_cannon_tower_Description"                           "<font color='#ffad33'>1250</font> HP\nAverage Splash Attack\nTrue Sight"
+
+		"DOTA_Tooltip_ability_upgrade_arcane_tower"                                       "Upgrade Arcane Tower"
+		"DOTA_Tooltip_ability_upgrade_arcane_tower_Description"                           "<font color='#ffad33'>1500</font> HP\nPowerful Single Target Mana Burning Attack\nTrue Sight"
+
+		"DOTA_Tooltip_ability_upgrade_tier1_human"                                        "Upgrade To Riflemen"
+		"DOTA_Tooltip_ability_upgrade_tier1_human_Description"                            "<font color='#ffad33'>1050</font> Gold Cost\nRiflemen have a ranged attack."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier1_human"                                   "Switch To Riflemen"
+		"DOTA_Tooltip_ability_side_upgrade_tier1_human_Description"                       "<font color='#ffad33'>1050</font> Gold Cost\nRiflemen have a ranged attack."
+
+		"DOTA_Tooltip_ability_upgrade_tier2_human"                                        "Upgrade To Militia"
+		"DOTA_Tooltip_ability_upgrade_tier2_human_Description"                            "<font color='#ffad33'>1400</font> Gold Cost\nMilitia are melee attackers that spawn 2 at a time."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier2_human"                                   "Switch To Militia"
+		"DOTA_Tooltip_ability_side_upgrade_tier2_human_Description"                       "<font color='#ffad33'>1400</font> Gold Cost\nMilitia are melee attackers that spawn 2 at a time."
+
+		"DOTA_Tooltip_ability_upgrade_tier3_human"                                        "Upgrade To Spell Breakers"
+		"DOTA_Tooltip_ability_upgrade_tier3_human_Description"                            "<font color='#ffad33'>2000</font> Gold Cost\nSpell Breakers have a ranged attack with mana burn."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier3_human"                                   "Switch To Spell Breakers"
+		"DOTA_Tooltip_ability_side_upgrade_tier3_human_Description"                       "<font color='#ffad33'>2000</font> Gold Cost\nSpell Breakers have a ranged attack with mana burn."
+
+		"DOTA_Tooltip_ability_upgrade_tier4_human"                                        "Upgrade To Knights"
+		"DOTA_Tooltip_ability_upgrade_tier4_human_Description"                            "<font color='#ffad33'>4000</font> Gold Cost\nKnights are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier4_human"                                   "Switch To Knights"
+		"DOTA_Tooltip_ability_side_upgrade_tier4_human_Description"                       "<font color='#ffad33'>4000</font> Gold Cost\nKnights are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_upgrade_tier5_human"                                        "Upgrade Tier5 Human"
+		"DOTA_Tooltip_ability_upgrade_tier5_human_Description"                            ""
+
+		"DOTA_Tooltip_ability_side_upgrade_tier5_human"                                   "Side Upgrade Tier5 Human"
+		"DOTA_Tooltip_ability_side_upgrade_tier5_human_Description"                       ""
+
+		"DOTA_Tooltip_ability_upgrade_tier1_nightelf"                                     "Upgrade To Archers"
+		"DOTA_Tooltip_ability_upgrade_tier1_nightelf_Description"                         "<font color='#ffad33'>1050</font> Gold Cost\nArchers have a ranged attack."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier1_nightelf"                                "Switch to Archers"
+		"DOTA_Tooltip_ability_side_upgrade_tier1_nightelf_Description"                    "<font color='#ffad33'>1050</font> Gold Cost\nArchers have a ranged attack."
+
+		"DOTA_Tooltip_ability_upgrade_tier2_nightelf"                                     "Upgrade To Huntresses"
+		"DOTA_Tooltip_ability_upgrade_tier2_nightelf_Description"                         "<font color='#ffad33'>1400</font> Gold Cost\nHuntresses have a short ranged, bouncing attack."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier2_nightelf"                                "Switch To Huntresses"
+		"DOTA_Tooltip_ability_side_upgrade_tier2_nightelf_Description"                    "<font color='#ffad33'>1400</font> Gold Cost\nHuntresses have a short ranged, bouncing attack."
+
+		"DOTA_Tooltip_ability_upgrade_tier3_nightelf"                                     "Upgrade To Druids of the Talon"
+		"DOTA_Tooltip_ability_upgrade_tier3_nightelf_Description"                         "<font color='#ffad33'>2000</font> Gold Cost\nDruids have a ranged attack."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier3_nightelf"                                "Switch To Druids of the Talon"
+		"DOTA_Tooltip_ability_side_upgrade_tier3_nightelf_Description"                    "<font color='#ffad33'>2000</font> Gold Cost\nDruids have a ranged attack."
+
+		"DOTA_Tooltip_ability_upgrade_tier4_nightelf"                                     "Upgrade To Dryads"
+		"DOTA_Tooltip_ability_upgrade_tier4_nightelf_Description"                         "<font color='#ffad33'>4000</font> Gold Cost\nDryads have a ranged attack and spawn 2 at a time."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier4_nightelf"                                "Switch To Dryads"
+		"DOTA_Tooltip_ability_side_upgrade_tier4_nightelf_Description"                    "<font color='#ffad33'>4000</font> Gold Cost\nDryads have a ranged attack and spawn 2 at a time."
+
+		"DOTA_Tooltip_ability_upgrade_tier5_nightelf"                                     "Upgrade Tier5 Nightelf"
+		"DOTA_Tooltip_ability_upgrade_tier5_nightelf_Description"                         ""
+
+		"DOTA_Tooltip_ability_side_upgrade_tier5_nightelf"                                "Side Upgrade Tier5 Nightelf"
+		"DOTA_Tooltip_ability_side_upgrade_tier5_nightelf_Description"                    ""
+
+		"DOTA_Tooltip_ability_upgrade_tier1_orc"                                          "Upgrade To Grunts"
+		"DOTA_Tooltip_ability_upgrade_tier1_orc_Description"                              "<font color='#ffad33'>1050</font> Gold Cost\nGrunts are tough melee attackers."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier1_orc"                                     "Switch To Grunts"
+		"DOTA_Tooltip_ability_side_upgrade_tier1_orc_Description"                         "<font color='#ffad33'>1050</font> Gold Cost\nGrunts are tough melee attackers."
+
+		"DOTA_Tooltip_ability_upgrade_tier2_orc"                                          "Switch To Headhunters"
+		"DOTA_Tooltip_ability_upgrade_tier2_orc_Description"                              "<font color='#ffad33'>1400</font> Gold Cost\nHeadhunters have a ranged attack."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier2_orc"                                     "Switch To Headhunters"
+		"DOTA_Tooltip_ability_side_upgrade_tier2_orc_Description"                         "<font color='#ffad33'>1400</font> Gold Cost\nHeadhunters have a ranged attack."
+
+		"DOTA_Tooltip_ability_upgrade_tier3_orc"                                          "Upgrade To Raiders"
+		"DOTA_Tooltip_ability_upgrade_tier3_orc_Description"                              "<font color='#ffad33'>2000</font> Gold Cost\nRaiders are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier3_orc"                                     "Switch To Raiders"
+		"DOTA_Tooltip_ability_side_upgrade_tier3_orc_Description"                         "<font color='#ffad33'>2000</font> Gold Cost\nRaiders are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_upgrade_tier4_orc"                                          "Upgrade To Tauren"
+		"DOTA_Tooltip_ability_upgrade_tier4_orc_Description"                              "<font color='#ffad33'>4000</font> Gold Cost\nTauren are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier4_orc"                                     "Switch To Tauren"
+		"DOTA_Tooltip_ability_side_upgrade_tier4_orc_Description"                         "<font color='#ffad33'>4000</font> Gold Cost\nTauren are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_upgrade_tier5_orc"                                          "Upgrade Tier5 Orc"
+		"DOTA_Tooltip_ability_upgrade_tier5_orc_Description"                              ""
+
+		"DOTA_Tooltip_ability_side_upgrade_tier5_orc"                                     "Side Upgrade Tier5 Orc"
+		"DOTA_Tooltip_ability_side_upgrade_tier5_orc_Description"                         ""
+
+		"DOTA_Tooltip_ability_upgrade_tier1_undead"                                       "Upgrade To Ghouls"
+		"DOTA_Tooltip_ability_upgrade_tier1_undead_Description"                           "<font color='#ffad33'>1050</font> Gold Cost\nGhouls are tough melee attackers."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier1_undead"                                  "Switch To Ghouls"
+		"DOTA_Tooltip_ability_side_upgrade_tier1_undead_Description"                      "<font color='#ffad33'>1050</font> Gold Cost\nGhouls are tough melee attackers."
+
+		"DOTA_Tooltip_ability_upgrade_tier2_undead"                                       "Upgrade To Crypt Fiend"
+		"DOTA_Tooltip_ability_upgrade_tier2_undead_Description"                           "<font color='#ffad33'>1400</font> Gold Cost\nCrypt Fiends have a ranged attack."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier2_undead"                                  "Switch To Crypt Fiend"
+		"DOTA_Tooltip_ability_side_upgrade_tier2_undead_Description"                      "<font color='#ffad33'>1400</font> Gold Cost\nCrypt Fiends have a ranged attack."
+
+		"DOTA_Tooltip_ability_upgrade_tier3_undead"                                       "Upgrade To Skeletal Mages"
+		"DOTA_Tooltip_ability_upgrade_tier3_undead_Description"                           "<font color='#ffad33'>2000</font> Gold Cost\nSkeletal Mages have a ranged attack and spawn 2 at a time."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier3_undead"                                  "Switch To Skeletal Mages"
+		"DOTA_Tooltip_ability_side_upgrade_tier3_undead_Description"                      "<font color='#ffad33'>2000</font> Gold Cost\nSkeletal Mages have a ranged attack and spawn 2 at a time."
+
+		"DOTA_Tooltip_ability_upgrade_tier4_undead"                                       "Upgrade To Abominations"
+		"DOTA_Tooltip_ability_upgrade_tier4_undead_Description"                           "<font color='#ffad33'>4000</font> Gold Cost\nAbominations are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_side_upgrade_tier4_undead"                                  "Switch To Abominations"
+		"DOTA_Tooltip_ability_side_upgrade_tier4_undead_Description"                      "<font color='#ffad33'>4000</font> Gold Cost\nAbominations are powerful melee attackers."
+
+		"DOTA_Tooltip_ability_upgrade_tier5_undead"                                       "Upgrade Tier5 Undead"
+		"DOTA_Tooltip_ability_upgrade_tier5_undead_Description"                           ""
+
+		"DOTA_Tooltip_ability_side_upgrade_tier5_undead"                                  "Side Upgrade Tier5 Undead"
+		"DOTA_Tooltip_ability_side_upgrade_tier5_undead_Description"                      ""
+		
+		
+		
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		////   Spawn Abilities
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		
+		
+		"DOTA_Tooltip_ability_spawn_footman"                                             "Spawn Footman"
+		"DOTA_Tooltip_ability_spawn_footman_Description"                                 ""
+
+		"DOTA_Tooltip_ability_spawn_rifleman"                                            "Spawn Rifleman"
+		"DOTA_Tooltip_ability_spawn_rifleman_Description"                                ""
+
+		"DOTA_Tooltip_ability_spawn_militia"                                             "Spawn Militia"
+		"DOTA_Tooltip_ability_spawn_militia_Description"                                 ""
+
+		"DOTA_Tooltip_ability_spawn_spell_breaker"                                       "Spawn Spell Breaker"
+		"DOTA_Tooltip_ability_spawn_spell_breaker_Description"                           ""
+
+		"DOTA_Tooltip_ability_spawn_knight"                                              "Spawn Knight"
+		"DOTA_Tooltip_ability_spawn_knight_Description"                                  ""
+
+		"DOTA_Tooltip_ability_spawn_siege_engine"                                        "Spawn Siege Engine"
+		"DOTA_Tooltip_ability_spawn_siege_engine_Description"                            ""
+
+		"DOTA_Tooltip_ability_spawn_archer"                                              "Spawn Archer"
+		"DOTA_Tooltip_ability_spawn_archer_Description"                                  ""
+
+		"DOTA_Tooltip_ability_spawn_huntress"                                            "Spawn Huntress"
+		"DOTA_Tooltip_ability_spawn_huntress_Description"                                ""
+
+		"DOTA_Tooltip_ability_spawn_druid_of_the_talon"                                  "Spawn Druid Of The Talon"
+		"DOTA_Tooltip_ability_spawn_druid_of_the_talon_Description"                      ""
+
+		"DOTA_Tooltip_ability_spawn_dryad"                                               "Spawn Dryads"
+		"DOTA_Tooltip_ability_spawn_dryad_Description"                                   ""
+
+		"DOTA_Tooltip_ability_spawn_glaive_thrower"                                      "Spawn Glaive Thrower"
+		"DOTA_Tooltip_ability_spawn_glaive_thrower_Description"                          ""
+
+		"DOTA_Tooltip_ability_spawn_grunt"                                               "Spawn Grunt"
+		"DOTA_Tooltip_ability_spawn_grunt_Description"                                   ""
+
+		"DOTA_Tooltip_ability_spawn_troll_headhunter"                                    "Spawn Troll Headhunter"
+		"DOTA_Tooltip_ability_spawn_troll_headhunter_Description"                        ""
+
+		"DOTA_Tooltip_ability_spawn_raider"                                              "Spawn Raider"
+		"DOTA_Tooltip_ability_spawn_raider_Description"                                  ""
+
+		"DOTA_Tooltip_ability_spawn_tauren"                                              "Spawn Tauren"
+		"DOTA_Tooltip_ability_spawn_tauren_Description"                                  ""
+
+		"DOTA_Tooltip_ability_spawn_kodo_beast"                                          "Spawn Kodo Beast"
+		"DOTA_Tooltip_ability_spawn_kodo_beast_Description"                              ""
+
+		"DOTA_Tooltip_ability_spawn_ghoul"                                               "Spawn Ghoul"
+		"DOTA_Tooltip_ability_spawn_ghoul_Description"                                   ""
+
+		"DOTA_Tooltip_ability_spawn_crypt_fiend"                                         "Spawn Crypt Fiend"
+		"DOTA_Tooltip_ability_spawn_crypt_fiend_Description"                             ""
+
+		"DOTA_Tooltip_ability_spawn_skeletal_mage"                                       "Spawn Skeletal Mages"
+		"DOTA_Tooltip_ability_spawn_skeletal_mage_Description"                           ""
+
+		"DOTA_Tooltip_ability_spawn_abomination"                                         "Spawn Abomination"
+		"DOTA_Tooltip_ability_spawn_abomination_Description"                             ""
+
+		"DOTA_Tooltip_ability_spawn_meat_wagon"                                          "Spawn Meat Wagon"
+		"DOTA_Tooltip_ability_spawn_meat_wagon_Description"                              ""
 	}
 }

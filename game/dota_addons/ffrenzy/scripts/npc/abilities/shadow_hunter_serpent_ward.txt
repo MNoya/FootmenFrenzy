@@ -38,12 +38,12 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"ward_hp_tooltip"		"75 135 135"
+			"ward_hp_tooltip"		"75 135 135 135"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"ward_damage_tooltip"	"12 24 43"
+			"ward_damage_tooltip"	"12 24 43 53"
 		}
 		"04"
 		{

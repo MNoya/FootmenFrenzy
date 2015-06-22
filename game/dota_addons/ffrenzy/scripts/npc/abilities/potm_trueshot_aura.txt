@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"potm_trueshot_aura"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -29,7 +29,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"damage_bonus_percent"	"10 20 30"
+			"damage_bonus_percent"	"10 20 30 40"
 		}
 		"02"
 		{

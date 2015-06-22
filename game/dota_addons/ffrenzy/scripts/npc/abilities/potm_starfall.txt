@@ -8,7 +8,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"potm_starfall"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -44,7 +44,7 @@
 		"02"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"wave_damage"	"50"
+			"wave_damage"	"50 75 100"
 		}
 		"03"
 		{

@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"warden_shadow_strike"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23,7 +23,7 @@
 	"AbilityCooldown"				"8.0"
 
 	"AbilityManaCost"				"100"
-	"AbilityDamage"					"75 130 200"
+	"AbilityDamage"					"75 130 200 270"
 
 	"precache"
 	{
@@ -46,12 +46,12 @@
 		"02"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"initial_damage"	"75 150 225"
+			"initial_damage"	"75 130 200 270"
 		}
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_every_3sec"	"10 30 45"
+			"damage_every_3sec"	"10 30 45 60"
 		}
 		"04"
 		{

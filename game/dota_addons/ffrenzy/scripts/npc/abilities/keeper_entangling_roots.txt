@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"keeper_entangling_roots"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -37,17 +37,17 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"damage_per_second"		"15 15 25"
+			"damage_per_second"		"15 15 25 35"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"hero_duration"			"3 4 5"
+			"hero_duration"			"3 4 5 6"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"creep_duration"		"9 24 36"
+			"creep_duration"		"9 24 36 48"
 		}
 	}
 

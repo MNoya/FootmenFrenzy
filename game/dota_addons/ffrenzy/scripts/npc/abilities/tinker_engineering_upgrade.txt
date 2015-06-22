@@ -11,7 +11,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"tinker_engineering_upgrade"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -20,32 +20,32 @@
 		"01"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"bonus_damage"					"2 4 6"
+			"bonus_damage"					"2 4 6 8"
 		}
 		"02"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"bonus_movement_speed"			"10 20 30"
+			"bonus_movement_speed"			"10 20 30 40"
 		}
 		"03"
 		{
 			"var_type"					 	"FIELD_FLOAT"
-			"factory_spawn_time_reduced"	"1.0 2.0 3.0"
+			"factory_spawn_time_reduced"	"1.0 2.0 3.0 4.0"
 		}
 		"04"
 		{	
 			"var_type"						"FIELD_INTEGER"
-			"cluster_extra_radius"			"30 60 90"
+			"cluster_extra_radius"			"30 60 90 120"
 		}
 		"05"
 		{	
 			"var_type"						"FIELD_INTEGER"
-			"robo_goblin_extra_str"			"2 4 6"
+			"robo_goblin_extra_str"			"2 4 6 8"
 		}
 		"05"
 		{	
 			"var_type"						"FIELD_INTEGER"
-			"robo_goblin_extra_armor"		"1 2 3"
+			"robo_goblin_extra_armor"		"1 2 3 4"
 		}
 	}
 

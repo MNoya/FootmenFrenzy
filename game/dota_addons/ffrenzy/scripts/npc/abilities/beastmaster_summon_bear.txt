@@ -41,22 +41,22 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_hp"				"600 900 1200"
+			"bear_hp"				"600 900 1200 1500"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_regen_tooltip"	"0.5 1 1.5"
+			"bear_regen_tooltip"	"0.5 1 1.5 2"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_damage"			"20 29 39"
+			"bear_damage"			"20 29 39 49"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bear_armor"			"0 1 2"
+			"bear_armor"			"0 1 2 3"
 		}	
 		"06"
 		{

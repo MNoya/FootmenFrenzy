@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"mountain_king_storm_bolt"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23,7 +23,7 @@
 	"AbilityCooldown"				"8.0"
 
 	"AbilityManaCost"				"75"
-	"AbilityDamage"					"100 225 350"
+	"AbilityDamage"					"100 225 350 450"
 	
 	"AbilitySpecial"
 	{

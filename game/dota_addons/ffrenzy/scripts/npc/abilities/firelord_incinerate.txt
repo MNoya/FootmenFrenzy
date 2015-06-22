@@ -12,7 +12,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"firelord_incinerate"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 	"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -42,12 +42,12 @@
 		"02"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"damage_per_stack"				"1 2 3"
+			"damage_per_stack"				"1 2 3 4"
 		}
 		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"incineration_damage"			"30 45 60"
+			"incineration_damage"			"30 45 60 75"
 		}
 		"04"
 		{

@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"dark_ranger_black_arrow"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 	"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -20,7 +20,7 @@
 	"AbilityCastRange"				"600"
 
 	"AbilityManaCost"				"10"
-	"AbilityDamage"					"2 10 20"
+	"AbilityDamage"					"2 10 20 30"
 
 	"precache"
 	{
@@ -38,12 +38,12 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"dark_minion_health"		"215 290 405"		
+			"dark_minion_health"		"215 290 405 525"		
 		}
 		"03"
 		{
 			"var_type"          		"FIELD_INTEGER"
-			"dark_minion_damage"       	"10 16 18"
+			"dark_minion_damage"       	"10 16 18 22"
 		}
 		"04"
 		{

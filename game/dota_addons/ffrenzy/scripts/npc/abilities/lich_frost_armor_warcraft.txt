@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"lich_frost_armor_warcraft"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -29,7 +29,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"armor_bonus"			"3 5 7"
+			"armor_bonus"			"3 5 7 9"
 		}
 		"02"
 		{

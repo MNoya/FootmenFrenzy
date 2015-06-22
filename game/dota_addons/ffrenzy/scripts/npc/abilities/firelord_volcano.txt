@@ -12,7 +12,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"firelord_volcano"
-	"MaxLevel" 						"1"
+	"MaxLevel" 						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -54,7 +54,7 @@
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"wave_damage"			"100"	//buildings take *2
+			"wave_damage"			"100 135 170"	//buildings take *2
 		}
 		"04"
 		{

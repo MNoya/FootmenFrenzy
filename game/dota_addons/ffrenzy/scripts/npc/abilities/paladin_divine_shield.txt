@@ -7,10 +7,10 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"paladin_divine_shield"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-	"AbilityCooldown"				"35 50 65"
+	"AbilityCooldown"				"35 50 65 80"
 	"AbilityManaCost"				"25"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"shield_duration"	"15 30 45"
+			"shield_duration"	"15 30 45 60"
 		}
 	}
 	"OnSpellStart"

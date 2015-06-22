@@ -10,13 +10,13 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"warden_blink"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 
 	"AbilityCastPoint"				"0.3"
-	"AbilityCooldown"				"10.0 10.0 1.0"
+	"AbilityCooldown"				"15.0 10.0 5.0 1.0"
 
 	"AbilityManaCost"				"50"
 

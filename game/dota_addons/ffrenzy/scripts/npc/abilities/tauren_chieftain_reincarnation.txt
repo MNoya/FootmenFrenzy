@@ -13,10 +13,10 @@
 	"BaseClass"             		"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"tauren_chieftain_reincarnation"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
-	"AbilityCooldown"				"240"
+	"AbilityCooldown"				"240 200 160"
 	"AbilityManaCost"				"0"
 
 	"AbilitySpecial"

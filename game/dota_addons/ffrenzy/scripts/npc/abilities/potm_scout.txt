@@ -10,14 +10,14 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"potm_scout"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
 	"AbilityCastPoint"				"0.3"
 	"AbilityCooldown"				"20.0"
 
-	"AbilityManaCost"				"100 75 50"
+	"AbilityManaCost"				"100 75 50 10"
 
 	"precache"
 	{
@@ -32,7 +32,7 @@
 		"01"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"owl_duration"				"60 90 120"
+			"owl_duration"				"60 90 120 160"
 		}
 		"02"
 		{
@@ -42,12 +42,12 @@
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"owl_vision"				"1000 1400 1800" //1000 1500 2200 originally
+			"owl_vision"				"1000 1400 1800 2000" //1000 1500 2200 originally
 		}
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"owl_movespeed"				"270 350 450"
+			"owl_movespeed"				"270 350 450 550"
 		}
 		"05"
 		{

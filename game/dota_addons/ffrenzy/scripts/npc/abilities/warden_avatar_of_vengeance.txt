@@ -12,7 +12,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"warden_avatar_of_vengeance"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"

@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"firelord_summon_lava_spawn"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityCastAnimation"			"ACT_DOTA_RAZE_2"
@@ -44,12 +44,12 @@
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"lava_spawn_damage"			"11 16 21"
+			"lava_spawn_damage"			"19 33 44 54"
 		}
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"lava_spawn_hp"				"425 550 700"
+			"lava_spawn_hp"				"425 550 700 850"
 		}
 		"05"
 		{

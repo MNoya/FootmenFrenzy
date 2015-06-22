@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"pandaren_drunken_haze"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23,7 +23,7 @@
 	"AbilityCooldown"				"12.0"
 
 	"AbilityManaCost"				"70"
-	"AbilityDamage"					"75 130 200"
+	"AbilityDamage"					"75 130 200 270"
 
 	"AoERadius"						"200"
 
@@ -40,12 +40,12 @@
 		"01"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"move_speed_slow"	"-15 -30 -50"
+			"move_speed_slow"	"-15 -30 -50 -70"
 		}
 		"02"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"miss_chance"		"45 65 80"
+			"miss_chance"		"45 65 80 100"
 		}
 		"03"
 		{

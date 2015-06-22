@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"tauren_chieftain_endurance_aura"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -27,12 +27,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"move_speed_bonus"		"10 20 30"
+			"move_speed_bonus"		"10 20 30 40"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"attack_speed_bonus"	"5 10 15"
+			"attack_speed_bonus"	"5 10 15 20"
 		}
 		"03"
 		{

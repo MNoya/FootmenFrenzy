@@ -1455,22 +1455,22 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_hp"				"600 900 1200"
+				"bear_hp"				"600 900 1200 1500"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_regen_tooltip"	"0.5 1 1.5"
+				"bear_regen_tooltip"	"0.5 1 1.5 2"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_damage"			"20 29 39"
+				"bear_damage"			"20 29 39 49"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bear_armor"			"0 1 2"
+				"bear_armor"			"0 1 2 3"
 			}	
 			"06"
 			{
@@ -1915,22 +1915,22 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_hp"				"300 450 650"
+				"bird_hp"				"300 450 650 850"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_regen_tooltip"	"0.5 1 1.5"
+				"bird_regen_tooltip"	"0.5 1 1.5 2"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_damage"			"0 23 52"	//MAGIC DAMAGE?
+				"bird_damage"			"0 23 52 82"	//MAGIC DAMAGE?
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bird_armor"			"0 3 5"
+				"bird_armor"			"0 3 5 7"
 			}	
 			"06"
 			{
@@ -2316,17 +2316,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"boar_hp"				"425 515 600"
+				"boar_hp"				"425 515 600 685"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"boar_regen_tooltip"	"0.5 1 1.5"
+				"boar_regen_tooltip"	"0.5 1 1.5 2"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"boar_damage"			"14 28 42"
+				"boar_damage"			"14 28 42 56"
 			}
 			"05"
 			{
@@ -5655,7 +5655,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"dark_ranger_black_arrow"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -5665,7 +5665,7 @@
 		"AbilityCastRange"				"600"
 	
 		"AbilityManaCost"				"10"
-		"AbilityDamage"					"2 10 20"
+		"AbilityDamage"					"2 10 20 30"
 	
 		"precache"
 		{
@@ -5683,12 +5683,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dark_minion_health"		"215 290 405"		
+				"dark_minion_health"		"215 290 405 525"		
 			}
 			"03"
 			{
 				"var_type"          		"FIELD_INTEGER"
-				"dark_minion_damage"       	"10 16 18"
+				"dark_minion_damage"       	"10 16 18 22"
 			}
 			"04"
 			{
@@ -7523,7 +7523,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"far_seer_chain_lightning"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -7883,7 +7883,7 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"reveal_radius"	"600 1800 4000"
+				"reveal_radius"	"600 1800 4000 8000"
 			}
 			"02"
 			{
@@ -8250,7 +8250,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"firelord_incinerate"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -8280,12 +8280,12 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"				"1 2 3"
+				"damage_per_stack"				"1 2 3 4"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"incineration_damage"			"30 45 60"
+				"incineration_damage"			"30 45 60 75"
 			}
 			"04"
 			{
@@ -8377,7 +8377,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"firelord_soul_burn"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -8402,17 +8402,17 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage_per_second"	"7 14 21"
+				"damage_per_second"	"7 14 21 28"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"hero_duration"		"6 7 8"
+				"hero_duration"		"6 7 8 9"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"creep_duration"	"14 16 18"
+				"creep_duration"	"14 16 18 20"
 			}
 			"04"
 			{
@@ -8498,7 +8498,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"firelord_summon_lava_spawn"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCastAnimation"			"ACT_DOTA_RAZE_2"
@@ -8532,12 +8532,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lava_spawn_damage"			"11 16 21"
+				"lava_spawn_damage"			"19 33 44 54"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lava_spawn_hp"				"425 550 700"
+				"lava_spawn_hp"				"425 550 700 850"
 			}
 			"05"
 			{
@@ -8836,7 +8836,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"firelord_volcano"
-		"MaxLevel" 						"1"
+		"MaxLevel" 						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -8878,7 +8878,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"100"	//buildings take *2
+				"wave_damage"			"100 135 170"	//buildings take *2
 			}
 			"04"
 			{
@@ -9188,7 +9188,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"keeper_entangling_roots"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -9215,17 +9215,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"15 15 25"
+				"damage_per_second"		"15 15 25 35"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hero_duration"			"3 4 5"
+				"hero_duration"			"3 4 5 6"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"creep_duration"		"9 24 36"
+				"creep_duration"		"9 24 36 48"
 			}
 		}
 	
@@ -9416,7 +9416,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"keeper_thorns_aura"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -9436,7 +9436,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"melee_damage_return"	"10 20 30"
+				"melee_damage_return"	"10 20 30 40"
 			}
 			"02"
 			{
@@ -9487,7 +9487,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"keeper_tranquility"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior" 				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -9519,7 +9519,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"heal_per_second"	"20"
+				"heal_per_second"	"20 30 40"
 			}
 			"03"
 			{
@@ -9638,7 +9638,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"lich_dark_ritual_warcraft"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -9662,7 +9662,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"health_conversion"		"33 66 100"
+				"health_conversion"		"33 66 100 133"
 			}
 		}
 	
@@ -9703,7 +9703,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"lich_death_and_decay"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -9733,12 +9733,12 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"health_percent_damage_per_sec"	"4"
+				"health_percent_damage_per_sec"	"4 5 6"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"300"
+				"radius"			"300 350 400"
 			}
 			"03"
 			{
@@ -9884,7 +9884,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"lich_frost_armor_warcraft"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -9903,7 +9903,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor_bonus"			"3 5 7"
+				"armor_bonus"			"3 5 7 9"
 			}
 			"02"
 			{
@@ -10056,7 +10056,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"lich_frost_nova_warcraft"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -10100,17 +10100,17 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aoe_damage"			"50 100 150"
+				"aoe_damage"			"50 100 150 200"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_hero_duration"	"2 3 4"
+				"slow_hero_duration"	"2 3 4 5"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_creep_duration"	"4 6 8"
+				"slow_creep_duration"	"4 6 8 10"
 			}
 		}
 	
@@ -10210,7 +10210,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"mountain_king_avatar"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -10227,12 +10227,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor_bonus"			"5"	
+				"armor_bonus"			"5 7 9"	
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"20"
+				"bonus_damage"			"20 30 40"
 			}
 			"04"
 			{
@@ -10321,7 +10321,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"mountain_king_bash"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
@@ -10340,7 +10340,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance"			"20 30 40"
+				"bash_chance"			"20 30 40 50"
 			}
 			"02"
 			{
@@ -10437,7 +10437,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"mountain_king_storm_bolt"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -10450,7 +10450,7 @@
 		"AbilityCooldown"				"8.0"
 	
 		"AbilityManaCost"				"75"
-		"AbilityDamage"					"100 225 350"
+		"AbilityDamage"					"100 225 350 450"
 		
 		"AbilitySpecial"
 		{
@@ -10586,7 +10586,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"mountain_king_thunder_clap"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -10594,7 +10594,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 	
-		"AbilityCastRange"				"250 300 350"
+		"AbilityCastRange"				"250 300 350 400"
 		"AbilityCastPoint"				"0.3"
 		"AbilityCooldown"				"6.0"
 	
@@ -10612,32 +10612,32 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"250 300 350"
+				"radius"					"250 300 350 400"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"3.0 3.0 3.0"
+				"duration"					"3.0 3.0 3.0 3.0"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_creeps"			"5.0 5.0 5.0"
+				"duration_creeps"			"5.0 5.0 5.0 5.0"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"60 100 140"
+				"damage"					"60 100 140 180"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movement_slow"				"-50 -50 -50"
+				"movement_slow"				"-50 -50 -50 -50"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_speed_slow"			"-50 -50 -50"
+				"attack_speed_slow"			"-50 -50 -50 -50"
 			}
 		}
 	
@@ -10740,7 +10740,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"naga_sea_witch_forked_lightning"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -10753,7 +10753,7 @@
 		"AbilityCastRange"				"900"
 	
 		"AbilityManaCost"				"110"
-		"AbilityDamage"					"85 160 250"
+		"AbilityDamage"					"85 160 250 340"
 	
 		"AbilitySpecial"
 		{
@@ -10811,7 +10811,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"naga_sea_witch_frost_arrows"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -10822,7 +10822,7 @@
 	    "AbilityCastRange"          	"600"
 	
 		"AbilityManaCost"				"10"
-		"AbilityDamage"					"5 10 15"
+		"AbilityDamage"					"5 10 15 20"
 	
 		"precache"
 		{
@@ -10847,7 +10847,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"slow_percentage"				"-20 -35 -50"		
+				"slow_percentage"				"-20 -35 -50 -65"		
 			}		
 		}
 	
@@ -10943,7 +10943,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"naga_sea_witch_mana_shield"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -10955,7 +10955,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"damage_per_mana"		"1 1.5 2"
+				"damage_per_mana"		"1 1.5 2 2.5"
 			}
 			"02"
 			{
@@ -11494,7 +11494,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"paladin_devotion_aura"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"	
@@ -11510,7 +11510,7 @@
 			"01"
 			{
 				"var_type"		"FIELD_FLOAT"
-				"armor_bonus"	"1.5 3 4.5"
+				"armor_bonus"	"1.5 3 4.5 6"
 			}
 			"02"
 			{
@@ -11555,10 +11555,10 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"paladin_divine_shield"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityCooldown"				"35 50 65"
+		"AbilityCooldown"				"35 50 65 80"
 		"AbilityManaCost"				"25"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 	
@@ -11573,7 +11573,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"shield_duration"	"15 30 45"
+				"shield_duration"	"15 30 45 60"
 			}
 		}
 		"OnSpellStart"
@@ -11617,7 +11617,7 @@
 	"paladin_holy_light"
 	{
 		"BaseClass" 					"ability_datadriven"
-		"MaxLevel"						"3"
+		"MaxLevel"						"4"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
@@ -11640,17 +11640,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"target_damage"			"100 200 300"
+				"target_damage"			"100 200 300 400"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"heal_amount"			"200 400 600"
+				"heal_amount"			"200 400 600 800"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"particle_radius"		"200 400 600"
+				"particle_radius"		"200 400 600 800"
 			}
 		}
 	
@@ -11675,7 +11675,7 @@
 	{
 		"BaseClass" 					"ability_datadriven"
 		"AbilityTextureName"			"paladin_resurrection"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -11706,7 +11706,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_units_resurrected"		"6"
+				"max_units_resurrected"		"6 10 14"
 			}		
 		}
 	
@@ -11795,7 +11795,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pandaren_breath_of_fire"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -11808,7 +11808,7 @@
 		"AbilityCooldown"				"10.0"
 	
 		"AbilityManaCost"				"70"
-		"AbilityDamage"					"75 130 200"
+		"AbilityDamage"					"75 130 200 270"
 	
 		"precache"
 		{
@@ -11822,7 +11822,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"drunken_haze_burn_dps"	"7 14 21"
+				"drunken_haze_burn_dps"	"7 14 21 28"
 			}
 			"02"
 			{
@@ -11927,7 +11927,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pandaren_drunken_brawler"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
@@ -11943,7 +11943,7 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"miss_chance"	"7 14 21"
+				"miss_chance"	"7 14 21 28"
 			}
 			"02"
 			{
@@ -11953,7 +11953,7 @@
 			"02"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"crit_bonus"	"200 300 400"
+				"crit_bonus"	"200 300 400 500"
 			}
 		}
 	
@@ -12039,7 +12039,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pandaren_drunken_haze"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -12052,7 +12052,7 @@
 		"AbilityCooldown"				"12.0"
 	
 		"AbilityManaCost"				"70"
-		"AbilityDamage"					"75 130 200"
+		"AbilityDamage"					"75 130 200 270"
 	
 		"AoERadius"						"200"
 	
@@ -12069,12 +12069,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"move_speed_slow"	"-15 -30 -50"
+				"move_speed_slow"	"-15 -30 -50 -70"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"miss_chance"		"45 65 80"
+				"miss_chance"		"45 65 80 100"
 			}
 			"03"
 			{
@@ -12174,7 +12174,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pandaren_storm_earth_fire"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -12191,7 +12191,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"60.0"
+				"duration"					"30.0 45.0 60.0"
 			}
 			"02"
 			{
@@ -14084,14 +14084,14 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"potm_scout"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	
 		"AbilityCastPoint"				"0.3"
 		"AbilityCooldown"				"20.0"
 	
-		"AbilityManaCost"				"100 75 50"
+		"AbilityManaCost"				"100 75 50 10"
 	
 		"precache"
 		{
@@ -14106,7 +14106,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"owl_duration"				"60 90 120"
+				"owl_duration"				"60 90 120 160"
 			}
 			"02"
 			{
@@ -14116,12 +14116,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"owl_vision"				"1000 1400 1800" //1000 1500 2200 originally
+				"owl_vision"				"1000 1400 1800 2000" //1000 1500 2200 originally
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"owl_movespeed"				"270 350 450"
+				"owl_movespeed"				"270 350 450 550"
 			}
 			"05"
 			{
@@ -14362,7 +14362,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"potm_searing_arrows"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -14371,10 +14371,10 @@
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 	
 		"AbilityCastPoint"          	"0"
-	    "AbilityCastRange"          	"600 700 700"
+	    "AbilityCastRange"          	"600 700 700 700"
 	
 		"AbilityManaCost"				"8"
-		"AbilityDamage"					"10 20 30"
+		"AbilityDamage"					"10 20 30 40"
 	
 		"precache"
 		{
@@ -14388,7 +14388,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_range"		"0 100 100"
+				"bonus_range"		"0 100 100 100"
 			}
 		}
 	
@@ -14451,7 +14451,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"potm_starfall"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -14487,7 +14487,7 @@
 			"02"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"wave_damage"	"50"
+				"wave_damage"	"50 75 100"
 			}
 			"03"
 			{
@@ -14665,7 +14665,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"potm_trueshot_aura"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -14684,7 +14684,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_bonus_percent"	"10 20 30"
+				"damage_bonus_percent"	"10 20 30 40"
 			}
 			"02"
 			{
@@ -14729,7 +14729,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"shadow_hunter_big_bad_voodoo"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -14761,7 +14761,7 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"duration"		"30"
+				"duration"		"20 30 40"
 			}
 			"01"
 			{
@@ -14918,7 +14918,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"shadow_hunter_healing_wave"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -14937,12 +14937,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"healing"				"160 215 300"
+				"healing"				"160 215 300 385"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_bounces"			"2 3 4"
+				"max_bounces"			"2 3 4 5"
 			}
 			"03"
 			{
@@ -14989,7 +14989,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"shadow_hunter_hex"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -15014,12 +15014,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"hero_duration"				"4 5 6"
+				"hero_duration"				"4 5 6 7"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"creep_duration"			"15 30 45"
+				"creep_duration"			"15 30 45 60"
 			}
 			"03"
 			{
@@ -15169,12 +15169,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_hp_tooltip"		"75 135 135"
+				"ward_hp_tooltip"		"75 135 135 135"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_damage_tooltip"	"12 24 43"
+				"ward_damage_tooltip"	"12 24 43 53"
 			}
 			"04"
 			{
@@ -15645,10 +15645,22 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"nightelf_dryad"
 					}
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/rally_point.lua"
+						"Function"		"SpawnUnit"
+						"UnitName"		"nightelf_dryad"
+					}
 				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/rally_point.lua"
+						"Function"		"SpawnUnit"
+						"UnitName"		"nightelf_dryad"
+					}
 					"RunScript"
 					{
 						"ScriptFile"	"buildings/rally_point.lua"
@@ -15962,10 +15974,22 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"undead_skeletal_mage"
 					}
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/rally_point.lua"
+						"Function"		"SpawnUnit"
+						"UnitName"		"undead_skeletal_mage"
+					}
 				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/rally_point.lua"
+						"Function"		"SpawnUnit"
+						"UnitName"		"undead_skeletal_mage"
+					}
 					"RunScript"
 					{
 						"ScriptFile"	"buildings/rally_point.lua"
@@ -16058,7 +16082,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tauren_chieftain_endurance_aura"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -16075,12 +16099,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"move_speed_bonus"		"10 20 30"
+				"move_speed_bonus"		"10 20 30 40"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"attack_speed_bonus"	"5 10 15"
+				"attack_speed_bonus"	"5 10 15 20"
 			}
 			"03"
 			{
@@ -16130,10 +16154,10 @@
 		"BaseClass"             		"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tauren_chieftain_reincarnation"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
-		"AbilityCooldown"				"240"
+		"AbilityCooldown"				"240 200 160"
 		"AbilityManaCost"				"0"
 	
 		"AbilitySpecial"
@@ -16182,7 +16206,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tauren_chieftain_shockwave"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -16195,7 +16219,7 @@
 		"AbilityCooldown"				"8.0"
 	
 		"AbilityManaCost"				"100"
-		"AbilityDamage"					"75 130 200"
+		"AbilityDamage"					"75 130 200 270"
 	
 		"precache"
 		{
@@ -16322,7 +16346,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tauren_chieftain_war_stomp"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -16330,12 +16354,12 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
 	
-		"AbilityCastRange"				"250 300 350"
+		"AbilityCastRange"				"250 300 350 400"
 		"AbilityCastPoint"				"0.3"
 		"AbilityCooldown"				"6.0"
 	
 		"AbilityManaCost"				"90"
-		"AbilityDamage"					"25 50 75"
+		"AbilityDamage"					"25 50 75 100"
 	
 		"precache"
 		{
@@ -16348,17 +16372,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"250 300 350"
+				"radius"				"250 300 350 400"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_hero_duration"	"2.0 3.0 4.0"
+				"stun_hero_duration"	"2.0 3.0 4.0 5.0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_creep_duration"	"3.0 4.0 5.0"
+				"stun_creep_duration"	"3.0 4.0 5.0 6.0"
 			}
 		}
 	
@@ -16443,7 +16467,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tinker_cluster_rockets"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -16456,10 +16480,10 @@
 		"AbilityCooldown"				"6.0"
 	
 		"AbilityManaCost"				"70"
-		"AbilityDamage"					"35 65 100"
+		"AbilityDamage"					"35 65 95 125"
 	
 		"AOERadius"						"%radius"
-		"AbilityChannelTime"			"0.5 1.0 1.5"
+		"AbilityChannelTime"			"0.5 1.0 1.5 2.0"
 	
 		"precache"
 		{
@@ -16475,7 +16499,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"230 260 290"
+				"radius"				"230 260 290 320"
 			}
 			"02"
 			{
@@ -16624,7 +16648,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tinker_engineering_upgrade"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
@@ -16633,32 +16657,32 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage"					"2 4 6"
+				"bonus_damage"					"2 4 6 8"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_movement_speed"			"10 20 30"
+				"bonus_movement_speed"			"10 20 30 40"
 			}
 			"03"
 			{
 				"var_type"					 	"FIELD_FLOAT"
-				"factory_spawn_time_reduced"	"1.0 2.0 3.0"
+				"factory_spawn_time_reduced"	"1.0 2.0 3.0 4.0"
 			}
 			"04"
 			{	
 				"var_type"						"FIELD_INTEGER"
-				"cluster_extra_radius"			"30 60 90"
+				"cluster_extra_radius"			"30 60 90 120"
 			}
 			"05"
 			{	
 				"var_type"						"FIELD_INTEGER"
-				"robo_goblin_extra_str"			"2 4 6"
+				"robo_goblin_extra_str"			"2 4 6 8"
 			}
 			"05"
 			{	
 				"var_type"						"FIELD_INTEGER"
-				"robo_goblin_extra_armor"		"1 2 3"
+				"robo_goblin_extra_armor"		"1 2 3 4"
 			}
 		}
 	
@@ -16918,7 +16942,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"tinker_robo_goblin"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -16941,17 +16965,17 @@
 			"01"
 			{	
 				"var_type"				"FIELD_INTEGER"
-				"extra_str"				"5"
+				"extra_str"				"5 8 11"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"extra_armor"			"1"
+				"extra_armor"			"1 2 3"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"extra_dmg_to_buildings"	"3.5"
+				"extra_dmg_to_buildings"	"3.5 5 7.5"
 			}
 			"04"
 			{
@@ -17494,7 +17518,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"warden_avatar_of_vengeance"
-		"MaxLevel"						"1"
+		"MaxLevel"						"3"
 		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -17742,13 +17766,13 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"warden_blink"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 	
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"10.0 10.0 1.0"
+		"AbilityCooldown"				"15.0 10.0 5.0 1.0"
 	
 		"AbilityManaCost"				"50"
 	
@@ -17816,7 +17840,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"warden_fan_of_knives"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -17824,12 +17848,12 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 	
-		"AbilityCastRange"				"400 500 600"
+		"AbilityCastRange"				"400 500 600 700"
 		"AbilityCastPoint"				"0.3"
 		"AbilityCooldown"				"9.0"
 	
 		"AbilityManacost" 				"100"
-		"AbilityDamage"					"75 125 190"
+		"AbilityDamage"					"75 125 190 265"
 	
 		"precache"
 		{
@@ -17842,7 +17866,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"400 500 600"
+				"radius"				"400 500 600 700"
 			}
 		}
 	
@@ -17885,7 +17909,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"warden_shadow_strike"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -17898,7 +17922,7 @@
 		"AbilityCooldown"				"8.0"
 	
 		"AbilityManaCost"				"100"
-		"AbilityDamage"					"75 130 200"
+		"AbilityDamage"					"75 130 200 270"
 	
 		"precache"
 		{
@@ -17921,12 +17945,12 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"initial_damage"	"75 150 225"
+				"initial_damage"	"75 130 200 270"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_every_3sec"	"10 30 45"
+				"damage_every_3sec"	"10 30 45 60"
 			}
 			"04"
 			{

@@ -46,22 +46,22 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bird_hp"				"300 450 650"
+			"bird_hp"				"300 450 650 850"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bird_regen_tooltip"	"0.5 1 1.5"
+			"bird_regen_tooltip"	"0.5 1 1.5 2"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bird_damage"			"0 23 52"	//MAGIC DAMAGE?
+			"bird_damage"			"0 23 52 82"	//MAGIC DAMAGE?
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bird_armor"			"0 3 5"
+			"bird_armor"			"0 3 5 7"
 		}	
 		"06"
 		{

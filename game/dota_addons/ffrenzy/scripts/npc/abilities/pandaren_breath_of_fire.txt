@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"pandaren_breath_of_fire"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"	
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23,7 +23,7 @@
 	"AbilityCooldown"				"10.0"
 
 	"AbilityManaCost"				"70"
-	"AbilityDamage"					"75 130 200"
+	"AbilityDamage"					"75 130 200 270"
 
 	"precache"
 	{
@@ -37,7 +37,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"drunken_haze_burn_dps"	"7 14 21"
+			"drunken_haze_burn_dps"	"7 14 21 28"
 		}
 		"02"
 		{

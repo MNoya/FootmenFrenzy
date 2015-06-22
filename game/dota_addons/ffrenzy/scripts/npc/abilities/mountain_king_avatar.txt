@@ -8,7 +8,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"mountain_king_avatar"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -25,12 +25,12 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"armor_bonus"			"5"	
+			"armor_bonus"			"5 7 9"	
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"20"
+			"bonus_damage"			"20 30 40"
 		}
 		"04"
 		{

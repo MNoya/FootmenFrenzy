@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"naga_sea_witch_frost_arrows"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -21,7 +21,7 @@
     "AbilityCastRange"          	"600"
 
 	"AbilityManaCost"				"10"
-	"AbilityDamage"					"5 10 15"
+	"AbilityDamage"					"5 10 15 20"
 
 	"precache"
 	{
@@ -46,7 +46,7 @@
 		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"slow_percentage"				"-20 -35 -50"		
+			"slow_percentage"				"-20 -35 -50 -65"		
 		}		
 	}
 

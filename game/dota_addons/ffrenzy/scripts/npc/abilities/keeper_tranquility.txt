@@ -8,7 +8,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"keeper_tranquility"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior" 				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
@@ -40,7 +40,7 @@
 		"02"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"heal_per_second"	"20"
+			"heal_per_second"	"20 30 40"
 		}
 		"03"
 		{

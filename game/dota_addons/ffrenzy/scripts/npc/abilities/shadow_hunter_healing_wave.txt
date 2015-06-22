@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"shadow_hunter_healing_wave"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -29,12 +29,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"healing"				"160 215 300"
+			"healing"				"160 215 300 385"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"max_bounces"			"2 3 4"
+			"max_bounces"			"2 3 4 5"
 		}
 		"03"
 		{

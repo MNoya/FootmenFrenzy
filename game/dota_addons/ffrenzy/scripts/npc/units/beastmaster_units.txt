@@ -245,19 +245,19 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"Ability1"					"beastmaster_summon_bear_bash"			// Ability 1
-	"Ability2"					""			// Ability 2
+	"Ability2"					"beastmaster_summon_bear_blink"			// Ability 2
 	"Ability3"					""			// Ability 3
 	"Ability4"					""			// Ability 4
 
 	// Armor
 	//----------------------------------------------------------------
-	"ArmorPhysical"				"1"			// Physical protection.
+	"ArmorPhysical"				"3"			// Physical protection.
 
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-	"AttackDamageMin"			"38"		// Damage range min.
-	"AttackDamageMax"			"40"		// Damage range max.	
+	"AttackDamageMin"			"48"		// Damage range min.
+	"AttackDamageMax"			"50"		// Damage range max.	
 	"AttackRate"				"1.5"		// Speed of attack.
 	"AttackAnimationPoint"		"0.43"		// Normalized time in animation cycle to attack.
 	"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -284,8 +284,8 @@
 
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"1200"		// Base health.
-	"StatusHealthRegen"			"1"			// Health regeneration rate.
+	"StatusHealth"				"1500"		// Base health.
+	"StatusHealthRegen"			"2"			// Health regeneration rate.
 	"StatusMana"				"0"		// Base mana.
 	"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 	
@@ -542,8 +542,8 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-	"AttackDamageMin"			"52"		// Damage range min.
-	"AttackDamageMax"			"52"		// Damage range max.	
+	"AttackDamageMin"			"56"		// Damage range min.
+	"AttackDamageMax"			"56"		// Damage range max.	
 	"AttackRate"				"1.5"		// Speed of attack.
 	"AttackAnimationPoint"		"0.633"		// Normalized time in animation cycle to attack.
 	"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
@@ -569,8 +569,8 @@
 
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"700"		// Base health.
-	"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+	"StatusHealth"				"685"		// Base health.
+	"StatusHealthRegen"			"2"		// Health regeneration rate.
 	
 	// Vision
 	//----------------------------------------------------------------
@@ -824,13 +824,13 @@
 
 	// Armor
 	//----------------------------------------------------------------
-	"ArmorPhysical"				"5"			// Physical protection.
+	"ArmorPhysical"				"7"			// Physical protection.
 
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-	"AttackDamageMin"			"62"		// Damage range min.
-	"AttackDamageMax"			"62"		// Damage range max.	
+	"AttackDamageMin"			"82"		// Damage range min.
+	"AttackDamageMax"			"82"		// Damage range max.	
 	"AttackRate"				"1.5"		// Speed of attack.
 	"AttackAnimationPoint"		"0.633"		// Normalized time in animation cycle to attack.
 	"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
@@ -856,8 +856,8 @@
 
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"650"		// Base health.
-	"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+	"StatusHealth"				"850"		// Base health.
+	"StatusHealthRegen"			"2"		// Health regeneration rate.
 	
 	// Vision
 	//----------------------------------------------------------------

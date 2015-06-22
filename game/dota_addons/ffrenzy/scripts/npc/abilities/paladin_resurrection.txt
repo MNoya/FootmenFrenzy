@@ -10,7 +10,7 @@
 {
 	"BaseClass" 					"ability_datadriven"
 	"AbilityTextureName"			"paladin_resurrection"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 	
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -41,7 +41,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"max_units_resurrected"		"6"
+			"max_units_resurrected"		"6 10 14"
 		}		
 	}
 

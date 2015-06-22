@@ -46,17 +46,17 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"boar_hp"				"425 515 600"
+			"boar_hp"				"425 515 600 685"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"boar_regen_tooltip"	"0.5 1 1.5"
+			"boar_regen_tooltip"	"0.5 1 1.5 2"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"boar_damage"			"14 28 42"
+			"boar_damage"			"14 28 42 56"
 		}
 		"05"
 		{

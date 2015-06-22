@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"naga_sea_witch_forked_lightning"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -23,7 +23,7 @@
 	"AbilityCastRange"				"900"
 
 	"AbilityManaCost"				"110"
-	"AbilityDamage"					"85 160 250"
+	"AbilityDamage"					"85 160 250 340"
 
 	"AbilitySpecial"
 	{

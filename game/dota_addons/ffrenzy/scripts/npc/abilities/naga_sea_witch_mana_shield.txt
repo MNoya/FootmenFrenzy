@@ -12,7 +12,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"naga_sea_witch_mana_shield"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -24,7 +24,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage_per_mana"		"1 1.5 2"
+			"damage_per_mana"		"1 1.5 2 2.5"
 		}
 		"02"
 		{

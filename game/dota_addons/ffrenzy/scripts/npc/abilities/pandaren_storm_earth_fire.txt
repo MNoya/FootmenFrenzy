@@ -5,7 +5,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"pandaren_storm_earth_fire"
-	"MaxLevel"						"1"
+	"MaxLevel"						"3"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -22,7 +22,7 @@
 		"01"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"duration"					"60.0"
+			"duration"					"30.0 45.0 60.0"
 		}
 		"02"
 		{
