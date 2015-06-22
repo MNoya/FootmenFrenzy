@@ -53,7 +53,7 @@ local team_c_counter = 0
 local team_d_counter = 0
 
 -- Change these at will
-local testing = true
+local testing = false
 local testingUnits = false
 local testingLevels = false
 local testingUnitFormation = false
@@ -65,15 +65,6 @@ if not Convars:GetBool("developer") then
     testingUnitFormation = false
     testing = false
 end
-
-local base_0_destroyed = false
-local base_1_destroyed = false
-local base_2_destroyed = false
-local base_3_destroyed = false
-local base_4_destroyed = false
-local base_5_destroyed = false
-local base_6_destroyed = false
-local base_7_destroyed = false
 
 
 if GameMode == nil then
@@ -528,48 +519,6 @@ end
 
 
 
---[[function GameMode:GatherValidTeams()
---	print( "GatherValidTeams:" )
-
-	local foundTeams = {}
-	for _, playerStart in pairs( Entities:FindAllByClassname( "info_player_start_dota" ) ) do
-		foundTeams[  playerStart:GetTeam() ] = true
-	end
-
-	local numTeams = TableCount(foundTeams)
-	print( "GatherValidTeams - Found spawns for a total of " .. numTeams .. " teams" )
-	
-	local foundTeamsList = {}
-	for t, _ in pairs( foundTeams ) do
-		table.insert( foundTeamsList, t )
-	end
-
-	if numTeams == 0 then
-		print( "GatherValidTeams - NO team spawns detected, defaulting to GOOD/BAD" )
-		table.insert( foundTeamsList, DOTA_TEAM_GOODGUYS )
-		table.insert( foundTeamsList, DOTA_TEAM_BADGUYS )
-		numTeams = 2
-	end
-
-	local maxPlayersPerValidTeam = math.floor( 10 / numTeams )
-
-	self.m_GatheredShuffledTeams = ShuffledList( foundTeamsList )
-
-	print( "Final shuffled team list:" )
-	for _, team in pairs( self.m_GatheredShuffledTeams ) do
-		print( " - " .. team .. " ( " .. GetTeamName( team ) .. " )" )
-	end
-
-	print( "Setting up teams:" )
-	for team = 0, (DOTA_TEAM_COUNT-1) do
-		local maxPlayers = 0
-		if ( nil ~= TableFindKey( foundTeamsList, team ) ) then
-			maxPlayers = maxPlayersPerValidTeam
-		end
-		print( " - " .. team .. " ( " .. GetTeamName( team ) .. " ) -> max players = " .. tostring(maxPlayers) )
-		GameRules:SetCustomGameTeamMaxPlayers( team, maxPlayers )
-	end
-end]]
 
 
 ---------------------------------------------------------------------------

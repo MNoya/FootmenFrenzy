@@ -241,7 +241,7 @@
 				
 					"Properties"
 					{
-						"MODIFIER_PROPERTY_STATS_INTELLIGENCE_BONUS"		"%bonus_intelligence"
+						"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intelligence"
 					}
 				}
 			}
