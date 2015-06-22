@@ -9,12 +9,6 @@ function SpawnUnit( event )
 	local position = GetInitialRallyPoint( event )
 	
 	local unit = CreateUnitByName(unit_name, position, true, owner, owner, caster:GetTeamNumber())
-	Timers:CreateTimer(0.6, function()
-		print("test")
-		giveUnitDataDrivenModifier(unit, unit, "modifier_make_unselectable", 20)
-		print (unit:IsUnselectable())
-	end
-	)
 	
 
 	-- Make sure the unit gets stuck
