@@ -12960,7 +12960,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pit_lord_cleaving_attack"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
@@ -12975,7 +12975,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_damage"			"30 55 80"
+				"cleave_damage"			"30 55 80 100"
 			}
 			
 			"02"
@@ -13053,7 +13053,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"40"
+				"damage_per_second"		"40 50 60"
 			}
 			"02"
 			{
@@ -13741,7 +13741,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pit_lord_howl_of_terror"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -13771,7 +13771,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_reduction_percent"	"-30 -40 -50"
+				"damage_reduction_percent"	"-30 -40 -50 -60"
 			}
 			"03"
 			{
@@ -13832,7 +13832,7 @@
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"pit_lord_rain_of_fire"
-		"MaxLevel" 						"3"
+		"MaxLevel" 						"4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
@@ -13846,7 +13846,7 @@
 		"AbilityManaCost"				"85"
 	
 		"AOERadius"     				"%radius"
-		"AbilityChannelTime"			"7.0 9.0 11.0"
+		"AbilityChannelTime"			"7.0 9.0 11.0 13.0"
 		
 		"precache"
 		{
@@ -13868,17 +13868,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"wave_duration"			"7.0 9.0 11.0"
+				"wave_duration"			"7.0 9.0 11.0 13.0"
 			}		
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_count"			"6 8 10"
+				"wave_count"			"6 8 10 12"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"25 30 35"
+				"wave_damage"			"25 30 35 40"
 			}
 			"05"
 			{
@@ -13888,7 +13888,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"burn_damage"			"5 10 15"
+				"burn_damage"			"5 10 15 20"
 			}
 			"07"
 			{

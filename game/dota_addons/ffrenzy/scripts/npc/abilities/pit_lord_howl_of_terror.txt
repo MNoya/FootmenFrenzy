@@ -10,7 +10,7 @@
 {
 	"BaseClass"             		"ability_datadriven"
 	"AbilityTextureName"			"pit_lord_howl_of_terror"
-	"MaxLevel" 						"3"
+	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -40,7 +40,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"damage_reduction_percent"	"-30 -40 -50"
+			"damage_reduction_percent"	"-30 -40 -50 -60"
 		}
 		"03"
 		{
