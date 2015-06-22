@@ -1069,7 +1069,7 @@ function GameMode:FilterExecuteOrder( filterTable )
     local issuer = filterTable["issuer_player_id_const"]
 
     -- Drop orders for players that don't own this unit
-    if issuer ~= -1 then
+    --[[if issuer ~= -1 then
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
             local ownerID = unit:GetPlayerOwnerID()
@@ -1080,7 +1080,7 @@ function GameMode:FilterExecuteOrder( filterTable )
                 return false
             end
         end
-    end
+    end]]
 
     if not testingUnitFormation then
         --return true
