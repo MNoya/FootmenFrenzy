@@ -15387,10 +15387,22 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"human_militia"
 					}
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/rally_point.lua"
+						"Function"		"SpawnUnit"
+						"UnitName"		"human_militia"
+					}
 				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/rally_point.lua"
+						"Function"		"SpawnUnit"
+						"UnitName"		"human_militia"
+					}
 					"RunScript"
 					{
 						"ScriptFile"	"buildings/rally_point.lua"

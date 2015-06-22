@@ -109,7 +109,7 @@
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
 	"Model"						"models/heroes/legion_commander/legion_commander.vmdl"
-	"ModelScale"				"0.9"
+	"ModelScale"				"0.7"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"SelectionGroup"            "Human_Militia"
