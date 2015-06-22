@@ -367,7 +367,7 @@ function GameMode:OnHeroInGame(hero)
     table.insert(self.vPlayers, hero)
 
     -- This line for example will set the starting gold of every hero to 100 unreliable gold
-    hero:SetGold(0, false)
+    hero:SetGold(100, false)
 	if testing then
 		hero:SetGold(99999, false)
 	end
@@ -1136,7 +1136,9 @@ function GameMode:FilterExecuteOrder( filterTable )
 
         local point = Vector(x,y,z)
 
-        DebugDrawCircle(point, Vector(0,255,0), 100, 18, true, 3)
+		if testingUnitFormation then
+			DebugDrawCircle(point, Vector(0,255,0), 100, 18, true, 3)
+		end
 
         local unitsPerRow = math.floor(math.sqrt(numUnits))
         local unitsPerColumn = math.floor(numUnits / unitsPerRow)
@@ -1158,7 +1160,9 @@ function GameMode:FilterExecuteOrder( filterTable )
           for j=1,unitsPerColumn do
             print ('grid point (' .. curX .. ', ' .. curY .. ')')
             local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
-            DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+			if testingUnitFormation then
+				DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+			end
             navPoints[#navPoints+1] = newPoint
             curX = curX + 1
           end
@@ -1169,11 +1173,13 @@ function GameMode:FilterExecuteOrder( filterTable )
         local curX = ((remainder-1) * -.5)
 
         for i=1,remainder do 
-          print ('grid point (' .. curX .. ', ' .. curY .. ')')
-          local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
-          DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
-          navPoints[#navPoints+1] = newPoint
-          curX = curX + 1
+			print ('grid point (' .. curX .. ', ' .. curY .. ')')
+			local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
+			if testingUnitFormation then
+				DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+			end
+			navPoints[#navPoints+1] = newPoint
+			curX = curX + 1
         end
 
         for i=1,#navPoints do 
