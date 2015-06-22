@@ -20,6 +20,8 @@
 	"SoundSet"					"Hero_Sniper"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"Ability1"					"human_long_rifles"
@@ -106,20 +108,19 @@
 	// General
 	//----------------------------------------------------------------
 	"BaseClass"					"npc_dota_creature"
-	"Model"						"models/heroes/meepo/meepo.vmdl"
+	"Model"						"models/heroes/legion_commander/legion_commander.vmdl"
 	"ModelScale"				"0.9"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
 	"SelectionGroup"            "Human_Militia"
-	"SoundSet"					"Hero_Meepo"
-	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
+	"SoundSet"					"Hero_LegionCommander"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/hero_legion_commander.vsndevts"
+	
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------
-	"Ability1"					"human_back_to_work"	 //Reference: Ahar
-	"Ability2"					"militia_upgrades"	 //Reference: Amil
-	"Ability3"					""	 //Reference: Ahrp
-	"Ability4"					"ability_prevent_attack_flying"
+	"Ability1"					""
 		
 	// Armor
 	//----------------------------------------------------------------
@@ -180,6 +181,14 @@
 	"Creature"
 	{
 		"DisableClumpingBehavior"	"1"
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"431"		}
+			"Wearable2"		{	"ItemDef"		"432"		}
+			"Wearable3" 	{	"ItemDef"		"433"		}
+			"Wearable4"		{	"ItemDef"		"434"		}
+			"Wearable5"		{	"ItemDef"		"435"		}
+		}
 	}
 }
 
@@ -200,6 +209,8 @@
 	"SelectionGroup"            "Human_Spell_Breakers"
 	"SoundSet"					"Hero_Silencer"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -295,6 +306,8 @@
 	"SelectionGroup"            "Human_Knights"
 	"SoundSet"					"Hero_ChaosKnight"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -359,14 +372,6 @@
 	"Creature"
 	{
 		"DisableClumpingBehavior"	"1"
-		//"AttachWearables"
-		//{
-		//	"Wearable1"		{	"ItemDef"		"5810"		} //"Blades of Voth Domosh"
-		//	"Wearable2"		{	"ItemDef"		"5886"		} //"Stonehall Royal Guard Banners"
-		//	"Wearable3" 	{	"ItemDef"		"5887"		} //"Stonehall Royal Guard Helmet"
-		//	"Wearable4"		{	"ItemDef"		"5885"		} //"Stonehall Royal Guard Arms"
-		//	"Wearable5"		{	"ItemDef"		"6192"		} //"Pauldrons of the Equine Emissary"
-		//}
 		"AttachWearables"	
 		{
 			"Wearable1"		{	"ItemDef"	"181"	}
@@ -398,6 +403,8 @@
 	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 	"HealthBarOffset"			"140"
 	"SelectionGroup"            "Human_Siege_Engines"
+
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------

@@ -18,6 +18,8 @@
 	"SoundSet"					"Hero_Windrunner"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
@@ -113,6 +115,8 @@
 	"HealthBarOffset"			"140"
 	"SoundSet"					"Hero_Luna"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+	
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -210,6 +214,8 @@
 	"SoundSet"					"Hero_Furion"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
@@ -304,6 +310,8 @@
 	"SoundSet"					"Hero_Enchantress"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_enchantress.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
@@ -396,6 +404,8 @@
 	"ModelScale"				"0.7"
 	"Level"						"2"
 	"HealthBarOffset"			"140"
+	
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------

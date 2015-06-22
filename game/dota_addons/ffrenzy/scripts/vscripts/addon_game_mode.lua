@@ -3,6 +3,7 @@ require( 'timers' )
 require( 'ffrenzy' )
 require( 'upgrades' )
 require( 'utilities' )
+require( 'spawn_area' )
 
 function Precache( context )
 	print("[ffrenzy] Performing pre-load precache")

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
 -get upgrades to work
+=======
+-set units not controllable by allies (Test if this changed)
+>>>>>>> origin/master
 -move fountain
 -hero abilities upgrade to 4 levels
+-defeat condition, no respawn (or at least a very high respawn time of >5 minutes)
+-swap arrow icons, upgrade icons (w/numbers for item levels)
+-tooltips for everything (use modkit)
+-unit & hero tinting
+
+Extra
+-creep-items
+-add 1 active/1 passive skill to each unit
+-unit formations

@@ -15,79 +15,22 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_footman"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
+
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_footman"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -109,79 +52,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_rifleman"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_rifleman"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -202,79 +87,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_militia"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_militia"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -295,79 +122,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_spell_breaker"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_spell_breaker"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -388,79 +157,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_knight"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_knight"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -481,79 +192,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_siege_engine"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"human_siege_engine"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -575,79 +228,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_archer"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_archer"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -668,79 +263,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_huntress"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_huntress"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -761,79 +298,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_druid_of_the_talon"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_druid_of_the_talon"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -854,79 +333,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_dryad"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_dryad"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -947,79 +368,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_glaive_thrower"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_glaive_thrower"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1041,79 +404,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_grunt"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_grunt"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1134,79 +439,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_troll_headhunter"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_troll_headhunter"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1227,79 +474,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_raider"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_raider"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1320,79 +509,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_tauren"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_tauren"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1413,79 +544,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_kodo_beast"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"orc_kodo_beast"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1507,79 +580,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_ghoul"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_ghoul"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1600,79 +615,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_crypt_fiend"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_crypt_fiend"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1693,79 +650,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_skeletal_mage"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_skeletal_mage"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1786,79 +685,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_abomination"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_abomination"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}
@@ -1879,79 +720,21 @@
 			"Passive"			"1"
 			"OnCreated"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_meat_wagon"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"SpawnUnit"
+				"RunScript"
 				{
+					"ScriptFile"	"buildings/rally_point.lua"
+					"Function"		"SpawnUnit"
 					"UnitName"		"undead_meat_wagon"
-					"Target"
-					{
-						"Center"		    "CASTER"
-						"ScriptSelectPoints"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "GetInitialRallyPoint"
-							"Target"		"CASTER"
-							"Count"			"1"
-						}
-					}
-					"UnitCount"		"1"
-					"UnitLimit"		"0"
-					"GrantsGold"	"1"
-					"GrantsXP"		"1"
-					"SpawnRadius"	"10"
-					"OnSpawn"
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_phased"
-							"Target"		"TARGET"
-							"Duration"		"0.03"
-						}
-
-						"RunScript"
-						{
-							"ScriptFile"    "buildings/rally_point.lua"
-							"Function"      "MoveToRallyPoint"
-						}
-					}
 				}
 			}
 		}

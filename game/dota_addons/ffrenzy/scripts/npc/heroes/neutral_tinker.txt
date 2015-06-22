@@ -18,6 +18,8 @@
 	"Ability5"					"attribute_bonus"
 	"Ability6"					"tinker_normal_form"
 
+	"PathfindingSearchDepthScale" "0.5"
+
 	// Armor
 	//----------------------------------------------------------------
 	"ArmorPhysical"				"2"

@@ -14,14 +14,11 @@ function UpgradeBuilding( event )
 	local currentHealthPercentage = caster:GetHealth()/caster:GetMaxHealth()
 
 	-- Remove the old building from the game
+	local old_flag = caster.flag
 	if IsValidEntity(caster) then
-
-        -- Remove the rally flag if there is one
-        if caster.flag then
-			caster.flag:RemoveSelf()
-		end
-
-        caster:RemoveSelf()
+		caster:SetAbsOrigin(Vector(6000, -6000, 0))
+		caster:ForceKill(true)
+        --caster:RemoveSelf()
     end
 
 	local building = CreateUnitByName(new_unit, position, true, hero, hero, hero:GetTeamNumber())
@@ -32,6 +29,7 @@ function UpgradeBuilding( event )
 	local newRelativeHP = math.ceil(building:GetMaxHealth() * currentHealthPercentage)
 	if newRelativeHP == 0 then newRelativeHP = 1 end --just incase rounding goes wrong
 	building:SetHealth(newRelativeHP)
+	building.flag = old_flag
 	
 	-- Teach spawn ability
 	if spawn_ability ~= nil and new_unit ~= "human_guard_tower" and new_unit ~= "human_cannon_tower" and new_unit ~= "human_arcane_tower"  then
@@ -39,6 +37,14 @@ function UpgradeBuilding( event )
 		local ability = building:FindAbilityByName(spawn_ability)
 		ability:SetLevel(1)
 	end
+
+	-- Unstuck any units
+	Timers:CreateTimer(0.1, function()
+		local units = FindUnitsInRadius(hero:GetTeamNumber(), position, nil, building:GetHullRadius()*2, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BASIC, 0, 0, false)
+		for _,unit in pairs(units) do
+			FindClearSpaceForUnit(unit, unit:GetAbsOrigin(), true)
+		end
+	end)
 
 end
 

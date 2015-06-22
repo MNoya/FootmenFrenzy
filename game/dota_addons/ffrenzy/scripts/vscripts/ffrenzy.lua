@@ -1,7 +1,5 @@
 print ('[FFrenzy] ffrenzy.lua' )
 
-require( 'spawn_area' )
-
 ----------------
 
 CORPSE_MODEL = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_troll_skeleton_fx.vmdl"
@@ -54,8 +52,19 @@ local team_b_counter = 0
 local team_c_counter = 0
 local team_d_counter = 0
 
-local testing = false
-local testinglevels = false
+-- Change these at will
+local testing = true
+local testingUnits = false
+local testingLevels = false
+local testingUnitFormation = false
+
+-- Making sure the testing values never go to the main client
+if not Convars:GetBool("developer") then
+    testing = false
+    testingUnits = false
+    testingUnitFormation = false
+    testing = false
+end
 
 local base_0_destroyed = false
 local base_1_destroyed = false
@@ -67,7 +76,6 @@ local base_6_destroyed = false
 local base_7_destroyed = false
 
 
--- Generated from template
 if GameMode == nil then
     print ( '[FFrenzy] creating Footman Frenzy game mode' )
     GameMode = class({})
@@ -150,6 +158,9 @@ function GameMode:InitGameMode()
     ListenToGameEvent('dota_team_kill_credit', Dynamic_Wrap(GameMode, 'OnTeamKillCredit'), self)
     ListenToGameEvent("player_reconnected", Dynamic_Wrap(GameMode, 'OnPlayerReconnect'), self)
 
+    -- Filter Execute Order
+    GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "FilterExecuteOrder" ), self )
+
     -- Change random seed
     local timeTxt = string.gsub(string.gsub(GetSystemTime(), ':', ''), '0','')
     math.randomseed(tonumber(timeTxt))
@@ -168,6 +179,8 @@ function GameMode:InitGameMode()
     self.nDireKills = 0
 
     self.bSeenWaitForPlayers = false
+
+    GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
 
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
     --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
@@ -911,19 +924,15 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetAbsOrigin(base_position)
 		
 		--test units
-		if testing then
+		if testingUnits then
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		end
-		if testinglevels then
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
-				hero:HeroLevelUp(true)
+		if testingLevels then
+            for i=1,24 do
+                hero:HeroLevelUp(true)
+            end
 		end
 		
 		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
@@ -1004,7 +1013,7 @@ function GameMode:OnEntityKilled( keys )
     local player = killedUnit:GetPlayerOwner()
 
     -- If the unit is supposed to leave a corpse, create a dummy_unit to use abilities on it.
-    Timers:CreateTimer(1, function() 
+    Timers:CreateTimer(1, function()
     if LeavesCorpse( killedUnit ) then
             -- Create and set model
             local corpse = CreateUnitByName("dummy_unit", killedUnit:GetAbsOrigin(), true, nil, nil, killedUnit:GetTeamNumber())
@@ -1093,4 +1102,225 @@ function LeavesCorpse( unit )
         --print("Leave corpse")
         return true
     end
+end
+
+
+
+
+
+-- Experimenting with Filter Orders
+function GameMode:FilterExecuteOrder( filterTable )
+    --[[for k, v in pairs( filterTable ) do
+        print("Order: " .. k .. " " .. tostring(v) )
+    end]]
+
+    local units = filterTable["units"]
+    local order_type = filterTable["order_type"]
+    local issuer = filterTable["issuer_player_id_const"]
+
+    -- Drop orders for players that don't own this unit
+    if issuer ~= -1 then
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            local ownerID = unit:GetPlayerOwnerID()
+            --print("OwnerID:",ownerID,"Issuer:",issuer)
+            if (ownerID ~= issuer and not PlayerResource:AreUnitsSharedWithPlayerID(ownerID, issuer)) then
+                print("Player "..issuer.." tried to execute order "..order_type.." on units of Player "..ownerID.." - Denied.")
+                return false
+            end
+        end
+    end
+
+    if not testingUnitFormation then
+        --return true
+    end
+
+    local numUnits = 0
+    if units then
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            if not unit:IsBuilding() then
+                numUnits = numUnits + 1
+            end
+        end
+    end
+
+    if units and order_type == 1 and numUnits > 1 then
+        
+        local x = tonumber(filterTable["position_x"])
+        local y = tonumber(filterTable["position_y"])
+        local z = tonumber(filterTable["position_z"])
+        local initialGoal = Vector(x,y,z)
+
+        ------------------------------------------------
+        --        Keep-Center Unit Formation          --
+        ------------------------------------------------
+        --Find the center point of the selected units by dividing the "total" by the number of units selected
+        --[[ local total = Vector(0,0,0)
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            -- If unit is a building, don't consider it
+            if not unit:IsBuilding() then
+                total = total + unit:GetAbsOrigin()
+            end
+        end
+        local center = total/numUnits
+        --print("Center: ",center," #Units:",unit_count)
+
+         Keep the current offset to the center
+        startVector = unit:GetAbsOrigin() - center 
+        local newX = x + startVector.x
+        local newY = y + startVector.y
+        local pos = Vector(newX,newY,z)]]
+
+        ------------------------------------------------
+        --           Grid Unit Formation              --
+        ------------------------------------------------
+        local navPoints = {}
+        local origin
+        for n,unit_index in pairs(units) do
+            if n == "0" then
+                local unit = EntIndexToHScript(unit_index)
+                origin = unit:GetAbsOrigin()
+            end
+        end
+
+        local point = Vector(x,y,z)
+
+        DebugDrawCircle(point, Vector(0,255,0), 100, 18, true, 3)
+
+        local unitsPerRow = math.floor(math.sqrt(numUnits))
+        local unitsPerColumn = math.floor(numUnits / unitsPerRow)
+        local remainder = numUnits % unitsPerRow
+        print(numUnits.." units = "..unitsPerRow.."x"..unitsPerColumn.." with a remainder of "..remainder)
+
+        local even = (unitsPerRow % 2 == 0)
+        local start = ((unitsPerRow-1) * -.5)
+
+        local curX = start
+        local curY = 0
+
+        local offsetX = 100
+        local offsetY = 100
+        local forward = (point-origin):Normalized()
+        local right = RotatePosition(Vector(0,0,0), QAngle(0,90,0), forward)
+
+        for i=1,unitsPerRow do
+          for j=1,unitsPerColumn do
+            print ('grid point (' .. curX .. ', ' .. curY .. ')')
+            local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
+            DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+            navPoints[#navPoints+1] = newPoint
+            curX = curX + 1
+          end
+          curX = start
+          curY = curY - 1
+        end
+
+        local curX = ((remainder-1) * -.5)
+
+        for i=1,remainder do 
+          print ('grid point (' .. curX .. ', ' .. curY .. ')')
+          local newPoint = point + (curX * offsetX * right) + (curY * offsetY * forward)
+          DebugDrawCircle(newPoint, Vector(0,0,255), 100, 18, true, 3)
+          navPoints[#navPoints+1] = newPoint
+          curX = curX + 1
+        end
+
+        for i=1,#navPoints do 
+            local point = navPoints[i]
+            print(i,navPoints[i])
+        end
+
+        ---------------------------------------------------
+
+        --print("======MOVEMENT ORDER FILTER: ",x,y,z)
+        for n,unit_index in pairs(units) do
+            local unit = EntIndexToHScript(unit_index)
+            if not unit:IsBuilding() then
+                --print("Issuing a New Movement Order to unit index: ",unit_index)
+
+                local pos = navPoints[tonumber(n)+1]
+                print("Unit Number "..n.." moving to ", pos)
+                
+                --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
+                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false})
+            end 
+        end
+        --DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
+        return false
+    end
+    print("----------------------------")
+
+    --[[[   VScript ]: DOTA_UNIT_ORDER_ATTACK_MOVE: 3
+[   VScript ]: DOTA_UNIT_ORDER_ATTACK_TARGET: 4
+[   VScript ]: DOTA_UNIT_ORDER_BUYBACK: 23
+[   VScript ]: DOTA_UNIT_ORDER_CAST_NO_TARGET: 8
+[   VScript ]: DOTA_UNIT_ORDER_CAST_POSITION: 5
+[   VScript ]: DOTA_UNIT_ORDER_CAST_RUNE: 26
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TARGET: 6
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TARGET_TREE: 7
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TOGGLE: 9
+[   VScript ]: DOTA_UNIT_ORDER_CAST_TOGGLE_AUTO: 20
+[   VScript ]: DOTA_UNIT_ORDER_DISASSEMBLE_ITEM: 18
+[   VScript ]: DOTA_UNIT_ORDER_DROP_ITEM: 12
+[   VScript ]: DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH: 25
+[   VScript ]: DOTA_UNIT_ORDER_GIVE_ITEM: 13
+[   VScript ]: DOTA_UNIT_ORDER_GLYPH: 24
+[   VScript ]: DOTA_UNIT_ORDER_HOLD_POSITION: 10
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_ITEM: 19
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_TO_DIRECTION: 28
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_TO_POSITION: 1
+[   VScript ]: DOTA_UNIT_ORDER_MOVE_TO_TARGET: 2
+[   VScript ]: DOTA_UNIT_ORDER_NONE: 0
+[   VScript ]: DOTA_UNIT_ORDER_PICKUP_ITEM: 14
+[   VScript ]: DOTA_UNIT_ORDER_PICKUP_RUNE: 15
+[   VScript ]: DOTA_UNIT_ORDER_PING_ABILITY: 27
+[   VScript ]: DOTA_UNIT_ORDER_PURCHASE_ITEM: 16
+[   VScript ]: DOTA_UNIT_ORDER_SELL_ITEM: 17
+[   VScript ]: DOTA_UNIT_ORDER_STOP: 21
+[   VScript ]: DOTA_UNIT_ORDER_TAUNT: 22
+[   VScript ]: DOTA_UNIT_ORDER_TRAIN_ABILITY: 11]]
+   
+
+    --[[if ( self._bGameStarted and Tutorial:GetTimeFrozen() ) then
+        local orderType = filterTable["order_type"]
+        if ( ( self._nActiveAlert == ALERT_FORCE_PURCHASE_ITEMS ) or ( self._nActiveAlert == ALERT_FIRST_PURCHASE ) and orderType == DOTA_UNIT_ORDER_PURCHASE_ITEM ) then
+            self:_ClearAlerts()
+            return true
+        elseif ( self._nActiveAlert == ALERT_FORCE_LEVEL_UP and orderType == DOTA_UNIT_ORDER_TRAIN_ABILITY ) then
+            self:_ClearAlerts()
+            return true         
+        elseif ( self._nActiveAlert == ALERT_NEED_DELIVER_ITEMS and orderType == DOTA_UNIT_ORDER_CAST_NO_TARGET ) then
+            self:_ClearAlerts()
+            return true
+        end     
+
+        print("Aborting order " .. tostring( orderType ) .. " Alert is " .. tostring( self._nActiveAlert ) )
+        return false
+    end
+
+    -- We don't need to prevent any orders if the player is finished with their build
+    if ( not self._bWhiteListEnabled ) then
+        return true
+    end
+
+    -- The player isn't allowed to do actions that may break the tutorial.
+    if ( filterTable["issuer_player_id_const"] == 0 ) then
+        local orderType = filterTable["order_type"]
+        if ( orderType == DOTA_UNIT_ORDER_PICKUP_RUNE ) then
+            self:_IncrementAlert( ALERT_PICKED_UP_RUNE, 1.0 )
+        elseif (orderType == DOTA_UNIT_ORDER_DROP_ITEM or
+                orderType == DOTA_UNIT_ORDER_GIVE_ITEM or
+                orderType == DOTA_UNIT_ORDER_SELL_ITEM or
+                orderType == DOTA_UNIT_ORDER_DISASSEMBLE_ITEM or
+                orderType == DOTA_UNIT_ORDER_BUYBACK or
+                orderType == DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH ) then
+
+            print("Skipping command from" .. tostring(issuer) )
+            return false
+        end
+    end]]
+
+    return true
 end

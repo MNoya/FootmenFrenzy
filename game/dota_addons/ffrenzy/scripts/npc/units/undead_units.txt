@@ -17,6 +17,8 @@
 	"SoundSet"					"Hero_LifeStealer"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
@@ -105,6 +107,8 @@
 	"HealthBarOffset"			"140"
 	"SoundSet"					"Hero_Weaver"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts"
+	
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -200,6 +204,8 @@
 	"SoundSet"					"Hero_Pugna"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
@@ -292,6 +298,8 @@
 	"SoundSet"					"Hero_Pudge"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
 	
+	"PathfindingSearchDepthScale" "0.5"
+	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
@@ -382,6 +390,8 @@
 	"ModelScale"				"1"
 	"Level"						"2"
 	"HealthBarOffset"			"140"
+	
+	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------

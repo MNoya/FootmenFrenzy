@@ -26,7 +26,9 @@
 	"SelectionGroup"            "Human_Footmen"
 	"SoundSet"					"Hero_DragonKnight"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
-	
+
+	"PathfindingSearchDepthScale" "0.5"
+
 	// Abilities
 	//----------------------------------------------------------------
 	"Ability1"					"human_defend"
