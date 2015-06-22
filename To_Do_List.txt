@@ -1,4 +1,3 @@
--set units not controllable by allies
 -get upgrades to work
 -move fountain
 -hero abilities upgrade to 4 levels
