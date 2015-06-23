@@ -22,7 +22,7 @@ function ChainLightning( event )
 
 	EmitSoundOn("Hero_Zuus.ArcLightning.Target", target)	
 	ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL })
-	PopupDamage(target,math.floor(damage))
+	--PopupDamage(target,math.floor(damage))
 
 	-- Every target struck by the chain is added to a list of targets struck, And set a boolean inside its index to be sure we don't hit it twice.
 	local targetsStruck = {}
@@ -78,7 +78,7 @@ function ChainLightning( event )
 			-- damage and decay
 			damage = damage - (damage*decay)
 			ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL })
-			PopupDamage(target,math.floor(damage))
+			--PopupDamage(target,math.floor(damage))
 			print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
 
 			-- play the sound

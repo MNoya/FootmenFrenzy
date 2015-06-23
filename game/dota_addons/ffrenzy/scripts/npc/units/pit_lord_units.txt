@@ -237,8 +237,8 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-	"AttackDamageMin"			"61"		// Damage range min.
-	"AttackDamageMax"			"68"		// Damage range max.
+	"AttackDamageMin"			"81"		// Damage range min.
+	"AttackDamageMax"			"88"		// Damage range max.
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"	//CHAOS
 	"AttackRate"				"1.8"			// Speed of attack.
 	"AttackAnimationPoint"		"0.467"		// Normalized time in animation cycle to attack.

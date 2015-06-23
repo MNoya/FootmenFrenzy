@@ -870,10 +870,9 @@ function GameMode:OnPlayerPickHero(keys)
 		
 		--test units
 		if testingUnits then
-			local testunit = CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 2)
-			testunit:NoTeamSelect()
-			--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-			--CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 		end
 		if testingLevels then
             for i=1,24 do
