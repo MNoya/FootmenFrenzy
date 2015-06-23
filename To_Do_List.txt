@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+-fix true sight on towers, potm owl, far seer first ability
+
 -get upgrades to work
 =======
 -set units not controllable by allies (Test if this changed)
