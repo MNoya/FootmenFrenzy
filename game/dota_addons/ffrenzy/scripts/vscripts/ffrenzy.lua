@@ -1261,36 +1261,42 @@ function GameMode:FilterExecuteOrder( filterTable )
         print("Result of Sorted Units:")
         DeepPrintTable(sortedUnits)
 
-        --[[unitsByRank = {}
+        unitsByRank = {}
         for i=0,3 do
-            local units = GetUnitsWithFormationRank(units, i)
+            local units = GetUnitsWithFormationRank(sortedUnits, i)
             if units then
                 unitsByRank[i] = units
             end
-        end]]
+        end
+
+        print("Result of Units By Rank:")
+        DeepPrintTable(unitsByRank)
 
         ---------------------------------------------------
 
-        --print("======MOVEMENT ORDER FILTER: ",x,y,z)
-        for n,unit_index in pairs(sortedUnits) do
-            local unit = EntIndexToHScript(unit_index)
-            if not unit:IsBuilding() then
-                --print("Issuing a New Movement Order to unit index: ",unit_index)
+        local n = 0
+        for i=0,3 do
+            if unitsByRank[i] then
+                for _,unit_index in pairs(unitsByRank[i]) do
+                    local unit = EntIndexToHScript(unit_index)
+                    if not unit:IsBuilding() then
+                        --print("Issuing a New Movement Order to unit index: ",unit_index)
 
-                local pos = navPoints[tonumber(n)]
-                print("Unit Number "..n.." moving to ", pos)
-                
-                --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
-				if order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION then
-					ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION, Position = pos, Queue = false})
-				else if order_type == DOTA_UNIT_ORDER_ATTACK_MOVE then
-					ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE, Position = pos, Queue = false})
-					end
-				end
-            end 
+                        local pos = navPoints[tonumber(n)+1]
+                        print("Unit Number "..n.." moving to ", pos)
+                        n = n+1
+                        
+                        --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
+                        ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = order_type, Position = pos, Queue = false})
+                    end 
+                end
+            end
         end
         --DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
         return false
+
+
+
     
     elseif units and order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION and numBuildings > 0 then
         local first_unit = EntIndexToHScript(units["0"])

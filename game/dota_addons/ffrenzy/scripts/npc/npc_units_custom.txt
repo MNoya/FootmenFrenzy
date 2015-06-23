@@ -4772,8 +4772,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"2"
 				
@@ -4867,7 +4867,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"CollisionSize"				"16"
 		"FormationRank"				"0"
 		
@@ -4962,8 +4962,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"31"
 		"FormationRank"				"1"
 				
@@ -5057,8 +5057,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"0"
 		
@@ -5120,7 +5120,7 @@
 		"Model"						"models/items/courier/carty/carty.vmdl"
 		"ModelScale"				"1.5"
 		"Level"						"3"
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Human_Siege_Engines"
 	
@@ -5390,8 +5390,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"2"
 		
@@ -5488,8 +5488,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"0"
 				
@@ -5682,8 +5682,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"2"
 	
@@ -5774,8 +5774,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"48"
 		"FormationRank"				"3"
 		
@@ -5863,8 +5863,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"0"
 		
@@ -5957,8 +5957,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"2"
 				
@@ -6051,8 +6051,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"0"
 		
@@ -6145,8 +6145,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"48"
 		"FormationRank"				"0"
 				
@@ -6242,8 +6242,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"48"
 		"FormationRank"				"2"
 		
@@ -8530,8 +8530,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"31"
 		"FormationRank"				"0"
 		
@@ -8624,8 +8624,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"32"
 		"FormationRank"				"2"
 		
@@ -8716,8 +8716,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"31"
 		"FormationRank"				"2"
 	
@@ -8811,8 +8811,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"48"
 		"FormationRank"				"0"
 		
@@ -8908,8 +8908,8 @@
 		
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"70"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
 		"CollisionSize"				"48"
 		"FormationRank"				"3"
 				

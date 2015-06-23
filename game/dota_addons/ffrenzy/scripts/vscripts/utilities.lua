@@ -65,7 +65,6 @@ end
 
 function GetClosestUnitToPoint( units_table, point )
     local closest_unit = units_table["0"]
-    print(units_table["0"], units_table["1"], units_table[0], units_table[1])
     if not closest_unit then
         closest_unit = units_table[1]
     end
@@ -85,10 +84,14 @@ end
 
 function GetUnitsWithFormationRank( units_table, rank )
     local allUnitsOfRank = {}
-    for _,unit in pairs(units_table) do
-        if GetFormationRank( unit ) == rank then
-            table.insert(allUnitsOfRank, unit)
+    for _,unit_index in pairs(units_table) do
+        print("RANK",GetFormationRank( EntIndexToHScript(unit_index) ))
+        if GetFormationRank( EntIndexToHScript(unit_index) ) == rank then
+            table.insert(allUnitsOfRank, unit_index)
         end
+    end
+    if #allUnitsOfRank == 0 then
+        return nil
     end
     return allUnitsOfRank
 end
