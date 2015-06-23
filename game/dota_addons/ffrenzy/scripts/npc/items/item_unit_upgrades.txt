@@ -1,6 +1,8 @@
 // 3 Upgrades are accessed through Items in the base inventory.
 // 100 gold +50 gold cost each rank, 20 levels.
 
+/////////id's 2200-2300
+
 "item_upgrade_weapon1"
 {
     "BaseClass"             		"item_datadriven"
@@ -30,7 +32,7 @@
 "item_upgrade_weapon2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon2"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -56,7 +58,7 @@
 "item_upgrade_weapon3"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon3"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -82,7 +84,7 @@
 "item_upgrade_weapon4"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -108,7 +110,7 @@
 "item_upgrade_weapon5"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon5"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -134,7 +136,7 @@
 "item_upgrade_weapon6"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon6"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -160,7 +162,7 @@
 "item_upgrade_weapon7"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon7"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -186,7 +188,7 @@
 "item_upgrade_weapon8"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon8"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -212,7 +214,7 @@
 "item_upgrade_weapon9"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon9"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -238,7 +240,7 @@
 "item_upgrade_weapon10"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon10"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -264,7 +266,7 @@
 "item_upgrade_weapon11"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon11"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -290,7 +292,7 @@
 "item_upgrade_weapon12"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon12"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -316,7 +318,7 @@
 "item_upgrade_weapon13"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon13"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -342,7 +344,7 @@
 "item_upgrade_weapon14"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon14"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -368,7 +370,7 @@
 "item_upgrade_weapon15"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon15"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -394,7 +396,7 @@
 "item_upgrade_weapon16"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon16"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -420,7 +422,7 @@
 "item_upgrade_weapon17"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon17"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -446,7 +448,7 @@
 "item_upgrade_weapon18"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon18"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -472,7 +474,7 @@
 "item_upgrade_weapon19"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon19"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -498,7 +500,7 @@
 "item_upgrade_weapon20"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_weapon1"
+	"AbilityTextureName"			"item_upgrade_weapon19"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -550,7 +552,7 @@
 "item_upgrade_armor2"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor2"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -576,7 +578,7 @@
 "item_upgrade_armor3"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor3"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -602,7 +604,7 @@
 "item_upgrade_armor4"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -628,7 +630,7 @@
 "item_upgrade_armor5"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor5"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -654,7 +656,7 @@
 "item_upgrade_armor6"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor6"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -680,7 +682,7 @@
 "item_upgrade_armor7"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor7"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -706,7 +708,7 @@
 "item_upgrade_armor8"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor8"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -732,7 +734,7 @@
 "item_upgrade_armor9"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor9"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -758,7 +760,7 @@
 "item_upgrade_armor10"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor10"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -784,7 +786,7 @@
 "item_upgrade_armor11"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor11"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -810,7 +812,7 @@
 "item_upgrade_armor12"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor12"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -836,7 +838,7 @@
 "item_upgrade_armor13"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor13"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -862,7 +864,7 @@
 "item_upgrade_armor14"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor14"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -888,7 +890,7 @@
 "item_upgrade_armor15"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor15"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -914,7 +916,7 @@
 "item_upgrade_armor16"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor16"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -940,7 +942,7 @@
 "item_upgrade_armor17"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor17"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -966,7 +968,7 @@
 "item_upgrade_armor18"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor18"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -992,7 +994,7 @@
 "item_upgrade_armor19"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor19"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
@@ -1018,7 +1020,7 @@
 "item_upgrade_armor20"
 {
     "BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"item_upgrade_armor1"
+	"AbilityTextureName"			"item_upgrade_armor19"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 

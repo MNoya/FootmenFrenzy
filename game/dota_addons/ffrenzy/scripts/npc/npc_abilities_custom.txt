@@ -17299,7 +17299,7 @@
 	"upgrade_weapon"
 	{
 	    "BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_weapon"
+		"AbilityTextureName"			"items_upgrade_weapon"
 		"MaxLevel" 						"20"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
