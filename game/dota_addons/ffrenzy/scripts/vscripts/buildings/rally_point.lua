@@ -49,9 +49,6 @@ function SetRallyPoint( event )
 			caster.flag:RemoveSelf()
 		end
 
-		-- Make a new one
-		caster.flag = Entities:CreateByClassname("prop_dynamic")
-
 		-- Find vector towards 0,0,0 for the initial rally point
 		if not IsValidEntity(caster) then
 			return
@@ -62,12 +59,13 @@ function SetRallyPoint( event )
 
 		local point = event.target_points[1]
 
-		local flag_model = "models/particle/legion_duel_banner.vmdl"
+		-- Make a flag dummy
+		caster.flag = CreateUnitByName("dummy_unit", point, false, caster, caster, caster:GetTeamNumber())
 
-		caster.flag:SetAbsOrigin(point)
-		caster.flag:SetModel(flag_model)
-		caster.flag:SetModelScale(0.7)
-		--caster.flag:SetForwardVector(forwardVec)
+		local particle = ParticleManager:CreateParticleForTeam("particles/rally_flag.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster.flag, caster:GetTeamNumber())
+		ParticleManager:SetParticleControl(particle, 0, point) -- Position
+		ParticleManager:SetParticleControl(particle, 1, caster:GetAbsOrigin()) --Orientation
+		ParticleManager:SetParticleControl(particle, 15, GameRules.TeamColors[caster:GetTeamNumber()]) --Color
 
 		--DebugDrawLine(caster:GetAbsOrigin(), point, 255, 255, 255, false, 10)
 

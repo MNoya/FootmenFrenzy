@@ -10,7 +10,8 @@
 	
 	"precache"
 	{
-		"model"						"models/particle/legion_duel_banner.vmdl"
+		"model"		"models/particle/legion_duel_banner.vmdl"
+		"particle"  "particles/rally_flag.vpcf"
 	}
 	
 	"OnSpellStart"

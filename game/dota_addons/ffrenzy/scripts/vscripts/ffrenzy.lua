@@ -79,16 +79,16 @@ function GameMode:InitGameMode()
     print('[FFrenzy] Starting to load gamemode...')
 
     -- MultiTeam
-    self.m_TeamColors = {}
-    self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }	--		Teal
-	self.m_TeamColors[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }		--		Yellow
-	self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 197, 77, 168 }	--      Pink
-	self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }		--		Orange
+    GameRules.TeamColors = {}
+    GameRules.TeamColors[DOTA_TEAM_GOODGUYS] = Vector(61, 210, 150)	--	Teal
+	GameRules.TeamColors[DOTA_TEAM_BADGUYS]  = Vector(243, 201, 9 )	--  Yellow
+	GameRules.TeamColors[DOTA_TEAM_CUSTOM_1] = Vector(197, 77, 168)	--  Pink
+	GameRules.TeamColors[DOTA_TEAM_CUSTOM_2] = Vector(255, 108, 0 )	--	Orange
 	
-	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 )  --		Teal
-	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )  --		Yellow
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 197, 77, 168 )	--      Pink
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 255, 108, 0 )		--		Orange
+	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 ) --	Teal
+	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )   --  Yellow
+	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 197, 77, 168 )	--  Pink
+	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 255, 108, 0 )	--  Orange
     
     self.m_VictoryMessages = {}
     self.m_VictoryMessages[DOTA_TEAM_GOODGUYS] = "#VictoryMessage_GoodGuys"
@@ -821,6 +821,9 @@ function GameMode:OnPlayerPickHero(keys)
     local playerID = hero:GetPlayerID()
 	local teamID = PlayerResource:GetTeam(playerID)
 	local teamCounter = 0
+
+    -- Player Color = Team Color
+    PlayerResource:SetCustomPlayerColor(playerID, GameRules.TeamColors[teamID].x, GameRules.TeamColors[teamID].y, GameRules.TeamColors[teamID].z)
 	
 	if teamID == 2 then 
 		teamCounter = team_a_counter
@@ -1276,7 +1279,6 @@ function GameMode:FilterExecuteOrder( filterTable )
                 local item = first_unit:GetItemInSlot(i)
                 if item then
                     local item_name = item:GetAbilityName()
-                    print(item_name)
                     if item_name == "item_rally" then
                         print("Executing Rally Point Order on ",point)
                         local item_index = item:GetEntityIndex()
