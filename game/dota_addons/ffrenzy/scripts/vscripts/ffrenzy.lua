@@ -162,12 +162,7 @@ function GameMode:InitGameMode()
     self.vBots = {}
     self.vBroadcasters = {}
 
-    self.vPlayers = {}
-    self.vRadiant = {}
-    self.vDire = {}
-
-    self.nRadiantKills = 0
-    self.nDireKills = 0
+    self.DefeatedPlayersOnTeam = {}
 
     self.bSeenWaitForPlayers = false
 
@@ -372,9 +367,6 @@ function GameMode:OnHeroInGame(hero)
 		hero:SetGold(99999, false)
 	end
 	
-    -- These lines will create an item and add it to the player, effectively ensuring they start with the item
-    local item = CreateItem("item_example_item", hero, hero)
-    hero:AddItem(item)
 end
 
 --[[
@@ -851,6 +843,7 @@ function GameMode:OnPlayerPickHero(keys)
     -- Initialize Variables for Tracking
     player.units = {} -- This keeps the handle of all the units of the player army
     player.upgrades = {} -- This keeps the name of all the upgrades researched, so each unit can check and upgrade itself on spawn
+    player.towers = {} -- Towers (possible to enable building more towers later)
 
     -- Define where to put the player/team
     -- Choose a Position
@@ -871,6 +864,9 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetOwner(hero)
         building:SetControllableByPlayer(playerID, true)
         building:SetAbsOrigin(base_position)
+
+        -- Add the base building to the player handle.
+        player.base = building
 		
 		--test units
 		if testingUnits then
@@ -897,6 +893,9 @@ function GameMode:OnPlayerPickHero(keys)
         tower2:SetControllableByPlayer(playerID, true)
         tower2:SetAbsOrigin(tower_b_position)
 		
+        table.insert(player.towers, tower1)
+        table.insert(player.towers, tower2)
+
 		CreateUnitByName("dummy_vision", Vector(0, 0, 100), true, hero, hero, hero:GetTeamNumber())
 
         -- Move the hero close by
@@ -932,7 +931,80 @@ function GameMode:OnPlayerPickHero(keys)
 		end
 	end
 
+    -- Player playing now, initialize team tracking
+    if not self.DefeatedPlayersOnTeam[teamID] then
+        self.DefeatedPlayersOnTeam[teamID] = 0
+    end
+
+    -- Defeat check for this player
+    Timers:CreateTimer(fuction()
+        local base_building = player.building
+        if not IsValidEntity(base_building) or not base_building:IsAlive() then
+            MakePlayerLose(player)
+            return
+        else
+            return 1 -- Check again every second
+        end
+    end)
+
 end
+
+-- Kill all the units and towers of the player, set their hero to not respawn and takes care of Team-Loss & Win Condition
+function MakePlayerLose( player )
+
+    for _,unit in pairs(player.units) do
+        if IsValidEntity(unit) and unit:IsAlive() then
+            unit:ForceKill(false)
+        end
+    end
+
+    for _,tower in pairs(player.towers) do
+        if IsValidEntity(tower) and tower:IsAlive() then
+            tower:ForceKill(false)
+        end
+    end
+
+    local hero = player:GetAssignedHero()
+    hero:ForceKill(false)
+    Timers:CreateTimer(function()
+        hero:SetTimeUntilRespawn(999)
+        return 1
+    end)
+
+    -- Add 1 to the players defeated of that team
+    local teamID = player:GetTeamNumber()
+    self.DefeatedPlayersOnTeam[teamID] = self.DefeatedPlayersOnTeam[teamID] + 1
+    
+    if GetPlayerCountForTeam(teamID) == self.DefeatedPlayersOnTeam[teamID] then
+        -- Team lost, check for win condition
+        local allHeroes = HeroList:GetAllHeroes()
+
+        -- If there are still heroes alive and they belong to different teams, it means there are at least 2 teams "alive"
+        local teamWins = true
+        for _,hero in pairs(allHeroes) do
+            if hero:IsAlive() then
+                for _,otherHero in pairs(allHeroes) do
+                    if otherHero:IsAlive() and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) then
+                        teamWins = false
+                        break
+                    end
+                end
+            end
+        end
+        if teamWins then
+            local winnerTeamID
+            for _,hero in pairs(allHeroes) do
+                if hero:IsAlive() then
+                    winnerTeamID = hero:GetTeamNumber()
+                    break
+                end
+            end
+            GameRules:SetGameWinner(winnerTeamID)
+        end
+    end
+    
+end
+
 
 -- A player killed another player in a multi-team context
 function GameMode:OnTeamKillCredit(keys)
@@ -992,13 +1064,21 @@ function GameMode:OnEntityKilled( keys )
     -- Table cleanup
     if player then
         local table_units = {}
-                for _,unit in pairs(player.units) do
-                    if unit and IsValidEntity(unit) then
-                        table.insert(table_units, unit)
-                    end
-                end
-                player.units = table_units
+        for _,unit in pairs(player.units) do
+            if unit and IsValidEntity(unit) and unit:IsAlive() then
+                table.insert(table_units, unit)
+            end
         end
+        player.units = table_units
+
+        local table_towers = {}
+        for _,tower in pairs(player.towers) do
+            if tower and IsValidEntity(tower) and tower:IsAlive() then
+                table.insert(table_towers, tower)
+            end
+        end
+        player.towers = table_towers
+    end
 
     -- Give Experience to heroes based on the level of the killed creature
     --[[if not killedUnit.isBuilding then

@@ -30,6 +30,9 @@ function UpgradeBuilding( event )
 	if newRelativeHP == 0 then newRelativeHP = 1 end --just incase rounding goes wrong
 	building:SetHealth(newRelativeHP)
 	building.flag = old_flag
+
+	-- Update the player base
+	player.base = building
 	
 	-- Teach spawn ability
 	if spawn_ability ~= nil and new_unit ~= "human_guard_tower" and new_unit ~= "human_cannon_tower" and new_unit ~= "human_arcane_tower"  then
