@@ -1179,21 +1179,15 @@ function GameMode:FilterExecuteOrder( filterTable )
         local x = tonumber(filterTable["position_x"])
         local y = tonumber(filterTable["position_y"])
         local z = tonumber(filterTable["position_z"])
-        local initialGoal = Vector(x,y,z)
 
         ------------------------------------------------
         --           Grid Unit Formation              --
         ------------------------------------------------
         local navPoints = {}
-        local origin
-        for n,unit_index in pairs(units) do
-            if n == "0" then
-                local unit = EntIndexToHScript(unit_index)
-                origin = unit:GetAbsOrigin()
-            end
-        end
+        local first_unit = EntIndexToHScript(units["0"])
+        local origin = first_unit:GetAbsOrigin()
 
-        local point = Vector(x,y,z)
+        local point = Vector(x,y,z) -- initial goal
 
 		if testingUnitFormation then
 			DebugDrawCircle(point, Vector(0,255,0), 100, 18, true, 3)
@@ -1246,15 +1240,44 @@ function GameMode:FilterExecuteOrder( filterTable )
             print(i,navPoints[i])
         end
 
+        sortedUnits = {}
+        for i=1,#navPoints do
+            local point = navPoints[i]
+            local closest_unit_index = GetClosestUnitToPoint(units, point)
+            if closest_unit_index then
+                print("Closest to point is ",closest_unit_index," - inserting in table of sorted units")
+                table.insert(sortedUnits, closest_unit_index)
+                DeepPrintTable(sortedUnits)
+
+                --print("ATTEMPTING TO REMOVE OF UNIT INDEX "..closest_unit_index.." IN TABLE:")
+                --DeepPrintTable(units)
+                units = RemoveElementFromTable(units, closest_unit_index)
+
+                --[[print("After Removing: ")
+                DeepPrintTable(units)]]
+            end
+        end
+
+        print("Result of Sorted Units:")
+        DeepPrintTable(sortedUnits)
+
+        --[[unitsByRank = {}
+        for i=0,3 do
+            local units = GetUnitsWithFormationRank(units, i)
+            if units then
+                unitsByRank[i] = units
+            end
+        end]]
+
         ---------------------------------------------------
 
         --print("======MOVEMENT ORDER FILTER: ",x,y,z)
-        for n,unit_index in pairs(units) do
+        for n,unit_index in pairs(sortedUnits) do
             local unit = EntIndexToHScript(unit_index)
             if not unit:IsBuilding() then
                 --print("Issuing a New Movement Order to unit index: ",unit_index)
 
-                local pos = navPoints[tonumber(n)+1]
+                local pos = navPoints[tonumber(n)]
                 print("Unit Number "..n.." moving to ", pos)
                 
                 --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
@@ -1271,7 +1294,6 @@ function GameMode:FilterExecuteOrder( filterTable )
             local y = tonumber(filterTable["position_y"])
             local z = tonumber(filterTable["position_z"])
             local point = Vector(x,y,z)
-            --print("Building Rightclick on ",initialGoal)
             --DebugDrawCircle(point, Vector(255,0,0), 255, 20, true, 3)
 
             -- Cast the rally point if the building has the item

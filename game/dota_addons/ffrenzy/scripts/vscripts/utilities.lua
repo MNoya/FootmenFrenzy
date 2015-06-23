@@ -33,6 +33,16 @@ function getUnitIndex(list, unitName)
     return -1
 end
 
+function getIndexTable(list, element)
+    if list == nil then return false end
+    for k,v in pairs(list) do
+        if v == element then
+            return k
+        end
+    end
+    return -1
+end
+
 function split(inputstr, sep)
     if sep == nil then
             sep = "%s"
@@ -49,4 +59,52 @@ function StringStartsWith( fullstring, substring )
     local strlen = string.len(substring)
     local first_characters = string.sub(fullstring, 1 , strlen)
     return (first_characters == substring)
+end
+
+
+
+function GetClosestUnitToPoint( units_table, point )
+    local closest_unit = units_table["0"]
+    print(units_table["0"], units_table["1"], units_table[0], units_table[1])
+    if not closest_unit then
+        closest_unit = units_table[1]
+    end
+    DeepPrintTable(units_table)
+    local min_distance = (point - EntIndexToHScript(closest_unit):GetAbsOrigin()):Length()
+
+    for _,unit_index in pairs(units_table) do
+        local distance = (point - EntIndexToHScript(unit_index):GetAbsOrigin()):Length()
+        if distance < min_distance then
+            closest_unit = unit_index
+            min_distance = distance
+        end
+    end
+
+    return closest_unit
+end
+
+function GetUnitsWithFormationRank( units_table, rank )
+    local allUnitsOfRank = {}
+    for _,unit in pairs(units_table) do
+        if GetFormationRank( unit ) == rank then
+            table.insert(allUnitsOfRank, unit)
+        end
+    end
+    return allUnitsOfRank
+end
+
+function GetFormationRank( unit )
+    return GameRules.UnitKV[unit:GetUnitName()]["FormationRank"]
+end
+
+-- Lua pls
+function RemoveElementFromTable(table, element)
+    local new_table = {}
+    for k,v in pairs(table) do
+        if v and v ~= element then
+            new_table[#new_table+1] = v
+        end
+    end
+
+    return new_table
 end
