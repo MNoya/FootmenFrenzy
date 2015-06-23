@@ -1174,7 +1174,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         end
     end
 
-    if units and order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION and numUnits > 1 then
+    if units and (order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION or order_type == DOTA_UNIT_ORDER_ATTACK_MOVE) and numUnits > 1 then
         
         local x = tonumber(filterTable["position_x"])
         local y = tonumber(filterTable["position_y"])
@@ -1281,7 +1281,12 @@ function GameMode:FilterExecuteOrder( filterTable )
                 print("Unit Number "..n.." moving to ", pos)
                 
                 --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
-                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION, Position = pos, Queue = false})
+				if order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION then
+					ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION, Position = pos, Queue = false})
+				else if order_type == DOTA_UNIT_ORDER_ATTACK_MOVE then
+					ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE, Position = pos, Queue = false})
+					end
+				end
             end 
         end
         --DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
