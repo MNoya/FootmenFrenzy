@@ -1159,42 +1159,24 @@ function GameMode:FilterExecuteOrder( filterTable )
     end
 
     local numUnits = 0
+    local numBuildings = 0
     if units then
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
             if not unit:IsBuilding() then
                 numUnits = numUnits + 1
+            elseif unit:IsBuilding() then
+                numBuildings = numBuildings + 1
             end
         end
     end
 
-    if units and order_type == 1 and numUnits > 1 then
+    if units and order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION and numUnits > 1 then
         
         local x = tonumber(filterTable["position_x"])
         local y = tonumber(filterTable["position_y"])
         local z = tonumber(filterTable["position_z"])
         local initialGoal = Vector(x,y,z)
-
-        ------------------------------------------------
-        --        Keep-Center Unit Formation          --
-        ------------------------------------------------
-        --Find the center point of the selected units by dividing the "total" by the number of units selected
-        --[[ local total = Vector(0,0,0)
-        for n,unit_index in pairs(units) do
-            local unit = EntIndexToHScript(unit_index)
-            -- If unit is a building, don't consider it
-            if not unit:IsBuilding() then
-                total = total + unit:GetAbsOrigin()
-            end
-        end
-        local center = total/numUnits
-        --print("Center: ",center," #Units:",unit_count)
-
-         Keep the current offset to the center
-        startVector = unit:GetAbsOrigin() - center 
-        local newX = x + startVector.x
-        local newY = y + startVector.y
-        local pos = Vector(newX,newY,z)]]
 
         ------------------------------------------------
         --           Grid Unit Formation              --
@@ -1273,11 +1255,37 @@ function GameMode:FilterExecuteOrder( filterTable )
                 print("Unit Number "..n.." moving to ", pos)
                 
                 --DebugDrawLine(unit:GetAbsOrigin(), pos, 255, 255, 255, true, 5)
-                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = 1, Position = pos, Queue = false})
+                ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION, Position = pos, Queue = false})
             end 
         end
         --DebugDrawCircle(center, Vector(255,0,0), 255, 20, true, 3)
         return false
+    
+    elseif units and order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION and numBuildings > 0 then
+        local first_unit = EntIndexToHScript(units["0"])
+        if first_unit:IsBuilding() then
+            local x = tonumber(filterTable["position_x"])
+            local y = tonumber(filterTable["position_y"])
+            local z = tonumber(filterTable["position_z"])
+            local point = Vector(x,y,z)
+            --print("Building Rightclick on ",initialGoal)
+            --DebugDrawCircle(point, Vector(255,0,0), 255, 20, true, 3)
+
+            -- Cast the rally point if the building has the item
+            for i=0,5 do
+                local item = first_unit:GetItemInSlot(i)
+                if item then
+                    local item_name = item:GetAbilityName()
+                    print(item_name)
+                    if item_name == "item_rally" then
+                        print("Executing Rally Point Order on ",point)
+                        local item_index = item:GetEntityIndex()
+                        ExecuteOrderFromTable({ UnitIndex = units["0"], OrderType = DOTA_UNIT_ORDER_CAST_POSITION, AbilityIndex = item_index, Position = point, Queue = false})
+                        break
+                    end
+                end
+            end
+        end
     end
     print("----------------------------")
 
@@ -1312,44 +1320,26 @@ function GameMode:FilterExecuteOrder( filterTable )
 [   VScript ]: DOTA_UNIT_ORDER_TRAIN_ABILITY: 11]]
    
 
-    --[[if ( self._bGameStarted and Tutorial:GetTimeFrozen() ) then
-        local orderType = filterTable["order_type"]
-        if ( ( self._nActiveAlert == ALERT_FORCE_PURCHASE_ITEMS ) or ( self._nActiveAlert == ALERT_FIRST_PURCHASE ) and orderType == DOTA_UNIT_ORDER_PURCHASE_ITEM ) then
-            self:_ClearAlerts()
-            return true
-        elseif ( self._nActiveAlert == ALERT_FORCE_LEVEL_UP and orderType == DOTA_UNIT_ORDER_TRAIN_ABILITY ) then
-            self:_ClearAlerts()
-            return true         
-        elseif ( self._nActiveAlert == ALERT_NEED_DELIVER_ITEMS and orderType == DOTA_UNIT_ORDER_CAST_NO_TARGET ) then
-            self:_ClearAlerts()
-            return true
-        end     
-
-        print("Aborting order " .. tostring( orderType ) .. " Alert is " .. tostring( self._nActiveAlert ) )
-        return false
-    end
-
-    -- We don't need to prevent any orders if the player is finished with their build
-    if ( not self._bWhiteListEnabled ) then
-        return true
-    end
-
-    -- The player isn't allowed to do actions that may break the tutorial.
-    if ( filterTable["issuer_player_id_const"] == 0 ) then
-        local orderType = filterTable["order_type"]
-        if ( orderType == DOTA_UNIT_ORDER_PICKUP_RUNE ) then
-            self:_IncrementAlert( ALERT_PICKED_UP_RUNE, 1.0 )
-        elseif (orderType == DOTA_UNIT_ORDER_DROP_ITEM or
-                orderType == DOTA_UNIT_ORDER_GIVE_ITEM or
-                orderType == DOTA_UNIT_ORDER_SELL_ITEM or
-                orderType == DOTA_UNIT_ORDER_DISASSEMBLE_ITEM or
-                orderType == DOTA_UNIT_ORDER_BUYBACK or
-                orderType == DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH ) then
-
-            print("Skipping command from" .. tostring(issuer) )
-            return false
+    ------------------------------------------------
+    --        Keep-Center Unit Formation          --
+    ------------------------------------------------
+    --Find the center point of the selected units by dividing the "total" by the number of units selected
+    --[[ local total = Vector(0,0,0)
+    for n,unit_index in pairs(units) do
+        local unit = EntIndexToHScript(unit_index)
+        -- If unit is a building, don't consider it
+        if not unit:IsBuilding() then
+            total = total + unit:GetAbsOrigin()
         end
-    end]]
+    end
+    local center = total/numUnits
+    --print("Center: ",center," #Units:",unit_count)
+
+     Keep the current offset to the center
+    startVector = unit:GetAbsOrigin() - center 
+    local newX = x + startVector.x
+    local newY = y + startVector.y
+    local pos = Vector(newX,newY,z)]]
 
     return true
 end

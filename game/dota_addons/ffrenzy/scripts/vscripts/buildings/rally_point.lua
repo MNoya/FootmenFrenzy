@@ -69,7 +69,7 @@ function SetRallyPoint( event )
 		caster.flag:SetModelScale(0.7)
 		--caster.flag:SetForwardVector(forwardVec)
 
-		DebugDrawLine(caster:GetAbsOrigin(), point, 255, 255, 255, false, 10)
+		--DebugDrawLine(caster:GetAbsOrigin(), point, 255, 255, 255, false, 10)
 
 		--print(caster:GetUnitName().." sets rally point on ",point)
 	end)
