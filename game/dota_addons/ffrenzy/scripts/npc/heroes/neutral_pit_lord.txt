@@ -9,6 +9,7 @@
 	"Model"						"models/heroes/abyssal_underlord/abyssal_underlord.vmdl"
 	"SoundSet"					"Hero_AbyssalUnderlord"
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------	
