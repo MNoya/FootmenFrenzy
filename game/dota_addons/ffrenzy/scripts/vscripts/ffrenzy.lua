@@ -162,7 +162,7 @@ function GameMode:InitGameMode()
     self.vBots = {}
     self.vBroadcasters = {}
 
-    self.DefeatedPlayersOnTeam = {}
+    GameRules.DefeatedPlayersOnTeam = {}
 
     self.bSeenWaitForPlayers = false
 
@@ -358,8 +358,6 @@ function GameMode:OnHeroInGame(hero)
     hero.player = PlayerResource:GetPlayer(hero:GetPlayerID())
     -- Store the player's name inside this hero handle.
     hero.playerName = PlayerResource:GetPlayerName(hero:GetPlayerID())
-    -- Store this hero handle in this table.
-    table.insert(self.vPlayers, hero)
 
     -- This line for example will set the starting gold of every hero to 100 unreliable gold
     hero:SetGold(100, false)
@@ -931,13 +929,13 @@ function GameMode:OnPlayerPickHero(keys)
 	end
 
     -- Player playing now, initialize team tracking
-    if not self.DefeatedPlayersOnTeam[teamID] then
-        self.DefeatedPlayersOnTeam[teamID] = 0
+    if not GameRules.DefeatedPlayersOnTeam[teamID] then
+        GameRules.DefeatedPlayersOnTeam[teamID] = 0
     end
 
     -- Defeat check for this player
-    Timers:CreateTimer(fuction()
-        local base_building = player.building
+    Timers:CreateTimer(1, function()
+        local base_building = player.base
         if not IsValidEntity(base_building) or not base_building:IsAlive() then
             MakePlayerLose(player)
             return
@@ -972,32 +970,27 @@ function MakePlayerLose( player )
 
     -- Add 1 to the players defeated of that team
     local teamID = player:GetTeamNumber()
-    self.DefeatedPlayersOnTeam[teamID] = self.DefeatedPlayersOnTeam[teamID] + 1
+    GameRules.DefeatedPlayersOnTeam[teamID] = GameRules.DefeatedPlayersOnTeam[teamID] + 1
     
-    if GetPlayerCountForTeam(teamID) == self.DefeatedPlayersOnTeam[teamID] then
+    if PlayerResource:GetPlayerCountForTeam(teamID) == GameRules.DefeatedPlayersOnTeam[teamID] then
         -- Team lost, check for win condition
         local allHeroes = HeroList:GetAllHeroes()
 
         -- If there are still heroes alive and they belong to different teams, it means there are at least 2 teams "alive"
-        local teamWins = true
+        local winnerTeamID = nil
         for _,hero in pairs(allHeroes) do
             if hero:IsAlive() then
+                winnerTeamID = hero:GetTeamNumber()
                 for _,otherHero in pairs(allHeroes) do
                     if otherHero:IsAlive() and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) then
                         teamWins = false
+                        winnerTeamID = nil
                         break
                     end
                 end
             end
         end
-        if teamWins then
-            local winnerTeamID
-            for _,hero in pairs(allHeroes) do
-                if hero:IsAlive() then
-                    winnerTeamID = hero:GetTeamNumber()
-                    break
-                end
-            end
+        if winnerTeamID then
             GameRules:SetGameWinner(winnerTeamID)
         end
     end
