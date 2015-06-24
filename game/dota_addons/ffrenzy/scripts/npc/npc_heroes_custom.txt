@@ -4,7 +4,7 @@
 	// Creature: Archmage
 	// Description: "Mystical Hero, adept at ranged assaults. Can learn Blizzard, Summon Water Elemental, Brilliance Aura and Mass Teleport. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"human_archmage"
+	"npc_dota_hero_keeper_of_the_light"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -98,7 +98,7 @@
 	// Creature: Blood Mage
 	// Description: "Mystical Hero, adept at controlling magic and ranged assaults. Can learn Flame Strike, Banish, Siphon Mana and Phoenix. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"Blood_Mage"
+	"npc_dota_hero_invoker"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -191,7 +191,7 @@
 	//=================================================================================
 	// Creature: Mountain King
 	//=================================================================================
-	"human_mountain_king"
+	"npc_dota_hero_zuus"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -281,7 +281,7 @@
 	// Creature: Paladin
 	// Description: "Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"human_paladin"
+	"npc_dota_hero_omniknight"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -371,7 +371,7 @@
 	// Creature: Alchemist
 	// Description: "Warrior Hero, known for offensive and defensive versatility. Can learn Healing Spray, Chemical Rage, Acid Bomb and Transmute.|n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"neutral_alchemist"
+	"npc_dota_hero_alchemist"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -459,7 +459,7 @@
 	// Creature: Beastmaster
 	// Description: "Warrior Hero, adept at summoning beasts into battle. Can learn Summon Bear, Summon Quilbeast, Summon Hawk, and Stampede. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"neutral_beastmaster"
+	"npc_dota_hero_beastmaster"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -548,7 +548,7 @@
 	// Creature: Dark Ranger
 	// Description: "Cunning Hero, adept at manipulating opponents. Can learn Silence, Black Arrow, Life Drain, and Charm. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"neutral_dark_ranger"
+	"npc_dota_hero_drow_ranger"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -638,12 +638,12 @@
 	// Creature: Firelord
 	// Description: "Mystical Hero, adept at disrupting spells and dealing large amounts of fire damage.  Can learn Soul Burn, Summon Lava Spawn, Incinerate and Volcano.|n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"neutral_firelord"
+	"npc_dota_hero_nevermore"
 	{
 		// General
 		//----------------------------------------------------------------
-		"override_hero"				"npc_dota_hero_nevermore"	 //Add npc_dota_hero internal name
-		//"Model"					"models/heroes/shadow_fiend/shadow_fiend_arcana.vmdl"
+		"override_hero"				"npc_dota_hero_nevermore"
+		"Model"						"models/heroes/shadow_fiend/shadow_fiend_arcana.vmdl"
 		"FormationRank"				"2"
 		
 		// Abilities
@@ -730,7 +730,7 @@
 	// Creature: Naga Sea Witch
 	// Description: "Mystical Hero, adept at ranged combat. Can learn Forked Lightning, Frost Arrows, Mana Shield, and Tornado. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"neutral_naga_sea_witch"
+	"npc_dota_hero_medusa"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -820,7 +820,7 @@
 	// Creature: Pandaren Brewmaster
 	// Description: "Warrior Hero, exceptional at absorbing damage and melee combat. Can learn Breath of Fire, Drunken Haze, Drunken Brawler and Storm, Earth, And Fire. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"neutral_pandaren"
+	"npc_dota_hero_brewmaster"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -907,7 +907,7 @@
 	//=================================================================================
 	// Creature: Pit Lord
 	//=================================================================================
-	"neutral_pit_lord"
+	"npc_dota_hero_undying"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1000,7 +1000,7 @@
 	// Creature: Tinker
 	// Description: "Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Pocket Factory, Cluster Rockets, Engineering Upgrade and Robo-Goblin.|n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"neutral_tinker"
+	"npc_dota_hero_tinker"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1087,7 +1087,7 @@
 	// Creature: Demon Hunter
 	// Description: "Cunning Hero, adept at maneuvering through battles. Can learn Immolation, Evasion, Mana Burn, and Metamorphosis. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"nightelf_demon_hunter"
+	"npc_dota_hero_terrorblade"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1176,7 +1176,7 @@
 	// Creature: Keeper of the Grove
 	// Description: "Mystical Hero, adept at using nature spells. Can learn Entangling Roots, Force of Nature, Thorns Aura, and Tranquility. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"nightelf_keeper"
+	"npc_dota_hero_leshrac"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1266,11 +1266,11 @@
 	// Creature: Priestess of the Moon
 	// Description: "Warrior Hero, adept at enhancing ranged attacks and slaying enemies from afar. Can learn Scout, Searing Arrows, Trueshot Aura, and Starfall. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"nightelf_potm"
+	"npc_dota_hero_mirana"
 	{
 		// General
 		//----------------------------------------------------------------
-		"override_hero"				"npc_dota_hero_mirana"	 //Add npc_dota_hero internal name
+		"override_hero"				"npc_dota_hero_mirana"
 		"FormationRank"				"2"
 		
 		// Abilities
@@ -1356,7 +1356,7 @@
 	// Creature: Warden
 	// Description: "Cunning Hero, adept at entering and escaping combat. Can learn Blink, Fan of Knives, Shadow Strike and Vengeance. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"nightelf_warden"
+	"npc_dota_hero_phantom_assassin"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1444,7 +1444,7 @@
 	// Creature: Blademaster
 	// Description: "Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Mirror Image, Wind Walk, Critical Strike and Bladestorm. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"orc_blademaster"
+	"npc_dota_hero_juggernaut"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1532,7 +1532,7 @@
 	// Creature: Far Seer
 	// Description: "Mystical Hero, effective at ranged attacks and scouting. Can learn Chain Lightning, Far Sight, Feral Spirit and Earthquake. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"orc_far_seer"
+	"npc_dota_hero_disruptor"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1620,7 +1620,7 @@
 	// Creature: Shadow Hunter
 	// Description: "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Big Bad Voodoo. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"orc_shadow_hunter"
+	"npc_dota_hero_shadow_shaman"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1706,7 +1706,7 @@
 	}
 	
 	
-	"orc_tauren_chieftain"
+	"npc_dota_hero_elder_titan"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1796,7 +1796,7 @@
 	// Creature: Crypt Lord
 	// Description: "Warrior Hero, adept at summoning insect minions and crushing enemies. Can learn Impale, Spiked Carapace, Carrion Beetles and Locust Swarm. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"undead_crypt_lord"
+	"npc_dota_hero_nyx_assassin"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1884,7 +1884,7 @@
 	// Creature: Death Knight
 	// Description: "Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Death Pact, Unholy Aura, and Animate Dead. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"undead_death_knight"
+	"npc_dota_hero_abaddon"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -1972,7 +1972,7 @@
 	// Creature: Dreadlord
 	// Description: "Cunning Hero, adept at controlling combat. Can learn Carrion Swarm, Sleep, Vampiric Aura, and Inferno. |n|n|cffffcc00Attacks land units.|r"
 	//=================================================================================
-	"undead_dread_lord"
+	"npc_dota_hero_night_stalker"
 	{
 		// General
 		//----------------------------------------------------------------
@@ -2060,7 +2060,7 @@
 	// Creature: Lich
 	// Description: "Mystical Hero, particularly adept at cold magic. Can learn Frost Armor, Frost Nova, Dark Ritual and Death And Decay. |n|n|cffffcc00Attacks land and air units.|r"
 	//=================================================================================
-	"undead_lich"
+	"npc_dota_hero_lich"
 	{
 		// General
 		//----------------------------------------------------------------

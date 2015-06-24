@@ -2,7 +2,7 @@
 // Creature: Far Seer
 // Description: "Mystical Hero, effective at ranged attacks and scouting. Can learn Chain Lightning, Far Sight, Feral Spirit and Earthquake. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"orc_far_seer"
+"npc_dota_hero_disruptor"
 {
 	// General
 	//----------------------------------------------------------------

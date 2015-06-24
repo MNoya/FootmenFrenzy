@@ -2,7 +2,7 @@
 // Creature: Blood Mage
 // Description: "Mystical Hero, adept at controlling magic and ranged assaults. Can learn Flame Strike, Banish, Siphon Mana and Phoenix. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"Blood_Mage"
+"npc_dota_hero_invoker"
 {
 	// General
 	//----------------------------------------------------------------

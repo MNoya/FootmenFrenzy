@@ -2,7 +2,7 @@
 // Creature: Tinker
 // Description: "Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Pocket Factory, Cluster Rockets, Engineering Upgrade and Robo-Goblin.|n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"neutral_tinker"
+"npc_dota_hero_tinker"
 {
 	// General
 	//----------------------------------------------------------------

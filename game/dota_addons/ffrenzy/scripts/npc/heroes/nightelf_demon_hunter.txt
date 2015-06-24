@@ -2,7 +2,7 @@
 // Creature: Demon Hunter
 // Description: "Cunning Hero, adept at maneuvering through battles. Can learn Immolation, Evasion, Mana Burn, and Metamorphosis. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"nightelf_demon_hunter"
+"npc_dota_hero_terrorblade"
 {
 	// General
 	//----------------------------------------------------------------

@@ -2,7 +2,7 @@
 // Creature: Keeper of the Grove
 // Description: "Mystical Hero, adept at using nature spells. Can learn Entangling Roots, Force of Nature, Thorns Aura, and Tranquility. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"nightelf_keeper"
+"npc_dota_hero_leshrac"
 {
 	// General
 	//----------------------------------------------------------------

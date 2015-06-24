@@ -2,7 +2,7 @@
 // Creature: Warden
 // Description: "Cunning Hero, adept at entering and escaping combat. Can learn Blink, Fan of Knives, Shadow Strike and Vengeance. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"nightelf_warden"
+"npc_dota_hero_phantom_assassin"
 {
 	// General
 	//----------------------------------------------------------------

@@ -2,7 +2,7 @@
 // Creature: Shadow Hunter
 // Description: "Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Big Bad Voodoo. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"orc_shadow_hunter"
+"npc_dota_hero_shadow_shaman"
 {
 	// General
 	//----------------------------------------------------------------

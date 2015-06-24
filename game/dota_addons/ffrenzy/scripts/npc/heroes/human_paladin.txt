@@ -2,7 +2,7 @@
 // Creature: Paladin
 // Description: "Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"human_paladin"
+"npc_dota_hero_omniknight"
 {
 	// General
 	//----------------------------------------------------------------

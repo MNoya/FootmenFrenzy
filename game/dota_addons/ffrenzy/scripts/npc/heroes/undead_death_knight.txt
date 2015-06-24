@@ -2,7 +2,7 @@
 // Creature: Death Knight
 // Description: "Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Death Pact, Unholy Aura, and Animate Dead. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"undead_death_knight"
+"npc_dota_hero_abaddon"
 {
 	// General
 	//----------------------------------------------------------------

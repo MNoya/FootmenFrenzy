@@ -4,6 +4,7 @@ require( 'ffrenzy' )
 require( 'upgrades' )
 require( 'utilities' )
 require( 'spawn_area' )
+require( 'orders' )
 
 function Precache( context )
 	print("[ffrenzy] Performing pre-load precache")

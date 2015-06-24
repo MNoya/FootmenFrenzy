@@ -1,4 +1,4 @@
-"orc_tauren_chieftain"
+"npc_dota_hero_elder_titan"
 {
 	// General
 	//----------------------------------------------------------------

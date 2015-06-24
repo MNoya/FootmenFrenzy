@@ -2,7 +2,7 @@
 // Creature: Dreadlord
 // Description: "Cunning Hero, adept at controlling combat. Can learn Carrion Swarm, Sleep, Vampiric Aura, and Inferno. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"undead_dread_lord"
+"npc_dota_hero_night_stalker"
 {
 	// General
 	//----------------------------------------------------------------

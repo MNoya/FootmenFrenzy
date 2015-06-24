@@ -2,7 +2,7 @@
 // Creature: Archmage
 // Description: "Mystical Hero, adept at ranged assaults. Can learn Blizzard, Summon Water Elemental, Brilliance Aura and Mass Teleport. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"human_archmage"
+"npc_dota_hero_keeper_of_the_light"
 {
 	// General
 	//----------------------------------------------------------------

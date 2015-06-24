@@ -2,7 +2,7 @@
 // Creature: Pandaren Brewmaster
 // Description: "Warrior Hero, exceptional at absorbing damage and melee combat. Can learn Breath of Fire, Drunken Haze, Drunken Brawler and Storm, Earth, And Fire. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"neutral_pandaren"
+"npc_dota_hero_brewmaster"
 {
 	// General
 	//----------------------------------------------------------------

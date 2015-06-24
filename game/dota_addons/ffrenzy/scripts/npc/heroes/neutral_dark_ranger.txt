@@ -2,7 +2,7 @@
 // Creature: Dark Ranger
 // Description: "Cunning Hero, adept at manipulating opponents. Can learn Silence, Black Arrow, Life Drain, and Charm. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"neutral_dark_ranger"
+"npc_dota_hero_drow_ranger"
 {
 	// General
 	//----------------------------------------------------------------

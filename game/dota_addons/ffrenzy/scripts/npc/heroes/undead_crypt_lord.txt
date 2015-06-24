@@ -2,7 +2,7 @@
 // Creature: Crypt Lord
 // Description: "Warrior Hero, adept at summoning insect minions and crushing enemies. Can learn Impale, Spiked Carapace, Carrion Beetles and Locust Swarm. |n|n|cffffcc00Attacks land units.|r"
 //=================================================================================
-"undead_crypt_lord"
+"npc_dota_hero_nyx_assassin"
 {
 	// General
 	//----------------------------------------------------------------

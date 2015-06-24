@@ -2,7 +2,7 @@
 // Creature: Naga Sea Witch
 // Description: "Mystical Hero, adept at ranged combat. Can learn Forked Lightning, Frost Arrows, Mana Shield, and Tornado. |n|n|cffffcc00Attacks land and air units.|r"
 //=================================================================================
-"neutral_naga_sea_witch"
+"npc_dota_hero_medusa"
 {
 	// General
 	//----------------------------------------------------------------
