@@ -121,7 +121,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Aesn
+	"Ability1"					"huntress_moon_glaive"
 	"Ability2"					""	 //Reference: Ashm
 	"Ability3"					""	 //Reference: Amgl
 	"Ability4"					""	 //Reference: Aien

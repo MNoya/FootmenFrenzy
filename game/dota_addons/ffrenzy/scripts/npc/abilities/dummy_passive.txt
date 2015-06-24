@@ -49,3 +49,24 @@
 		}
 	}
 }
+
+"dummy_empty1"
+{
+	"BaseClass" 		"ability_datadriven"
+	"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+"dummy_empty2"
+{
+	"BaseClass" 		"ability_datadriven"
+	"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+"dummy_empty3"
+{
+	"BaseClass" 		"ability_datadriven"
+	"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+"dummy_empty4"
+{
+	"BaseClass" 		"ability_datadriven"
+	"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}

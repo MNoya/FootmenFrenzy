@@ -1904,7 +1904,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"450"
 		"StatusHealthRegen"			"0.25"
-		"StatusMana"				"0"
+		"StatusMana"				"50"
 		"StatusManaRegen"			"0"
 		
 		// Vision
@@ -4974,7 +4974,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"human_feedback"
+		"Ability1"					"spell_breaker_feedback"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5071,7 +5071,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"knight_bash"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5498,7 +5498,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Aesn
+		"Ability1"					"huntress_moon_glaive"
 		"Ability2"					""	 //Reference: Ashm
 		"Ability3"					""	 //Reference: Amgl
 		"Ability4"					""	 //Reference: Aien
@@ -6160,8 +6160,12 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Awar
-		"Ability2"					""	 //Reference: Aion
+		"Ability1"					"tauren_pulverize"
+		"Ability2"					"dummy_empty1"
+		"Ability3"					"dummy_empty2"
+		"Ability4"					"dummy_empty3"
+		"Ability5"					"tauren_pulverize_cast"
+		"Ability6"					"tauren_pulverize_damage"
 		
 		// Armor
 		//----------------------------------------------------------------

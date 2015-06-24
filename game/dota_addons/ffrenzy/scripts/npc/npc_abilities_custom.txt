@@ -7511,6 +7511,27 @@
 			}
 		}
 	}
+	
+	"dummy_empty1"
+	{
+		"BaseClass" 		"ability_datadriven"
+		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"dummy_empty2"
+	{
+		"BaseClass" 		"ability_datadriven"
+		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"dummy_empty3"
+	{
+		"BaseClass" 		"ability_datadriven"
+		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"dummy_empty4"
+	{
+		"BaseClass" 		"ability_datadriven"
+		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
 	// Far Seer Chain Lightning
 	// Author: Noya
 	// Date: 17.1.2015.
@@ -17226,12 +17247,237 @@
 			}
 		}	
 	}
+	"huntress_moon_glaive"
+	{
+		"BaseClass"						"luna_moon_glaive"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		
+		
+		"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"range"						"500"
+				}
+				"02"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"bounces"					"1"
+				}
+				"03"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"damage_reduction_percent"	"35"
+				}
+			}
+	}
+	
+	
+	"spell_breaker_feedback"
+	{
+		"BaseClass"						"antimage_mana_break"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_burn"		"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_hit"			"3"
+			}
+		}
+	}
+	
+	"knight_bash"
+	{
+		"BaseClass"						"slardar_bash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+			"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+			
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"chance"				"25"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"bonus_damage"			"25"
+				}
+				"03"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"duration"				"1.0"
+				}
+				"04"
+				{
+					"var_type"				"FIELD_FLOAT"
+					"duration_creep"		"2.0"
+				}
+			}
+	
+	}
+	
+	
+	
+	"tauren_pulverize"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityTextureName"			"earthshaker_enchant_totem"
+		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance"				"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"100"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_pulverize"
+			{
+				"IsDebuff" 		"1"
+			}
+	
+	
+			"modifier_bash_datadriven"		
+			{
+				"IsHidden"	"1"
+				"Passive"	"1"
+	
+				"OnAttackLanded"
+				{
+					"Random"
+					{
+						"Chance"	"%chance"
+						"PseudoRandom"		"DOTA_PSEUDO_RANDOM_SLARDAR_BASH"
+	
+						"OnSuccess"
+						{
+							"RunScript"
+							{
+								"ScriptFile"	"units/tauren_pulverize.lua"
+								"Function"		"OnHit"
+							}					
+						}
+					}
+				} 
+			}
+		}
+	}
+	
+	
+	
+	"tauren_pulverize_cast"
+	{
+		"BaseClass"						"earthshaker_enchant_totem"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	
+			// Casting
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCastRange"				"0"
+			"AbilityCastPoint"				"0.69"
+			"FightRecapLevel"				"1"
+	
+			// Time		
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCooldown"				"0"
+			"AbilityDuration"				"0"
+	
+			// Damage.
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityDamage"					"100"
+	
+			// Cost
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityManaCost"				"0"		
+	
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"totem_damage_percentage"	"0"
+				}
+				"02"
+				{
+					"var_type"					"FIELD_FLOAT"
+					"tooltip_duration"			"0"
+				}
+			}
+	}
+	
+	
+	"tauren_pulverize_damage"
+	{
+		"BaseClass"						"earthshaker_aftershock"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+			"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	
+			// Time		
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityDuration"				"0"
+	
+			// Damage.
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityDamage"					"100"
+			
+			// Stats
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityModifierSupportBonus"	"100"
+	
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"					"FIELD_INTEGER"
+					"aftershock_range"			"300"
+				}
+				"02"
+				{
+					"var_type"					"FIELD_FLOAT"
+					"tooltip_duration"			"0"
+				}
+			}
+	}
 	// These abilities apply and show the current level of upgrade on the unit.
 	// The modifier is stacked and increased every time the player researches a new rank of the upgrade
 	"upgrade_weapon"
 	{
 	    "BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"items_upgrade_weapon"
+		"AbilityTextureName"			"upgrade_weapon"
 		"MaxLevel" 						"20"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"

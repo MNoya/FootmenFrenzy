@@ -70,6 +70,17 @@ function ApplyUpgrade(unit, upgrade_name)
 		or ( upgrade_name == "upgrade_nightelf_training" and IsNightElf(unit_name) )
 		or ( upgrade_name == "upgrade_orc_training" and IsOrc(unit_name) )
 		or ( upgrade_name == "upgrade_undead_training" and IsUndead(unit_name) ) then
+			if unit_name == "orc_tauren" then
+				if unit:HasAbility("dummy_empty1") then
+					unit:RemoveAbility("dummy_empty1")
+					else if unit:HasAbility("dummy_empty2") then
+						unit:RemoveAbility("dummy_empty2")
+						else if unit:HasAbility("dummy_empty3") then
+							unit:RemoveAbility("dummy_empty3")
+						end
+					end
+				end
+			end
 			unit:AddAbility(upgrade_name)
 			local new_ability = unit:FindAbilityByName(upgrade_name)
 			new_ability:SetLevel(upgrade_level)

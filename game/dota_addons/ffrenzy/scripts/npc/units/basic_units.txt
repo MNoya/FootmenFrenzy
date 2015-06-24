@@ -72,7 +72,7 @@
 	//----------------------------------------------------------------
 	"StatusHealth"				"450"
 	"StatusHealthRegen"			"0.25"
-	"StatusMana"				"0"
+	"StatusMana"				"50"
 	"StatusManaRegen"			"0"
 	
 	// Vision

@@ -31,7 +31,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         --           Grid Unit Formation              --
         ------------------------------------------------
         local DEBUG = false --If enabled it'll show circles and grid positions
-        local SQUARE_FACTOR = 2 --1 is a perfect square, higher numbers will increase
+        local SQUARE_FACTOR = 1.5 --1 is a perfect square, higher numbers will increase
 
         local navPoints = {}
         local first_unit = EntIndexToHScript(units["0"])
