@@ -51,7 +51,7 @@ end
 function VolcanoWave( event )
 	local caster = event.caster
 	local targets = event.target_entities
-	print("Targets detected: "..#targets)
+	--print("Targets detected: "..#targets)
 	local ability = event.ability
 	local wave_damage = ability:GetLevelSpecialValueFor( "wave_damage", ability:GetLevel() - 1 )
 	local stun_duration = ability:GetLevelSpecialValueFor( "stun_duration", ability:GetLevel() - 1 )
@@ -60,8 +60,12 @@ function VolcanoWave( event )
 
 	for _,unit in pairs(targets) do
 		if unit ~= caster then
-			ability:ApplyDataDrivenModifier(caster, unit, "modifier_volcano_stun", {duration = stun_duration})
-			ApplyDamage({ victim = unit, attacker = caster, damage = wave_damage, damage_type = abilityDamageType })
+			if unit:IsBuilding() then
+				ApplyDamage({ victim = unit, attacker = caster, damage = wave_damage*2, damage_type = abilityDamageType })
+			else
+				ability:ApplyDataDrivenModifier(caster, unit, "modifier_volcano_stun", {duration = stun_duration})
+				ApplyDamage({ victim = unit, attacker = caster, damage = wave_damage, damage_type = abilityDamageType })
+			end
 		end
 	end			
 end

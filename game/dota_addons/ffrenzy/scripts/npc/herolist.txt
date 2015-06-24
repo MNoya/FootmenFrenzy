@@ -57,7 +57,7 @@
 	"npc_dota_hero_morphling"				"0"
 	"npc_dota_hero_naga_siren"				"0"
 	"npc_dota_hero_necrolyte"				"0"
-	"npc_dota_hero_nevermore"				"0"  //enable
+	"npc_dota_hero_nevermore"				"1"
 	"npc_dota_hero_night_stalker"			"1"
 	"npc_dota_hero_nyx_assassin"			"0" //enable
 	"npc_dota_hero_obsidian_destroyer"		"0"
