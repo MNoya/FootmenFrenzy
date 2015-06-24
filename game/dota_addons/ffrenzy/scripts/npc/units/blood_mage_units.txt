@@ -10,6 +10,7 @@
 	"Model"				"models/heroes/phoenix/phoenix_bird.vmdl"
 	"ModelScale"		"1"
 	"Level"				"6"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -81,6 +82,7 @@
 	"Model"				"models/heroes/phoenix/phoenix_bird.vmdl"
 	"ModelScale"		"1"
 	"Level"				"6"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -152,6 +154,7 @@
 	"Model"				"models/heroes/phoenix/phoenix_bird.vmdl"
 	"ModelScale"		"1"
 	"Level"				"6"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -225,6 +228,7 @@
 	"ModelScale"		"0.6"
 	"SoundSet"			"Phoenix_Sun"
 	"Level"				"6"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------

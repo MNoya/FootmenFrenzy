@@ -36,7 +36,7 @@
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 	"AttackDamageMin"			"18.0"
-	"AttackDamageMax"			"24.0"
+	"AttackDamageMax"			"20.0"
 	"AttackRate"				"1.5"
 	"AttackAnimationPoint"		"0.17"
 	"AttackAcquisitionRange"	"600"
@@ -130,8 +130,8 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-	"AttackDamageMin"			"12.0"
-	"AttackDamageMax"			"13.0"
+	"AttackDamageMin"			"22.0"
+	"AttackDamageMax"			"24.0"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 	"AttackRate"				"1.2"
 	"AttackAnimationPoint"		"0.39"
@@ -140,9 +140,9 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"10.0"
-	"BountyGoldMax"				"15.0"
-	"BountyXP"					"12"	
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
+	"BountyXP"					"24"	
 	
 	// Bounds
 	//----------------------------------------------------------------
@@ -159,7 +159,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"220"
+	"StatusHealth"				"600"
 	"StatusHealthRegen"			"0.25"
 	"StatusMana"				"0"
 	"StatusManaRegen"			"0"
@@ -224,8 +224,8 @@
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-	"AttackDamageMin"			"13.0"
-	"AttackDamageMax"			"15.0"
+	"AttackDamageMin"			"22.0"
+	"AttackDamageMax"			"24.0"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 	"AttackRate"				"1.9"
 	"AttackAnimationPoint"		"0.5"
@@ -236,8 +236,8 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"26.0"
-	"BountyGoldMax"				"38.0"
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
 	"BountyXP"					"24"	
 	
 	// Bounds
@@ -350,7 +350,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"835"
+	"StatusHealth"				"850"
 	"StatusHealthRegen"			"0.25"
 	"StatusMana"				"0"
 	"StatusManaRegen"			"0"

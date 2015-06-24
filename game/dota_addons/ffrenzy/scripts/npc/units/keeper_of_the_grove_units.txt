@@ -10,6 +10,7 @@
 	"Model"				"models/items/furion/treant/father_treant/father_treant.vmdl"
 	"ModelScale"		"1"
 	"Level"				"2"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------

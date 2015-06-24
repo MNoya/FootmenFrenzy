@@ -18,6 +18,7 @@ function BuildPocketFactory( event )
 	caster.pocket_factory:RemoveModifierByName("modifier_invulnerable")
 	caster.pocket_factory.no_corpse = true
 	Timers:CreateTimer(0.03, function() caster.pocket_factory:SetAbsOrigin(point) end)
+	Timers:CreateTimer(0.06, function() ResolveNPCPositions(point, 300) end)
 
 	-- Add the ability and set its level
 	caster.pocket_factory:AddAbility("tinker_pocket_factory_spawn_goblin")

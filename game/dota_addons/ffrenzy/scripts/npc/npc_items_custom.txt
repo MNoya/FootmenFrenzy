@@ -3268,7 +3268,7 @@
 	"item_upgrade_human_training2"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training2"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3294,7 +3294,7 @@
 	"item_upgrade_human_training3"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training3"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3320,7 +3320,7 @@
 	"item_upgrade_human_training4"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3346,7 +3346,7 @@
 	"item_upgrade_human_training5"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training5"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3372,7 +3372,7 @@
 	"item_upgrade_human_training6"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training6"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3398,7 +3398,7 @@
 	"item_upgrade_human_training7"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training7"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3424,7 +3424,7 @@
 	"item_upgrade_human_training8"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training8"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3450,7 +3450,7 @@
 	"item_upgrade_human_training9"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training9"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3476,7 +3476,7 @@
 	"item_upgrade_human_training10"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training10"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3502,7 +3502,7 @@
 	"item_upgrade_human_training11"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training11"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3528,7 +3528,7 @@
 	"item_upgrade_human_training12"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training12"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3554,7 +3554,7 @@
 	"item_upgrade_human_training13"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training13"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3580,7 +3580,7 @@
 	"item_upgrade_human_training14"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training14"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3606,7 +3606,7 @@
 	"item_upgrade_human_training15"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training15"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3632,7 +3632,7 @@
 	"item_upgrade_human_training16"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training16"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3658,7 +3658,7 @@
 	"item_upgrade_human_training17"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training17"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3684,7 +3684,7 @@
 	"item_upgrade_human_training18"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training18"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3710,7 +3710,7 @@
 	"item_upgrade_human_training19"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3736,7 +3736,7 @@
 	"item_upgrade_human_training20"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_human_training1"
+		"AbilityTextureName"			"item_upgrade_human_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3788,7 +3788,7 @@
 	"item_upgrade_nightelf_training2"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training2"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3814,7 +3814,7 @@
 	"item_upgrade_nightelf_training3"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training3"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3840,7 +3840,7 @@
 	"item_upgrade_nightelf_training4"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3866,7 +3866,7 @@
 	"item_upgrade_nightelf_training5"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training5"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3892,7 +3892,7 @@
 	"item_upgrade_nightelf_training6"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training6"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3918,7 +3918,7 @@
 	"item_upgrade_nightelf_training7"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training7"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3944,7 +3944,7 @@
 	"item_upgrade_nightelf_training8"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training8"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3970,7 +3970,7 @@
 	"item_upgrade_nightelf_training9"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training9"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -3996,7 +3996,7 @@
 	"item_upgrade_nightelf_training10"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training10"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4022,7 +4022,7 @@
 	"item_upgrade_nightelf_training11"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training11"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4048,7 +4048,7 @@
 	"item_upgrade_nightelf_training12"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training12"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4074,7 +4074,7 @@
 	"item_upgrade_nightelf_training13"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training13"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4100,7 +4100,7 @@
 	"item_upgrade_nightelf_training14"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training14"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4126,7 +4126,7 @@
 	"item_upgrade_nightelf_training15"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training15"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4152,7 +4152,7 @@
 	"item_upgrade_nightelf_training16"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training16"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4178,7 +4178,7 @@
 	"item_upgrade_nightelf_training17"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training17"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4204,7 +4204,7 @@
 	"item_upgrade_nightelf_training18"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training18"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4230,7 +4230,7 @@
 	"item_upgrade_nightelf_training19"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4256,7 +4256,7 @@
 	"item_upgrade_nightelf_training20"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_nightelf_training1"
+		"AbilityTextureName"			"item_upgrade_nightelf_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4308,7 +4308,7 @@
 	"item_upgrade_orc_training2"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training2"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4334,7 +4334,7 @@
 	"item_upgrade_orc_training3"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training3"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4360,7 +4360,7 @@
 	"item_upgrade_orc_training4"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4386,7 +4386,7 @@
 	"item_upgrade_orc_training5"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training5"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4412,7 +4412,7 @@
 	"item_upgrade_orc_training6"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training6"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4438,7 +4438,7 @@
 	"item_upgrade_orc_training7"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training7"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4464,7 +4464,7 @@
 	"item_upgrade_orc_training8"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training8"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4490,7 +4490,7 @@
 	"item_upgrade_orc_training9"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training9"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4516,7 +4516,7 @@
 	"item_upgrade_orc_training10"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training10"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4542,7 +4542,7 @@
 	"item_upgrade_orc_training11"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training11"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4568,7 +4568,7 @@
 	"item_upgrade_orc_training12"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training12"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4594,7 +4594,7 @@
 	"item_upgrade_orc_training13"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training13"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4620,7 +4620,7 @@
 	"item_upgrade_orc_training14"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training14"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4646,7 +4646,7 @@
 	"item_upgrade_orc_training15"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training15"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4672,7 +4672,7 @@
 	"item_upgrade_orc_training16"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training16"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4698,7 +4698,7 @@
 	"item_upgrade_orc_training17"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training17"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4724,7 +4724,7 @@
 	"item_upgrade_orc_training18"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training18"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4750,7 +4750,7 @@
 	"item_upgrade_orc_training19"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4776,7 +4776,7 @@
 	"item_upgrade_orc_training20"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_orc_training1"
+		"AbilityTextureName"			"item_upgrade_orc_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4828,7 +4828,7 @@
 	"item_upgrade_undead_training2"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training2"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4854,7 +4854,7 @@
 	"item_upgrade_undead_training3"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training3"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4880,7 +4880,7 @@
 	"item_upgrade_undead_training4"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training4"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4906,7 +4906,7 @@
 	"item_upgrade_undead_training5"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training5"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4932,7 +4932,7 @@
 	"item_upgrade_undead_training6"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training6"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4958,7 +4958,7 @@
 	"item_upgrade_undead_training7"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training7"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -4984,7 +4984,7 @@
 	"item_upgrade_undead_training8"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training8"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5010,7 +5010,7 @@
 	"item_upgrade_undead_training9"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training9"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5036,7 +5036,7 @@
 	"item_upgrade_undead_training10"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training10"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5062,7 +5062,7 @@
 	"item_upgrade_undead_training11"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training11"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5088,7 +5088,7 @@
 	"item_upgrade_undead_training12"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training12"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5114,7 +5114,7 @@
 	"item_upgrade_undead_training13"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training13"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5140,7 +5140,7 @@
 	"item_upgrade_undead_training14"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training14"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5166,7 +5166,7 @@
 	"item_upgrade_undead_training15"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training15"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5192,7 +5192,7 @@
 	"item_upgrade_undead_training16"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training16"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5218,7 +5218,7 @@
 	"item_upgrade_undead_training17"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training17"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5244,7 +5244,7 @@
 	"item_upgrade_undead_training18"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training18"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5270,7 +5270,7 @@
 	"item_upgrade_undead_training19"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	
@@ -5296,7 +5296,7 @@
 	"item_upgrade_undead_training20"
 	{
 	    "BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_upgrade_undead_training1"
+		"AbilityTextureName"			"item_upgrade_undead_training19"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	

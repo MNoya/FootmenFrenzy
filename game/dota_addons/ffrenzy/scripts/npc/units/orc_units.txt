@@ -35,8 +35,8 @@
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"18.0"
-	"AttackDamageMax"			"21.0"
+	"AttackDamageMin"			"20.0"
+	"AttackDamageMax"			"22.0"
 	"AttackRate"				"1.6"
 	"AttackAnimationPoint"		"0.33"
 	"AttackAcquisitionRange"	"500"
@@ -127,8 +127,8 @@
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"23.0"
-	"AttackDamageMax"			"27.0"
+	"AttackDamageMin"			"26.0"
+	"AttackDamageMax"			"32.0"
 	"AttackRate"				"2.31"
 	"AttackAnimationPoint"		"0.31"
 	"AttackAcquisitionRange"	"500"
@@ -138,8 +138,8 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"26.0"
-	"BountyGoldMax"				"38.0"
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
 	"BountyXP"					"24"	
 	
 	// Bounds
@@ -157,7 +157,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"350"
+	"StatusHealth"				"500"
 	"StatusHealthRegen"			"0.25"
 	"StatusMana"				"0"
 	"StatusManaRegen"			"0"

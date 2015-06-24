@@ -16,6 +16,7 @@
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
 	"IsAncient"					"1"
 	"ConsideredHero"			"1"
+	"FormationRank"				"0"
 	
 	"precache"
 	{
@@ -115,6 +116,7 @@
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
 	"IsAncient"					"1"
 	"ConsideredHero"			"1"
+	"FormationRank"				"0"
 	
 	"precache"
 	{
@@ -214,6 +216,7 @@
 	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
 	"IsAncient"					"1"
 	"ConsideredHero"			"1"
+	"FormationRank"				"0"
 	
 	"precache"
 	{

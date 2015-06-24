@@ -290,6 +290,7 @@
 	"Model"				"models/heroes/rattletrap/rattletrap.vmdl"
 	"ModelScale"		"0.7"
 	"Level"				"0"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------

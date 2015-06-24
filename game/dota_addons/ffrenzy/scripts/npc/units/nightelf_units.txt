@@ -136,8 +136,8 @@
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"16.0"
-	"AttackDamageMax"			"18.0"
+	"AttackDamageMin"			"22.0"
+	"AttackDamageMax"			"24.0"
 	"AttackRate"				"1.8"
 	"AttackAnimationPoint"		"0.46"
 	"AttackAcquisitionRange"	"500"
@@ -243,8 +243,8 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"26.0"
-	"BountyGoldMax"				"38.0"
+	"BountyGoldMin"				"32.0"
+	"BountyGoldMax"				"46.0"
 	"BountyXP"					"24"	
 	
 	// Bounds
@@ -262,7 +262,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"300"
+	"StatusHealth"				"450"
 	"StatusHealthRegen"			"1"
 	"StatusMana"				"200"
 	"StatusManaRegen"			"200"
@@ -324,14 +324,14 @@
 	// Armor
 	//----------------------------------------------------------------
 	"ArmorPhysical"				"0"
-	"MagicalResistance"			"0"
+	"MagicalResistance"			"30"
 	
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"17.0"
-	"AttackDamageMax"			"19.0"
+	"AttackDamageMin"			"36.0"
+	"AttackDamageMax"			"42.0"
 	"AttackRate"				"2"
 	"AttackAnimationPoint"		"0.3"
 	"AttackAcquisitionRange"	"800"
@@ -341,9 +341,9 @@
 	
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyGoldMin"				"32.0"
-	"BountyGoldMax"				"46.0"
-	"BountyXP"					"12"	
+	"BountyGoldMin"				"38.0"
+	"BountyGoldMax"				"54.0"
+	"BountyXP"					"24"	
 	
 	// Bounds
 	//----------------------------------------------------------------
@@ -360,7 +360,7 @@
 	
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"				"435"
+	"StatusHealth"				"500"
 	"StatusHealthRegen"			"0.5"
 	"StatusMana"				"200"
 	"StatusManaRegen"			"200"

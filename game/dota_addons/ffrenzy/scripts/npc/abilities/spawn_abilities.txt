@@ -93,22 +93,10 @@
 					"Function"		"SpawnUnit"
 					"UnitName"		"human_militia"
 				}
-				"RunScript"
-				{
-					"ScriptFile"	"buildings/rally_point.lua"
-					"Function"		"SpawnUnit"
-					"UnitName"		"human_militia"
-				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"RunScript"
-				{
-					"ScriptFile"	"buildings/rally_point.lua"
-					"Function"		"SpawnUnit"
-					"UnitName"		"human_militia"
-				}
 				"RunScript"
 				{
 					"ScriptFile"	"buildings/rally_point.lua"
@@ -351,22 +339,10 @@
 					"Function"		"SpawnUnit"
 					"UnitName"		"nightelf_dryad"
 				}
-				"RunScript"
-				{
-					"ScriptFile"	"buildings/rally_point.lua"
-					"Function"		"SpawnUnit"
-					"UnitName"		"nightelf_dryad"
-				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"RunScript"
-				{
-					"ScriptFile"	"buildings/rally_point.lua"
-					"Function"		"SpawnUnit"
-					"UnitName"		"nightelf_dryad"
-				}
 				"RunScript"
 				{
 					"ScriptFile"	"buildings/rally_point.lua"
@@ -680,22 +656,10 @@
 					"Function"		"SpawnUnit"
 					"UnitName"		"undead_skeletal_mage"
 				}
-				"RunScript"
-				{
-					"ScriptFile"	"buildings/rally_point.lua"
-					"Function"		"SpawnUnit"
-					"UnitName"		"undead_skeletal_mage"
-				}
 			}
 			"ThinkInterval"  	"10.0"
 			"OnIntervalThink"
 			{
-				"RunScript"
-				{
-					"ScriptFile"	"buildings/rally_point.lua"
-					"Function"		"SpawnUnit"
-					"UnitName"		"undead_skeletal_mage"
-				}
 				"RunScript"
 				{
 					"ScriptFile"	"buildings/rally_point.lua"

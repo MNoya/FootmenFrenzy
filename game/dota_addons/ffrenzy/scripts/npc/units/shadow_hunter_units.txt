@@ -44,6 +44,7 @@
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 	"HealthBarOffset"			"170"
+	"FormationRank"				"0"
 
 	// Movement
 	//----------------------------------------------------------------
@@ -123,6 +124,7 @@
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 	"HealthBarOffset"			"170"
+	"FormationRank"				"0"
 
 	// Movement
 	//----------------------------------------------------------------
@@ -201,6 +203,7 @@
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 	"HealthBarOffset"			"170"
+	"FormationRank"				"0"
 
 	// Movement
 	//----------------------------------------------------------------
@@ -279,6 +282,7 @@
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 	"HealthBarOffset"			"170"
+	"FormationRank"				"0"
 
 	// Movement
 	//----------------------------------------------------------------

@@ -23,7 +23,7 @@
 	"AbilityCooldown"				"8.0"
 
 	"AbilityManaCost"				"100"
-	"AbilityDamage"					"75 130 200 270"
+	"AbilityDamage"					"75 125 175 225"
 
 	"precache"
 	{
@@ -46,12 +46,12 @@
 		"02"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"initial_damage"	"75 130 200 270"
+			"initial_damage"	"75 125 175 225"
 		}
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_every_3sec"	"10 30 45 60"
+			"damage_every_3sec"	"10 20 30 40"
 		}
 		"04"
 		{

@@ -14,6 +14,7 @@
 	"Model"				"models/items/invoker/forge_spirit/cadenza_spirit/cadenza_spirit.vmdl"
 	"ModelScale"		"1"
 	"Level"				"4"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -81,6 +82,7 @@
 	"Model"				"models/items/invoker/forge_spirit/cadenza_spirit/cadenza_spirit.vmdl"
 	"ModelScale"		"1.1"
 	"Level"				"5"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -148,6 +150,7 @@
 	"Model"				"models/items/invoker/forge_spirit/cadenza_spirit/cadenza_spirit.vmdl"
 	"ModelScale"		"1.2"
 	"Level"				"6"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -215,6 +218,7 @@
 	"Model"				"models/items/invoker/forge_spirit/cadenza_spirit/cadenza_spirit.vmdl"
 	"ModelScale"		"1.2"
 	"Level"				"6"
+	"FormationRank"				"1"
 	
 	// Abilities
 	//----------------------------------------------------------------

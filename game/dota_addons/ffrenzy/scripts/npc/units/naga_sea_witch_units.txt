@@ -44,6 +44,7 @@
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 	"HealthBarOffset"			"140"
+	"FormationRank"				"0"
 
 	// Movement
 	//----------------------------------------------------------------

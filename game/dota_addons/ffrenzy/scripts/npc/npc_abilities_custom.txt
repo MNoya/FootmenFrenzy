@@ -6737,7 +6737,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"10 15 20 25"
+				"damage_per_second"		"20 25 30 40"
 			}
 			"02"
 			{
@@ -15387,22 +15387,10 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"human_militia"
 					}
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/rally_point.lua"
-						"Function"		"SpawnUnit"
-						"UnitName"		"human_militia"
-					}
 				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/rally_point.lua"
-						"Function"		"SpawnUnit"
-						"UnitName"		"human_militia"
-					}
 					"RunScript"
 					{
 						"ScriptFile"	"buildings/rally_point.lua"
@@ -15645,22 +15633,10 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"nightelf_dryad"
 					}
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/rally_point.lua"
-						"Function"		"SpawnUnit"
-						"UnitName"		"nightelf_dryad"
-					}
 				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/rally_point.lua"
-						"Function"		"SpawnUnit"
-						"UnitName"		"nightelf_dryad"
-					}
 					"RunScript"
 					{
 						"ScriptFile"	"buildings/rally_point.lua"
@@ -15974,22 +15950,10 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"undead_skeletal_mage"
 					}
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/rally_point.lua"
-						"Function"		"SpawnUnit"
-						"UnitName"		"undead_skeletal_mage"
-					}
 				}
 				"ThinkInterval"  	"10.0"
 				"OnIntervalThink"
 				{
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/rally_point.lua"
-						"Function"		"SpawnUnit"
-						"UnitName"		"undead_skeletal_mage"
-					}
 					"RunScript"
 					{
 						"ScriptFile"	"buildings/rally_point.lua"
@@ -17922,7 +17886,7 @@
 		"AbilityCooldown"				"8.0"
 	
 		"AbilityManaCost"				"100"
-		"AbilityDamage"					"75 130 200 270"
+		"AbilityDamage"					"75 125 175 225"
 	
 		"precache"
 		{
@@ -17945,12 +17909,12 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"initial_damage"	"75 130 200 270"
+				"initial_damage"	"75 125 175 225"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_every_3sec"	"10 30 45 60"
+				"damage_every_3sec"	"10 20 30 40"
 			}
 			"04"
 			{

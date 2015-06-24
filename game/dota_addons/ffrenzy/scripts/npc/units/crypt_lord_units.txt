@@ -10,6 +10,7 @@
 	"Model"				"models/heroes/weaver/weaver_bug.vmdl"
 	"ModelScale"		"1"
 	"Level"				"1"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -76,6 +77,7 @@
 	"Model"				"models/heroes/weaver/weaver_bug.vmdl"
 	"ModelScale"		"1"
 	"Level"				"2"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -143,6 +145,7 @@
 	"Model"				"models/heroes/weaver/weaver_bug.vmdl"
 	"ModelScale"		"1"
 	"Level"				"3"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -209,6 +212,7 @@
 	"Model"				"models/heroes/weaver/weaver_bug.vmdl"
 	"ModelScale"		"1"
 	"Level"				"3"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -278,6 +282,7 @@
 	"Model"				"models/development/invisiblebox.vmdl"
 	"ModelScale"		"1"
 	"Level"				"1"
+	"FormationRank"				"0"
 	
 	// Abilities
 	//----------------------------------------------------------------

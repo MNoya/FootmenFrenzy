@@ -48,6 +48,7 @@
 	"RingRadius"				"70"
 	"HealthBarOffset"			"160"
 	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+	"FormationRank"				"0"
 
 	// Bounty
 	//----------------------------------------------------------------
@@ -121,6 +122,7 @@
 	"RingRadius"				"70"
 	"HealthBarOffset"			"160"
 	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+	"FormationRank"				"0"
 
 	// Bounty
 	//----------------------------------------------------------------
@@ -195,6 +197,7 @@
 	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
 	"RingRadius"				"70"
 	"HealthBarOffset"			"160"
+	"FormationRank"				"0"
 
 	// Bounty
 	//----------------------------------------------------------------
@@ -268,6 +271,7 @@
 	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
 	"RingRadius"				"70"
 	"HealthBarOffset"			"160"
+	"FormationRank"				"0"
 
 	// Bounty
 	//----------------------------------------------------------------

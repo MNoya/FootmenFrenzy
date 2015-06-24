@@ -50,6 +50,7 @@
 	//----------------------------------------------------------------
 	"RingRadius"				"70"
 	"HealthBarOffset"			"190"
+	"FormationRank"				"1"
 
 
 	// Movement
@@ -137,6 +138,7 @@
 	//----------------------------------------------------------------
 	"RingRadius"				"70"
 	"HealthBarOffset"			"190"
+	"FormationRank"				"1"
 
 
 	// Movement
@@ -224,6 +226,7 @@
 	//----------------------------------------------------------------
 	"RingRadius"				"70"
 	"HealthBarOffset"			"190"
+	"FormationRank"				"1"
 
 
 	// Movement
@@ -311,6 +314,7 @@
 	//----------------------------------------------------------------
 	"RingRadius"				"70"
 	"HealthBarOffset"			"190"
+	"FormationRank"				"1"
 
 
 	// Movement

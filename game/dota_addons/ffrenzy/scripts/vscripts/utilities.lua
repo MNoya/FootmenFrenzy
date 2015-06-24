@@ -97,6 +97,9 @@ function GetUnitsWithFormationRank( units_table, rank )
 end
 
 function GetFormationRank( unit )
+	if unit:IsHero() then
+		return 0
+	end
     return GameRules.UnitKV[unit:GetUnitName()]["FormationRank"]
 end
 
