@@ -1,0 +1,71 @@
+"tower_feedback"
+{
+	"BaseClass"						"antimage_mana_break"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_burn"		"1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"mana_per_hit"			"50"
+		}
+	}
+}
+
+
+"tower_aoe"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	
+	
+	"AbilityTextureName"			"upgrade_cannon_tower"
+	
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"150"
+		}
+	}
+	"Modifiers"
+	{
+
+		"modifier_aoe_cannon"		
+		{
+			"IsHidden"	"1"
+			"Passive"	"1"
+
+			"OnAttackLanded"
+			{
+			
+				"RunScript"
+				{
+					"ScriptFile"	"buildings/tower_aoe.lua"
+					"Function"		"OnHit"
+					"Radius"		"%radius"
+					"Damage"		"%damage"
+				}
+				
+			} 
+		}
+	}
+}

@@ -298,19 +298,22 @@
 	"Level"						"5"
 	"HealthBarOffset"			"140"
 	"SoundSet"					"Hero_EarthShaker"
-	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_earth_shaker.vsndevts"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
 	
 	"PathfindingSearchDepthScale" "0.5"
 	
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"tauren_pulverize"
-	"Ability2"					"dummy_empty1"
-	"Ability3"					"dummy_empty2"
-	"Ability4"					"dummy_empty3"
-	"Ability5"					"tauren_pulverize_cast"
-	"Ability6"					"tauren_pulverize_damage"
+	
+	"Ability1"					"pulverize"
+	
+	//"Ability1"					"tauren_pulverize"
+	//"Ability2"					"dummy_empty1"
+	//"Ability3"					"dummy_empty2"
+	//"Ability4"					"dummy_empty3"
+	//"Ability5"					"tauren_pulverize_cast"
+	//"Ability6"					"tauren_pulverize_damage"
 	
 	// Armor
 	//----------------------------------------------------------------

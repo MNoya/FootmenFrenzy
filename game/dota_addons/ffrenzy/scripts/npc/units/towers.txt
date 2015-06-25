@@ -160,8 +160,8 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
 	"Ability1"					"upgrade_arcane_tower"
-	"Ability2"					"human_magic_sentry"
-	"Ability3"					""//aoe attack
+	"Ability2"					"tower_aoe"
+	"Ability3"					"human_magic_sentry"
 	"Ability4"					"ability_building"
 	
 	// Armor
@@ -235,10 +235,10 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					"human_reveal"
+	"Ability1"					"tower_feedback"
 	"Ability2"					"human_magic_sentry"
-	"Ability3"					"human_feedback"
-	"Ability4"					""
+	"Ability3"					""
+	"Ability4"					"ability_building"
 	
 	// Armor
 	//----------------------------------------------------------------
