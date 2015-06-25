@@ -111,11 +111,11 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_building"
-	"Model"						"models/props_structures/good_barracks_melee001.vmdl"
-	"ModelScale"				"1"
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/heroes/dragon_knight/dragon_knight.vmdl"
+	"ModelScale"				"2"
 	"Level"						"1"
-	"HealthBarOffset"			"140"
+	"HealthBarOffset"			"370"
 	"HasInventory"				"1"
 	"ConsideredHero"			"1"
 	
@@ -174,5 +174,18 @@
 	"TeamName"					"DOTA_TEAM_NEUTRALS"
 	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
-	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"	
+	"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+
+	"Creature"
+	{
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"63"		}
+			"Wearable2"		{	"ItemDef"		"64"		}
+			"Wearable3" 	{	"ItemDef"		"65"		}
+			"Wearable4"		{	"ItemDef"		"66"		}
+			"Wearable5"		{	"ItemDef"		"67"		}
+			"Wearable6"		{	"ItemDef"		"68"		}
+		}
+	}
 }

@@ -128,7 +128,6 @@
 	[
 		{
 			m_ChildRef = resource:"particles/econ/items/undying/undying_manyone/undying_pale_tower_destruction_dust_hit.vpcf"
-			m_bDisableChild = true
 		},
 	]
 }

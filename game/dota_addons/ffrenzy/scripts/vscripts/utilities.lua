@@ -60,3 +60,12 @@ function StringStartsWith( fullstring, substring )
     local first_characters = string.sub(fullstring, 1 , strlen)
     return (first_characters == substring)
 end
+
+function IsCustomBuilding( unit )
+    local ability_building = unit:FindAbilityByName("ability_building")
+    if ability_building then
+        return true
+    else
+        return false
+    end
+end

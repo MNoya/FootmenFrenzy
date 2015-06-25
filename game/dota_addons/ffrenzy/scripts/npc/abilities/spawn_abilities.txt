@@ -32,7 +32,18 @@
 					"Function"		"SpawnUnit"
 					"UnitName"		"human_footman"
 				}
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_spawn_footman_animation"
+					"Target" 		"CASTER"
+				}
 			}
+		}
+		"modifier_spawn_footman_animation"
+		{
+			"IsHidden"				"1"
+			"OverrideAnimation"     "ACT_DOTA_VICTORY"
+			"Duration"				"2.7"
 		}
 	}
 }

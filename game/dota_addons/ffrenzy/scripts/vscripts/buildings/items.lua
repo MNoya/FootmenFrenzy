@@ -4,6 +4,11 @@ function GiveBaseItems( event )
 	local owner = caster:GetOwner()
 	local player = caster:GetPlayerOwner()
 
+	-- Don't do it for towers
+	if string.find(caster:GetUnitName(), "tower") then
+		return
+	end
+
 	-- Check the current level of upgrades and give the items on their proper rank
 	local upgrades = player.upgrades -- Table of the current upgrade levels
 
