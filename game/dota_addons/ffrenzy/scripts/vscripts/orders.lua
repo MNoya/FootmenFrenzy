@@ -44,7 +44,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         local unitsPerRow = math.floor(math.sqrt(numUnits/SQUARE_FACTOR))
         local unitsPerColumn = math.floor((numUnits / unitsPerRow))
         local remainder = numUnits - (unitsPerRow*unitsPerColumn) 
-        print(numUnits.." units = "..unitsPerRow.." rows of "..unitsPerColumn.." with a remainder of "..remainder)
+        --print(numUnits.." units = "..unitsPerRow.." rows of "..unitsPerColumn.." with a remainder of "..remainder)
 
         local start = (unitsPerColumn-1)* -.5
 
@@ -132,7 +132,6 @@ function GameMode:FilterExecuteOrder( filterTable )
             end
         end
         return false
-
     ------------------------------------------------
     --          Rally Point Right-Click           --
     ------------------------------------------------

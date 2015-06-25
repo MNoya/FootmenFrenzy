@@ -19,6 +19,7 @@ function Precache( context )
 	PrecacheResource("model_folder", "particles/heroes/antimage", context)
 	PrecacheResource("model", "particles/heroes/viper/viper.vmdl", context)
 	PrecacheModel("models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_troll_skeleton_fx.vmdl", context)
+	PrecacheModel("models/heroes/pedestal/effigy_pedestal_ti5_dire.vmdl", context)
 
 	-- Sounds can precached here like anything else
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context)

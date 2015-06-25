@@ -40,12 +40,12 @@ end
 function SetRallyPoint( event )
 	local caster = event.caster
 	local origin = caster:GetOrigin()
-	
+
 	-- Need to wait one frame for the building to be properly positioned
 	Timers:CreateTimer(function()
 
 		-- If there's an old flag, remove
-		if caster.flag then
+		if caster and caster.flag then
 			caster.flag:RemoveSelf()
 		end
 

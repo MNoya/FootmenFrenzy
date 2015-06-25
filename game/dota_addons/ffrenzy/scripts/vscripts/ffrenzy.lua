@@ -857,7 +857,11 @@ function GameMode:OnPlayerPickHero(keys)
         local base_position = base_position_entity:GetAbsOrigin()
 		local tower_a_position = tower_a_position_entity:GetAbsOrigin()
 		local tower_b_position = tower_b_position_entity:GetAbsOrigin()
+        local pedestal = Entities:CreateByClassname("prop_dynamic")
         base_position.z = 172
+        pedestal:SetAbsOrigin(base_position)
+        pedestal:SetModel("models/heroes/pedestal/effigy_pedestal_ti5_dire.vmdl")
+        pedestal:SetModelScale(2)
 
         -- Create the base building
         local building = CreateUnitByName("human_barracks", base_position, true, hero, hero, hero:GetTeamNumber())

@@ -23,7 +23,7 @@
 				"IsHidden"			"1"
 				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 	
-				"StatusEffectName" 		"particles/status_fx/status_effect_statue_compendium_2014_radiant.vpcf" 	   
+				"StatusEffectName" 		"particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf" 	   
 				"StatusEffectPriority"  "10"
 	
 				"States"
@@ -15406,11 +15406,22 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"human_rifleman"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_rifleman_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_rifleman_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_4"
+				"Duration"				"3.4"
 			}
 		}
 	}
-	"spawn_militia" //maybe spawn_legionaire?
+	"spawn_militia"
 	{
 		"BaseClass"             		"ability_datadriven"
 		"AbilityTextureName"			"spawn_militia"
@@ -15441,7 +15452,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"human_militia"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_militia_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_militia_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1.2"
 			}
 		}
 	}
@@ -15476,7 +15498,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"human_spell_breaker"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_spell_breaker_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_spell_breaker_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1"
 			}
 		}
 	}
@@ -15511,7 +15544,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"human_knight"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_knight_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_knight_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1.4"
 			}
 		}
 	}
@@ -15582,7 +15626,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"nightelf_archer"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_archer_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_archer_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_ATTACK"
+				"Duration"				"1.1"
 			}
 		}
 	}
@@ -15617,7 +15672,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"nightelf_huntress"
 					}
+				"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_huntress_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_huntress_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1"
 			}
 		}
 	}
@@ -15652,7 +15718,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"nightelf_druid_of_the_talon"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_talon_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_talon_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1.8"
 			}
 		}
 	}
@@ -15687,7 +15764,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"nightelf_dryad"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_dryad_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_dryad_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_2"
+				"Duration"				"1.2"
 			}
 		}
 	}
@@ -15758,7 +15846,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"orc_grunt"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_grunt_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_grunt_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_3"
+				"Duration"				"0.7"
 			}
 		}
 	}
@@ -15793,7 +15892,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"orc_troll_headhunter"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_troll_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_troll_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1"
 			}
 		}
 	}
@@ -15828,7 +15938,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"orc_raider"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_raider_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_raider_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1.2"
 			}
 		}
 	}
@@ -15863,7 +15984,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"orc_tauren"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_tauren_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_tauren_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_2"
+				"Duration"				"1.2"
 			}
 		}
 	}
@@ -15934,7 +16066,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"undead_ghoul"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_ghoul_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_ghoul_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_LIFESTEALER_RAGE"
+				"Duration"				"0.8"
 			}
 		}
 	}
@@ -15969,7 +16112,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"undead_crypt_fiend"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_crypt_fiend_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_crypt_fiend_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1"
 			}
 		}
 	}
@@ -16004,7 +16158,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"undead_skeletal_mage"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_skeletal_mage_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_skeletal_mage_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+				"Duration"				"1"
 			}
 		}
 	}
@@ -16039,7 +16204,18 @@
 						"Function"		"SpawnUnit"
 						"UnitName"		"undead_abomination"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_spawn_abomination_animation"
+						"Target" 		"CASTER"
+					}
 				}
+			}
+			"modifier_spawn_abomination_animation"
+			{
+				"IsHidden"				"1"
+				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_ROT"
+				"Duration"				"1.1"
 			}
 		}
 	}

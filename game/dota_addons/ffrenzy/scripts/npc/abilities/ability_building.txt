@@ -21,7 +21,7 @@
 			"IsHidden"			"1"
 			"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 
-			"StatusEffectName" 		"particles/status_fx/status_effect_statue_compendium_2014_radiant.vpcf" 	   
+			"StatusEffectName" 		"particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf" 	   
 			"StatusEffectPriority"  "10"
 
 			"States"

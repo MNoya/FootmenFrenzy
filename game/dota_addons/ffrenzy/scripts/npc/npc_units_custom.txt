@@ -408,7 +408,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -451,10 +451,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/items/furion/treant_flower_1.vmdl"
-		"ModelScale"				"1.5"
+		"Model"						"models/heroes/windrunner/windrunner.vmdl"
+		"ModelScale"				"2"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -492,7 +492,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -516,6 +516,18 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"21"		}
+				"Wearable2"		{	"ItemDef"		"22"		}
+				"Wearable3" 	{	"ItemDef"		"23"		}
+				"Wearable4"		{	"ItemDef"		"24"		}
+				"Wearable5"		{	"ItemDef"		"25"		}
+			}
+		}
 	}
 	
 	"orc_base_tier1"
@@ -523,10 +535,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/good_barracks_ranged001.vmdl"
-		"ModelScale"				"1"
+		"Model"						"models/heroes/axe/axe.vmdl"
+		"ModelScale"				"1.9"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"350"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -564,7 +576,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -588,6 +600,17 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"2"		}
+				"Wearable2"		{	"ItemDef"		"3"		}
+				"Wearable3" 	{	"ItemDef"		"4"		}
+				"Wearable4"		{	"ItemDef"		"5"		}
+			}
+		}
 	}
 	
 	"undead_base_tier1"
@@ -595,10 +618,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/bad_barracks001_melee.vmdl"
-		"ModelScale"				"1"
+		"Model"						"models/heroes/life_stealer/life_stealer.vmdl"
+		"ModelScale"				"1.7"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"250"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -636,7 +659,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -660,6 +683,15 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"443"		}
+				"Wearable2"		{	"ItemDef"		"444"		}
+			}
+		}
 	}
 	
 	
@@ -716,7 +748,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -759,10 +791,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/items/furion/treant/father_treant/father_treant.vmdl"
-		"ModelScale"				"1.5"
+		"Model"						"models/heroes/luna/luna.vmdl"
+		"ModelScale"				"1.7"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -800,7 +832,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -824,6 +856,19 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"448"		}
+				"Wearable2"		{	"ItemDef"		"449"		}
+				"Wearable3" 	{	"ItemDef"		"450"		}
+				"Wearable4"		{	"ItemDef"		"451"		}
+				"Wearable5"		{	"ItemDef"		"452"		}
+				"Wearable6"		{	"ItemDef"		"453"		}
+			}
+		}
 	}
 	
 	"orc_base_tier2"
@@ -831,10 +876,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/bad_column001.vmdl"
-		"ModelScale"				"1.5"
+		"Model"						"models/heroes/huskar/huskar.vmdl"
+		"ModelScale"				"2"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -872,7 +917,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -896,6 +941,18 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"268"		}
+				"Wearable2"		{	"ItemDef"		"269"		}
+				"Wearable3" 	{	"ItemDef"		"270"		}
+				"Wearable4"		{	"ItemDef"		"271"		}
+				"Wearable5"		{	"ItemDef"		"272"		}
+			}
+		}
 	}
 	
 	"undead_base_tier2"
@@ -903,10 +960,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/bad_barracks001_ranged.vmdl"
-		"ModelScale"				"1"
+		"Model"						"models/heroes/weaver/weaver.vmdl"
+		"ModelScale"				"1.7"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -944,7 +1001,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -968,6 +1025,17 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"277"		}
+				"Wearable2"		{	"ItemDef"		"278"		}
+				"Wearable3" 	{	"ItemDef"		"279"		}
+				"Wearable4"		{	"ItemDef"		"280"		}
+			}
+		}
 	}	
 	
 	//=================================================================================
@@ -1023,7 +1091,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1067,10 +1135,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/items/furion/treant/furion_treant_nelum_red/furion_treant_nelum_red.vmdl"
-		"ModelScale"				"1.5"
+		"Model"						"models/heroes/furion/furion.vmdl"
+		"ModelScale"				"1.6"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"370"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1108,7 +1176,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1132,6 +1200,19 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef"	"29" } //Staff
+				"Wearable2" { "ItemDef"	"30" } //Horns
+				"Wearable3" { "ItemDef"	"31" } //Beard
+				"Wearable4"	{ "ItemDef"	"32" } //Cape
+				"Wearable5"	{ "ItemDef"	"33" } //Necklace
+				"Wearable6"	{ "ItemDef" "49" } //Bracers
+			}
+		}
 	}
 	
 	"orc_base_tier3"
@@ -1139,10 +1220,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/bad_ancient001.vmdl"
-		"ModelScale"				"0.5"
+		"Model"						"models/heroes/chen/chen.vmdl"
+		"ModelScale"				"2"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1180,7 +1261,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1204,6 +1285,19 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"220"		}
+				"Wearable2"		{	"ItemDef"		"221"		}
+				"Wearable3" 	{	"ItemDef"		"222"		}
+				"Wearable4"		{	"ItemDef"		"223"		}
+				"Wearable5"		{	"ItemDef"		"224"		}
+				"Wearable6"		{	"ItemDef"		"225"		}
+			}
+		}
 	}
 	
 	"undead_base_tier3"
@@ -1211,10 +1305,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/heroes/undying/undying_tower.vmdl"
+		"Model"						"models/heroes/pugna/pugna.vmdl"
 		"ModelScale"				"1.3"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1252,7 +1346,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1276,6 +1370,19 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"153"		}
+				"Wearable2"		{	"ItemDef"		"154"		}
+				"Wearable3" 	{	"ItemDef"		"155"		}
+				"Wearable4"		{	"ItemDef"		"156"		}
+				"Wearable5"		{	"ItemDef"		"157"		}
+				"Wearable6"		{	"ItemDef"		"167"		}
+			}
+		}
 	}
 	
 	//=================================================================================
@@ -1331,7 +1438,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1374,10 +1481,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/items/furion/treant/primeval_treant/primeval_treant.vmdl"
-		"ModelScale"				"1.5"
+		"Model"						"models/heroes/enchantress/enchantress.vmdl"
+		"ModelScale"				"1.8"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"350"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1415,7 +1522,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1439,6 +1546,18 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"286"		}
+				"Wearable2"		{	"ItemDef"		"287"		}
+				"Wearable3" 	{	"ItemDef"		"288"		}
+				"Wearable4"		{	"ItemDef"		"289"		}
+				"Wearable5"		{	"ItemDef"		"290"		}
+			}
+		}
 	}
 	
 	"orc_base_tier4"
@@ -1446,10 +1565,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/props_structures/bad_barracks001_destruction.vmdl"
-		"ModelScale"				"0.9"
+		"Model"						"models/heroes/earthshaker/earthshaker.vmdl"
+		"ModelScale"				"2"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1487,7 +1606,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1511,6 +1630,17 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"459"		} //Totem
+				"Wearable2"		{	"ItemDef"		"460"		} //Bracers
+				"Wearable3" 	{	"ItemDef"		"461"		} //Belt
+				"Wearable4"		{	"ItemDef"		"5640"		} //Helm of Impasse
+			}
+		}
 	}
 	
 	"undead_base_tier4"
@@ -1518,10 +1648,10 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
-		"Model"						"models/items/undying/idol_of_ruination/idol_tower.vmdl"
-		"ModelScale"				"1.3"
+		"Model"						"models/heroes/pudge/pudge.vmdl"
+		"ModelScale"				"2"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"350"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1559,7 +1689,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1583,6 +1713,19 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 		"UnitRelationShipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"258"		}
+				"Wearable2"		{	"ItemDef"		"259"		}
+				"Wearable3" 	{	"ItemDef"		"260"		}
+				"Wearable4"		{	"ItemDef"		"261"		}
+				"Wearable5"		{	"ItemDef"		"262"		}
+				"Wearable6"		{	"ItemDef"		"470"		}
+			}
+		}
 	}
 	
 	//=================================================================================
@@ -1600,7 +1743,7 @@
 		"Model"						"models/props_structures/good_ancient001.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1638,7 +1781,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1672,7 +1815,7 @@
 		"Model"						"models/items/furion/treant/eternalseasons_treant/eternalseasons_treant.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1710,7 +1853,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1744,7 +1887,7 @@
 		"Model"						"models/props_structures/bad_ancient002.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1782,7 +1925,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -1816,7 +1959,7 @@
 		"Model"						"models/items/undying/idol_of_ruination/idol_tower_gold.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
-		"HealthBarOffset"			"140"
+		"HealthBarOffset"			"300"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		
@@ -1854,7 +1997,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 		
 		// Movement
@@ -2032,7 +2175,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-		"RingRadius"				"220"
+		"RingRadius"				"190"
 		"CollisionSize"				"144"
 				
 		// Movement

@@ -151,7 +151,7 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
-	"RingRadius"				"220"
+	"RingRadius"				"190"
 	"CollisionSize"				"144"
 			
 	// Movement

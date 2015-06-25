@@ -17,8 +17,8 @@ function UpgradeBuilding( event )
 	local old_flag = caster.flag
 	if IsValidEntity(caster) then
 		caster:SetAbsOrigin(Vector(6000, -6000, 0))
-		caster:ForceKill(true)
-        --caster:RemoveSelf()
+		--caster:ForceKill(true)
+        caster:RemoveSelf()
     end
 
 	local building = CreateUnitByName(new_unit, position, true, hero, hero, hero:GetTeamNumber())
