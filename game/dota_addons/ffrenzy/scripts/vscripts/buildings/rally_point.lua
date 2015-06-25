@@ -1,4 +1,3 @@
-require("apply_modifier")
 function SpawnUnit( event )
 	local caster = event.caster
 	local owner = caster:GetOwner()

@@ -63,7 +63,8 @@ end
 
 function IsCustomBuilding( unit )
     local ability_building = unit:FindAbilityByName("ability_building")
-    if ability_building then
+    local ability_tower = unit:FindAbilityByName("ability_tower")
+    if ability_building or ability_tower then
         return true
     else
         return false

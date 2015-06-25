@@ -91,14 +91,6 @@
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	
-		"precache"
-		{
-			"particle"  "particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf"
-			"particle"  "particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_radiant.vpcf"
-			"particle"  "particles/status_fx/status_effect_statue_compendium_2014_dire.vpcf"
-			"particle"  "particles/status_fx/status_effect_statue_compendium_2014_radiant.vpcf"
-		}
-	
 		"Modifiers"
 		{
 			"modifier_building"
@@ -117,42 +109,6 @@
 					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
 					//"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
 					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
-				}
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/items.lua"
-						"Function"		"GiveBaseItems"
-					}
-					"RunScript"
-					{
-						"ScriptFile"	"buildings/items.lua"
-						"Function"		"SetRallyPoint"
-					}
-	
-					// If we want it to not animate
-					//"DelayedAction"
-					//{
-					//	"Delay"     "0.5"
-					//	"Action"    
-					//	{
-					//		"ApplyModifier"
-					//		{
-					//			"ModifierName"	"modifier_frozen"
-					//			"Target" 		"CASTER"
-					//		}
-					//	}
-					//}
-				}
-			}
-			
-			"modifier_frozen"
-			{
-				"IsHidden"			"1"
-				"States"
-				{
-					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
 		}		
