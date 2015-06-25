@@ -13,9 +13,9 @@ function GameMode:FilterExecuteOrder( filterTable )
     if units then
         for n,unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
-            if not unit:IsBuilding() then
+            if not unit:IsBuilding() and not IsCustomBuilding(unit) then
                 numUnits = numUnits + 1
-            elseif unit:IsBuilding() then
+            elseif unit:IsBuilding() or IsCustomBuilding(unit) then
                 numBuildings = numBuildings + 1
             end
         end
@@ -119,7 +119,7 @@ function GameMode:FilterExecuteOrder( filterTable )
             if unitsByRank[i] then
                 for _,unit_index in pairs(unitsByRank[i]) do
                     local unit = EntIndexToHScript(unit_index)
-                    if not unit:IsBuilding() then
+                    if not unit:IsBuilding() and not IsCustomBuilding(unit) then
                         --print("Issuing a New Movement Order to unit index: ",unit_index)
 
                         local pos = navPoints[tonumber(n)+1]
@@ -138,7 +138,7 @@ function GameMode:FilterExecuteOrder( filterTable )
     ------------------------------------------------
     elseif units and order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION and numBuildings > 0 then
         local first_unit = EntIndexToHScript(units["0"])
-        if first_unit:IsBuilding() then
+        if IsCustomBuilding(first_unit) then
             local x = tonumber(filterTable["position_x"])
             local y = tonumber(filterTable["position_y"])
             local z = tonumber(filterTable["position_z"])
