@@ -6366,14 +6366,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		
-		"Ability1"					"pulverize"
-		
-		//"Ability1"					"tauren_pulverize"
-		//"Ability2"					"dummy_empty1"
-		//"Ability3"					"dummy_empty2"
-		//"Ability4"					"dummy_empty3"
-		//"Ability5"					"tauren_pulverize_cast"
-		//"Ability6"					"tauren_pulverize_damage"
+		"Ability1"					"tauren_pulverize"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8478,7 +8471,7 @@
 		"Ability1"					"upgrade_guard_tower"
 		"Ability2"					"upgrade_cannon_tower"
 		"Ability3"					"upgrade_arcane_tower"
-		"Ability4"					"ability_building"
+		"Ability4"					"ability_tower"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8547,7 +8540,7 @@
 		"Ability1"					"upgrade_cannon_tower"
 		"Ability2"					"upgrade_arcane_tower"
 		"Ability3"					"human_magic_sentry"
-		"Ability4"					"ability_building"
+		"Ability4"					"ability_tower"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8622,7 +8615,7 @@
 		"Ability1"					"upgrade_arcane_tower"
 		"Ability2"					"tower_aoe"
 		"Ability3"					"human_magic_sentry"
-		"Ability4"					"ability_building"
+		"Ability4"					"ability_tower"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8690,7 +8683,6 @@
 		"ModelScale"				"1"
 		"Level"						"1"
 		"HealthBarOffset"			"140"
-		"Ability4"					"ability_building"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -8698,7 +8690,7 @@
 		"Ability1"					"tower_feedback"
 		"Ability2"					"human_magic_sentry"
 		"Ability3"					""
-		"Ability4"					"ability_building"
+		"Ability4"					"ability_tower"
 		
 		// Armor
 		//----------------------------------------------------------------

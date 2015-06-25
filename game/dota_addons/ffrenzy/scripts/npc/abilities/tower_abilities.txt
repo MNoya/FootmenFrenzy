@@ -57,12 +57,25 @@
 			"OnAttackLanded"
 			{
 			
-				"RunScript"
+				//"RunScript"
+				//{
+					//"ScriptFile"	"buildings/tower_aoe.lua"
+					//"Function"		"OnHit"
+					//"Radius"		"%radius"
+					//"Damage"		"%damage"
+				//}
+				
+				"Damage"
 				{
-					"ScriptFile"	"buildings/tower_aoe.lua"
-					"Function"		"OnHit"
-					"Radius"		"%radius"
-					"Damage"		"%damage"
+					"Target"
+					{
+						"Center"  	"TARGET"
+						"Radius" 	"%radius"
+						"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+					"Type"				"DAMAGE_TYPE_PHYSICAL"
+					"Damage"			"%damage"
 				}
 				
 			} 

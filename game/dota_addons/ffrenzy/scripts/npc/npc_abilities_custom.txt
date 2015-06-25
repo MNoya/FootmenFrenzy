@@ -82,6 +82,81 @@
 			}
 		}		
 	}
+	
+	
+	"ability_tower"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+		"precache"
+		{
+			"particle"  "particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf"
+			"particle"  "particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_radiant.vpcf"
+			"particle"  "particles/status_fx/status_effect_statue_compendium_2014_dire.vpcf"
+			"particle"  "particles/status_fx/status_effect_statue_compendium_2014_radiant.vpcf"
+		}
+	
+		"Modifiers"
+		{
+			"modifier_building"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+	
+				"StatusEffectName" 		"particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf" 	   
+				"StatusEffectPriority"  "10"
+	
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
+					//"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED" // Prevents turning
+					"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED" // Prevents moving
+					//"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" "MODIFIER_STATE_VALUE_ENABLED" // Makes it a secondary target when A-clicking ground
+				}
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/items.lua"
+						"Function"		"GiveBaseItems"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/items.lua"
+						"Function"		"SetRallyPoint"
+					}
+	
+					// If we want it to not animate
+					//"DelayedAction"
+					//{
+					//	"Delay"     "0.5"
+					//	"Action"    
+					//	{
+					//		"ApplyModifier"
+					//		{
+					//			"ModifierName"	"modifier_frozen"
+					//			"Target" 		"CASTER"
+					//		}
+					//	}
+					//}
+				}
+			}
+			
+			"modifier_frozen"
+			{
+				"IsHidden"			"1"
+				"States"
+				{
+					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}		
+	}
 	// AbilityName
 	// Author: 
 	// Date: 13.1.2015.
@@ -16639,120 +16714,6 @@
 			}
 		}
 	}
-	// Gives a 25% chance that an attack will deal bonus damage to nearby units.
-	"tauren_pulverize"
-	{
-		"BaseClass"				"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-		"AbilityTextureName"			"earthshaker_enchant_totem"
-		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"chance"				"25"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"250"
-			}
-		}
-		
-		"precache"
-		{
-			"particle"	"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_aftershock_egset.vpcf"
-			"particle"	"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_totem_buff_egset.vpcf"
-		}
-	
-		"Modifiers"
-		{
-			"modifier_tauren_pulverize_passive"		
-			{
-				"IsHidden"	"1"
-				"Passive"	"1"
-	
-				"OnAttackStart"
-				{
-					"RemoveModifier"
-					{
-						"ModifierName"	"modifier_tauren_pulverize_attack"
-						"Target" 		"CASTER"
-					}
-					"Random"
-					{
-						"Chance" "%chance"
-						"OnSuccess"
-						{
-							"ApplyModifier"
-							{
-								"ModifierName" "modifier_tauren_pulverize_attack"
-								"Target"	   "CASTER"	
-							}
-						}
-					}
-				}
-			}
-	
-			"modifier_tauren_pulverize_attack"
-			{
-				"IsHidden"	"1"
-				//"OverrideAnimation"	"ACT_DOTA_ATTACK+totem_attack" //Doesn't work :(
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_totem_buff_egset.vpcf"
-						"EffectAttachType"	"start_at_customorigin"
-						"Target"            "CASTER"
-						"ControlPointEntities"
-						{
-							"CASTER"	"attach_totem"
-							"CASTER"	"attach_totem"
-							"CASTER"	"attach_totem"
-						}
-					}
-				}
-				"OnAttackLanded"
-				{	
-					"Damage"
-					{
-						"Target"
-						{
-							"Center"  	"TARGET"
-							"Radius" 	"%radius"
-							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-						}
-						"Type"				"DAMAGE_TYPE_MAGICAL"
-						"Damage"			"%bonus_damage"
-					}
-					"FireEffect"
-					{
-						"EffectName"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_aftershock_egset.vpcf"
-						"EffectAttachType"	"follow_origin"
-						"Target"			"TARGET"
-						"ControlPoints"
-						{
-							"01"	"%radius 1 1"
-						}
-					}
-					"RemoveModifier"
-					{
-						"ModifierName"	"modifier_tauren_pulverize_attack"
-						"Target" 		"CASTER"
-					}
-				} 
-			}
-		}
-	}
 	// Tinker Cluster Rockets
 	// Author: Noya
 	// Date: 03.02.2015.
@@ -17537,12 +17498,25 @@
 				"OnAttackLanded"
 				{
 				
-					"RunScript"
+					//"RunScript"
+					//{
+						//"ScriptFile"	"buildings/tower_aoe.lua"
+						//"Function"		"OnHit"
+						//"Radius"		"%radius"
+						//"Damage"		"%damage"
+					//}
+					
+					"Damage"
 					{
-						"ScriptFile"	"buildings/tower_aoe.lua"
-						"Function"		"OnHit"
-						"Radius"		"%radius"
-						"Damage"		"%damage"
+						"Target"
+						{
+							"Center"  	"TARGET"
+							"Radius" 	"%radius"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						}
+						"Type"				"DAMAGE_TYPE_PHYSICAL"
+						"Damage"			"%damage"
 					}
 					
 				} 
@@ -17801,6 +17775,123 @@
 								"Damage"		"%damage"
 							}					
 						}
+					}
+				} 
+			}
+		}
+	}
+	
+	
+	
+	// Gives a 25% chance that an attack will deal bonus damage to nearby units.
+	"tauren_pulverize"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityTextureName"			"earthshaker_enchant_totem"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance"				"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"250"
+			}
+		}
+		
+		"precache"
+		{
+			"particle"	"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_aftershock_egset.vpcf"
+			"particle"	"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_totem_buff_egset.vpcf"
+		}
+	
+		"Modifiers"
+		{
+			"modifier_tauren_pulverize_passive"		
+			{
+				"IsHidden"	"1"
+				"Passive"	"1"
+	
+				"OnAttackStart"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_tauren_pulverize_attack"
+						"Target" 		"CASTER"
+					}
+					"Random"
+					{
+						"Chance" "%chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName" "modifier_tauren_pulverize_attack"
+								"Target"	   "CASTER"	
+							}
+						}
+					}
+				}
+			}
+	
+			"modifier_tauren_pulverize_attack"
+			{
+				"IsHidden"	"1"
+				"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_totem_buff_egset.vpcf"
+						"EffectAttachType"	"start_at_customorigin"
+						"Target"            "CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_totem"
+							"CASTER"	"attach_totem"
+							"CASTER"	"attach_totem"
+						}
+					}
+				}
+				"OnAttackLanded"
+				{	
+					"Damage"
+					{
+						"Target"
+						{
+							"Center"  	"TARGET"
+							"Radius" 	"%radius"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						}
+						"Type"				"DAMAGE_TYPE_MAGICAL"
+						"Damage"			"%bonus_damage"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_aftershock_egset.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"			"TARGET"
+						"ControlPoints"
+						{
+							"01"	"%radius 1 1"
+						}
+					}
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_tauren_pulverize_attack"
+						"Target" 		"CASTER"
 					}
 				} 
 			}
