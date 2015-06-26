@@ -1,15 +1,13 @@
 -fix true sight on towers, potm owl, far seer first ability
-
-=======
--set units not controllable by allies (Test if this changed)
--move fountain
--hero abilities upgrade to 4 levels
--defeat condition, no respawn (or at least a very high respawn time of >5 minutes)
--swap arrow icons, upgrade icons (w/numbers for item levels)
+-give bases health regen aura
+-fix win/lose conditions
+	-teams sometimes win before the game is over
+-swap arrow icons
 -tooltips for everything (use modkit)
 -unit & hero tinting
+-test all hero abilities
+-fix broken heroes and release them
 
 Extra
 -creep-items
--add 1 active/1 passive skill to each unit
--unit formations (Done! Test extensively and see if it the square formation is good enough or it should be a rectangle)
+-add 1 passive skill to each unit
