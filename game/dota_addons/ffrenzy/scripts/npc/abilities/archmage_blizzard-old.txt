@@ -74,6 +74,13 @@
 		//	"Function"		"BlizzardStart"
 		//	"Target"		"POINT"
 		//}
+		
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/archmage/blizzard.lua"
+			"Function"		"BlizzardStartPoint"
+			"Target"		"POINT"
+		}
 
 		"ApplyModifier"
 		{
@@ -81,11 +88,11 @@
 			"Target" 		"CASTER"
 		}
 		
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_blizzard_wave"
-			"Target" 		"CASTER"
-		}
+		//"ApplyModifier"
+		//{
+		//	"ModifierName"	"modifier_blizzard_wave"
+		//	"Target" 		"CASTER"
+		//}
 		
 		"FireSound"
 		{
@@ -150,8 +157,7 @@
 
 		"modifier_blizzard_thinker"
 		{
-			"ThinkInterval"  "%wave_interval"
-			"OnIntervalThink"
+			"OnCreated"
 			{
 				"DelayedAction"
 				{
