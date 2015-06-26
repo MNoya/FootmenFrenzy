@@ -701,7 +701,7 @@
 			}		
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"				"FIELD_FLOAT"
 				"wave_count"			"6 8 10 12"
 			}
 			"04"
@@ -739,13 +739,7 @@
 				"ModifierName"	"modifier_blizzard_channelling"
 				"Target" 		"CASTER"
 			}
-			
-			"ApplyModifier"
-			{
-				"ModifierName"	"modifier_blizzard_wave"
-				"Target" 		"CASTER"
-			}
-			
+					
 			"FireSound"
 			{
 				"EffectName"	"hero_Crystal.freezingField.wind"
@@ -759,14 +753,7 @@
 	    	{
 	    		"ScriptFile"	"heroes/archmage/blizzard.lua"
 				"Function"		"BlizzardEnd"
-	    	} 
-	
-	    	"RemoveModifier"
-			{
-				"ModifierName"	"modifier_blizzard_channelling"
-				"Target" 		"CASTER"
-			}
-	   			
+	    	}
 	    }
 	
 		"Modifiers"
@@ -774,14 +761,13 @@
 	        "modifier_blizzard_channelling"
 	        {
 	        	"IsHidden"			"1"
-	            "ThinkInterval"		"1.0"
+	            "ThinkInterval"		"0.99"
 	            "OnIntervalThink"
 	         	{
-	         		"ApplyModifier"
+	         		"RunScript"
 	         		{
-	         			"ModifierName"	"modifier_channeling"
-	         			"Target" 		"CASTER"
-	         			"Duration"		"0.9"
+	         			"ScriptFile"	"heroes/archmage/blizzard.lua"
+	         			"Function"		"ApplyAnimation"
 	         		}
 				}
 			}
@@ -792,21 +778,6 @@
 				"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_5"
 			}
 			
-			
-			"modifier_blizzard_wave"
-			{
-				"ThinkInterval"  "%wave_interval"
-				"OnIntervalThink"
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"heroes/archmage/blizzard.lua"
-						"Function"		"BlizzardStart"
-						"Target"		"POINT"
-					}
-				}
-			}
-	
 			"modifier_blizzard_thinker"
 			{
 				"ThinkInterval"  "%wave_interval"
@@ -840,7 +811,7 @@
 									"Center"  	"TARGET"
 									"Radius" 	"%radius"
 									"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-									"Types" 	"DOTA_UNIT_TARGET_BASIC"
+									"Types" 	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 									"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 								}
 								"Damage"		"%wave_damage / 2"
@@ -856,11 +827,6 @@
 									"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
 									"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 								}
-							}
-							"RemoveModifier"
-							{
-								"ModifierName"	"modifier_blizzard_thinker"
-								"Target" 		"TARGET"
 							}
 						}
 					}
