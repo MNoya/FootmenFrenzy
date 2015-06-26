@@ -7,6 +7,11 @@
 -test all hero abilities
 -fix broken heroes and release them
 
+Unit abilities
+-Huntress moon glaive, 1 bounce
+-Abomination disease cloud
+-Enchantress spell immunity, poison slow
+
 Extra
 -creep-items
 -add 1 passive skill to each unit
