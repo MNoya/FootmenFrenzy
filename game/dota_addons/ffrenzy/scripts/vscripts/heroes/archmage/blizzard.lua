@@ -13,19 +13,9 @@ function BlizzardStartPoint( event )
 end
 
 
-function BlizzardStart( event )
-	-- Variables
+function BlizzardWaveStart( event )
 	local caster = event.caster
-	local point = caster.blizzard_dummy_point:GetAbsOrigin()
-	
-	if caster.blizzard_dummy ~= nil and not caster.blizzard_dummy:IsNull() then
-		caster.blizzard_dummy:RemoveSelf()
-	end
-
-	caster.blizzard_dummy = CreateUnitByName("dummy_unit_vulnerable", point, false, caster, caster, caster:GetTeam())
-	event.ability:ApplyDataDrivenModifier(caster, caster.blizzard_dummy, "modifier_blizzard_thinker", nil)
-
-	--DebugDrawCircle(point, Vector(0,255,0), 255, 100, true, 8)
+	event.ability:ApplyDataDrivenModifier(caster, caster.blizzard_dummy_point, "modifier_blizzard_thinker", nil)
 end
 
 -- -- Create the particles with small delays between each other
@@ -77,12 +67,7 @@ function BlizzardEnd( event )
 	caster:RemoveModifierByName("modifier_blizzard_wave")
 	caster:RemoveModifierByName("modifier_blizzard_channelling")
 	
-	local blizzard_dummy_pointer = caster.blizzard_dummy
 	local blizzard_dummy_point_pointer = caster.blizzard_dummy_point
-	
-	Timers:CreateTimer(0.3,function()
-	blizzard_dummy_pointer:RemoveSelf()
-	blizzard_dummy_point_pointer:RemoveSelf()
-	end)
+	Timers:CreateTimer(0.3,function() blizzard_dummy_point_pointer:RemoveSelf() end)
 	
 end

@@ -26,7 +26,7 @@
 	"AbilityManaCost"				"75"
 
 	"AOERadius"     				"%radius"
-	"AbilityChannelTime"			"7.0 9.0 11.0 13.0"
+	"AbilityChannelTime"			"6.0 8.0 10.0 12.0"
 	
 	"AbilitySpecial"
 	{
@@ -38,7 +38,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"wave_duration"			"7.0 9.0 11.0 13.0"
+			"wave_duration"			"6.0 8.0 10.0 12.0"
 		}		
 		"03"
 		{
@@ -68,13 +68,6 @@
 
 	"OnSpellStart"
 	{
-		//"RunScript"
-		//{
-		//	"ScriptFile"	"heroes/archmage/blizzard.lua"
-		//	"Function"		"BlizzardStart"
-		//	"Target"		"POINT"
-		//}
-		
 		"RunScript"
 		{
 			"ScriptFile"	"heroes/archmage/blizzard.lua"
@@ -128,13 +121,22 @@
 		
 		"modifier_blizzard_wave"
 		{
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/archmage/blizzard.lua"
+					"Function"		"BlizzardWaveStart"
+					"Target"		"POINT"
+				}
+			}
 			"ThinkInterval"  "%wave_interval"
 			"OnIntervalThink"
 			{
 				"RunScript"
 				{
 					"ScriptFile"	"heroes/archmage/blizzard.lua"
-					"Function"		"BlizzardStart"
+					"Function"		"BlizzardWaveStart"
 					"Target"		"POINT"
 				}
 			}
