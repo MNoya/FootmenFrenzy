@@ -19,7 +19,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 
 			"StatusEffectName" 		"particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf" 	   
 			"StatusEffectPriority"  "10"

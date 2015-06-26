@@ -32,10 +32,13 @@ function UpgradeBuilding( event )
 	building.flag = old_flag
 
 	-- Update the player base
-	player.base = building
+	if not string.find(new_unit, "tower") then
+		print("Updated Base: "..new_unit)
+		player.base = building
+	end
 	
 	-- Teach spawn ability
-	if spawn_ability ~= nil and new_unit ~= "human_guard_tower" and new_unit ~= "human_cannon_tower" and new_unit ~= "human_arcane_tower"  then
+	if spawn_ability ~= nil and not string.find(new_unit, "tower") then
 		building:AddAbility(spawn_ability)
 		local ability = building:FindAbilityByName(spawn_ability)
 		ability:SetLevel(1)
@@ -57,4 +60,9 @@ function SetLevel0( event )
 	if ability:GetLevel() == 1 then
 		ability:SetLevel(0)	
 	end
+end
+
+function ApplyTrueSightModifier( event )
+	local building = event.caster
+	building:AddNewModifier(building, nil, "modifier_tower_truesight_aura", {})
 end

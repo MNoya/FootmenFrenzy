@@ -7,6 +7,7 @@ function FarSight( event )
 	local caster = event.caster
 	local ability = event.ability
 	local level = ability:GetLevel()
+	local teamID = caster:GetTeamNumber()
 	local reveal_radius = ability:GetLevelSpecialValueFor( "reveal_radius", level - 1 )
 	local duration = ability:GetLevelSpecialValueFor( "duration", level - 1 )
 
@@ -24,32 +25,10 @@ function FarSight( event )
 	end
 
 	-- Vision
-	if level == 1 or level == 2 then
-		ability:CreateVisibilityNode(target, reveal_radius, duration)
-	elseif level == 3 then
-		-- Central vision
-		ability:CreateVisibilityNode(target, 1800, duration)
+	local dummy = CreateUnitByName("dummy_vision"..reveal_radius, target, false, caster, caster, teamID)
 
-		-- We need to create many 1800 vision nodes to make a bigger circle
-		local fv = caster:GetForwardVector()
-    	local distance = 1800
-
-    	-- Front and Back
-    	local front_position = target + fv * distance
-    	local back_position = target - fv * distance
-
-		-- Left and Right
-    	ang_left = QAngle(0, 90, 0)
-    	ang_right = QAngle(1, -90, 0)
-		
-		local left_position = RotatePosition(target, ang_left, front_position)
-    	local right_position = RotatePosition(target, ang_right, front_position)
-
-    	-- Create the 4 auxiliar units
-    	ability:CreateVisibilityNode(front_position, 1800, duration)
-    	ability:CreateVisibilityNode(back_position, 1800, duration)
-    	ability:CreateVisibilityNode(left_position, 1800, duration)
-    	ability:CreateVisibilityNode(right_position, 1800, duration)
-    end
+	Timers:CreateTimer(duration, function()
+		dummy:RemoveSelf()
+	end)
 
 end

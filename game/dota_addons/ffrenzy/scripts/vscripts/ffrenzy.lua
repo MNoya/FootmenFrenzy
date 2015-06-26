@@ -909,7 +909,7 @@ function GameMode:OnPlayerPickHero(keys)
 			--Spawn_Position(hero)
             --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             PlayerResource:SetCameraTarget(playerID, building)
-            Timers:CreateTimer(2, function() 
+            Timers:CreateTimer(1, function() 
                 PlayerResource:SetCameraTarget(playerID, nil)
             end)
             

@@ -75,7 +75,7 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/tower_good.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
@@ -120,7 +120,7 @@
 	
 	// Movement
 	//----------------------------------------------------------------
-	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
 	"MovementSpeed"				"0"
 	
 	// Status
@@ -150,7 +150,7 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/tower001.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
@@ -225,7 +225,7 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/tower_dragon_white.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"

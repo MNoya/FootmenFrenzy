@@ -21,7 +21,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Attributes"		"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 	
 				"StatusEffectName" 		"particles/econ/items/effigies/status_fx_effigies/status_effect_statue_compendium_2014_dire.vpcf" 	   
 				"StatusEffectPriority"  "10"
@@ -1412,10 +1412,10 @@
 				{
 					"Center"  	"TARGET"
 					"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Types" 	"DOTA_UNIT_TARGET_BASIC"
+					"Types" 	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 					"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 				}
-				"Damage"		"%lizard_damage"
+				"Damage"		"%lizard_damage / 2"
 			}
 	
 			"FireSound"
@@ -7636,6 +7636,33 @@
 		}
 	}
 	
+	"dummy_passive_fly"
+	{
+		"BaseClass" 		"ability_datadriven"
+		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Modifiers"
+		{
+			"dummy_modifier"
+			{
+				"Passive"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_TEAM_MOVE_TO"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_TEAM_SELECT"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"		   "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	
 	"dummy_empty1"
 	{
 		"BaseClass" 		"ability_datadriven"
@@ -7926,7 +7953,7 @@
 							"Center"  	"TARGET"
 							"Radius" 	"%radius"
 							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-							"Types" 	"DOTA_UNIT_TARGET_BASIC"
+							"Types" 	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 							"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 						}
 						"Damage"		"%building_damage_per_sec"
@@ -8028,7 +8055,7 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"reveal_radius"	"600 1800 4000 8000"
+				"reveal_radius"	"600 1200 2000 4000"
 			}
 			"02"
 			{
@@ -9221,6 +9248,7 @@
 									"Radius" 	"%radius"
 									"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
 									"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+									"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 								}
 							}
 						}
@@ -9258,6 +9286,7 @@
 									"Radius" 	"%radius"
 									"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
 									"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+									"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 								}
 							}
 						}
@@ -14739,6 +14768,7 @@
 							"Radius" 	"%radius"
 							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+							"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 						}
 					
 						"Action"    
@@ -14788,7 +14818,7 @@
 									"Center"  	"TARGET"
 									"Radius" 	"%radius"
 									"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-									"Types" 	"DOTA_UNIT_TARGET_BASIC"
+									"Types" 	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 									"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 								}
 								"Damage"		"%wave_damage * %building_dmg_pct * 0.01"
@@ -17630,45 +17660,15 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-		
-				"ThinkInterval"  "0.03"
-				"OnIntervalThink"
+			
+				"OnCreated"
 				{
-					"ActOnTargets"
+					"RunScript"
 					{
-						"Target"
-						{
-							"Center"  	"TARGET"
-							"Radius" 	"%owl_vision"
-							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-						}
-					
-						"Action"    
-						{
-							"RemoveModifier"
-							{
-								"ModifierName"	"modifier_truesight_reveal"
-								"Target" 		"TARGET"
-							}
-							"ApplyModifier"
-							{
-								"ModifierName"	"modifier_truesight_reveal"
-								"Target" 		"TARGET"
-							}
-						}
-					}			
-				}
-			}
-	
-			"modifier_true_sight_reveal"
-			{
-				"IsHidden"			"1"
-				"Duration"			"0.03"
-				"States"
-				{
-					"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_DISABLED"
-				}
+						"ScriptFile"	"buildings/upgrades.lua"
+						"Function"		"ApplyTrueSightModifier"
+					}
+				}				
 			}
 		}	
 	}

@@ -4273,6 +4273,28 @@
 		"Ability1"					"dummy_passive_vulnerable"
 	}
 	
+	"dummy_vision600"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"600"	
+		"VisionNighttimeRange"		"600"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
+	}
+	
+	"dummy_vision1200"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"1200"	
+		"VisionNighttimeRange"		"1200"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
+	}
+	
 	"dummy_vision"
 	{
 		"BaseClass"					"npc_dota_creature"
@@ -4282,6 +4304,28 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
 		"Ability1"					"dummy_passive"
+	}
+	
+	"dummy_vision2000"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"2000"	
+		"VisionNighttimeRange"		"2000"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
+	}
+	
+	"dummy_vision4000"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"4000"	
+		"VisionNighttimeRange"		"4000"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
 	}
 	
 	"npc_dummy_blank"
@@ -8533,7 +8577,7 @@
 	{
 		// General
 		//----------------------------------------------------------------
-		"BaseClass"					"npc_dota_creature"
+		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/tower_good.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
@@ -8578,7 +8622,7 @@
 		
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
 		"MovementSpeed"				"0"
 		
 		// Status
@@ -8608,7 +8652,7 @@
 	{
 		// General
 		//----------------------------------------------------------------
-		"BaseClass"					"npc_dota_creature"
+		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/tower001.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"
@@ -8683,7 +8727,7 @@
 	{
 		// General
 		//----------------------------------------------------------------
-		"BaseClass"					"npc_dota_creature"
+		"BaseClass"					"npc_dota_building"
 		"Model"						"models/props_structures/tower_dragon_white.vmdl"
 		"ModelScale"				"1"
 		"Level"						"1"

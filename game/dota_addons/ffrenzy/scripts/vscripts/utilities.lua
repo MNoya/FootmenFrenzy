@@ -70,3 +70,12 @@ function IsCustomBuilding( unit )
         return false
     end
 end
+
+function IsCustomTower( unit )
+    local ability_tower = unit:FindAbilityByName("ability_tower")
+    if ability_tower then
+        return true
+    else
+        return false
+    end
+end

@@ -60,8 +60,17 @@ function VolcanoWave( event )
 
 	for _,unit in pairs(targets) do
 		if unit ~= caster then
-			if unit:IsBuilding() then
-				ApplyDamage({ victim = unit, attacker = caster, damage = wave_damage*2, damage_type = abilityDamageType })
+			if IsCustomBuilding(unit) and not IsCustomTower(unit) then
+				local currentHP = unit:GetHealth()
+				local newHP = currentHP - wave_damage*2
+
+				-- If the HP would hit 0 with this damage, kill the unit
+				if newHP <= 0 then
+					unit:Kill(ability, caster)
+				else
+					unit:SetHealth( newHP)
+				end
+				
 			else
 				ability:ApplyDataDrivenModifier(caster, unit, "modifier_volcano_stun", {duration = stun_duration})
 				ApplyDamage({ victim = unit, attacker = caster, damage = wave_damage, damage_type = abilityDamageType })
