@@ -436,7 +436,7 @@
 "side_upgrade_tier4_nightelf"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"upgrade_dryad_up"
+	"AbilityTextureName"			"upgrade_dryad_side"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -870,7 +870,7 @@
 "side_upgrade_tier4_undead"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"upgrade_abomination_up"
+	"AbilityTextureName"			"upgrade_abomination_side"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

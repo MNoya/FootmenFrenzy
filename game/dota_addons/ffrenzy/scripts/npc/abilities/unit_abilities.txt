@@ -536,6 +536,7 @@
 	"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
 	"AbilityCastRange"			"%radius"
 	"MaxLevel"					"1"
+	"AbilityTextureName"		"pudge_rot"
 
 	"AbilitySpecial"
 	{
