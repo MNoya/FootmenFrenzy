@@ -979,27 +979,24 @@ function MakePlayerLose( player )
     local teamID = player:GetTeamNumber()
     GameRules.DefeatedPlayersOnTeam[teamID] = GameRules.DefeatedPlayersOnTeam[teamID] + 1
     
-    if PlayerResource:GetPlayerCountForTeam(teamID) == GameRules.DefeatedPlayersOnTeam[teamID] then
-        -- Team lost, check for win condition
-        local allHeroes = HeroList:GetAllHeroes()
+    -- check for win condition
+    local allHeroes = HeroList:GetAllHeroes()
 
-        -- If there are still heroes alive and they belong to different teams, it means there are at least 2 teams "alive"
-        local winnerTeamID = nil
-        for _,hero in pairs(allHeroes) do
-            if hero:IsAlive() then
-                winnerTeamID = hero:GetTeamNumber()
-                for _,otherHero in pairs(allHeroes) do
-                    if otherHero:IsAlive() and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) then
-                        teamWins = false
-                        winnerTeamID = nil
-                        break
-                    end
+    -- If there are still heroes alive and they belong to different teams, it means there are at least 2 teams "alive"
+    local winnerTeamID = nil
+    for _,hero in pairs(allHeroes) do
+        if hero:IsAlive() or hero:GetRespawnTime() < 101 then
+            winnerTeamID = hero:GetTeamNumber()
+            for _,otherHero in pairs(allHeroes) do
+                if (otherHero:IsAlive() or hero:GetRespawnTime() < 101) and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) then
+                    winnerTeamID = nil
+                    break
                 end
             end
         end
-        if winnerTeamID then
-            GameRules:SetGameWinner(winnerTeamID)
-        end
+    end
+    if winnerTeamID then
+        GameRules:SetGameWinner(winnerTeamID)
     end
     
 end

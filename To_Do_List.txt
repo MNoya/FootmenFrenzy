@@ -1,5 +1,4 @@
 -fix true sight on towers, potm owl, far seer first ability
--give bases health regen aura
 -fix win/lose conditions
 	-teams sometimes win before the game is over
 -swap arrow icons

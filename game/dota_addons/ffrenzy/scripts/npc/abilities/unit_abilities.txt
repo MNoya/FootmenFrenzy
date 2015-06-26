@@ -1,29 +1,55 @@
 "huntress_moon_glaive"
 {
-	"BaseClass"						"luna_moon_glaive"
+	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	
+	"AbilityTextureName" 			"luna_moon_glaive"
+	
 	
 	"AbilitySpecial"
+	{
+		"01"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"range"						"500"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bounces"					"1"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_reduction_percent"	"35"
-			}
+			"var_type"					"FIELD_INTEGER"
+			"range"						"500"
 		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bounces"					"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_reduction_percent"	"35"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_moon_glaive"		
+		{
+			"IsHidden"	"1"
+			"Passive"	"1"
+
+			"OnAttackLanded"
+			{
+				"TrackingProjectile"
+				{
+					"Target"	"TARGET"
+				}
+			}
+			
+		
+		}
+	
+	}
 }
+
+
+
+
+
 
 
 "spell_breaker_feedback"
@@ -82,65 +108,6 @@
 }
 
 
-
-"pulverize"
-{
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-	"AbilityTextureName"			"earthshaker_enchant_totem"
-	
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"chance"				"25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"100"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"150"
-		}
-	}
-	"Modifiers"
-	{
-
-		"modifier_pulverize"		
-		{
-			"IsHidden"	"1"
-			"Passive"	"1"
-
-			"OnAttackStart"
-			{
-				"Random"
-				{
-					"Chance"			"%chance"
-					"PseudoRandom"		"DOTA_PSEUDO_RANDOM_SLARDAR_BASH"
-
-					"OnSuccess"
-					{
-						"RunScript"
-						{
-							"ScriptFile"	"units/tauren_pulverize.lua"
-							"Function"		"OnProc"
-							"Radius"		"%radius"
-							"Damage"		"%damage"
-						}					
-					}
-				}
-			} 
-		}
-	}
-}
 
 
 

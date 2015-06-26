@@ -383,6 +383,7 @@
 		"Ability4"					"side_upgrade_tier1_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -467,6 +468,7 @@
 		"Ability4"					"side_upgrade_tier1_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -551,6 +553,7 @@
 		"Ability4"					"side_upgrade_tier1_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -634,6 +637,7 @@
 		"Ability4"					"side_upgrade_tier1_orc"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -723,6 +727,7 @@
 		"Ability4"					"side_upgrade_tier2_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -807,6 +812,7 @@
 		"Ability4"					"side_upgrade_tier2_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -892,6 +898,7 @@
 		"Ability4"					"side_upgrade_tier2_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -976,6 +983,7 @@
 		"Ability4"					"side_upgrade_tier2_orc"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1066,6 +1074,7 @@
 		"Ability4"					"side_upgrade_tier3_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1151,6 +1160,7 @@
 		"Ability4"					"side_upgrade_tier3_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1236,6 +1246,7 @@
 		"Ability4"					"side_upgrade_tier3_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1321,6 +1332,7 @@
 		"Ability4"					"side_upgrade_tier3_orc"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1413,6 +1425,7 @@
 		"Ability4"					"side_upgrade_tier4_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1497,6 +1510,7 @@
 		"Ability4"					"side_upgrade_tier4_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1581,6 +1595,7 @@
 		"Ability4"					"side_upgrade_tier4_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1664,6 +1679,7 @@
 		"Ability4"					"side_upgrade_tier4_orc"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1756,6 +1772,7 @@
 		"Ability4"					"side_upgrade_tier5_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1828,6 +1845,7 @@
 		"Ability4"					"side_upgrade_tier5_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1900,6 +1918,7 @@
 		"Ability4"					"side_upgrade_tier5_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -1972,6 +1991,7 @@
 		"Ability4"					"side_upgrade_tier5_orc"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -2152,6 +2172,7 @@
 		"Ability4"					"upgrade_tier1_undead"
 		"Ability5"					""
 		"Ability6"					"ability_building"
+		"Ability7"					"building_regen"
 		
 		// Stats
 		//----------------------------------------------------------------
