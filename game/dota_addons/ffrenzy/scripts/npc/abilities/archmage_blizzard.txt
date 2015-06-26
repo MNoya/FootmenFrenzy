@@ -68,10 +68,17 @@
 
 	"OnSpellStart"
 	{
+		//"RunScript"
+		//{
+		//	"ScriptFile"	"heroes/archmage/blizzard.lua"
+		//	"Function"		"BlizzardStart"
+		//	"Target"		"POINT"
+		//}
+		
 		"RunScript"
 		{
 			"ScriptFile"	"heroes/archmage/blizzard.lua"
-			"Function"		"BlizzardStart"
+			"Function"		"BlizzardStartPoint"
 			"Target"		"POINT"
 		}
 
@@ -119,10 +126,23 @@
 			"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_5"
 		}
 		
-		"modifier_blizzard_thinker"
+		"modifier_blizzard_wave"
 		{
 			"ThinkInterval"  "%wave_interval"
 			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/archmage/blizzard.lua"
+					"Function"		"BlizzardStart"
+					"Target"		"POINT"
+				}
+			}
+		}
+		
+		"modifier_blizzard_thinker"
+		{
+			"OnCreated"
 			{
 				"DelayedAction"
 				{
@@ -168,6 +188,12 @@
 								"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
 								"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 							}
+						}
+						
+						"RemoveModifier"
+						{
+							"ModifierName"	"modifier_blizzard_thinker"
+							"Target" 		"TARGET"
 						}
 					}
 				}
