@@ -5,8 +5,10 @@
 ]]
 function BlizzardStart( event )
 	-- Variables
+	print("blizzar start called")
 	local caster = event.caster
 	local point = event.target_points[1]
+	print(point)
 
 	caster.blizzard_dummy = CreateUnitByName("dummy_unit_vulnerable", point, false, caster, caster, caster:GetTeam())
 	event.ability:ApplyDataDrivenModifier(caster, caster.blizzard_dummy, "modifier_blizzard_thinker", nil)
@@ -48,6 +50,6 @@ end
 
 function BlizzardEnd( event )
 	local caster = event.caster
-
-	caster.blizzard_dummy:RemoveSelf()
+	--caster.blizzard_dummy:RemoveModifierByName("modifier_blizzard_thinker")
+	--caster.blizzard_dummy:RemoveSelf()
 end
