@@ -23,11 +23,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Aco2
-	"Ability2"					""	 //Reference: Ashm
-	"Ability3"					""	 //Reference: Aien
-	"Ability4"					""	 //Reference: Ault
-	"Ability5"					""	 //Reference: Aegr
+	"Ability1"					"archer_marksmanship"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -122,10 +118,6 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
 	"Ability1"					"huntress_moon_glaive"
-	"Ability2"					""	 //Reference: Ashm
-	"Ability3"					""	 //Reference: Amgl
-	"Ability4"					""	 //Reference: Aien
-	"Ability5"					""	 //Reference: Ault
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -141,7 +133,7 @@
 	"AttackRate"				"1.8"
 	"AttackAnimationPoint"		"0.46"
 	"AttackAcquisitionRange"	"500"
-	"AttackRange"				"225"
+	"AttackRange"				"300"
 	"ProjectileModel"			"particles/units/heroes/hero_luna/luna_base_attack.vpcf"
 	"ProjectileSpeed"			"900"
 	
@@ -219,9 +211,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Arav
-	"Ability2"					""	 //Reference: Afa2
-	"Ability3"					""	 //Reference: Ault
+	"Ability1"					"druid_faerie_fire"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -238,7 +228,7 @@
 	"AttackAnimationPoint"		"0.6"
 	"AttackAcquisitionRange"	"600"
 	"AttackRange"				"600"
-	"ProjectileModel"			""	 //Add projectile
+	"ProjectileModel"			"particles/units/heroes/hero_furion/furion_base_attack.vpcf"
 	"ProjectileSpeed"			"900"
 	
 	// Bounty
@@ -315,11 +305,8 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Aadm
-	"Ability2"					""	 //Reference: Amim
-	"Ability3"					""	 //Reference: Aspo
-	"Ability4"					""	 //Reference: Aien
-	"Ability5"					""	 //Reference: Ault
+	"Ability1"					"dryad_spell_immunity"
+	"Ability2"					"dryad_poison_slow"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -336,7 +323,7 @@
 	"AttackAnimationPoint"		"0.3"
 	"AttackAcquisitionRange"	"800"
 	"AttackRange"				"500"
-	"ProjectileModel"			""	 //Add projectile
+	"ProjectileModel"			"particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf"
 	"ProjectileSpeed"			"1000"
 	
 	// Bounty

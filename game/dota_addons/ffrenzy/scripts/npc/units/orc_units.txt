@@ -23,8 +23,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Asal
-	"Ability2"					""	 //Reference: Aion
+	"Ability1"					"grunt_berserker_rage"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -115,8 +114,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Sbsk
-	"Ability2"					""	 //Reference: Aion
+	"Ability1"					"headhunter_berserker_blood"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -133,7 +131,7 @@
 	"AttackAnimationPoint"		"0.31"
 	"AttackAcquisitionRange"	"500"
 	"AttackRange"				"450"
-	"ProjectileModel"			""	 //Add projectile
+	"ProjectileModel"			"particles/units/heroes/hero_huskar/huskar_base_attack.vpcf"
 	"ProjectileSpeed"			"1200"
 	
 	// Bounty
@@ -210,9 +208,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Aens
-	"Ability2"					""	 //Reference: Asal
-	"Ability3"					""	 //Reference: Aion
+	"Ability1"					"raider_ensnaring_attacks"
 	
 	// Armor
 	//----------------------------------------------------------------

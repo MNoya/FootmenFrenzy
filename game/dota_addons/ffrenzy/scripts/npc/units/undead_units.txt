@@ -22,9 +22,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Acan
-	"Ability2"					""	 //Reference: Ahrl
-	"Ability3"					""	 //Reference: Aiun
+	"Ability1"					"ghoul_cannibalize"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -113,10 +111,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Aweb
-	"Ability2"					""	 //Reference: Aspa
-	"Ability3"					""	 //Reference: Abur
-	"Ability4"					""	 //Reference: Aiun
+	"Ability1"					"crypt_fiend_double_attack"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -133,7 +128,7 @@
 	"AttackAnimationPoint"		"0.64"
 	"AttackAcquisitionRange"	"700"
 	"AttackRange"				"450"
-	"ProjectileModel"			""	 //Add projectile
+	"ProjectileModel"			"particles/units/heroes/hero_weaver/weaver_base_attack.vpcf"
 	"ProjectileSpeed"			"500"
 	
 	// Bounty
@@ -209,6 +204,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
+	"Ability1"					"skeletal_mage_raise_dead"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -225,7 +221,7 @@
 	"AttackAnimationPoint"		"0.5"
 	"AttackAcquisitionRange"	"700"
 	"AttackRange"				"500"
-	"ProjectileModel"			""	 //Add projectile
+	"ProjectileModel"			"particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
 	"ProjectileSpeed"			"900"
 	
 	// Bounty
@@ -303,9 +299,7 @@
 	// Abilities
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
-	"Ability1"					""	 //Reference: Aap1
-	"Ability2"					""	 //Reference: Aiun
-	"Ability3"					""	 //Reference: Acn2
+	"Ability1"					"abomination_disease_cloud"
 	
 	// Armor
 	//----------------------------------------------------------------

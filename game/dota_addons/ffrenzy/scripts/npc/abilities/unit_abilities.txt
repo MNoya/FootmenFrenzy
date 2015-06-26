@@ -1,56 +1,103 @@
-"huntress_moon_glaive"
+//------------------------//
+// 	   Human Abilities    //
+//------------------------//
+"rifleman_headshot"
 {
-	"BaseClass"						"ability_datadriven"
+	"BaseClass"						"sniper_headshot"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	
-	"AbilityTextureName" 			"luna_moon_glaive"
-	
-	
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+	"AbilityDamage"					"15"
+		
 	"AbilitySpecial"
 	{
 		"01"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"range"						"500"
+			"var_type"				"FIELD_FLOAT"
+			"slow_duration"			"0.5"
 		}
 		"02"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"bounces"					"1"
+			"var_type"				"FIELD_INTEGER"
+			"proc_chance"			"20"
 		}
 		"03"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_reduction_percent"	"35"
+			"var_type"				"FIELD_INTEGER"
+			"slow"					"-50"
 		}
 	}
+
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+	}
+
 	"Modifiers"
 	{
-		"modifier_moon_glaive"		
+		"modifier_rifleman_headshot_passive"
 		{
-			"IsHidden"	"1"
-			"Passive"	"1"
-
+			"Passive"			"1"
+			"IsHidden"			"1"
+			
 			"OnAttackLanded"
 			{
-				"TrackingProjectile"
+				"Random"
 				{
-					"Target"	"TARGET"
+					"Chance"		"%proc_chance"
+					"PseudoRandom"	"DOTA_PSEUDO_RANDOM_SNIPER_HEADSHOT"
+					
+					"OnSuccess"
+					{
+						"ApplyModifier"
+						{
+							"Target"
+							{
+								"Center"		"TARGET"
+								"Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+								"Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+							}
+							"ModifierName"		"modifier_rifleman_headshot_debuff"
+						}
+						
+						"Damage"
+						{
+							"Target"
+							{
+								"Center"		"TARGET"
+								"Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+							}
+							"Damage"			"%AbilityDamage"
+							"Type"				"DAMAGE_TYPE_PHYSICAL"
+						}
+					}
 				}
 			}
-			
-		
 		}
 	
+		"modifier_rifleman_headshot_debuff"
+		{
+			"IsHidden"			"0"
+		
+			"Duration"			"%slow_duration"
+			
+			"EffectName"		"particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+			"EffectAttachType"	"follow_overhead"
+		
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%slow"
+			}
+		}
 	}
 }
 
+"militia_courage"
+{
 
-
-
-
-
+}
 
 "spell_breaker_feedback"
 {
@@ -58,6 +105,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"						"1"
 	
 	"AbilitySpecial"
 	{
@@ -78,46 +126,225 @@
 {
 	"BaseClass"						"slardar_bash"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		
-		"AbilitySpecial"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"MaxLevel"						"1"
+	
+	"AbilitySpecial"
+	{
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"chance"				"25"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"25"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration_creep"		"2.0"
-			}
+			"var_type"				"FIELD_INTEGER"
+			"chance"				"25"
 		}
-
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"25"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"1.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_creep"		"2.0"
+		}
+	}
 }
 
 
 
+//------------------------//
+// 	 Night Elf Abilities  //
+//------------------------//
 
+// Attacks get faster the longer they attack a single target
+"archer_marksmanship"
+{
+	"BaseClass"						"troll_warlord_fervor"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"troll_warlord_fervor"
+	"MaxLevel"						"1"
+	
+	// Casting
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_stacks"			"4"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"15"
+		}
+	}
+}
+
+"huntress_moon_glaive"
+{
+	"BaseClass"						"luna_moon_glaive"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"MaxLevel"						"1"
+	
+	"AbilityTextureName" 			"luna_moon_glaive"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"range"						"500"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bounces"					"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_reduction_percent"	"35"
+		}
+	}
+}
+
+// -Armor
+"druid_faerie_fire"
+{
+
+}
+
+"dryad_poison_slow"
+{
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"				"ability_datadriven"
+	"AbilityTextureName"	"gnoll_assassin_envenomed_weapon"
+	"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+	"Aura_Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"MaxLevel"				"1"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"duration"		"5"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"damage"		"4"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"attack_speed"	"-25"
+		}
+		"04"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"move_speed"	"-50"
+		}
+
+	}
+
+	"Modifiers"
+	{
+		"modifier_dryad_poison_slow"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"OnAttackLanded"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_poison_slow"
+					"Target"		"TARGET"
+				}
+
+				"Damage"
+				{
+					"Type"		"DAMAGE_TYPE_MAGICAL"
+					"Damage"	"%damage"
+					"Target"	"TARGET"
+				}
+			}
+		}
+
+		"modifier_poison_slow"
+		{
+			"IsDebuff"			"1"
+			"IsPurgable"		"0"
+			"EffectName"		"particles/neutral_fx/gnoll_poison_debuff.vpcf"
+			"EffectAttachType"	"attach_hitloc"
+			"Duration"	"%duration"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_speed"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
+			}
+		}
+	}
+}
+
+"dryad_spell_immunity"
+{
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	"enchantress_untouchable"
+	"MaxLevel"				"1"
+
+	"Modifiers"
+	{
+		"modifier_dryad_spell_immunity"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"States"
+			{
+				"MODIFIER_STATE_MAGIC_IMMUNE"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}
+
+//------------------------//
+// 		Orc Abilities     //
+//------------------------//
+
+// Damage buff when hit
+"grunt_berserker_rage"
+{
+
+}
+
+// Faster attack speed on health missing
+"headhunter_berserker_blood"
+{
+
+}
+
+// Chance to apply net on hit
+"raider_ensnaring_attacks"
+{
+
+}
 
 // Gives a 25% chance that an attack will deal bonus damage to nearby units.
 "tauren_pulverize"
 {
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 	"AbilityTextureName"			"earthshaker_enchant_totem"
+	"MaxLevel"						"1"
 	
 	"AbilitySpecial"
 	{
@@ -226,9 +453,174 @@
 	}
 }
 
+//------------------------//
+//     Undead Abilities   //
+//------------------------//
 
+// Lifesteal on last hit
+"ghoul_cannibalize"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"life_stealer_feast"
+	"MaxLevel"						"1"
 
-"disease_cloud"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_gained_on_kill"	"100"
+		}
+	}
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_life_stealer/life_stealer_feast.vpcf"
+	}
+
+	"Modifiers"
+	{
+		"modifier_ghoul_cannibalize"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnKill"
+			{
+				"Heal"
+				{
+					"Target"        "CASTER"
+					"HealAmount"	"%health_gained_on_kill"
+				}
+
+				"FireEffect"
+				{
+					"EffectName"		"particles/units/heroes/hero_life_stealer/life_stealer_feast.vpcf"
+					"EffectAttachType"	"attach_hitloc"
+					"Target"			"CASTER"
+				}
+			}
+		}
+	}
+}
+
+"crypt_fiend_double_attack"
+{
+	"BaseClass"						"weaver_geminate_attack"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"MaxLevel"						"1"
+	
+	"AbilityCooldown"				"6.0"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"delay"					"0.25"
+		}
+	}		
+}
+
+"skeletal_mage_raise_dead"
 {
 
 }
+
+"abomination_disease_cloud"
+{
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+	"AbilityCastRange"			"%radius"
+	"MaxLevel"					"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"radius"			"200"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"damage_per_second"	"25.0"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"think_interval"	"0.1"
+		}
+	}
+
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_pudge/pudge_rot.vpcf"
+	}
+
+	"Modifiers"
+	{
+		"modifier_disease_cloud_aura"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"Target"			"CASTER"
+					"EffectName"		"particles/units/heroes/hero_pudge/pudge_rot.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"ControlPoints"
+					{
+						"00"	"0 0 0"
+						"01"	"%radius 0 0"
+					}
+				}
+			}
+
+			"Aura"          	"modifier_disease_cloud_debuff"
+			"Aura_Radius"   	"%radius"
+			"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_NONE"
+		}
+
+		"modifier_disease_cloud_debuff"
+		{
+			"IsDebuff"			"1"
+			"ThinkInterval"  	"%think_interval"
+			"OnIntervalThink"
+			{
+				"Damage"
+				{
+					"Target"		"TARGET"
+					"Type"			"DAMAGE_TYPE_MAGICAL"
+					"Damage"		"%damage_per_second * %think_interval"
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

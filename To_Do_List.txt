@@ -8,19 +8,12 @@
 -fix broken heroes and release them
 
 Unit abilities
--Huntress moon glaive, 1 bounce
--Abomination disease cloud
--Enchantress spell immunity, poison slow
--Riflemen headshot
 -Grunt damage buff when hit, or extra damage when health missing
--Ghouls lifesteal on last hit
 -Head Hunters faster attack speed on health missing
 -Raider chance to apply net on hit
--Crypt Fiend weaver's double attack
 -Skeletal Mages summon units from corpse
--Archers attacks get faster the longer they attack a single target, like troll's passive
 -Druid of the Talon, chance on attack to turn into a powerful bird for a time?
 
-Extra
+-Review unit stats and ability damages (Balance between races)
+
 -creep-items
--add 1 passive skill to each unit

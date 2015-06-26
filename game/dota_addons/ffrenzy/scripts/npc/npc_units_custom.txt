@@ -5010,7 +5010,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"human_long_rifles"
+		"Ability1"					"rifleman_headshot"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5106,7 +5106,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"militia_courage"
 			
 		// Armor
 		//----------------------------------------------------------------
@@ -5626,11 +5626,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Aco2
-		"Ability2"					""	 //Reference: Ashm
-		"Ability3"					""	 //Reference: Aien
-		"Ability4"					""	 //Reference: Ault
-		"Ability5"					""	 //Reference: Aegr
+		"Ability1"					"archer_marksmanship"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5725,10 +5721,6 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"huntress_moon_glaive"
-		"Ability2"					""	 //Reference: Ashm
-		"Ability3"					""	 //Reference: Amgl
-		"Ability4"					""	 //Reference: Aien
-		"Ability5"					""	 //Reference: Ault
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5744,7 +5736,7 @@
 		"AttackRate"				"1.8"
 		"AttackAnimationPoint"		"0.46"
 		"AttackAcquisitionRange"	"500"
-		"AttackRange"				"225"
+		"AttackRange"				"300"
 		"ProjectileModel"			"particles/units/heroes/hero_luna/luna_base_attack.vpcf"
 		"ProjectileSpeed"			"900"
 		
@@ -5822,9 +5814,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Arav
-		"Ability2"					""	 //Reference: Afa2
-		"Ability3"					""	 //Reference: Ault
+		"Ability1"					"druid_faerie_fire"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5841,7 +5831,7 @@
 		"AttackAnimationPoint"		"0.6"
 		"AttackAcquisitionRange"	"600"
 		"AttackRange"				"600"
-		"ProjectileModel"			""	 //Add projectile
+		"ProjectileModel"			"particles/units/heroes/hero_furion/furion_base_attack.vpcf"
 		"ProjectileSpeed"			"900"
 		
 		// Bounty
@@ -5918,11 +5908,8 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Aadm
-		"Ability2"					""	 //Reference: Amim
-		"Ability3"					""	 //Reference: Aspo
-		"Ability4"					""	 //Reference: Aien
-		"Ability5"					""	 //Reference: Ault
+		"Ability1"					"dryad_spell_immunity"
+		"Ability2"					"dryad_poison_slow"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -5939,7 +5926,7 @@
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"				"500"
-		"ProjectileModel"			""	 //Add projectile
+		"ProjectileModel"			"particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf"
 		"ProjectileSpeed"			"1000"
 		
 		// Bounty
@@ -6104,8 +6091,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Asal
-		"Ability2"					""	 //Reference: Aion
+		"Ability1"					"grunt_berserker_rage"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -6196,8 +6182,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Sbsk
-		"Ability2"					""	 //Reference: Aion
+		"Ability1"					"headhunter_berserker_blood"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -6214,7 +6199,7 @@
 		"AttackAnimationPoint"		"0.31"
 		"AttackAcquisitionRange"	"500"
 		"AttackRange"				"450"
-		"ProjectileModel"			""	 //Add projectile
+		"ProjectileModel"			"particles/units/heroes/hero_huskar/huskar_base_attack.vpcf"
 		"ProjectileSpeed"			"1200"
 		
 		// Bounty
@@ -6291,9 +6276,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Aens
-		"Ability2"					""	 //Reference: Asal
-		"Ability3"					""	 //Reference: Aion
+		"Ability1"					"raider_ensnaring_attacks"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8790,9 +8773,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Acan
-		"Ability2"					""	 //Reference: Ahrl
-		"Ability3"					""	 //Reference: Aiun
+		"Ability1"					"ghoul_cannibalize"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8881,10 +8862,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Aweb
-		"Ability2"					""	 //Reference: Aspa
-		"Ability3"					""	 //Reference: Abur
-		"Ability4"					""	 //Reference: Aiun
+		"Ability1"					"crypt_fiend_double_attack"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8901,7 +8879,7 @@
 		"AttackAnimationPoint"		"0.64"
 		"AttackAcquisitionRange"	"700"
 		"AttackRange"				"450"
-		"ProjectileModel"			""	 //Add projectile
+		"ProjectileModel"			"particles/units/heroes/hero_weaver/weaver_base_attack.vpcf"
 		"ProjectileSpeed"			"500"
 		
 		// Bounty
@@ -8977,6 +8955,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
+		"Ability1"					"skeletal_mage_raise_dead"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -8993,7 +8972,7 @@
 		"AttackAnimationPoint"		"0.5"
 		"AttackAcquisitionRange"	"700"
 		"AttackRange"				"500"
-		"ProjectileModel"			""	 //Add projectile
+		"ProjectileModel"			"particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
 		"ProjectileSpeed"			"900"
 		
 		// Bounty
@@ -9071,9 +9050,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""	 //Reference: Aap1
-		"Ability2"					""	 //Reference: Aiun
-		"Ability3"					""	 //Reference: Acn2
+		"Ability1"					"abomination_disease_cloud"
 		
 		// Armor
 		//----------------------------------------------------------------
