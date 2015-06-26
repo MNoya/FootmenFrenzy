@@ -12,7 +12,7 @@
 	"AbilityTextureName"			"keeper_force_of_nature"
 	"MaxLevel" 						"4"
 
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
@@ -37,7 +37,7 @@
 		"01"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"treant_count"	"2 3 4 6"
+			"treant_count"	"2 3 4 5"
 		}
 		"02"
 		{
@@ -51,36 +51,67 @@
 		}
 	}
 
-	"OnAbilityPhaseStart"
-	{
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/keeper/force_of_nature.lua"
-			"Function"		"CheckTrees"
-			"Target"		"POINT"
-		}
-	}
+	//"OnAbilityPhaseStart"
+	//{
+	//	"RunScript"
+	//	{
+	//		"ScriptFile"	"heroes/keeper/force_of_nature.lua"
+	//		"Function"		"CheckTrees"
+	//		"Target"		"POINT"
+	//	}
+	//}
 
 	"OnSpellStart"
 	{		
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/keeper/force_of_nature.lua"
-			"Function"		"ForceOfNature"
-			"Target"		"POINT"
-		}
+		//"RunScript"
+		//{
+		//	"ScriptFile"	"heroes/keeper/force_of_nature.lua"
+		//	"Function"		"ForceOfNature"
+		//	"Target"		"POINT"
+		//}
 
-		"DestroyTrees"
-		{
-			"Target" 		"POINT"
-			"Radius"		"%radius"
-		}
+		//"DestroyTrees"
+		//{
+		//	"Target" 		"POINT"
+		//	"Radius"		"%radius"
+		//}
 
-		"FireSound"
+		//"FireSound"
+		//{
+		//	"EffectName"	"Hero_Furion.ForceOfNature"
+		//	"Target" 		"CASTER"
+		//}	
+
+
+		"SpawnUnit"
 		{
-			"EffectName"	"Hero_Furion.ForceOfNature"
-			"Target" 		"CASTER"
-		}									
+			"UnitName"		"npc_treant"
+			"UnitCount"		"%treant_count"
+			"SpawnRadius"	"100"
+			"Duration"		"%duration"
+			"Target"		"CASTER"
+			"GrantsGold" 	"1"
+	        "GrantsXP" 		"1"
+			"OnSpawn"
+			{
+				//"AttachEffect"
+				//{
+				//	"EffectName"		"particles/units/heroes/hero_morphling/morphling_replicate_finish.vpcf"
+				//	"EffectAttachType"	"follow_origin"
+				//	"Target"			"TARGET"
+				//}
+				"FireSound"
+				{
+					"EffectName" 		"Hero_Furion.ForceOfNature"
+					"Target"			"CASTER"
+				}
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_summoned"
+					"Target" 		"TARGET"
+				}
+			}
+		}
 	}
 
 	"Modifiers"
@@ -92,6 +123,14 @@
 			"States"
 			{
 				"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"mechanics.lua"
+					"Function"		"SetNoCorpse"
+				}
 			}
 		}
 	}

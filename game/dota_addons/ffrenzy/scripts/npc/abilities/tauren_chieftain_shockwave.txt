@@ -85,7 +85,7 @@
 		    "EffectName" 	"particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
 		    "MoveSpeed"   	"%shock_speed"
 		    "StartRadius"   "%shock_width"
-		    "StartPosition" "attach_attack1"
+		    "StartPosition" "CASTER"
 		    "EndRadius"     "%shock_width"
 		    "FixedDistance" "%shock_distance"
 		    "TargetTeams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"

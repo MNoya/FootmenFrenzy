@@ -47,6 +47,7 @@ USE_CUSTOM_HERO_LEVELS = false           -- Should we allow heroes to have custo
 MAX_LEVEL = 25                          -- What level should we let heroes get to?
 USE_CUSTOM_XP_VALUES = false             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 
+
 local team_a_counter = 0
 local team_b_counter = 0
 local team_c_counter = 0
@@ -55,7 +56,7 @@ local team_d_counter = 0
 -- Change these at will
 local testing = true
 local testingUnits = true
-local testingLevels = false
+local testingLevels = true
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
@@ -119,6 +120,7 @@ function GameMode:InitGameMode()
     GameRules:SetHeroMinimapIconScale( MINIMAP_ICON_SIZE )
     GameRules:SetCreepMinimapIconScale( MINIMAP_CREEP_ICON_SIZE )
     GameRules:SetRuneMinimapIconScale( MINIMAP_RUNE_ICON_SIZE )
+	GameRules:GetGameModeEntity():SetLoseGoldOnDeath( false ) 
     print('[FFrenzy] GameRules set')
 
     -- Listeners - Event Hooks
@@ -687,8 +689,8 @@ end
 function GameMode:OnEntityHurt(keys)
     --print("[FFrenzy] Entity Hurt")
     ----DeepPrintTable(keys)
-    local entCause = EntIndexToHScript(keys.entindex_attacker)
-    local entVictim = EntIndexToHScript(keys.entindex_killed)
+    --local entCause = EntIndexToHScript(keys.entindex_attacker)
+    --local entVictim = EntIndexToHScript(keys.entindex_killed)
 end
 
 -- An item was picked up off the ground
