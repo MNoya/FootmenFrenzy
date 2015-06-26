@@ -1740,6 +1740,7 @@
 				"Wearable4"		{	"ItemDef"		"261"		}
 				"Wearable5"		{	"ItemDef"		"262"		}
 				"Wearable6"		{	"ItemDef"		"470"		}
+				"Wearable7"		{	"ItemDef"		"4007"		} //Hook slot
 			}
 		}
 	}
@@ -9119,6 +9120,7 @@
 				"Wearable4"		{	"ItemDef"		"261"		}
 				"Wearable5"		{	"ItemDef"		"262"		}
 				"Wearable6"		{	"ItemDef"		"470"		}
+				"Wearable7"		{	"ItemDef"		"4007"		} //Hook slot
 			}
 		}
 	}

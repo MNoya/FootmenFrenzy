@@ -61,6 +61,8 @@
 		"modifier_spawn_rifleman"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -117,6 +119,8 @@
 				}
 			}
 			"ThinkInterval"  	"10.0"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnIntervalThink"
 			{
 				"RunScript"
@@ -153,6 +157,8 @@
 		"modifier_spawn_spell_breaker"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant_lvl2.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -199,6 +205,8 @@
 		"modifier_spawn_knight"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant_lvl2.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -281,6 +289,8 @@
 		"modifier_spawn_archer"
 		{
 			"Passive"			"1"
+			"EffectName"		"particles/econ/items/effigies/status_fx_effigies/jade_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"  "follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -327,6 +337,8 @@
 		"modifier_spawn_huntress"
 		{
 			"Passive"			"1"
+			"EffectName"		"particles/econ/items/effigies/status_fx_effigies/jade_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"  "follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -373,6 +385,8 @@
 		"modifier_spawn_druid_of_the_talon"
 		{
 			"Passive"			"1"
+			"EffectName"		"particles/econ/items/effigies/status_fx_effigies/jade_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"  "follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -419,6 +433,8 @@
 		"modifier_spawn_dryad"
 		{
 			"Passive"			"1"
+			"EffectName"		"particles/econ/items/effigies/status_fx_effigies/jade_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"  "follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -496,6 +512,11 @@
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
+	"precache"
+	{
+		"particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_life_break.vpcf"
+	}
+
 	"Modifiers"
 	{
 		"modifier_spawn_grunt"
@@ -508,6 +529,16 @@
 					"ScriptFile"	"buildings/rally_point.lua"
 					"Function"		"SpawnUnit"
 					"UnitName"		"orc_grunt"
+				}
+				"FireEffect"
+				{
+					"EffectName"        "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_life_break.vpcf"
+					"EffectAttachType"  "start_at_customorigin"
+					"ControlPointEntities"
+					{
+						"CASTER"	"attach_origin"
+						"CASTER"	"attach_origin"
+					}
 				}
 			}
 			"ThinkInterval"  	"10.0"
@@ -523,6 +554,16 @@
 				{
 					"ModifierName"	"modifier_spawn_grunt_animation"
 					"Target" 		"CASTER"
+				}
+				"FireEffect"
+				{
+					"EffectName"        "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_life_break.vpcf"
+					"EffectAttachType"  "start_at_customorigin"
+					"ControlPointEntities"
+					{
+						"CASTER"	"attach_origin"
+						"CASTER"	"attach_origin"
+					}
 				}
 			}
 		}
@@ -721,6 +762,8 @@
 		"modifier_spawn_ghoul"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -767,6 +810,8 @@
 		"modifier_spawn_crypt_fiend"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -813,6 +858,8 @@
 		"modifier_spawn_skeletal_mage"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant_lvl2.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
@@ -859,6 +906,8 @@
 		"modifier_spawn_abomination"
 		{
 			"Passive"			"1"
+			"EffectName" 		"particles/econ/items/effigies/status_fx_effigies/gold_effigy_ambient_radiant_lvl2.vpcf"
+			"EffectAttachType"	"follow_origin"
 			"OnCreated"
 			{
 				"RunScript"
