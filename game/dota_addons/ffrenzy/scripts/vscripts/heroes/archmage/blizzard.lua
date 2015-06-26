@@ -3,26 +3,13 @@
 	Date: 25.01.2015.
 	Creates a dummy unit to apply the Blizzard thinker modifier which does the waves
 ]]
-function BlizzardStartPoint( event )
-	local caster = event.caster
-	local point = event.target_points[1]
-
-	caster.blizzard_dummy_point = CreateUnitByName("dummy_unit_vulnerable", point, false, caster, caster, caster:GetTeam())
-	event.ability:ApplyDataDrivenModifier(caster, caster, "modifier_blizzard_wave", nil)
-end
-
-
 function BlizzardStart( event )
 	-- Variables
 	print("blizzar start called")
 	local caster = event.caster
-	--local point = event.target_points[1]
-	local point = caster.blizzard_dummy_point:GetAbsOrigin()
+	local point = event.target_points[1]
 	print(point)
 
-	if caster.blizzard_dummy ~= nil then
-		caster.blizzard_dummy:RemoveSelf()
-	end
 	caster.blizzard_dummy = CreateUnitByName("dummy_unit_vulnerable", point, false, caster, caster, caster:GetTeam())
 	event.ability:ApplyDataDrivenModifier(caster, caster.blizzard_dummy, "modifier_blizzard_thinker", nil)
 end
@@ -30,7 +17,7 @@ end
 -- -- Create the particles with small delays between each other
 function BlizzardWave( event )
 	local caster = event.caster
-	print("blizzard wave called")
+
 	local target_position = event.target:GetAbsOrigin() --event.target_points[1]
     local particleName = "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_explosion.vpcf"
     local distance = 100
@@ -63,9 +50,6 @@ end
 
 function BlizzardEnd( event )
 	local caster = event.caster
-	caster:RemoveModifierByName("modifier_blizzard_wave")
-	Timers:CreateTimer(0.5,function()
-	caster.blizzard_dummy:RemoveSelf()
-	caster.blizzard_dummy_point:RemoveSelf() end)
-	
+	--caster.blizzard_dummy:RemoveModifierByName("modifier_blizzard_thinker")
+	--caster.blizzard_dummy:RemoveSelf()
 end
