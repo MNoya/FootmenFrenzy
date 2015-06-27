@@ -172,6 +172,8 @@ function GameMode:InitGameMode()
 
     GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
     GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
+	
+	CreateUnitByName("dummy_mana", Vector(0, 0, 0), false, nil, nil, 4)
 
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
     --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
@@ -908,7 +910,7 @@ function GameMode:OnPlayerPickHero(keys)
         table.insert(player.towers, tower1)
         table.insert(player.towers, tower2)
 
-        CreateUnitByName("dummy_vision", Vector(0, 0, 100), true, hero, hero, hero:GetTeamNumber())
+        CreateUnitByName("dummy_vision", Vector(0, 0, 100), false, hero, hero, hero:GetTeamNumber())
 
         -- Move the hero close by
         Timers:CreateTimer(function()
