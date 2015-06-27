@@ -3498,6 +3498,7 @@
 			"particle" 	"particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_requiemofsouls_line_ground.vpcf"
 			"soundfile" "soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
 			"soundfile" "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			"soundfile" "soundevents/custom_sounds.vsndevts"
 		}
 		
 		"AbilitySpecial"
