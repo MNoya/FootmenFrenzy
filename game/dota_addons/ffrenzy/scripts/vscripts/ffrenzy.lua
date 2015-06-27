@@ -880,6 +880,8 @@ function GameMode:OnPlayerPickHero(keys)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			Timers:CreateTimer(15,function() 
+			CreateUnitByName("npc_far_seer_shadow_wolf", Vector(-3000, -3000, 100), true, nil, nil, 3) end)
 		end
 		if testingLevels then
             for i=1,24 do

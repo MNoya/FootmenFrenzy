@@ -16,6 +16,6 @@ function RainOfFireEnd( event )
 	local caster = event.caster
 	
 	local fire_storm_dummy_pointer = caster.fire_storm_dummy
-	Timers:CreateTimer(0.3,function() fire_storm_dummy_pointer:RemoveSelf() end)
+	Timers:CreateTimer(0.4,function() fire_storm_dummy_pointer:RemoveSelf() end)
 	
 end

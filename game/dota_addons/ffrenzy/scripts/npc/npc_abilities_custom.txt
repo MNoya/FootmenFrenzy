@@ -14227,7 +14227,7 @@
 				{
 					"ApplyModifier"
 	         		{
-						"ModifierName"	"modifier_raid_of_fire_explosion"
+						"ModifierName"	"modifier_rain_of_fire_explosion"
 	         			"Target" 		"TARGET"
 	         			"Duration"		"0.9"
 					}
@@ -14238,7 +14238,7 @@
 				{
 					"ApplyModifier"
 	         		{
-						"ModifierName"	"modifier_raid_of_fire_explosion"
+						"ModifierName"	"modifier_rain_of_fire_explosion"
 	         			"Target" 		"TARGET"
 	         			"Duration"		"0.9"
 					}
@@ -14246,7 +14246,7 @@
 				
 			}
 			
-			"modifier_raid_of_fire_explosion"
+			"modifier_rain_of_fire_explosion"
 			{
 				"OnCreated"
 				{
