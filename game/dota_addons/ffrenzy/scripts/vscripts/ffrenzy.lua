@@ -55,8 +55,8 @@ local team_d_counter = 0
 
 -- Change these at will
 local testing = true
-local testingUnits = false
-local testingLevels = false
+local testingUnits = true
+local testingLevels = true
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
@@ -79,15 +79,21 @@ function GameMode:InitGameMode()
 
     -- MultiTeam
     GameRules.TeamColors = {}
-    GameRules.TeamColors[DOTA_TEAM_GOODGUYS] = Vector(61, 210, 150)	--	Teal
-	GameRules.TeamColors[DOTA_TEAM_BADGUYS]  = Vector(243, 201, 9 )	--  Yellow
-	GameRules.TeamColors[DOTA_TEAM_CUSTOM_1] = Vector(197, 77, 168)	--  Pink
-	GameRules.TeamColors[DOTA_TEAM_CUSTOM_2] = Vector(255, 108, 0 )	--	Orange
-	
-	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 ) --	Teal
-	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )   --  Yellow
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 197, 77, 168 )	--  Pink
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 255, 108, 0 )	--  Orange
+    GameRules.TeamColors[DOTA_TEAM_GOODGUYS] = Vector(61, 210, 150) --  Teal
+    GameRules.TeamColors[DOTA_TEAM_BADGUYS]  = Vector(243, 201, 9 ) --  Yellow
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_1] = Vector(197, 77, 168) --  Pink
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_2] = Vector(255, 108, 0 ) --  Orange
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_3] = Vector( 52, 85, 255) --  Blue
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_4] = Vector(101, 212, 19) --  Green
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_5] = Vector(129, 83, 54 ) --  Brown
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_6] = Vector(27, 192, 216) --  Cyan
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_7] = Vector(199, 228, 13) --  Olive
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_8] = Vector(140, 42, 244) --  Purple
+
+    SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 ) --  Teal
+    SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )   --  Yellow
+    SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 197, 77, 168 ) --  Pink
+    SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 255, 108, 0 )  --  Orange
     
     self.m_VictoryMessages = {}
     self.m_VictoryMessages[DOTA_TEAM_GOODGUYS] = "#VictoryMessage_GoodGuys"
@@ -100,8 +106,8 @@ function GameMode:InitGameMode()
     self.m_NumAssignedPlayers = 0
 
     GameMode:GatherValidTeams()
-	
-	
+    
+    
     -----------------------
 
     -- Setup rules
@@ -120,7 +126,7 @@ function GameMode:InitGameMode()
     GameRules:SetHeroMinimapIconScale( MINIMAP_ICON_SIZE )
     GameRules:SetCreepMinimapIconScale( MINIMAP_CREEP_ICON_SIZE )
     GameRules:SetRuneMinimapIconScale( MINIMAP_RUNE_ICON_SIZE )
-	GameRules:GetGameModeEntity():SetLoseGoldOnDeath( false ) 
+    GameRules:GetGameModeEntity():SetLoseGoldOnDeath( false ) 
     print('[FFrenzy] GameRules set')
 
     -- Listeners - Event Hooks
@@ -162,14 +168,10 @@ function GameMode:InitGameMode()
     self.vBots = {}
     self.vBroadcasters = {}
 
-    GameRules.DefeatedPlayersOnTeam = {}
-
     self.bSeenWaitForPlayers = false
 
     GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
     GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
-	
-	CreateUnitByName("dummy_mana", Vector(0, 0, 0), false, nil, nil, 4)
 
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
     --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
@@ -364,10 +366,10 @@ function GameMode:OnHeroInGame(hero)
 
     -- This line for example will set the starting gold of every hero to 100 unreliable gold
     hero:SetGold(100, false)
-	if testing then
-		hero:SetGold(99999, false)
-	end
-	
+    if testing then
+        hero:SetGold(99999, false)
+    end
+    
 end
 
 --[[
@@ -399,10 +401,10 @@ end
 function GameMode:OnGameRulesStateChange(keys)
     print("[FFrenzy] GameRules State Changed")
     --DeepPrintTable(keys)
-	
-	if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-	
-	end
+    
+    if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+    
+    end
 
     -- MultiTeam Thinker
     if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
@@ -482,7 +484,7 @@ end
 -- Scan the map to see which teams have spawn points
 ---------------------------------------------------------------------------
 function GameMode:GatherValidTeams()
-	print( "GatherValidTeams:" )
+    print( "GatherValidTeams:" )
 
     local foundTeams = {}
     for _, playerStart in pairs( Entities:FindAllByClassname( "info_player_start_dota" ) ) do
@@ -502,12 +504,12 @@ function GameMode:GatherValidTeams()
     for _, team in pairs( self.m_GatheredShuffledTeams ) do
         print( " - " .. team .. " ( " .. GetTeamName( team ) .. " )" )
     end
-	
-	GameRules:SetCustomGameTeamMaxPlayers( 2, 2 )
-	GameRules:SetCustomGameTeamMaxPlayers( 3, 2 )
-	GameRules:SetCustomGameTeamMaxPlayers( 6, 2 )
-	GameRules:SetCustomGameTeamMaxPlayers( 7, 2 )
-	
+    
+    GameRules:SetCustomGameTeamMaxPlayers( 2, 2 )
+    GameRules:SetCustomGameTeamMaxPlayers( 3, 2 )
+    GameRules:SetCustomGameTeamMaxPlayers( 6, 2 )
+    GameRules:SetCustomGameTeamMaxPlayers( 7, 2 )
+    
 end
 
 
@@ -661,11 +663,11 @@ function GameMode:OnNPCSpawned(keys)
         npc.bFirstSpawned = true
         GameMode:OnHeroInGame(npc)
     end
-	
-	--if npc:IsRealHero() and npc.bFirstSpawned == true then
-		--Spawn_Position(npc)
-		--FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
-	--end
+    
+    --if npc:IsRealHero() and npc.bFirstSpawned == true then
+        --Spawn_Position(npc)
+        --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
+    --end
 
     if npc:IsCreature() then
         Timers:CreateTimer(0.05, function()
@@ -816,33 +818,33 @@ end
 function GameMode:OnPlayerPickHero(keys)
     print ('[FFrenzy] OnPlayerPickHero')
     --DeepPrintTable(keys)
-	
+    
 
     local heroClass = keys.hero
     local hero = EntIndexToHScript(keys.heroindex)
     local player = EntIndexToHScript(keys.player)
     local playerID = hero:GetPlayerID()
-	local teamID = PlayerResource:GetTeam(playerID)
-	local teamCounter = 0
+    local teamID = PlayerResource:GetTeam(playerID)
+    local teamCounter = 0
 
     -- Player Color = Team Color
     PlayerResource:SetCustomPlayerColor(playerID, GameRules.TeamColors[teamID].x, GameRules.TeamColors[teamID].y, GameRules.TeamColors[teamID].z)
-	
-	if teamID == 2 then 
-		teamCounter = team_a_counter
-	else 
-		if teamID == 3 then
-			teamCounter = team_b_counter
-		else 
-			if teamID == 6 then
-				teamCounter = team_c_counter
-			else 
-				if teamID == 7 then
-					teamCounter = team_d_counter
-				end
-			end
-		end
-	end
+    
+    if teamID == 2 then 
+        teamCounter = team_a_counter
+    else 
+        if teamID == 3 then
+            teamCounter = team_b_counter
+        else 
+            if teamID == 6 then
+                teamCounter = team_c_counter
+            else 
+                if teamID == 7 then
+                    teamCounter = team_d_counter
+                end
+            end
+        end
+    end
 
     -- Initialize Variables for Tracking
     player.units = {} -- This keeps the handle of all the units of the player army
@@ -853,14 +855,14 @@ function GameMode:OnPlayerPickHero(keys)
     -- Choose a Position
     local position_name = "team_"..teamID.."_player_position_"..teamCounter
     local base_position_entity = Entities:FindByName(nil, position_name)
-	local tower_a_position_name = "team_"..teamID.."_tower_a_player_"..teamCounter
+    local tower_a_position_name = "team_"..teamID.."_tower_a_player_"..teamCounter
     local tower_a_position_entity = Entities:FindByName(nil, tower_a_position_name)
-	local tower_b_position_name = "team_"..teamID.."_tower_b_player_"..teamCounter
+    local tower_b_position_name = "team_"..teamID.."_tower_b_player_"..teamCounter
     local tower_b_position_entity = Entities:FindByName(nil, tower_b_position_name)
     if base_position_entity then
         local base_position = base_position_entity:GetAbsOrigin()
-		local tower_a_position = tower_a_position_entity:GetAbsOrigin()
-		local tower_b_position = tower_b_position_entity:GetAbsOrigin()
+        local tower_a_position = tower_a_position_entity:GetAbsOrigin()
+        local tower_b_position = tower_b_position_entity:GetAbsOrigin()
         local pedestal = Entities:CreateByClassname("prop_dynamic")
         base_position.z = 172
         pedestal:SetAbsOrigin(base_position)
@@ -876,42 +878,41 @@ function GameMode:OnPlayerPickHero(keys)
 
         -- Add the base building to the player handle.
         player.base = building
-		
-		--test units
-		if testingUnits then
-			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-			CreateUnitByName("human_barracks", Vector(-1700, -3000, 100), true, nil, nil, 3)
-			Timers:CreateTimer(15,function() 
-			CreateUnitByName("npc_far_seer_shadow_wolf", Vector(-3000, -3000, 100), true, nil, nil, 3) end)
-		end
-		if testingLevels then
+        
+        --test units
+        if testingUnits then
+            CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+            CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+            CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+            Timers:CreateTimer(15,function() 
+            CreateUnitByName("npc_far_seer_shadow_wolf", Vector(-3000, -3000, 100), true, nil, nil, 3) end)
+        end
+        if testingLevels then
             for i=1,24 do
                 hero:HeroLevelUp(true)
             end
-		end
-		
-		local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
-		tower:RemoveModifierByName("modifier_invulnerable")
+        end
+        
+        local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
+        tower:RemoveModifierByName("modifier_invulnerable")
         tower:SetOwner(hero)
         tower:SetControllableByPlayer(playerID, true)
         tower:SetAbsOrigin(tower_a_position)
-		
-		local tower2 = CreateUnitByName("human_scout_tower", tower_b_position, true, hero, hero, hero:GetTeamNumber())
-		tower2:RemoveModifierByName("modifier_invulnerable")
+        
+        local tower2 = CreateUnitByName("human_scout_tower", tower_b_position, true, hero, hero, hero:GetTeamNumber())
+        tower2:RemoveModifierByName("modifier_invulnerable")
         tower2:SetOwner(hero)
         tower2:SetControllableByPlayer(playerID, true)
         tower2:SetAbsOrigin(tower_b_position)
-		
+        
         table.insert(player.towers, tower1)
         table.insert(player.towers, tower2)
 
-		CreateUnitByName("dummy_vision", Vector(0, 0, 100), false, hero, hero, hero:GetTeamNumber())
+        CreateUnitByName("dummy_vision", Vector(0, 0, 100), true, hero, hero, hero:GetTeamNumber())
 
         -- Move the hero close by
         Timers:CreateTimer(function()
-			--Spawn_Position(hero)
+            --Spawn_Position(hero)
             --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             PlayerResource:SetCameraTarget(playerID, building)
             Timers:CreateTimer(1, function() 
@@ -927,27 +928,23 @@ function GameMode:OnPlayerPickHero(keys)
     else
         print("No Base Position found for player "..playerID)   
     end
-	
-	
-	if teamID == 2 then 
-		team_a_counter = team_a_counter + 1
-		else if teamID == 3 then
-			team_b_counter = team_b_counter + 1
-			else if teamID == 6 then
-				team_c_counter = team_c_counter + 1
-				else if teamID == 7 then
-					team_d_counter = team_d_counter + 1
-				end
-			end
-		end
-	end
-
-    -- Player playing now, initialize team tracking
-    if not GameRules.DefeatedPlayersOnTeam[teamID] then
-        GameRules.DefeatedPlayersOnTeam[teamID] = 0
+    
+    
+    if teamID == 2 then 
+        team_a_counter = team_a_counter + 1
+        else if teamID == 3 then
+            team_b_counter = team_b_counter + 1
+            else if teamID == 6 then
+                team_c_counter = team_c_counter + 1
+                else if teamID == 7 then
+                    team_d_counter = team_d_counter + 1
+                end
+            end
+        end
     end
 
     -- Defeat check for this player
+    hero.lost = false
     Timers:CreateTimer(1, function()
         local base_building = player.base
         if not IsValidEntity(base_building) or not base_building:IsAlive() then
@@ -962,7 +959,6 @@ end
 
 -- Kill all the units and towers of the player, set their hero to not respawn and takes care of Team-Loss & Win Condition
 function MakePlayerLose( player )
-
     for _,unit in pairs(player.units) do
         if IsValidEntity(unit) and unit:IsAlive() then
             unit:ForceKill(false)
@@ -977,32 +973,41 @@ function MakePlayerLose( player )
 
     local hero = player:GetAssignedHero()
     hero:ForceKill(false)
+    hero.lost = true
     Timers:CreateTimer(function()
         hero:SetTimeUntilRespawn(999)
         return 1
     end)
-
-    -- Add 1 to the players defeated of that team
-    local teamID = player:GetTeamNumber()
-    GameRules.DefeatedPlayersOnTeam[teamID] = GameRules.DefeatedPlayersOnTeam[teamID] + 1
     
     -- check for win condition
     local allHeroes = HeroList:GetAllHeroes()
 
     -- If there are still heroes alive and they belong to different teams, it means there are at least 2 teams "alive"
     local winnerTeamID = nil
+    local winConditionFailed = false
     for _,hero in pairs(allHeroes) do
-        if hero:IsAlive() or hero:GetRespawnTime() < 101 then
-            winnerTeamID = hero:GetTeamNumber()
+        print(hero:GetPlayerOwnerID())
+        if not hero.lost and not winConditionFailed then
+            print(hero:GetPlayerOwnerID().." is still playing, checking others")
+            winnerTeamID = hero:GetTeamNumber() -- Possible winning team
             for _,otherHero in pairs(allHeroes) do
-                if (otherHero:IsAlive() or hero:GetRespawnTime() < 101) and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) then
+                -- If it's a different hero, from a different team, both alive and playing, break
+                if (otherHero ~= hero) and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) and (not otherHero.lost) then
+                    print(" "..otherHero:GetPlayerOwnerID().." is still in play and has a different team than "..hero:GetPlayerOwnerID())
+                    winConditionFailed = true
                     winnerTeamID = nil
-                    break
+                    break                    
+                elseif otherHero.lost then
+                    print(" "..otherHero:GetPlayerOwnerID().." also lost")
                 end
             end
+        else
+            print("Win Condition Check Failed - Keep playing")
+            break
         end
     end
     if winnerTeamID then
+        print(winnerTeamID.." is the Winner")
         GameRules:SetGameWinner(winnerTeamID)
     end
     
