@@ -86,7 +86,7 @@
 	"AbilityLayout"				"4"
 	"Ability1"					"upgrade_cannon_tower"
 	"Ability2"					"upgrade_arcane_tower"
-	"Ability3"					"human_magic_sentry"
+	"Ability3"					"true_sight"
 	"Ability4"					"ability_tower"
 	
 	// Armor
@@ -161,7 +161,7 @@
 	"AbilityLayout"				"4"
 	"Ability1"					"upgrade_arcane_tower"
 	"Ability2"					"tower_aoe"
-	"Ability3"					"human_magic_sentry"
+	"Ability3"					"true_sight"
 	"Ability4"					"ability_tower"
 	
 	// Armor
@@ -235,7 +235,7 @@
 	//----------------------------------------------------------------
 	"AbilityLayout"				"4"
 	"Ability1"					"tower_feedback"
-	"Ability2"					"human_magic_sentry"
+	"Ability2"					"true_sight"
 	"Ability3"					""
 	"Ability4"					"ability_tower"
 	

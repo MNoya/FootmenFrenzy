@@ -8,7 +8,7 @@
 	//
 	"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 	"Model"						"models/heroes/doom/doom.vmdl"	// Model.	
-	"ModelScale"				"1.2"
+	"ModelScale"				"1"
 	"Level"						"8"
 	"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 	"SoundSet"					"Hero_DoomBringer"			
@@ -108,7 +108,7 @@
 	//
 	"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 	"Model"						"models/heroes/doom/doom.vmdl"	// Model.	
-	"ModelScale"				"1.3"
+	"ModelScale"				"1.1"
 	"Level"						"9"
 	"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 	"SoundSet"					"Hero_DoomBringer"			
@@ -208,7 +208,7 @@
 	//
 	"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 	"Model"						"models/heroes/doom/doom.vmdl"	// Model.	
-	"ModelScale"				"1.4"
+	"ModelScale"				"1.2"
 	"Level"						"10"
 	"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 	"SoundSet"					"Hero_DoomBringer"			

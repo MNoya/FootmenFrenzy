@@ -4273,28 +4273,6 @@
 		"Ability1"					"dummy_passive_vulnerable"
 	}
 	
-	"dummy_vision600"
-	{
-		"BaseClass"					"npc_dota_creature"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"VisionDaytimeRange"		"600"	
-		"VisionNighttimeRange"		"600"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-		"Ability1"					"dummy_passive_fly"
-	}
-	
-	"dummy_vision1200"
-	{
-		"BaseClass"					"npc_dota_creature"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"VisionDaytimeRange"		"1200"	
-		"VisionNighttimeRange"		"1200"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-		"Ability1"					"dummy_passive_fly"
-	}
-	
 	"dummy_vision"
 	{
 		"BaseClass"					"npc_dota_creature"
@@ -4306,6 +4284,46 @@
 		"Ability1"					"dummy_passive"
 	}
 	
+	
+	
+	"dummy_vision600"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"600"	
+		"VisionNighttimeRange"		"600"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
+		"Ability2"					"true_sight"
+	}
+	
+	"dummy_vision700"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"700"	
+		"VisionNighttimeRange"		"700"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
+		"Ability2"					"true_sight"
+	}
+	
+	"dummy_vision1200"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"VisionDaytimeRange"		"1200"	
+		"VisionNighttimeRange"		"1200"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"Ability1"					"dummy_passive_fly"
+		"Ability2"					"true_sight"
+	}
+	
+	
+	
 	"dummy_vision2000"
 	{
 		"BaseClass"					"npc_dota_creature"
@@ -4315,6 +4333,7 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
 		"Ability1"					"dummy_passive_fly"
+		"Ability2"					"true_sight"
 	}
 	
 	"dummy_vision4000"
@@ -4326,6 +4345,7 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
 		"Ability1"					"dummy_passive_fly"
+		"Ability2"					"true_sight"
 	}
 	
 	"npc_dummy_blank"
@@ -4418,15 +4438,18 @@
 		//----------------------------------------------------------------
 		"AttackDesire"				"1.5"		// How much bots want to attack them vs other non-hero things
 	}
-	"dummy_vision"
+	
+	"dummy_mana"
 	{
 		"BaseClass"					"npc_dota_creature"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		"VisionDaytimeRange"		"1800"	
-		"VisionNighttimeRange"		"1800"
+		"VisionDaytimeRange"		"0"	
+		"VisionNighttimeRange"		"0"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"AbilityLayout"				"4"
 		"Ability1"					"dummy_passive"
+		"Ability2"					"dummy_mana"
 	}
 	//=================================================================================
 	//	Unit for far_seer_feral_spirit
@@ -7266,7 +7289,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/doom/doom.vmdl"	// Model.	
-		"ModelScale"				"1.2"
+		"ModelScale"				"1"
 		"Level"						"8"
 		"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 		"SoundSet"					"Hero_DoomBringer"			
@@ -7366,7 +7389,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/doom/doom.vmdl"	// Model.	
-		"ModelScale"				"1.3"
+		"ModelScale"				"1.1"
 		"Level"						"9"
 		"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 		"SoundSet"					"Hero_DoomBringer"			
@@ -7466,7 +7489,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/doom/doom.vmdl"	// Model.	
-		"ModelScale"				"1.4"
+		"ModelScale"				"1.2"
 		"Level"						"10"
 		"Portrait"					"vgui/hud/heroportraits/portrait_doom_bringer"
 		"SoundSet"					"Hero_DoomBringer"			
@@ -8588,7 +8611,7 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"upgrade_cannon_tower"
 		"Ability2"					"upgrade_arcane_tower"
-		"Ability3"					"human_magic_sentry"
+		"Ability3"					"true_sight"
 		"Ability4"					"ability_tower"
 		
 		// Armor
@@ -8663,7 +8686,7 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"upgrade_arcane_tower"
 		"Ability2"					"tower_aoe"
-		"Ability3"					"human_magic_sentry"
+		"Ability3"					"true_sight"
 		"Ability4"					"ability_tower"
 		
 		// Armor
@@ -8737,7 +8760,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"tower_feedback"
-		"Ability2"					"human_magic_sentry"
+		"Ability2"					"true_sight"
 		"Ability3"					""
 		"Ability4"					"ability_tower"
 		

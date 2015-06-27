@@ -54,9 +54,9 @@ local team_c_counter = 0
 local team_d_counter = 0
 
 -- Change these at will
-local testing = true
-local testingUnits = true
-local testingLevels = true
+local testing = false
+local testingUnits = false
+local testingLevels = false
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
@@ -168,6 +168,8 @@ function GameMode:InitGameMode()
 
     GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
     GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
+	
+	CreateUnitByName("dummy_mana", Vector(0, 0, 0), false, nil, nil, 4)
 
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
     --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
@@ -880,6 +882,7 @@ function GameMode:OnPlayerPickHero(keys)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
 			CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			CreateUnitByName("human_barracks", Vector(-1700, -3000, 100), true, nil, nil, 3)
 			Timers:CreateTimer(15,function() 
 			CreateUnitByName("npc_far_seer_shadow_wolf", Vector(-3000, -3000, 100), true, nil, nil, 3) end)
 		end
@@ -904,7 +907,7 @@ function GameMode:OnPlayerPickHero(keys)
         table.insert(player.towers, tower1)
         table.insert(player.towers, tower2)
 
-		CreateUnitByName("dummy_vision", Vector(0, 0, 100), true, hero, hero, hero:GetTeamNumber())
+		CreateUnitByName("dummy_vision", Vector(0, 0, 100), false, hero, hero, hero:GetTeamNumber())
 
         -- Move the hero close by
         Timers:CreateTimer(function()

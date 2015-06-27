@@ -54,6 +54,21 @@
 			"var_type"				"FIELD_INTEGER"
 			"doom_guard_duration"	"180"
 		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"doom_guard_count1"		"1 0 0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"doom_guard_count2"		"0 1 0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"doom_guard_count3"		"0 0 1"
+		}
 	}
 
 	"OnAbilityPhaseStart"
@@ -130,7 +145,7 @@
 						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
 					}
 					"Duration"		"%doom_guard_duration"
-					"UnitCount"		"%doom_guard_1_count"
+					"UnitCount"		"%doom_guard_count1"
 					"UnitLimit"		"0"
 					"GrantsGold"	"1"
 					"GrantsXP"		"1"
@@ -169,7 +184,7 @@
 						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
 					}
 					"Duration"		"%doom_guard_duration"
-					"UnitCount"		"%doom_guard_2_count"
+					"UnitCount"		"%doom_guard_count2"
 					"UnitLimit"		"0"
 					"GrantsGold"	"1"
 					"GrantsXP"		"1"
@@ -208,7 +223,7 @@
 						"Flags"		"DOTA_UNIT_TARGET_FLAG_DEAD"
 					}
 					"Duration"		"%doom_guard_duration"
-					"UnitCount"		"%doom_guard_3_count"
+					"UnitCount"		"%doom_guard_count3"
 					"UnitLimit"		"0"
 					"GrantsGold"	"1"
 					"GrantsXP"		"1"
@@ -493,7 +508,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityCastAnimation"			"ACT_DOTA_VICTORY"
+	"AbilityCastAnimation"			"ACT_DOTA_SPAWN"
 
 	"AbilityCastRange"				"800"
 	"AbilityCastPoint"				"0.6"		
@@ -501,7 +516,7 @@
 	"AbilityManaCost"				"85"
 
 	"AOERadius"     				"%radius"
-	"AbilityChannelTime"			"7.0"
+	"AbilityChannelTime"			"5.5"
 	
 	"precache"
 	{
@@ -523,12 +538,12 @@
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"wave_duration"			"7.0"
+			"wave_duration"			"5.5"
 		}		
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"wave_count"			"6 8 10"
+			"wave_count"			"6"
 		}
 		"04"
 		{
@@ -625,75 +640,106 @@
 
 		"modifier_rain_of_fire_thinker"
 		{
+			"OnCreated"
+			{
+				"ApplyModifier"
+         		{
+					"ModifierName"	"modifier_rain_of_fire_caster"
+         			"Target" 		"TARGET"
+         			"Duration"		"0.9"
+				}
+			}
 			"ThinkInterval"  "%wave_interval"
 			"OnIntervalThink"
 			{
-				"Damage"
-				{
-					"Target"
-					{
-						"Center"  	"TARGET"
-						"Radius" 	"%radius"
-						"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
-						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-					}
-										
-					"Type"			"DAMAGE_TYPE_MAGICAL"
-					"Damage"		"%wave_damage"
-				}
-
-				"Damage"
-				{
-					"Target"
-					{
-						"Center"  	"TARGET"
-						"Radius" 	"%radius"
-						"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
-						"Types" 	"DOTA_UNIT_TARGET_BUILDING"
-					}
-					"Type"			"DAMAGE_TYPE_MAGICAL"
-					"Damage"		"%wave_damage / 2"
-				}
-				
 				"ApplyModifier"
-				{
-					"Target"
-					{
-						"Center"	"TARGET"
-						"Radius"	"%radius"
-						"Teams"		"DOTA_UNIT_TARGET_TEAM_BOTH"
-						"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"
-					}
-					"ModifierName"	"modifier_rain_of_fire_burn"
-				}
-
-				"FireSound"
-				{
-					"EffectName"		"Hero_Jakiro.LiquidFire"
-					"Target"			"TARGET"
-				}
-
-				"AttachEffect"
-				{
-					"Target" 			"TARGET"
-					"EffectName"		"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf"
-					"EffectAttachType" 	"follow_origin"
-				}
-				"AttachEffect"
-				{
-					"Target" 			"TARGET"
-					"EffectName"		"particles/units/heroes/hero_warlock/warlock_rain_of_chaos_explosion.vpcf"
-					"EffectAttachType" 	"follow_origin"
-				}
-
-				"AttachEffect"
-				{
-					"Target" 			"TARGET"
-					"EffectName"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
-					"EffectAttachType" 	"follow_origin"
+         		{
+					"ModifierName"	"modifier_rain_of_fire_caster"
+         			"Target" 		"TARGET"
+         			"Duration"		"0.9"
 				}
 			}
 			
+		}
+		
+		"modifier_rain_of_fire_caster"
+		{
+			"OnCreated"
+			{
+			
+				"DelayedAction"
+				{
+					"Delay"     "0.3"
+					"Action"    
+					{	
+						"Damage"
+						{
+							"Target"
+							{
+								"Center"  	"TARGET"
+								"Radius" 	"%radius"
+								"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
+								"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+							}
+										
+							"Type"			"DAMAGE_TYPE_MAGICAL"
+							"Damage"		"%wave_damage"
+						}
+
+						"Damage"
+						{
+							"Target"
+							{
+								"Center"  	"TARGET"
+								"Radius" 	"%radius"
+								"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
+								"Types" 	"DOTA_UNIT_TARGET_BUILDING"
+							}
+							"Type"			"DAMAGE_TYPE_MAGICAL"
+							"Damage"		"%wave_damage / 2"
+						}
+				
+						"ApplyModifier"
+						{
+							"Target"
+							{
+								"Center"	"TARGET"
+								"Radius"	"%radius"
+								"Teams"		"DOTA_UNIT_TARGET_TEAM_BOTH"
+								"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"
+							}
+							"ModifierName"	"modifier_rain_of_fire_burn"
+						}
+
+						"FireSound"
+						{
+							"EffectName"		"Hero_Jakiro.LiquidFire"
+							"Target"			"TARGET"
+						}
+
+						"AttachEffect"
+						{
+							"Target" 			"TARGET"
+							"EffectName"		"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf"
+							"EffectAttachType" 	"follow_origin"
+						}
+						"AttachEffect"
+						{
+							"Target" 			"TARGET"
+							"EffectName"		"particles/units/heroes/hero_warlock/warlock_rain_of_chaos_explosion.vpcf"
+							"EffectAttachType" 	"follow_origin"
+						}
+
+						"AttachEffect"
+						{
+							"Target" 			"TARGET"
+							"EffectName"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+							"EffectAttachType" 	"follow_origin"
+						}
+					}
+				}
+			}
+		
 		}
 
 		"modifier_rain_of_fire_burn"

@@ -29,12 +29,3 @@ function team_7_fountain(trigger)
 	end
 end
 
---------------------------------------------------------------------------------------------------------------------
-
-function center_fountain(trigger)
-	trigger.activator:SetBaseManaRegen(trigger.activator:GetStatsBasedManaRegen()*5)
-end
-
-function center_fountain_leave(trigger)
-	trigger.activator:SetBaseManaRegen(trigger.activator:GetStatsBasedManaRegen()/5)
-end

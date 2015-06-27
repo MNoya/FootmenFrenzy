@@ -56,14 +56,14 @@
 				
 					"Action"    
 					{
-						"RemoveModifier"
-						{
-							"ModifierName"	"modifier_truesight_reveal"
-							"Target" 		"TARGET"
-						}
+						//"RemoveModifier"
+						//{
+						//	"ModifierName"	"modifier_true_sight_reveal"
+						//	"Target" 		"TARGET"
+						//}
 						"ApplyModifier"
 						{
-							"ModifierName"	"modifier_truesight_reveal"
+							"ModifierName"	"modifier_true_sight_reveal"
 							"Target" 		"TARGET"
 						}
 					}
@@ -74,6 +74,7 @@
 		"modifier_true_sight_reveal"
 		{
 			"IsHidden"			"1"
+			"Passive"			"1"
 			"Duration"			"0.03"
 			"States"
 			{

@@ -97,3 +97,53 @@
 	"BaseClass" 		"ability_datadriven"
 	"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 }
+
+"dummy_mana"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	"AbilityTextureName"			""
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"regen"					"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"900"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_building_regen"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			
+			"Aura" 					"modifier_building_regen_aura"
+			"Aura_Radius" 			"%radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_BOTH"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO"
+		}
+		
+		"modifier_building_regen_aura"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%regen"
+			}
+		
+		}
+	
+	}
+}
