@@ -204,7 +204,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	"BaseClass" 					"item_datadriven"
+	"BaseClass" 					"item_sphere"
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
@@ -233,87 +233,30 @@
 			"var_type"				"FIELD_INTEGER"
 			"block_cooldown"		"120"
 		}
+		"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"		"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		"0"
+			}
 		
 	}
 	
-	"OnSpellStart"
-	{
-		"RunScript"
-		{
-			"ScriptFile"		"items/item_sphere.lua"
-			"Function"			"item_sphere_datadriven_on_spell_start"
-			"Duration"			"%block_cooldown"
-		}
-	}
 	
-	"Modifiers"
-	{
-		"modifier_item_sphere_datadriven"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-			
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%bonus_health_regen"
-				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
-			}
-			
-			"OnCreated"
-			{			
-				"RunScript"
-				{
-					"ScriptFile"		"items/item_sphere.lua"
-					"Function"			"modifier_item_sphere_datadriven_on_created"
-				}
-			}
-			
-			"OnDestroy"
-			{
-				"RunScript"
-				{
-					"ScriptFile"		"items/item_sphere.lua"
-					"Function"			"modifier_item_sphere_datadriven_on_destroy"
-				}
-			}
-			
-			"ThinkInterval" 		".03"
-			"OnIntervalThink"
-			{
-				//Check if the caster has the correct number of Linken's modifiers on them.  If they have less than they are
-				//supposed to, we can assume that a sphere was popped due to an enemy's targeted spell, and put the player's 
-				//Linken's Spheres on cooldown.
-				"RunScript"
-				{
-					"ScriptFile"			"items/item_sphere.lua"
-					"Function"				"modifier_item_sphere_datadriven_on_interval_think"
-				}
-			}
-		}
-		//A modifier that is applied to a unit when they receive the modifier_item_sphere_target modifier.
-		//So long as they still have that modifier, this one will remain and provide a public face on the modifier icon bar.
-		//This modifier deletes itself when modifier_item_sphere_target no longer exists on the unit.
-		"modifier_item_sphere_datadriven_icon"
-		{
-			"Passive"			"0"
-			"IsHidden"			"0"
-			
-			"ThinkInterval" 		".03"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"			"items/item_sphere.lua"
-					"Function"				"modifier_item_sphere_datadriven_icon_on_interval_think"
-				}
-			}
-		}
-	}
 }
 
 
