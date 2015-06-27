@@ -27,6 +27,6 @@ end
 
 function HealingSprayEnd( event )
 	local caster = event.caster
-
-	caster.healing_spray_dummy:RemoveSelf()
+	local healing_spray_dummy_pointer = caster.healing_spray_dummy
+	Timers:CreateTimer(0.3,function() healing_spray_dummy_pointer:RemoveSelf() end)
 end

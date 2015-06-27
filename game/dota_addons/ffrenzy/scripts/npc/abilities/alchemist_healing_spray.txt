@@ -25,7 +25,7 @@
 	"AbilityManaCost"				"75"
 	
 	"AOERadius"     				"%radius"
-	"AbilityChannelTime"			"4.0 5.0 6.0 7.0"
+	"AbilityChannelTime"			"2.5 3.5 4.5 5.5"
 	
 	"AbilitySpecial"
 	{
@@ -37,7 +37,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"wave_duration"			"4.0 5.0 6.0 7.0"
+			"wave_duration"			"2.5 3.5 4.5 5.5"
 		}		
 		"03"
 		{
@@ -115,6 +115,15 @@
          			"Duration"		"0.9"
          		}
 			}
+			"OnCreated"
+         	{
+         		"ApplyModifier"
+         		{
+         			"ModifierName"	"modifier_channeling"
+         			"Target" 		"CASTER"
+         			"Duration"		"0.9"
+         		}
+			}
 		}
 
 		"modifier_channeling"
@@ -125,48 +134,78 @@
 
 		"modifier_healing_spray_thinker"
 		{
+		
+			"OnCreated"
+			{
+				"ApplyModifier"
+         		{
+					"ModifierName"	"modifier_healing_spray_caster"
+         			"Target" 		"TARGET"
+         			"Duration"		"0.9"
+				}
+			}
 			"ThinkInterval"  "%wave_interval"
 			"OnIntervalThink"
 			{
 					
-				"Heal"
-				{
-					"Target"
-					{
-						"Center"  	"TARGET"
-						"Radius" 	"%radius"
-						"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
-						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-						"Flags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-					}
-					"HealAmount"	"%wave_heal"
-				}					
-
-				"FireSound"
-				{
-					"EffectName"	"Hero_Alchemist.UnstableConcoction.Throw"
-					"Target"		"CASTER"
-				}
-
-				"RunScript"
-		    	{
-		    		"ScriptFile"	"heroes/alchemist/healing_spray.lua"
-					"Function"		"HealingSprayWave"
-		    	} 
-
-				"FireEffect"
-				{
-					"EffectName"        "particles/custom/alchemist_acid_spray.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
-					"ControlPoints"
-					{
-						"01"	"%radius 1 %radius"
-						"15"	"255 255 0"
-						"16"	"255 255 0"
-					}					
-				}				
+				"ApplyModifier"
+         		{
+					"ModifierName"	"modifier_healing_spray_caster"
+         			"Target" 		"TARGET"
+         			"Duration"		"0.9"
+				}			
 			}			
+		}
+		
+		"modifier_healing_spray_caster"
+		{
+			"OnCreated"
+			{
+				"DelayedAction"
+				{
+					"Delay"     "0.3"
+					"Action"    
+					{	
+						"Heal"
+						{
+							"Target"
+							{
+								"Center"  	"TARGET"
+								"Radius" 	"%radius"
+								"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
+								"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+								"Flags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+							}
+							"HealAmount"	"%wave_heal"
+						}					
+
+						"FireSound"
+						{
+							"EffectName"	"Hero_Alchemist.UnstableConcoction.Throw"
+							"Target"		"CASTER"
+						}
+
+						"RunScript"
+						{
+							"ScriptFile"	"heroes/alchemist/healing_spray.lua"
+							"Function"		"HealingSprayWave"
+						} 
+
+						"FireEffect"
+						{
+							"EffectName"        "particles/custom/alchemist_acid_spray.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"            "TARGET"
+							"ControlPoints"
+							{
+								"01"	"%radius 1 %radius"
+								"15"	"255 255 0"
+								"16"	"255 255 0"
+							}					
+						}	
+					}
+				}
+			}		
 		}
 	}	
 }
