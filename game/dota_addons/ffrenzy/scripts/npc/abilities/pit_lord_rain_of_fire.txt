@@ -166,7 +166,6 @@
          		{
 					"ModifierName"	"modifier_rain_of_fire_explosion"
          			"Target" 		"TARGET"
-         			"Duration"		"0.9"
 				}
 			}
 			
@@ -177,7 +176,6 @@
          		{
 					"ModifierName"	"modifier_rain_of_fire_explosion"
          			"Target" 		"TARGET"
-         			"Duration"		"0.9"
 				}
 			}
 			
@@ -258,6 +256,12 @@
 							"Target" 			"TARGET"
 							"EffectName"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 							"EffectAttachType" 	"follow_origin"
+						}
+						
+						"RemoveModifier"
+						{
+							"ModifierName"	"modifier_rain_of_fire_explosion"
+							"Target" 		"TARGET"
 						}
 					}
 				}

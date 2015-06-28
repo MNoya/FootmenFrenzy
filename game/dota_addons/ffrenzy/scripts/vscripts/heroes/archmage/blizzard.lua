@@ -9,15 +9,15 @@ function BlizzardStartPoint( event )
 	local point = event.target_points[1]
 
 	caster.blizzard_dummy_point = CreateUnitByName("dummy_unit_vulnerable", point, false, caster, caster, caster:GetTeam())
-	event.ability:ApplyDataDrivenModifier(caster, caster, "modifier_blizzard_wave", nil)
+	event.ability:ApplyDataDrivenModifier(caster, caster.blizzard_dummy_point, "modifier_blizzard_wave", nil)
 	caster.blizzard_dummy_point:EmitSound("hero_Crystal.freezingField.wind")
 end
 
 
-function BlizzardWaveStart( event )
+--[[function BlizzardWaveStart( event )
 	local caster = event.caster
 	event.ability:ApplyDataDrivenModifier(caster, caster.blizzard_dummy_point, "modifier_blizzard_thinker", nil)
-end
+end]]
 
 -- -- Create the particles with small delays between each other
 function BlizzardWave( event )
@@ -65,11 +65,11 @@ end
 
 function BlizzardEnd( event )
 	local caster = event.caster
-	caster:RemoveModifierByName("modifier_blizzard_wave")
+	caster.blizzard_dummy_point:RemoveModifierByName("modifier_blizzard_wave")
 	caster:RemoveModifierByName("modifier_blizzard_channelling")
 	caster.blizzard_dummy_point:StopSound("hero_Crystal.freezingField.wind")
 	
 	local blizzard_dummy_point_pointer = caster.blizzard_dummy_point
-	Timers:CreateTimer(0.3,function() blizzard_dummy_point_pointer:RemoveSelf() end)
+	Timers:CreateTimer(0.4,function() blizzard_dummy_point_pointer:RemoveSelf() end)
 	
 end

@@ -57,6 +57,7 @@ local team_d_counter = 0
 local testing = false
 local testingUnits = false
 local testingLevels = false
+local filmmaker = false
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
@@ -894,6 +895,12 @@ function GameMode:OnPlayerPickHero(keys)
                 hero:HeroLevelUp(true)
             end
         end
+		if filmmaker then
+			for i=1,30 do
+                CreateUnitByName("human_footman", Vector(400, -400, 100), true, hero, hero, 2)
+				CreateUnitByName("human_footman", Vector(400, -200, 100), true, nil, nil, 3)
+            end
+		end
         
         local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
         tower:RemoveModifierByName("modifier_invulnerable")

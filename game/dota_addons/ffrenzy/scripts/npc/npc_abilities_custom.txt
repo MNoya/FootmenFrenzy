@@ -568,7 +568,6 @@
 	         		{
 						"ModifierName"	"modifier_healing_spray_caster"
 	         			"Target" 		"TARGET"
-	         			"Duration"		"0.9"
 					}
 				}
 				"ThinkInterval"  "%wave_interval"
@@ -579,7 +578,6 @@
 	         		{
 						"ModifierName"	"modifier_healing_spray_caster"
 	         			"Target" 		"TARGET"
-	         			"Duration"		"0.9"
 					}			
 				}			
 			}
@@ -616,7 +614,7 @@
 							{
 								"ScriptFile"	"heroes/alchemist/healing_spray.lua"
 								"Function"		"HealingSprayWave"
-							} 
+							}
 	
 							"FireEffect"
 							{
@@ -629,9 +627,17 @@
 									"15"	"255 255 0"
 									"16"	"255 255 0"
 								}					
-							}	
+							}
+	
+							"RemoveModifier"
+							{
+								"ModifierName"	"modifier_healing_spray_caster"
+								"Target" 		"TARGET"
+							}						
 						}
 					}
+					
+					 
 				}		
 			}
 		}	
@@ -821,21 +827,31 @@
 			{
 				"OnCreated"
 				{
-					"RunScript"
-					{
-						"ScriptFile"	"heroes/archmage/blizzard.lua"
-						"Function"		"BlizzardWaveStart"
-						"Target"		"POINT"
+					//"RunScript"
+					//{
+					//	"ScriptFile"	"heroes/archmage/blizzard.lua"
+					//	"Function"		"BlizzardWaveStart"
+					//	"Target"		"POINT"
+					//}
+					"ApplyModifier"
+	         		{
+						"ModifierName"	"modifier_blizzard_thinker"
+	         			"Target" 		"TARGET"
 					}
 				}
 				"ThinkInterval"  "%wave_interval"
 				"OnIntervalThink"
 				{
-					"RunScript"
-					{
-						"ScriptFile"	"heroes/archmage/blizzard.lua"
-						"Function"		"BlizzardWaveStart"
-						"Target"		"POINT"
+					//"RunScript"
+					//{
+					//	"ScriptFile"	"heroes/archmage/blizzard.lua"
+					//	"Function"		"BlizzardWaveStart"
+					//	"Target"		"POINT"
+					//}
+					"ApplyModifier"
+	         		{
+						"ModifierName"	"modifier_blizzard_thinker"
+	         			"Target" 		"TARGET"
 					}
 				}
 			}
@@ -13964,9 +13980,8 @@
 				{
 					"ApplyModifier"
 	         		{
-						"ModifierName"	"modifier_rain_of_fire_caster"
+						"ModifierName"	"modifier_rain_of_fire_explosion"
 	         			"Target" 		"TARGET"
-	         			"Duration"		"0.9"
 					}
 				}
 				"ThinkInterval"  "%wave_interval"
@@ -13974,15 +13989,14 @@
 				{
 					"ApplyModifier"
 	         		{
-						"ModifierName"	"modifier_rain_of_fire_caster"
+						"ModifierName"	"modifier_rain_of_fire_explosion"
 	         			"Target" 		"TARGET"
-	         			"Duration"		"0.9"
 					}
 				}
 				
 			}
 			
-			"modifier_rain_of_fire_caster"
+			"modifier_rain_of_fire_explosion"
 			{
 				"OnCreated"
 				{
@@ -14055,6 +14069,11 @@
 								"Target" 			"TARGET"
 								"EffectName"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 								"EffectAttachType" 	"follow_origin"
+							}
+							"RemoveModifier"
+							{
+								"ModifierName"	"modifier_rain_of_fire_explosion"
+								"Target" 		"TARGET"
 							}
 						}
 					}
@@ -14347,7 +14366,6 @@
 	         		{
 						"ModifierName"	"modifier_rain_of_fire_explosion"
 	         			"Target" 		"TARGET"
-	         			"Duration"		"0.9"
 					}
 				}
 				
@@ -14358,7 +14376,6 @@
 	         		{
 						"ModifierName"	"modifier_rain_of_fire_explosion"
 	         			"Target" 		"TARGET"
-	         			"Duration"		"0.9"
 					}
 				}
 				
@@ -14439,6 +14456,12 @@
 								"Target" 			"TARGET"
 								"EffectName"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 								"EffectAttachType" 	"follow_origin"
+							}
+							
+							"RemoveModifier"
+							{
+								"ModifierName"	"modifier_rain_of_fire_explosion"
+								"Target" 		"TARGET"
 							}
 						}
 					}

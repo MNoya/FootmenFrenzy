@@ -14,6 +14,8 @@ end
 
 function RainOfFireEnd( event )
 	local caster = event.caster
+	caster.fire_storm_dummy:RemoveModifierByName("modifier_rain_of_fire_thinker")
+	caster:RemoveModifierByName("modifier_rain_of_fire_channelling")
 	
 	local fire_storm_dummy_pointer = caster.fire_storm_dummy
 	Timers:CreateTimer(0.4,function() fire_storm_dummy_pointer:RemoveSelf() end)

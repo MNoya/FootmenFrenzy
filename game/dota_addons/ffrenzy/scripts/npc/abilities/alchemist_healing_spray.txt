@@ -141,7 +141,6 @@
          		{
 					"ModifierName"	"modifier_healing_spray_caster"
          			"Target" 		"TARGET"
-         			"Duration"		"0.9"
 				}
 			}
 			"ThinkInterval"  "%wave_interval"
@@ -152,7 +151,6 @@
          		{
 					"ModifierName"	"modifier_healing_spray_caster"
          			"Target" 		"TARGET"
-         			"Duration"		"0.9"
 				}			
 			}			
 		}
@@ -189,7 +187,7 @@
 						{
 							"ScriptFile"	"heroes/alchemist/healing_spray.lua"
 							"Function"		"HealingSprayWave"
-						} 
+						}
 
 						"FireEffect"
 						{
@@ -202,9 +200,17 @@
 								"15"	"255 255 0"
 								"16"	"255 255 0"
 							}					
-						}	
+						}
+
+						"RemoveModifier"
+						{
+							"ModifierName"	"modifier_healing_spray_caster"
+							"Target" 		"TARGET"
+						}						
 					}
 				}
+				
+				 
 			}		
 		}
 	}	

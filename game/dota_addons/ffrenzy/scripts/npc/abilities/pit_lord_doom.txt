@@ -644,9 +644,8 @@
 			{
 				"ApplyModifier"
          		{
-					"ModifierName"	"modifier_rain_of_fire_caster"
+					"ModifierName"	"modifier_rain_of_fire_explosion"
          			"Target" 		"TARGET"
-         			"Duration"		"0.9"
 				}
 			}
 			"ThinkInterval"  "%wave_interval"
@@ -654,15 +653,14 @@
 			{
 				"ApplyModifier"
          		{
-					"ModifierName"	"modifier_rain_of_fire_caster"
+					"ModifierName"	"modifier_rain_of_fire_explosion"
          			"Target" 		"TARGET"
-         			"Duration"		"0.9"
 				}
 			}
 			
 		}
 		
-		"modifier_rain_of_fire_caster"
+		"modifier_rain_of_fire_explosion"
 		{
 			"OnCreated"
 			{
@@ -735,6 +733,11 @@
 							"Target" 			"TARGET"
 							"EffectName"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 							"EffectAttachType" 	"follow_origin"
+						}
+						"RemoveModifier"
+						{
+							"ModifierName"	"modifier_rain_of_fire_explosion"
+							"Target" 		"TARGET"
 						}
 					}
 				}
