@@ -10,6 +10,7 @@ function BlizzardStartPoint( event )
 
 	caster.blizzard_dummy_point = CreateUnitByName("dummy_unit_vulnerable", point, false, caster, caster, caster:GetTeam())
 	event.ability:ApplyDataDrivenModifier(caster, caster, "modifier_blizzard_wave", nil)
+	caster.blizzard_dummy_point:EmitSound("hero_Crystal.freezingField.wind")
 end
 
 
@@ -66,6 +67,7 @@ function BlizzardEnd( event )
 	local caster = event.caster
 	caster:RemoveModifierByName("modifier_blizzard_wave")
 	caster:RemoveModifierByName("modifier_blizzard_channelling")
+	caster.blizzard_dummy_point:StopSound("hero_Crystal.freezingField.wind")
 	
 	local blizzard_dummy_point_pointer = caster.blizzard_dummy_point
 	Timers:CreateTimer(0.3,function() blizzard_dummy_point_pointer:RemoveSelf() end)

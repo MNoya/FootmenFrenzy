@@ -62,7 +62,7 @@
 		"item"			"item_periapt_of_vitality"
 		"item"			"item_shield_of_the_gods"
 		"item"			"item_runed_bracers"
-		"item"			"item_amulet_of_spell_shield"
+		//"item"			"item_amulet_of_spell_shield"
 		"item"			"item_claws_of_ultimate_devastation"
 		"item"			"item_pipe_of_the_gods"
 		"item"			"item_plate_of_the_storm_lord"

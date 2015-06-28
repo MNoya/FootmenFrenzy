@@ -81,11 +81,11 @@
 			"Target" 		"CASTER"
 		}
 				
-		"FireSound"
-		{
-			"EffectName"	"hero_Crystal.freezingField.wind"
-			"Target"		"CASTER"
-		}
+		//"FireSound"
+		//{
+		//	"EffectName"	"hero_Crystal.freezingField.wind"
+		//	"Target"		"CASTER"
+		//}
 	}
 
 	"OnChannelFinish"

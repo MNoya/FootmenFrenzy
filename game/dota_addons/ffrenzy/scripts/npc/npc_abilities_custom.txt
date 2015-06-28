@@ -779,11 +779,11 @@
 				"Target" 		"CASTER"
 			}
 					
-			"FireSound"
-			{
-				"EffectName"	"hero_Crystal.freezingField.wind"
-				"Target"		"CASTER"
-			}
+			//"FireSound"
+			//{
+			//	"EffectName"	"hero_Crystal.freezingField.wind"
+			//	"Target"		"CASTER"
+			//}
 		}
 	
 		"OnChannelFinish"
@@ -7778,6 +7778,7 @@
 				"Aura_Radius" 			"%radius"
 				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_BOTH"
 				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 			}
 			
 			"modifier_building_regen_aura"
