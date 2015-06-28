@@ -1,11 +1,7 @@
--fix true sight on towers, potm owl, far seer first ability
 -fix win/lose conditions
-	-teams sometimes win before the game is over
--swap arrow icons
 -tooltips for everything (use modkit)
 -unit & hero tinting
 -test all hero abilities
--fix broken heroes and release them
 
 Unit abilities
 -Grunt damage buff when hit, or extra damage when health missing
