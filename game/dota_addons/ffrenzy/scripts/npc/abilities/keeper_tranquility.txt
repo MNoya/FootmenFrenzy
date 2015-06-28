@@ -54,7 +54,7 @@
 		"ApplyModifier"
 		{
 			"Target"			"CASTER"
-			"ModifierName"		"modifier_tranquility_aura"
+			"ModifierName"		"modifier_tranquility_channel"
 		}	
 	}
 
@@ -63,21 +63,42 @@
 		"RemoveModifier"
 		{
 			"Target"			"CASTER"
-			"ModifierName"		"modifier_tranquility_aura"
+			"ModifierName"		"modifier_tranquility_channel"
 		}	
 
-	}
-	"OnHeroKilled"
-	{
-		"RemoveModifier"
-		{
-			"Target"			"CASTER"
-			"ModifierName"		"modifier_tranquility_aura"
-		}	
 	}
 
 	"Modifiers"
 	{
+		"modifier_tranquility_channel"
+		{
+			"IsHidden"			"1"
+            "ThinkInterval"		"2.0"
+            "OnIntervalThink"
+         	{
+         		"ApplyModifier"
+         		{
+         			"ModifierName"	"modifier_tranquility_aura"
+         			"Target" 		"CASTER"
+         			"Duration"		"1.9"
+         		}
+			}
+			"OnCreated"
+         	{
+         		"ApplyModifier"
+         		{
+         			"ModifierName"	"modifier_tranquility_aura"
+         			"Target" 		"CASTER"
+         			"Duration"		"1.9"
+         		}
+				"FireSound"
+				{
+					"Target" 		"CASTER"
+					"EffectName" 	"leshrac_lesh_respawn_09"
+				}
+			}
+		}
+		
 		"modifier_tranquility_aura"
 		{
 			"IsHidden" 			"1"
@@ -103,18 +124,8 @@
 					}
 				}
 
-				"FireSound"
-				{
-					"Target" 		"CASTER"
-					"EffectName" 	"leshrac_lesh_respawn_09"
-				}
+				
 
-			}
-
-			// Just for looping sound and animation
-			"ThinkInterval"		"2"
-			"OnIntervalThink"
-			{
 				"FireSound"
 				{
 					"Target"		"CASTER"
