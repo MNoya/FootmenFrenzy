@@ -48,7 +48,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"wave_damage"			"25 30 35 40"
+			"wave_damage"			"45 80 110 140"
 		}
 		"05"
 		{

@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"shield_duration"	"15 30 45 60"
+			"shield_duration"	"10 15 20 25"
 		}
 	}
 	"OnSpellStart"

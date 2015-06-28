@@ -746,7 +746,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"25 30 35 40"
+				"wave_damage"			"45 80 110 140"
 			}
 			"05"
 			{
@@ -9840,6 +9840,14 @@
 			}	
 	
 		}
+		"OnHeroKilled"
+		{
+			"RemoveModifier"
+			{
+				"Target"			"CASTER"
+				"ModifierName"		"modifier_tranquility_aura"
+			}	
+		}
 	
 		"Modifiers"
 		{
@@ -10516,7 +10524,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"60"
+				"duration"				"30"
 			}
 			"02"
 			{
@@ -10744,7 +10752,7 @@
 		"AbilityCooldown"				"8.0"
 	
 		"AbilityManaCost"				"75"
-		"AbilityDamage"					"100 225 350 450"
+		"AbilityDamage"					"75 125 175 225"
 		
 		"AbilitySpecial"
 		{
@@ -11867,7 +11875,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"shield_duration"	"15 30 45 60"
+				"shield_duration"	"10 15 20 25"
 			}
 		}
 		"OnSpellStart"
@@ -13848,7 +13856,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"25"
+				"wave_damage"			"45"
 			}
 			"05"
 			{
@@ -14219,7 +14227,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"25 30 35 40"
+				"wave_damage"			"45 80 110 140"
 			}
 			"05"
 			{

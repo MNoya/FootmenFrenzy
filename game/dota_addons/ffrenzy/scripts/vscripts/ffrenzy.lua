@@ -883,14 +883,14 @@ function GameMode:OnPlayerPickHero(keys)
         
         --test units
         if testingUnits then
-            CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-            CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
-            CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+			for i=1,10 do
+                CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
+            end
             Timers:CreateTimer(15,function() 
             CreateUnitByName("npc_far_seer_shadow_wolf", Vector(-3000, -3000, 100), true, nil, nil, 3) end)
         end
         if testingLevels then
-            for i=1,24 do
+            for i=1,5 do
                 hero:HeroLevelUp(true)
             end
         end
@@ -949,6 +949,7 @@ function GameMode:OnPlayerPickHero(keys)
     hero.lost = false
     Timers:CreateTimer(1, function()
         local base_building = player.base
+		if player then print("Checking: player detected "..player) end
         if not IsValidEntity(base_building) or not base_building:IsAlive() then
             MakePlayerLose(player)
             return
@@ -974,6 +975,8 @@ function MakePlayerLose( player )
     end
 
     local hero = player:GetAssignedHero()
+	if player then print("MakePlayerLose: player detected") end
+	if hero then print("MakePlayerLose: hero detected") end
     hero:ForceKill(false)
     hero.lost = true
     Timers:CreateTimer(function()

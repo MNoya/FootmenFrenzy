@@ -67,6 +67,14 @@
 		}	
 
 	}
+	"OnHeroKilled"
+	{
+		"RemoveModifier"
+		{
+			"Target"			"CASTER"
+			"ModifierName"		"modifier_tranquility_aura"
+		}	
+	}
 
 	"Modifiers"
 	{
