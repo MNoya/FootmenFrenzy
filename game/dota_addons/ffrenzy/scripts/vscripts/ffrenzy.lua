@@ -989,24 +989,28 @@ function MakePlayerLose( hero )
     local winnerTeamID = nil
     local winConditionFailed = false
     for _,hero in pairs(allHeroes) do
-        print(hero:GetPlayerOwnerID())
-        if not hero.lost and not winConditionFailed then
-            print(hero:GetPlayerOwnerID().." is still playing, checking others")
-            winnerTeamID = hero:GetTeamNumber() -- Possible winning team
-            for _,otherHero in pairs(allHeroes) do
-                -- If it's a different hero, from a different team, both alive and playing, break
-                if (otherHero ~= hero) and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) and (not otherHero.lost) then
-                    print(" "..otherHero:GetPlayerOwnerID().." is still in play and has a different team than "..hero:GetPlayerOwnerID())
-                    winConditionFailed = true
-                    winnerTeamID = nil
-                    break                    
-                elseif otherHero.lost then
-                    print(" "..otherHero:GetPlayerOwnerID().." also lost")
+        print("Checking ",hero:GetPlayerOwnerID())
+        if not hero.lost then
+            if not winConditionFailed then
+                print(hero:GetPlayerOwnerID().." is still playing, checking others")
+                winnerTeamID = hero:GetTeamNumber() -- Possible winning team
+                for _,otherHero in pairs(allHeroes) do
+                    -- If it's a different hero, from a different team, both alive and playing, break
+                    if (otherHero ~= hero) and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) and (not otherHero.lost) then
+                        print(" "..otherHero:GetPlayerOwnerID().." is still in play and has a different team than "..hero:GetPlayerOwnerID())
+                        winConditionFailed = true
+                        winnerTeamID = nil
+                        break                    
+                    elseif otherHero.lost then
+                        print(" "..otherHero:GetPlayerOwnerID().." lost")
+                    end
                 end
+            else
+                print("Win Condition Check Failed - Keep playing")
+                break
             end
         else
-            print("Win Condition Check Failed - Keep playing")
-            break
+            print("   This hero lost")
         end
     end
     if winnerTeamID then
