@@ -3,6 +3,7 @@ function GiveBaseItems( event )
 	local caster = event.caster
 	local owner = caster:GetOwner()
 	local player = caster:GetPlayerOwner()
+	local hero = player:GetAssignedHero()
 
 	-- Don't do it for towers
 	if string.find(caster:GetUnitName(), "tower") then
@@ -10,9 +11,9 @@ function GiveBaseItems( event )
 	end
 
 	-- Check the current level of upgrades and give the items on their proper rank
-	local upgrades = player.upgrades -- Table of the current upgrade levels
+	local upgrades = hero.upgrades -- Table of the current upgrade levels
 
-	local upgrade_weapon_level = player.upgrades["upgrade_weapon"]
+	local upgrade_weapon_level = hero.upgrades["upgrade_weapon"]
 	if upgrade_weapon_level then
 		local next_upgrade_level = upgrade_weapon_level + 1
 		local item_upgrade_weapon = CreateItem("item_upgrade_weapon"..next_upgrade_level, owner, caster)
@@ -22,7 +23,7 @@ function GiveBaseItems( event )
 		caster:AddItem(item_upgrade_weapon)
 	end
 
-	local upgrade_armor_level = player.upgrades["upgrade_armor"]
+	local upgrade_armor_level = hero.upgrades["upgrade_armor"]
 	if upgrade_armor_level then
 		local next_upgrade_level = upgrade_armor_level + 1
 		local item_upgrade_armor = CreateItem("item_upgrade_armor"..next_upgrade_level, owner, caster)
@@ -36,7 +37,7 @@ function GiveBaseItems( event )
 	local building_name = caster:GetUnitName()
 	local race_training_level = 1
 	if StringStartsWith(building_name, "human") then
-		race_training_level = player.upgrades["upgrade_human_training"]
+		race_training_level = hero.upgrades["upgrade_human_training"]
 		if race_training_level then
 			local next_upgrade_level = race_training_level + 1
 			local item_upgrade_human_training = CreateItem("item_upgrade_human_training"..next_upgrade_level, owner, caster)
@@ -46,7 +47,7 @@ function GiveBaseItems( event )
 			caster:AddItem(item_upgrade_armor)
 		end
 	elseif StringStartsWith(building_name, "nightelf") then
-		race_training_level = player.upgrades["upgrade_nightelf_training"]
+		race_training_level = hero.upgrades["upgrade_nightelf_training"]
 		if race_training_level then
 			local next_upgrade_level = race_training_level + 1
 			local item_upgrade_nightelf_training = CreateItem("item_upgrade_nightelf_training"..next_upgrade_level, owner, caster)
@@ -56,7 +57,7 @@ function GiveBaseItems( event )
 			caster:AddItem(item_upgrade_armor)
 		end
 	elseif StringStartsWith(building_name, "orc") then
-		race_training_level = player.upgrades["upgrade_orc_training"]
+		race_training_level = hero.upgrades["upgrade_orc_training"]
 		if race_training_level then
 			local next_upgrade_level = race_training_level + 1
 			local item_upgrade_orc_training = CreateItem("item_upgrade_orc_training"..next_upgrade_level, owner, caster)
@@ -66,7 +67,7 @@ function GiveBaseItems( event )
 			caster:AddItem(item_upgrade_armor)
 		end
 	elseif StringStartsWith(building_name, "undead") then
-		race_training_level = player.upgrades["upgrade_undead_training"]
+		race_training_level = hero.upgrades["upgrade_undead_training"]
 		if race_training_level then
 			local next_upgrade_level = race_training_level + 1
 			local item_upgrade_undead_training = CreateItem("item_upgrade_undead_training"..next_upgrade_level, owner, caster)

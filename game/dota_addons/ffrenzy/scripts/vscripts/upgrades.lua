@@ -2,16 +2,17 @@
 function UpgradeFinished( event )
 	local caster = event.caster
 	local player = caster:GetPlayerOwner()
-	local upgrades = player.upgrades -- Table of the current upgrade levels
+	local hero = player:GetAssignedHero()
+	local upgrades = hero.upgrades -- Table of the current upgrade levels
 	local upgrade_level = event.Level
 	local upgrade_name = event.Name
 
-	player.upgrades[upgrade_name] = upgrade_level
+	hero.upgrades[upgrade_name] = upgrade_level
 	print("Upgrade Finished: "..upgrade_name..upgrade_level)
-	--DeepPrintTable(player.upgrades)
+	--DeepPrintTable(hero.upgrades)
 
 	-- Upgrade all units
-	for _,unit in pairs(player.units) do
+	for _,unit in pairs(hero.units) do
 		ApplyUpgrade(unit, upgrade_name)
 	end
 
@@ -38,11 +39,12 @@ function ApplyUpgrade(unit, upgrade_name)
 		end
 		return
 	end
-	local upgrades = player.upgrades
+	local hero = player:GetAssignedHero()
+	local upgrades = hero.upgrades
 	local upgrade_level = 0
 
-	if player.upgrades[upgrade_name] then
-		upgrade_level = player.upgrades[upgrade_name]
+	if hero.upgrades[upgrade_name] then
+		upgrade_level = hero.upgrades[upgrade_name]
 	else
 		return
 	end

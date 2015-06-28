@@ -671,7 +671,7 @@ function GameMode:OnNPCSpawned(keys)
         --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
     --end
 
-    if npc:IsCreature() then
+    if npc:IsCreature() and not IsCustomBuilding(npc) then
         Timers:CreateTimer(0.05, function()
             --print("Unit Spawned, Applying Upgrades...")
             ApplyUpgrade(npc, "upgrade_weapon")
@@ -849,9 +849,9 @@ function GameMode:OnPlayerPickHero(keys)
     end
 
     -- Initialize Variables for Tracking
-    player.units = {} -- This keeps the handle of all the units of the player army
-    player.upgrades = {} -- This keeps the name of all the upgrades researched, so each unit can check and upgrade itself on spawn
-    player.towers = {} -- Towers (possible to enable building more towers later)
+    hero.units = {} -- This keeps the handle of all the units of the player army
+    hero.upgrades = {} -- This keeps the name of all the upgrades researched, so each unit can check and upgrade itself on spawn
+    hero.towers = {} -- Towers (possible to enable building more towers later)
 
     -- Define where to put the player/team
     -- Choose a Position
@@ -879,7 +879,7 @@ function GameMode:OnPlayerPickHero(keys)
         building:SetAbsOrigin(base_position)
 
         -- Add the base building to the player handle.
-        player.base = building
+        hero.base = building
         
         --test units
         if testingUnits then
@@ -907,8 +907,8 @@ function GameMode:OnPlayerPickHero(keys)
         tower2:SetControllableByPlayer(playerID, true)
         tower2:SetAbsOrigin(tower_b_position)
         
-        table.insert(player.towers, tower1)
-        table.insert(player.towers, tower2)
+        table.insert(hero.towers, tower1)
+        table.insert(hero.towers, tower2)
 
         CreateUnitByName("dummy_vision", Vector(0, 0, 100), false, hero, hero, hero:GetTeamNumber())
 
@@ -947,46 +947,34 @@ function GameMode:OnPlayerPickHero(keys)
 
     -- Defeat check for this player
     hero.lost = false
-	print("Pre Check")
-    Timers:CreateTimer(1, function()
-        local base_building = player.base
-		
-		print ("Checking")
-		print(base_building)
-		if player then print("Checking: player detected "..player) end
-		if player.base then print("Checking: player.base detected "..player) end
-		if base_building then print("Checking: base_building detected") end
-		
+    Timers:CreateTimer(function()
+        local base_building = hero.base			
         if not IsValidEntity(base_building) or not base_building:IsAlive() then
-			print("Checking: base is dead")
-            MakePlayerLose(player)
+            print("base_building ded")
+            MakePlayerLose(hero)
             return
         else
-			print("Checking: return")
             return 1 -- Check again every second
         end
     end)
 
 end
 
--- Kill all the units and towers of the player, set their hero to not respawn and takes care of Team-Loss & Win Condition
-function MakePlayerLose( player )
-    for _,unit in pairs(player.units) do
+-- Kill all the units and towers of the HERO, set their hero to not respawn and takes care of Team-Loss & Win Condition
+function MakePlayerLose( hero )
+    for _,unit in pairs(hero.units) do
         if IsValidEntity(unit) and unit:IsAlive() then
             unit:ForceKill(false)
         end
     end
 
-    for _,tower in pairs(player.towers) do
+    for _,tower in pairs(hero.towers) do
         if IsValidEntity(tower) and tower:IsAlive() then
             tower:ForceKill(false)
         end
     end
 
-    local hero = player:GetAssignedHero()
 	print("Making Player Lose")
-	if player then print("MakePlayerLose: player detected") end
-	if hero then print("MakePlayerLose: hero detected") end
     hero:ForceKill(false)
     hero.lost = true
     Timers:CreateTimer(function()
@@ -1086,21 +1074,22 @@ function GameMode:OnEntityKilled( keys )
 
     -- Table cleanup
     if player then
+        local hero = player:GetAssignedHero()
         local table_units = {}
-        for _,unit in pairs(player.units) do
+        for _,unit in pairs(hero.units) do
             if unit and IsValidEntity(unit) and unit:IsAlive() then
                 table.insert(table_units, unit)
             end
         end
-        player.units = table_units
+        hero.units = table_units
 
         local table_towers = {}
-        for _,tower in pairs(player.towers) do
+        for _,tower in pairs(hero.towers) do
             if tower and IsValidEntity(tower) and tower:IsAlive() then
                 table.insert(table_towers, tower)
             end
         end
-        player.towers = table_towers
+        hero.towers = table_towers
     end
 
     -- Give Experience to heroes based on the level of the killed creature

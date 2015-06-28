@@ -14,10 +14,10 @@ function SpawnUnit( event )
 	FindClearSpaceForUnit(unit, position, true)
 	unit:AddNewModifier(caster, nil, "modifier_phased", { duration = 0.03 })
 
-	-- Add to player.units table
+	-- Add to hero.units table
 	unit:SetOwner(hero)
 	unit:SetControllableByPlayer(playerID, true)
-	table.insert(player.units, unit)
+	table.insert(hero.units, unit)
 	
 	-- Put the passive skill on cooldown (just for looks)
 	local ability = event.ability

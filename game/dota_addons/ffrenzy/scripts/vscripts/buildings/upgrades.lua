@@ -34,7 +34,7 @@ function UpgradeBuilding( event )
 	-- Update the player base
 	if not string.find(new_unit, "tower") then
 		print("Updated Base: "..new_unit)
-		player.base = building
+		hero.base = building
 	end
 	
 	-- Teach spawn ability
