@@ -54,9 +54,9 @@ local team_c_counter = 0
 local team_d_counter = 0
 
 -- Change these at will
-local testing = true
-local testingUnits = true
-local testingLevels = true
+local testing = false
+local testingUnits = false
+local testingLevels = false
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
@@ -947,13 +947,22 @@ function GameMode:OnPlayerPickHero(keys)
 
     -- Defeat check for this player
     hero.lost = false
+	print("Pre Check")
     Timers:CreateTimer(1, function()
         local base_building = player.base
+		
+		print ("Checking")
+		print(base_building)
 		if player then print("Checking: player detected "..player) end
+		if player.base then print("Checking: player.base detected "..player) end
+		if base_building then print("Checking: base_building detected") end
+		
         if not IsValidEntity(base_building) or not base_building:IsAlive() then
+			print("Checking: base is dead")
             MakePlayerLose(player)
             return
         else
+			print("Checking: return")
             return 1 -- Check again every second
         end
     end)
@@ -975,6 +984,7 @@ function MakePlayerLose( player )
     end
 
     local hero = player:GetAssignedHero()
+	print("Making Player Lose")
 	if player then print("MakePlayerLose: player detected") end
 	if hero then print("MakePlayerLose: hero detected") end
     hero:ForceKill(false)
