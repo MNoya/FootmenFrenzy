@@ -6,9 +6,18 @@ function SpawnUnit( event )
 	local hero = player:GetAssignedHero()
 	local unit_name = event.UnitName
 	local position = GetInitialRallyPoint( event )
+	local teamID = caster:GetTeam()
 	
 	local unit = CreateUnitByName(unit_name, position, true, owner, owner, caster:GetTeamNumber())
 	
+	for k, v in pairs(unit:GetChildren()) do 
+		if v:GetClassname() == "dota_item_wearable" then
+			local model = v:GetModelName()
+			if not string.match(model, "horse") and not string.match(model, "mount") then
+				v:SetRenderColor(GameRules.TeamColors[teamID][1],GameRules.TeamColors[teamID][2],GameRules.TeamColors[teamID][3])
+			end
+		end 
+	end 
 
 	-- Make sure the unit gets stuck
 	FindClearSpaceForUnit(unit, position, true)

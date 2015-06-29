@@ -1,5 +1,5 @@
--tooltips for modifiers
--unit & hero tinting
+-tooltips for modifiers (not working?)
+
 -test all hero abilities
 
 -Review unit stats and ability damages (Balance between races)
@@ -8,4 +8,6 @@
 
 -make it so when group selecting units, buildings don't get selected.  possible?
 
--max units 200
+-max units maybe
+
+-base upgrade doesnt replace unit, instead switches model, ups hp, switches wearables, switches abilities so is not unselected when upgraded

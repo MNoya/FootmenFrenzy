@@ -1785,4 +1785,390 @@
 		"DOTA_Tooltip_ability_spawn_meat_wagon"                                          "Spawn Meat Wagon"
 		"DOTA_Tooltip_ability_spawn_meat_wagon_Description"                              ""
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// ******************** ABILITY MODIFIERS ********************
+		"DOTA_Tooltip_modifier_acid_bomb"                                                 "Acid Bomb"
+		"DOTA_Tooltip_modifier_acid_bomb_Description"                                     ""
+
+		"DOTA_Tooltip_modifier_healing_spray_channelling"                                 "Healing Spray Channelling"
+		"DOTA_Tooltip_modifier_healing_spray_channelling_Description"                     ""
+
+		"DOTA_Tooltip_modifier_healing_spray_thinker"                                     "Healing Spray Thinker"
+		"DOTA_Tooltip_modifier_healing_spray_thinker_Description"                         ""
+
+		"DOTA_Tooltip_modifier_healing_spray_caster"                                      "Healing Spray Caster"
+		"DOTA_Tooltip_modifier_healing_spray_caster_Description"                          ""
+
+		"DOTA_Tooltip_modifier_blizzard_wave"                                             "Blizzard Wave"
+		"DOTA_Tooltip_modifier_blizzard_wave_Description"                                 ""
+
+		"DOTA_Tooltip_modifier_blizzard_thinker"                                          "Blizzard Thinker"
+		"DOTA_Tooltip_modifier_blizzard_thinker_Description"                              ""
+
+		"DOTA_Tooltip_modifier_brilliance_aura_mana_regen"                                "Brilliance Aura Mana Regen"
+		"DOTA_Tooltip_modifier_brilliance_aura_mana_regen_Description"                    ""
+
+		"DOTA_Tooltip_modifier_channeling_animation"                                      "Channeling Animation"
+		"DOTA_Tooltip_modifier_channeling_animation_Description"                          ""
+
+		"DOTA_Tooltip_modifier_stampede"                                                  "Stampede"
+		"DOTA_Tooltip_modifier_stampede_Description"                                      ""
+
+		"DOTA_Tooltip_modifier_stampede_dummy"                                            "Stampede Dummy"
+		"DOTA_Tooltip_modifier_stampede_dummy_Description"                                ""
+
+		"DOTA_Tooltip_modifier_bash_stun"                                                 "Bash Stun"
+		"DOTA_Tooltip_modifier_bash_stun_Description"                                     ""
+
+		"DOTA_Tooltip_modifier_hawk_invis"                                                "Hawk Invis"
+		"DOTA_Tooltip_modifier_hawk_invis_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_frenzy"                                                    "Frenzy"
+		"DOTA_Tooltip_modifier_frenzy_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_bladestorm"                                                "Bladestorm"
+		"DOTA_Tooltip_modifier_bladestorm_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_windwalk"                                                  "Windwalk"
+		"DOTA_Tooltip_modifier_windwalk_Description"                                      ""
+
+		"DOTA_Tooltip_modifier_banish"                                                    "Banish"
+		"DOTA_Tooltip_modifier_banish_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_flame_strike_first_burn"                                   "Flame Strike First Burn"
+		"DOTA_Tooltip_modifier_flame_strike_first_burn_Description"                       ""
+
+		"DOTA_Tooltip_modifier_flame_strike_second_burn"                                  "Flame Strike Second Burn"
+		"DOTA_Tooltip_modifier_flame_strike_second_burn_Description"                      ""
+
+		"DOTA_Tooltip_modifier_phoenix_reborn"                                            "Phoenix Reborn"
+		"DOTA_Tooltip_modifier_phoenix_reborn_Description"                                ""
+
+		"DOTA_Tooltip_modifier_egg"                                                       "Egg"
+		"DOTA_Tooltip_modifier_egg_Description"                                           ""
+
+		"DOTA_Tooltip_modifier_siphon_mana"                                               "Siphon Mana"
+		"DOTA_Tooltip_modifier_siphon_mana_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_carrion_beetle"                                            "Carrion Beetle"
+		"DOTA_Tooltip_modifier_carrion_beetle_Description"                                ""
+
+		"DOTA_Tooltip_modifier_burrow"                                                    "Burrow"
+		"DOTA_Tooltip_modifier_burrow_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_impale"                                                    "Impale"
+		"DOTA_Tooltip_modifier_impale_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_locust_swarm"                                              "Locust Swarm"
+		"DOTA_Tooltip_modifier_locust_swarm_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_locust"                                                    "Locust"
+		"DOTA_Tooltip_modifier_locust_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_spiked_carapace"                                           "Spiked Carapace"
+		"DOTA_Tooltip_modifier_spiked_carapace_Description"                               ""
+
+		"DOTA_Tooltip_modifier_life_drain"                                                "Life Drain"
+		"DOTA_Tooltip_modifier_life_drain_Description"                                    ""
+
+		"DOTA_Tooltip_channelling_animation"                                              "Channelling Animation"
+		"DOTA_Tooltip_channelling_animation_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_silenced"                                                  "Silenced"
+		"DOTA_Tooltip_modifier_silenced_Description"                                      ""
+
+		"DOTA_Tooltip_modifier_animate_dead"                                              "Animate Dead"
+		"DOTA_Tooltip_modifier_animate_dead_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_unholy_aura_buff"                                          "Unholy Aura Buff"
+		"DOTA_Tooltip_modifier_unholy_aura_buff_Description"                              ""
+
+		"DOTA_Tooltip_modifier_demon_form"                                                "Demon Form"
+		"DOTA_Tooltip_modifier_demon_form_Description"                                    ""
+
+		"DOTA_Tooltip_evasion"                                                            "Evasion"
+		"DOTA_Tooltip_evasion_Description"                                                ""
+
+		"DOTA_Tooltip_modifier_immolation"                                                "Immolation"
+		"DOTA_Tooltip_modifier_immolation_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_inferno_stun"                                              "Inferno Stun"
+		"DOTA_Tooltip_modifier_inferno_stun_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_inferno_immolation_burn"                                   "Inferno Immolation Burn"
+		"DOTA_Tooltip_modifier_inferno_immolation_burn_Description"                       ""
+
+		"DOTA_Tooltip_modifier_sleep"                                                     "Sleep"
+		"DOTA_Tooltip_modifier_sleep_Description"                                         ""
+
+		"DOTA_Tooltip_modifier_vampiric_aura_buff"                                        "Vampiric Aura Buff"
+		"DOTA_Tooltip_modifier_vampiric_aura_buff_Description"                            ""
+
+		"DOTA_Tooltip_dummy_modifier"                                                     "Dummy Modifier"
+		"DOTA_Tooltip_dummy_modifier_Description"                                         ""
+
+		"DOTA_Tooltip_modifier_cripple"                                                   "Cripple"
+		"DOTA_Tooltip_modifier_cripple_Description"                                       ""
+
+		"DOTA_Tooltip_modifier_curse"                                                     "Curse"
+		"DOTA_Tooltip_modifier_curse_Description"                                         ""
+
+		"DOTA_Tooltip_modifier_mana_aura_regen"                                           "Mana Aura Regen"
+		"DOTA_Tooltip_modifier_mana_aura_regen_Description"                               ""
+
+		"DOTA_Tooltip_modifier_earthquake_thinker"                                        "Earthquake Thinker"
+		"DOTA_Tooltip_modifier_earthquake_thinker_Description"                            ""
+
+		"DOTA_Tooltip_modifier_eartquake_slow"                                            "Eartquake Slow"
+		"DOTA_Tooltip_modifier_eartquake_slow_Description"                                ""
+
+		"DOTA_Tooltip_modifier_incinerate_stack"                                          "Incinerate Stack"
+		"DOTA_Tooltip_modifier_incinerate_stack_Description"                              ""
+
+		"DOTA_Tooltip_modifier_soul_burn"                                                 "Soul Burn"
+		"DOTA_Tooltip_modifier_soul_burn_Description"                                     ""
+
+		"DOTA_Tooltip_modifier_channeling_idle"                                           "Channeling Idle"
+		"DOTA_Tooltip_modifier_channeling_idle_Description"                               ""
+
+		"DOTA_Tooltip_modifier_volcano_thinker"                                           "Volcano Thinker"
+		"DOTA_Tooltip_modifier_volcano_thinker_Description"                               ""
+
+		"DOTA_Tooltip_modifier_volcano_stun"                                              "Volcano Stun"
+		"DOTA_Tooltip_modifier_volcano_stun_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_entangling_roots"                                          "Entangling Roots"
+		"DOTA_Tooltip_modifier_entangling_roots_Description"                              ""
+
+		"DOTA_Tooltip_modifiers_thorns_aura_buff"                                         "Modifiers Thorns Aura Buff"
+		"DOTA_Tooltip_modifiers_thorns_aura_buff_Description"                             ""
+
+		"DOTA_Tooltip_modifier_tranquility_aura_effect"                                   "Tranquility Aura Effect"
+		"DOTA_Tooltip_modifier_tranquility_aura_effect_Description"                       ""
+
+		"DOTA_Tooltip_modifier_tranquility_animation"                                     "Tranquility Animation"
+		"DOTA_Tooltip_modifier_tranquility_animation_Description"                         ""
+
+		"DOTA_Tooltip_modifier_death_and_decay_thinker"                                   "Death And Decay Thinker"
+		"DOTA_Tooltip_modifier_death_and_decay_thinker_Description"                       ""
+
+		"DOTA_Tooltip_modifier_frost_armor"                                               "Frost Armor"
+		"DOTA_Tooltip_modifier_frost_armor_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_frost_armor_slow"                                          "Frost Armor Slow"
+		"DOTA_Tooltip_modifier_frost_armor_slow_Description"                              ""
+
+		"DOTA_Tooltip_modifier_frost_nova_slow"                                           "Frost Nova Slow"
+		"DOTA_Tooltip_modifier_frost_nova_slow_Description"                               ""
+
+		"DOTA_Tooltip_modifier_avatar"                                                    "Avatar"
+		"DOTA_Tooltip_modifier_avatar_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_storm_bolt"                                                "Storm Bolt"
+		"DOTA_Tooltip_modifier_storm_bolt_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_thunder_clap"                                              "Thunder Clap"
+		"DOTA_Tooltip_modifier_thunder_clap_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_frost_arrows_slow"                                         "Frost Arrows Slow"
+		"DOTA_Tooltip_modifier_frost_arrows_slow_Description"                             ""
+
+		"DOTA_Tooltip_modifier_mana_shield"                                               "Mana Shield"
+		"DOTA_Tooltip_modifier_mana_shield_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_tornado_debuff"                                            "Tornado Debuff"
+		"DOTA_Tooltip_modifier_tornado_debuff_Description"                                ""
+
+		"DOTA_Tooltip_modifier_tornado_flying_debuff"                                     "Tornado Flying Debuff"
+		"DOTA_Tooltip_modifier_tornado_flying_debuff_Description"                         ""
+
+		"DOTA_Tooltip_modifier_devotion_aura_buff"                                        "Devotion Aura Buff"
+		"DOTA_Tooltip_modifier_devotion_aura_buff_Description"                            ""
+
+		"DOTA_Tooltip_modifier_paladin_divine_shield"                                     "Paladin Divine Shield"
+		"DOTA_Tooltip_modifier_paladin_divine_shield_Description"                         ""
+
+		"DOTA_Tooltip_modifier_resurrection"                                              "Resurrection"
+		"DOTA_Tooltip_modifier_resurrection_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_breath_fire_burn"                                          "Breath Fire Burn"
+		"DOTA_Tooltip_modifier_breath_fire_burn_Description"                              ""
+
+		"DOTA_Tooltip_modifier_drunken_haze"                                              "Drunken Haze"
+		"DOTA_Tooltip_modifier_drunken_haze_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_primal_split_delay"                                        "Primal Split Delay"
+		"DOTA_Tooltip_modifier_primal_split_delay_Description"                            ""
+
+		"DOTA_Tooltip_modifier_primal_split_duration"                                     "Primal Split Duration"
+		"DOTA_Tooltip_modifier_primal_split_duration_Description"                         ""
+
+		"DOTA_Tooltip_modifier_split_unit"                                                "Split Unit"
+		"DOTA_Tooltip_modifier_split_unit_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_storm_cyclone"                                             "Storm Cyclone"
+		"DOTA_Tooltip_modifier_storm_cyclone_Description"                                 ""
+
+		"DOTA_Tooltip_modifier_permanent_immolation_burn"                                 "Permanent Immolation Burn"
+		"DOTA_Tooltip_modifier_permanent_immolation_burn_Description"                     ""
+
+		"DOTA_Tooltip_modifier_doom"                                                      "Doom"
+		"DOTA_Tooltip_modifier_doom_Description"                                          ""
+
+		"DOTA_Tooltip_modifier_hoof_stomp"                                                "Hoof Stomp"
+		"DOTA_Tooltip_modifier_hoof_stomp_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_rain_of_fire_thinker"                                      "Rain Of Fire Thinker"
+		"DOTA_Tooltip_modifier_rain_of_fire_thinker_Description"                          ""
+
+		"DOTA_Tooltip_modifier_rain_of_fire_explosion"                                    "Rain Of Fire Explosion"
+		"DOTA_Tooltip_modifier_rain_of_fire_explosion_Description"                        ""
+
+		"DOTA_Tooltip_modifier_rain_of_fire_burn"                                         "Rain Of Fire Burn"
+		"DOTA_Tooltip_modifier_rain_of_fire_burn_Description"                             ""
+
+		"DOTA_Tooltip_modifier_howl_of_terror"                                            "Howl Of Terror"
+		"DOTA_Tooltip_modifier_howl_of_terror_Description"                                ""
+
+		"DOTA_Tooltip_modifier_starfall"                                                  "Starfall"
+		"DOTA_Tooltip_modifier_starfall_Description"                                      ""
+
+		"DOTA_Tooltip_modifier_trueshot_aura_buff"                                        "Trueshot Aura Buff"
+		"DOTA_Tooltip_modifier_trueshot_aura_buff_Description"                            ""
+
+		"DOTA_Tooltip_modifier_big_bad_voodoo"                                            "Big Bad Voodoo"
+		"DOTA_Tooltip_modifier_big_bad_voodoo_Description"                                ""
+
+		"DOTA_Tooltip_modifier_big_bad_voodoo_invulnerability"                            "Big Bad Voodoo Invulnerability"
+		"DOTA_Tooltip_modifier_big_bad_voodoo_invulnerability_Description"                ""
+
+		"DOTA_Tooltip_modifier_hex"                                                       "Hex"
+		"DOTA_Tooltip_modifier_hex_Description"                                           ""
+
+		"DOTA_Tooltip_modifier_spawn_footman"                                             "Spawn Footman"
+		"DOTA_Tooltip_modifier_spawn_footman_Description"                                 ""
+
+		"DOTA_Tooltip_modifier_spawn_rifleman"                                            "Spawn Rifleman"
+		"DOTA_Tooltip_modifier_spawn_rifleman_Description"                                ""
+
+		"DOTA_Tooltip_modifier_spawn_militia"                                             "Spawn Militia"
+		"DOTA_Tooltip_modifier_spawn_militia_Description"                                 ""
+
+		"DOTA_Tooltip_modifier_spawn_spell_breaker"                                       "Spawn Spell Breaker"
+		"DOTA_Tooltip_modifier_spawn_spell_breaker_Description"                           ""
+
+		"DOTA_Tooltip_modifier_spawn_knight"                                              "Spawn Knight"
+		"DOTA_Tooltip_modifier_spawn_knight_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_spawn_siege_engine"                                        "Spawn Siege Engine"
+		"DOTA_Tooltip_modifier_spawn_siege_engine_Description"                            ""
+
+		"DOTA_Tooltip_modifier_spawn_archer"                                              "Spawn Archer"
+		"DOTA_Tooltip_modifier_spawn_archer_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_spawn_huntress"                                            "Spawn Huntress"
+		"DOTA_Tooltip_modifier_spawn_huntress_Description"                                ""
+
+		"DOTA_Tooltip_modifier_spawn_druid_of_the_talon"                                  "Spawn Druid Of The Talon"
+		"DOTA_Tooltip_modifier_spawn_druid_of_the_talon_Description"                      ""
+
+		"DOTA_Tooltip_modifier_spawn_dryad"                                               "Spawn Dryad"
+		"DOTA_Tooltip_modifier_spawn_dryad_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_spawn_glaive_thrower"                                      "Spawn Glaive Thrower"
+		"DOTA_Tooltip_modifier_spawn_glaive_thrower_Description"                          ""
+
+		"DOTA_Tooltip_modifier_spawn_grunt"                                               "Spawn Grunt"
+		"DOTA_Tooltip_modifier_spawn_grunt_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_spawn_troll_headhunter"                                    "Spawn Troll Headhunter"
+		"DOTA_Tooltip_modifier_spawn_troll_headhunter_Description"                        ""
+
+		"DOTA_Tooltip_modifier_spawn_raider"                                              "Spawn Raider"
+		"DOTA_Tooltip_modifier_spawn_raider_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_spawn_tauren"                                              "Spawn Tauren"
+		"DOTA_Tooltip_modifier_spawn_tauren_Description"                                  ""
+
+		"DOTA_Tooltip_modifier_spawn_kodo_beast"                                          "Spawn Kodo Beast"
+		"DOTA_Tooltip_modifier_spawn_kodo_beast_Description"                              ""
+
+		"DOTA_Tooltip_modifier_spawn_ghoul"                                               "Spawn Ghoul"
+		"DOTA_Tooltip_modifier_spawn_ghoul_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_spawn_crypt_fiend"                                         "Spawn Crypt Fiend"
+		"DOTA_Tooltip_modifier_spawn_crypt_fiend_Description"                             ""
+
+		"DOTA_Tooltip_modifier_spawn_skeletal_mage"                                       "Spawn Skeletal Mage"
+		"DOTA_Tooltip_modifier_spawn_skeletal_mage_Description"                           ""
+
+		"DOTA_Tooltip_modifier_spawn_abomination"                                         "Spawn Abomination"
+		"DOTA_Tooltip_modifier_spawn_abomination_Description"                             ""
+
+		"DOTA_Tooltip_modifier_spawn_meat_wagon"                                          "Spawn Meat Wagon"
+		"DOTA_Tooltip_modifier_spawn_meat_wagon_Description"                              ""
+
+		"DOTA_Tooltip_modifier_endurance_aura_effect"                                     "Endurance Aura Effect"
+		"DOTA_Tooltip_modifier_endurance_aura_effect_Description"                         ""
+
+		"DOTA_Tooltip_modifier_war_stomp"                                                 "War Stomp"
+		"DOTA_Tooltip_modifier_war_stomp_Description"                                     ""
+
+		"DOTA_Tooltip_modifier_robot_transform"                                           "Robot Transform"
+		"DOTA_Tooltip_modifier_robot_transform_Description"                               ""
+
+		"DOTA_Tooltip_modifier_tinker_transform"                                          "Tinker Transform"
+		"DOTA_Tooltip_modifier_tinker_transform_Description"                              ""
+
+		"DOTA_Tooltip_modifier_rifleman_headshot_debuff"                                  "Rifleman Headshot Debuff"
+		"DOTA_Tooltip_modifier_rifleman_headshot_debuff_Description"                      ""
+
+		"DOTA_Tooltip_modifier_faerie_fire"                                               "Faerie Fire"
+		"DOTA_Tooltip_modifier_faerie_fire_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_poison_slow"                                               "Poison Slow"
+		"DOTA_Tooltip_modifier_poison_slow_Description"                                   ""
+
+		"DOTA_Tooltip_modifier_enraged"                                                   "Enraged"
+		"DOTA_Tooltip_modifier_enraged_Description"                                       ""
+
+		"DOTA_Tooltip_modifier_ensnared_debuff"                                           "Ensnared Debuff"
+		"DOTA_Tooltip_modifier_ensnared_debuff_Description"                               ""
+
+		"DOTA_Tooltip_modifier_disease_cloud_debuff"                                      "Disease Cloud Debuff"
+		"DOTA_Tooltip_modifier_disease_cloud_debuff_Description"                          ""
+
+		"DOTA_Tooltip_modifier_upgrade_weapon"                                            "Upgrade Weapon"
+		"DOTA_Tooltip_modifier_upgrade_weapon_Description"                                ""
+
+		"DOTA_Tooltip_modifier_upgrade_armor"                                             "Upgrade Armor"
+		"DOTA_Tooltip_modifier_upgrade_armor_Description"                                 ""
+
+		"DOTA_Tooltip_modifier_upgrade_human_training"                                    "Upgrade Human Training"
+		"DOTA_Tooltip_modifier_upgrade_human_training_Description"                        ""
+
+		"DOTA_Tooltip_modifier_upgrade_nightelf_training"                                 "Upgrade Nightelf Training"
+		"DOTA_Tooltip_modifier_upgrade_nightelf_training_Description"                     ""
+
+		"DOTA_Tooltip_modifier_upgrade_orc_training"                                      "Upgrade Orc Training"
+		"DOTA_Tooltip_modifier_upgrade_orc_training_Description"                          ""
+
+		"DOTA_Tooltip_modifier_upgrade_undead_training"                                   "Upgrade Undead Training"
+		"DOTA_Tooltip_modifier_upgrade_undead_training_Description"                       ""
+
+		"DOTA_Tooltip_modifier_shadow_strike"                                             "Shadow Strike"
+		"DOTA_Tooltip_modifier_shadow_strike_Description"                                 ""
+
 }
