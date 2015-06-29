@@ -3555,7 +3555,6 @@
 		{
 			"FireSound"
 			{
-				//"EffectName"	"Hero_Invoker.SunStrike.Charge"
 				"EffectName"	"FootmenFrenzy.FlameStrike"
 				"Target" 		"CASTER"
 			}
@@ -7809,6 +7808,269 @@
 			
 			}
 		
+		}
+	}
+	"durant_cripple"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"durant_cripple"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"30.0"
+	
+		"AbilityManaCost"				"75"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attackspeed_slow"		"-50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_loss"			"-30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movespeed_slow"		"-50"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"10"
+			}
+		}
+		
+		"precache"
+		{
+			"particle"			"particles/durant_cripple.vpcf"
+			"soundfile" 		"soundevents/game_sounds_items.vsndevts"
+		}
+		
+		
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_cripple"
+				"Target" 		"TARGET"
+				"Duration"		"%duration"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/durant_cripple.vpcf"
+				"EffectAttachType"  "attach_hitloc"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"DOTA_Item.DiffusalBlade.Activate"
+				"Target" 		"TARGET"
+			}
+		}
+	
+		"Modifiers"
+		{
+			
+		
+			"modifier_cripple"
+			{
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movespeed_slow"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attackspeed_slow"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage_loss"
+				}
+			}
+		}
+	}
+	
+	
+	"durant_curse"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"durant_curse"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"30.0"
+	
+		"AbilityManaCost"				"75"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"miss_chance"			"33"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"30"
+			}
+		}
+		
+		"precache"
+		{
+			"particle"			"particles/durant_curse.vpcf"
+			"soundfile" 		"soundevents/game_sounds_items.vsndevts"
+		}
+		
+		
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_curse"
+				"Target" 		"TARGET"
+				"Duration"		"%duration"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/durant_curse.vpcf"
+				"EffectAttachType"  "attach_hitloc"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Item.StarEmblem.Enemy"
+				"Target" 		"TARGET"
+			}
+		}
+	
+		"Modifiers"
+		{
+			
+		
+			"modifier_curse"
+			{
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MISS_PERCENTAGE"	"%miss_chance"
+				}
+			}
+		}
+	}
+	
+	
+	"durant_mana_clutch"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"durant_mana_clutch"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"60.0"
+	
+		"AbilityManaCost"				"75"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"mana_burn"			"100"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_per_mana"	"1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen"			"2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"60"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"900"
+			}
+		}
+		
+		"precache"
+		{
+			"particle"			"particles/generic_gameplay/generic_manaburn.vpcf"
+			"soundfile" 		"soundevents/game_sounds_items.vsndevts"
+		}
+		
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"    "units/durant/mana_burn.lua"
+				"Function"      "ManaBurn"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/generic_gameplay/generic_manaburn.vpcf"
+				"EffectAttachType"  "attach_hitloc"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"DOTA_Item.Mjollnir.Activate"
+				"Target" 		"TARGET"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_mana_aura"
+			{
+				"EffectName"		"particles/items_fx/aura_shivas.vpcf"
+				"EffectAttachType" 	"follow_origin"
+				
+				"IsHidden" 			"1"
+				"IsBuff"			"1"
+				"Aura" 				"modifier_mana_aura_regen"
+				"Aura_Radius" 		"%radius"
+				"Aura_Teams" 		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 		"DOTA_UNIT_TARGET_ALL"
+				
+			}
+			
+			"modifier_mana_aura_regen"
+			{
+				"IsBuff"				"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"%mana_regen"
+				}
+			}
+		
+			
 		}
 	}
 	// Far Seer Chain Lightning

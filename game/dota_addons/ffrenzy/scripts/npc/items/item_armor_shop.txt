@@ -11,7 +11,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -27,6 +27,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -74,7 +75,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -90,6 +91,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -134,7 +136,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -150,6 +152,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -194,7 +197,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -210,6 +213,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -255,7 +259,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -271,6 +275,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -316,7 +321,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -331,6 +336,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -378,7 +384,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -393,6 +399,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -438,7 +445,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -453,6 +460,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -498,7 +506,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -513,6 +521,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 
@@ -557,7 +566,7 @@
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
@@ -572,6 +581,7 @@
 		"ItemDroppable"                 "1"
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
+		"SideShop" 						"1"
 	
 		
 

@@ -2117,7 +2117,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"450"
 		"StatusHealthRegen"			"0.25"
-		"StatusMana"				"50"
+		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
 		
 		// Vision
@@ -5522,6 +5522,91 @@
 		// Creature Data
 		//----------------------------------------------------------------
 	}
+	"npc_durant"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl"		// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"													// Name of sound set.
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"IdleSoundLoop"				"n_creep_Ranged.IdleLoop"
+		"Level"						"1"
+		"ModelScale" 				"0.84"
+		"CanBeDominated"			"0"
+		
+	
+		"precache"
+		{
+			"model"	"models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl"
+			"soundfile"	"soundevents/game_sounds_creeps.vsndevts"
+			"particle" "particles/neutral_fx/satyr_trickster_projectile.vpcf"
+		}
+	
+		"Ability1"					"durant_cripple"			// Ability 1.
+		"Ability2"					"durant_curse"
+		"Ability3"					"durant_mana_clutch"
+		"Ability4"					"neutral_spell_immunity"
+	
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"2"								// Physical protection.
+	
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"20"									// Damage range min.
+		"AttackDamageMax"			"20"									// Damage range max.
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0"									// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"700"									// Range within a target can be acquired.
+		"AttackRange"				"600"									// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"									// Speed of projectile.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"0"		// Gold earned min.
+		"BountyGoldMax"				"0"		// Gold earned max.
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"190"
+		"FormationRank"				"1"
+	
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"350"
+		"MovementTurnRate"			"0.6"
+	
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"525"		// Base health.
+		"StatusHealthRegen"			"0.5"			// Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"0.5"		// Mana regeneration rate.
+	
+		// Vision
+		//-------------------------------------------------------------------------------------------------------------
+		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"									// Range of vision at night time.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		
+	
+	}
+	
+	
 	//------------------------------------------------------------------------------------
 	//- Units for keeper_force_of_nature ability 								 	-
 	//------------------------------------------------------------------------------------

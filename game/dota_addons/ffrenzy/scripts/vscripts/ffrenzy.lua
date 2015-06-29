@@ -54,8 +54,8 @@ local team_c_counter = 0
 local team_d_counter = 0
 
 -- Change these at will
-local testing = false
-local testingUnits = false
+local testing = true
+local testingUnits = true
 local testingLevels = false
 local filmmaker = false
 
@@ -64,6 +64,7 @@ if not Convars:GetBool("developer") then
     testing = false
     testingUnits = false
     testingLevels = false
+	filmmaker = false
 end
 
 
@@ -884,11 +885,9 @@ function GameMode:OnPlayerPickHero(keys)
         
         --test units
         if testingUnits then
-			for i=1,10 do
+			for i=1,3 do
                 CreateUnitByName("human_footman", Vector(-3000, -1700, 100), true, nil, nil, 3)
             end
-            Timers:CreateTimer(15,function() 
-            CreateUnitByName("npc_far_seer_shadow_wolf", Vector(-3000, -3000, 100), true, nil, nil, 3) end)
         end
         if testingLevels then
             for i=1,5 do

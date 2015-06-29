@@ -238,6 +238,7 @@
 	"item_silver_edge"			"REMOVE"
 	"item_solar_crest"			"REMOVE"
 	"item_lotus_orb"			"REMOVE"
+	"item_crimson_guard"			"REMOVE"
 	
   
   	"item_halloween_candy_corn"			"REMOVE"

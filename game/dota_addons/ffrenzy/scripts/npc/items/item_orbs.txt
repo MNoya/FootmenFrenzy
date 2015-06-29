@@ -31,6 +31,7 @@
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
+	"SideShop" 						"1"
 
 	"AbilitySpecial"
 	{
@@ -69,7 +70,7 @@
 			"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" 	    "%bonus_damage"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 	    "%bonus_damage"
 			}
 
 			"Orb"
@@ -115,6 +116,7 @@
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemQuality"					"artifact"
+	"SideShop" 						"1"
 	
 	"Model"							"models/props_gameplay/red_box.vmdl"
 	"Effect"						"particles/econ/courier/courier_greevil_red/courier_greevil_red_ambient_3.vpcf"
@@ -160,7 +162,7 @@
 			"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" 	    "%bonus_damage"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 	    "%bonus_damage"
 			}
 
 			"Orb"
@@ -195,6 +197,7 @@
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemQuality"					"artifact"
+	"SideShop" 						"1"
 	
 	"Model"							"models/props_gameplay/red_box.vmdl"
 	"Effect"						"particles/items2_fx/orb_of_venom.vpcf"
@@ -241,7 +244,7 @@
 			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" 	    "%bonus_damage"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 	    "%bonus_damage"
 			}
 
 			"Orb"
@@ -298,6 +301,7 @@
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemQuality"					"artifact"
+	"SideShop" 						"1"
 	
 	"Model"							"models/props_gameplay/red_box.vmdl"
 	"Effect"						"particles/econ/courier/courier_trail_cursed/courier_cursed_ambient.vpcf"
@@ -339,7 +343,7 @@
 			"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" 	    "%bonus_damage"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 	    "%bonus_damage"
 			}
 
 			"Orb"
@@ -383,6 +387,7 @@
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemQuality"					"artifact"
+	"SideShop" 						"1"
 	
 	"Model"							"models/props_gameplay/red_box.vmdl"
 	"Effect"						"particles/econ/courier/courier_greevil_black/courier_greevil_black_ambient_3.vpcf"
@@ -425,6 +430,13 @@
 		{
 			"Passive"		"1"
 			"IsHidden"	 	"1"
+			
+			"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 	    "%bonus_damage"
+			}
+			
 			"Orb"
 			{
 				"Priority"			"DOTA_ORB_PRIORITY_ABILITY"
@@ -491,6 +503,7 @@
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemQuality"					"artifact"
+	"SideShop" 						"1"
 	
 	"Model"							"models/props_gameplay/red_box.vmdl"
 	"Effect"						"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
@@ -544,7 +557,7 @@
 			"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" 	    "%bonus_damage"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 	    "%bonus_damage"
 			}
 
 			"Orb"

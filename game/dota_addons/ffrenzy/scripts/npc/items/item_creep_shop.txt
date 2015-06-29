@@ -1,0 +1,99 @@
+///////////////////////////////////////////////////
+//Use Id's 2070-2099
+//////////////////////////////////////////////////
+
+
+//=================================================================================================================
+// Durant
+//=================================================================================================================
+"item_summon_durant"
+{
+	"ID"							"2070"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_summon_durant"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	"precache"
+	{
+		"particle"			"particles/durant_curse.vpcf"
+		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+	}
+	
+	
+	"OnSpellStart"
+	{
+		"SpawnUnit"
+		{
+			"UnitName"		"npc_durant"
+			"UnitCount"		"1"
+			"SpawnRadius"	"100"
+			"Target"		"CASTER"
+			"GrantsGold" 	"1"
+	        "GrantsXP" 		"1"
+			"OnSpawn"
+			{
+				"FireEffect"
+				{
+					"EffectName"        "particles/durant_curse.vpcf"
+					"EffectAttachType"  "attach_hitloc"
+					"Target"            "TARGET"
+				}
+				"FireSound"
+				{
+					"EffectName" 		"Hero_Enigma.Demonic_Conversion"
+					"Target"			"TARGET"
+				}
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_summoned"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+		"SpendCharge"
+		{}	
+	}
+	
+	"Modifiers"
+	{
+		"modifier_summoned"
+		{
+			"IsHidden"			"1"
+			
+			"States"
+			{
+				"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"mechanics.lua"
+					"Function"		"SetNoCorpse"
+				}
+			}
+		}
+	}
+}

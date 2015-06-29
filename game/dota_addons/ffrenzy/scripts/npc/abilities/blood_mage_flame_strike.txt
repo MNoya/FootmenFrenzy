@@ -75,7 +75,6 @@
 	{
 		"FireSound"
 		{
-			//"EffectName"	"Hero_Invoker.SunStrike.Charge"
 			"EffectName"	"FootmenFrenzy.FlameStrike"
 			"Target" 		"CASTER"
 		}
