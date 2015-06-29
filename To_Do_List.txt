@@ -1,15 +1,9 @@
--fix win/lose conditions
--tooltips for everything (use modkit)
+-tooltips for modifiers
 -unit & hero tinting
 -test all hero abilities
-
-Unit abilities
--Grunt damage buff when hit, or extra damage when health missing
--Head Hunters faster attack speed on health missing
--Raider chance to apply net on hit
--Skeletal Mages summon units from corpse
--Druid of the Talon, chance on attack to turn into a powerful bird for a time?
 
 -Review unit stats and ability damages (Balance between races)
 
 -creep-items
+
+-make it so when group selecting units, buildings don't get selected.  possible?

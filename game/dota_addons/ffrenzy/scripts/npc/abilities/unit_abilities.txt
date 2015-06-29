@@ -317,7 +317,7 @@
 		"02"
 		{
 			"var_type"		"FIELD_INTEGER"
-			"damage"		"4"
+			"damage"		"0"
 		}
 		"03"
 		{
@@ -327,7 +327,7 @@
 		"04"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"move_speed"	"-50"
+			"move_speed"	"-20"
 		}
 
 	}
@@ -413,12 +413,12 @@
 			"var_type"				"FIELD_INTEGER"
 			"bonus_damage"			"10"
 		}
-		"01"
+		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"bonus_armor"			"1"
 		}
-		"02"
+		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"duration"				"10.0"
@@ -565,7 +565,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"100"
+			"bonus_damage"			"50"
 		}
 		"03"
 		{
@@ -613,21 +613,6 @@
 		{
 			"IsHidden"	"1"
 			"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_2"
-			"OnCreated"
-			{
-				"AttachEffect"
-				{
-					"EffectName"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_totem_buff_egset.vpcf"
-					"EffectAttachType"	"start_at_customorigin"
-					"Target"            "CASTER"
-					"ControlPointEntities"
-					{
-						"CASTER"	"attach_totem"
-						"CASTER"	"attach_totem"
-						"CASTER"	"attach_totem"
-					}
-				}
-			}
 			"OnAttackLanded"
 			{	
 				"Damage"

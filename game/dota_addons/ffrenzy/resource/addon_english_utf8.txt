@@ -199,6 +199,8 @@
 		"tinker_pocket_factory_building1"                                                 "Pocket Factory"
 		"tinker_pocket_factory_building2"                                                 "Pocket Factory"
 		"tinker_pocket_factory_building3"                                                 "Pocket Factory"
+		
+		"npc_durant"																		"Durant"
 
 		
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -288,6 +290,9 @@
 		
 		"DOTA_Tooltip_ability_item_potion_of_mana"											"Potion of Mana"
 		"DOTA_Tooltip_ability_item_potion_of_mana_Description"								"Consumable for <font color='#ffad33'>400</font> Mana"
+		
+		"DOTA_Tooltip_ability_item_summon_durant"											"Summon Durant"
+		"DOTA_Tooltip_ability_item_summon_durant_Description"								"Consumable to summon a minion with strong spells"
 		
 		
 		
@@ -1077,10 +1082,107 @@
 		////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		
+		"DOTA_Tooltip_ability_rifleman_headshot"                                         	"Head Shot"
+		"DOTA_Tooltip_ability_rifleman_headshot_Description"                             	"Chance on hit to deal extra damage and slow."
+		"DOTA_Tooltip_ability_rifleman_headshot_proc_chance"								"CHANCE:"
+		"DOTA_Tooltip_ability_rifleman_headshot_slow"										"SLOW:"
+		"DOTA_Tooltip_ability_rifleman_headshot_slow_duration"								"SLOW DURATION:"
 		
-		"DOTA_Tooltip_ability_human_magic_sentry"                                         "Human Magic Sentry"
-		"DOTA_Tooltip_ability_human_magic_sentry_Description"                             "Gives True Sight"
+		"DOTA_Tooltip_ability_militia_courage"                                         		"Courage"
+		"DOTA_Tooltip_ability_militia_courage_Description"  								"Chance on hit to swing a second time and steal health."
+		"DOTA_Tooltip_ability_militia_courage_trigger_chance"								"CHANCE:"
+		"DOTA_Tooltip_ability_militia_courage_hp_leech_percent"								"LIFE STEAL:"
 		
+		"DOTA_Tooltip_ability_spell_breaker_feedback"                                       "Feedback"
+		"DOTA_Tooltip_ability_spell_breaker_feedback_Description"							"Burn mana on hit and deal damage equal to the amount of mana lost"
+		"DOTA_Tooltip_ability_spell_breaker_feedback_mana_per_hit"							"MANA BURN:"
+		
+		"DOTA_Tooltip_ability_knight_bash"                                       			"Bash"
+		"DOTA_Tooltip_ability_knight_bash_Description"										"Chance to stun and deal bonus damage on hit."
+		"DOTA_Tooltip_ability_knight_bash_chance"											"CHANCE:"
+		"DOTA_Tooltip_ability_knight_bash_bonus_damage"										"DAMAGE:"
+		"DOTA_Tooltip_ability_knight_bash_duration"											"HERO DURATION:"
+		"DOTA_Tooltip_ability_knight_bash_duration_creep"									"CREEP DURATION:"
+		
+		"DOTA_Tooltip_ability_archer_marksmanship"                                       	"Marksman"
+		"DOTA_Tooltip_ability_archer_marksmanship_Description"								"Consecutive attacks on the same target increase attack speed."
+		"DOTA_Tooltip_ability_archer_marksmanship_attack_speed"								"ATTACK SPEED PER STACK:"
+		"DOTA_Tooltip_ability_archer_marksmanship_max_stacks"								"MAX STACKS:"
+		
+		"DOTA_Tooltip_ability_huntress_moon_glaive"                                       	"Moon Glaive"
+		"DOTA_Tooltip_ability_huntress_moon_glaive_Description"								"Attacks bounce to a nearby target."
+		
+		"DOTA_Tooltip_ability_druid_faerie_fire"                                       		"Faerie Fire"
+		"DOTA_Tooltip_ability_druid_faerie_fire_Description"								"Attacks reduce the target's armor."
+		"DOTA_Tooltip_ability_druid_faerie_fire_minus_armor"  								"ARMOR REDUCTION:"
+		"DOTA_Tooltip_ability_druid_faerie_fire_duration"  									"DURATION:"
+		
+		"DOTA_Tooltip_ability_dryad_poison_slow"                                       		"Poison"
+		"DOTA_Tooltip_ability_dryad_poison_slow_Description"								"Poisons the target, reducing their movement and attack speed."
+		"DOTA_Tooltip_ability_dryad_poison_slow_move_speed"									"MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_dryad_poison_slow_attack_speed"								"ATTACK SLOW:"
+		"DOTA_Tooltip_ability_dryad_poison_slow_duration"									"DURATION:"
+		
+		"DOTA_Tooltip_ability_dryad_spell_immunity"                                       	"Spell Immunity"
+		"DOTA_Tooltip_ability_dryad_spell_immunity_Description"								""
+		
+		"DOTA_Tooltip_ability_grunt_berserker_rage"                                       	"Berserker Rage"
+		"DOTA_Tooltip_ability_grunt_berserker_rage_Description"								"Gain damage and armor when stuck."
+		"DOTA_Tooltip_ability_grunt_berserker_rage_bonus_damage"   							"DAMAGE:"
+		"DOTA_Tooltip_ability_grunt_berserker_rage_bonus_armor"   							"ARMOR:
+		"DOTA_Tooltip_ability_grunt_berserker_rage_duration"   								"DURATION:"
+		
+		"DOTA_Tooltip_ability_headhunter_berserker_blood"                             		"Berserker Blood"
+		"DOTA_Tooltip_ability_headhunter_berserker_blood_Description"						"Gain attack speed based on missing health."
+		"DOTA_Tooltip_ability_headhunter_berserker_blood_attack_speed_bonus_per_stack"		"ATTACK SPEED PER STACK:"
+		
+		"DOTA_Tooltip_ability_raider_ensnaring_attacks"                             		"Ensnare"
+		"DOTA_Tooltip_ability_raider_ensnaring_attacks_Description"							"Chance on attack to trap the target in a net."
+		"DOTA_Tooltip_ability_raider_ensnaring_attacks_chance" 								"CHANCE:"
+		"DOTA_Tooltip_ability_raider_ensnaring_attacks_duration" 							"DURATION:"
+		
+		"DOTA_Tooltip_ability_tauren_pulverize"                             				"Pulverize"
+		"DOTA_Tooltip_ability_tauren_pulverize_Description"									"Chance on attack to deal AOE damage."
+		"DOTA_Tooltip_ability_tauren_pulverize_chance"										"CHANCE:"
+		"DOTA_Tooltip_ability_tauren_pulverize_bonus_damage"								"DAMAGE:"
+		"DOTA_Tooltip_ability_tauren_pulverize_radius"										"RADIUS:"
+		
+		"DOTA_Tooltip_ability_ghoul_cannibalize"                             				"Cannibalize"
+		"DOTA_Tooltip_ability_ghoul_cannibalize_Description"								"Gain health after killing a target."
+		"DOTA_Tooltip_ability_ghoul_cannibalize_health_gained_on_kill"						"HEALTH GAINED:"
+		
+		"DOTA_Tooltip_ability_crypt_fiend_double_attack"                             		"Double Tap"
+		"DOTA_Tooltip_ability_crypt_fiend_double_attack_Description"						"Allows the crypt fiend to attack twice."
+		
+		"DOTA_Tooltip_ability_skeletal_mage_raise_dead"                             		"Raise Dead"
+		"DOTA_Tooltip_ability_skeletal_mage_raise_dead_Description"							"Creates a skeleton warrior from a corpse."
+		
+		"DOTA_Tooltip_ability_abomination_disease_cloud"                             		"Disease Cloud"
+		"DOTA_Tooltip_ability_abomination_disease_cloud_Description"						"Passively deals damage to nearby units."
+		"DOTA_Tooltip_ability_abomination_disease_cloud_damage_per_second" 					"DAMAGE PER SECOND:"
+		"DOTA_Tooltip_ability_abomination_disease_cloud_radius" 							"RADIUS:"
+		
+		
+		"DOTA_Tooltip_ability_human_magic_sentry"                                         	"Human Magic Sentry"
+		"DOTA_Tooltip_ability_human_magic_sentry_Description"                             	"Gives True Sight"
+		
+		"DOTA_Tooltip_ability_durant_cripple"                                         		"Cripple"
+		"DOTA_Tooltip_ability_durant_cripple_Description"                             		"Cripple the target, slowing their attack speed, movement speed, and reducing their damage."
+		"DOTA_Tooltip_ability_durant_cripple_attackspeed_slow"								"ATTACK SPEED SLOW:"
+		"DOTA_Tooltip_ability_durant_cripple_movespeed_slow"								"MOVEMENT SLOW PERCENT:"
+		"DOTA_Tooltip_ability_durant_cripple_damage_loss"									"DAMAGE LOSS:"
+		"DOTA_Tooltip_ability_durant_cripple_duration"										"DURATION:"
+		
+		"DOTA_Tooltip_ability_durant_curse"                                         		"Curse"
+		"DOTA_Tooltip_ability_durant_curse_Description"                             		"Curses the target, giving them a chance to miss their attacks."
+		"DOTA_Tooltip_ability_durant_curse_miss_chance" 									"MISS CHANCE:"
+		"DOTA_Tooltip_ability_durant_curse_duration" 										"DURATION"
+		
+		"DOTA_Tooltip_ability_durant_mana_clutch"                                         	"Mana Clutch"
+		"DOTA_Tooltip_ability_durant_mana_clutch_Description"                             	"Burns the target's mana, dealing damage equal to the amount burned.  Then applies a mana regenerating aura on Durant.  The duration of the aura depends on the amount of mana burned."
+		"DOTA_Tooltip_ability_durant_mana_clutch_mana_burn"									"MANA BURN:"
+		"DOTA_Tooltip_ability_durant_mana_clutch_mana_regen"								"AURA MANA REGEN:"
+		"DOTA_Tooltip_ability_durant_mana_clutch_duration"									"MAX DURATION:"
 		
 		
 		
@@ -1220,8 +1322,11 @@
 		
 		
 		////////////////////////////////////////////////////////////////////////////////////////////////////
-		////   Unit Upgrades
+		////   Unit Upgrades/Building items
 		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		"DOTA_Tooltip_ability_item_rally"                                             	"Set Rally Point"
+		"DOTA_Tooltip_ability_item_rally_Description"                                 	""
 		
 		"DOTA_Tooltip_ability_upgrade_weapon"                                             "Upgraded Weapon"
 		"DOTA_Tooltip_ability_upgrade_weapon_Description"                                 "BONUS DAMAGE:"

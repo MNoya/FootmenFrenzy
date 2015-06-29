@@ -11,9 +11,7 @@ function RaiseDead( event )
 	
 	
 	Timers:CreateTimer(0.1,function ()
-		print("Timer a")
 		if ability:GetCooldownTimeRemaining() == 0 and (caster:IsIdle() or caster:IsAttacking()) then
-			print("Timer b")
 			-- Find all corpse entities in the radius
 			local targets = Entities:FindAllByNameWithin("npc_dota_creature", caster:GetAbsOrigin(), ability:GetCastRange())
 			-- Go through every unit, stop at the first corpse found
