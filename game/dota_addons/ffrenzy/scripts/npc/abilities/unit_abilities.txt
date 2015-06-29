@@ -3,10 +3,11 @@
 //------------------------//
 "rifleman_headshot"
 {
-	"BaseClass"						"sniper_headshot"
+	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"sniper_headshot"
 		
 	"AbilityDamage"					"15"
 		
@@ -96,7 +97,31 @@
 
 "militia_courage"
 {
+	"BaseClass"				"legion_commander_moment_of_courage"
+	"AbilityTextureName"	"legion_commander_moment_of_courage"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"				"1"
 
+	"AbilityCooldown"		"2.0"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"trigger_chance"			"25"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"buff_duration"				"1.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"hp_leech_percent"			"50"
+		}
+	}
 }
 
 "spell_breaker_feedback"
@@ -217,7 +242,60 @@
 // -Armor
 "druid_faerie_fire"
 {
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"MaxLevel"						"1"
+	
+	"AbilityTextureName" 			"furion_wrath_of_nature"
 
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"minus_armor"			"-7"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"10.0"
+		}		
+	}
+		
+	"Modifiers"
+	{
+		"modifier_druid_faerie_fire"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+
+			"Orb"
+			{
+				"Priority"				"DOTA_ORB_PRIORITY_ABILITY"
+				"ProjectileName"		"particles/items_fx/desolator_projectile.vpcf"
+				"CastAttack"			"0"
+			}
+
+			"OnOrbImpact"
+			{
+				"ApplyModifier"
+				{
+					"Target"			"TARGET"
+					"ModifierName"		"modifier_faerie_fire"
+					"Duration"			"%duration"
+				}
+			}
+		}
+		"modifier_faerie_fire"
+		{
+			"IsDebuff"		"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%minus_armor"
+			}
+		}
+	}
 }
 
 "dryad_poison_slow"
@@ -322,19 +400,143 @@
 // Damage buff when hit
 "grunt_berserker_rage"
 {
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"						"1"
+	
+	"AbilityTextureName" 			"axe_berserkers_call_shoutmask"
 
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"10"
+		}
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"10.0"
+		}		
+	}
+
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_axe/axe_battle_hunger.vpcf"
+	}
+
+	"Modifiers"
+	{
+		"modifier_berserker_rage"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnAttacked"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_enraged"
+					"Target" 		"CASTER"
+					"Duration"		"%duration"
+				}
+			}
+		}
+
+		"modifier_enraged"
+		{
+			"EffectName"		"particles/units/heroes/hero_axe/axe_battle_hunger_c.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+			    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE " "%bonus_damage" 
+			}
+		}
+	}
 }
 
 // Faster attack speed on health missing
 "headhunter_berserker_blood"
 {
+	"BaseClass"						"huskar_berserkers_blood"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"						"1"
+	
+	"AbilityTextureName" 			"huskar_berserkers_blood"
 
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"attack_speed_bonus_per_stack"	"10"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"resistance_per_stack"			"0"
+		}
+	}
 }
 
 // Chance to apply net on hit
 "raider_ensnaring_attacks"
 {
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"						"1"
+	
+	"AbilityTextureName" 			"dark_troll_warlord_ensnare"
 
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chance"				"25"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"3"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_raider_ensnaring_attacks"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+	
+			"OnAttackLanded"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_ensnared_debuff"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+			}
+		}
+
+		"modifier_ensnared_debuff"
+		{
+			"IsDebuff"			"1"
+			"EffectName"		"particles/neutral_fx/dark_troll_ensnare.vpcf"
+			"EffectAttachType"	"attach_origin"
+			"States"
+			{
+				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
 }
 
 // Gives a 25% chance that an attack will deal bonus damage to nearby units.
@@ -526,7 +728,69 @@
 
 "skeletal_mage_raise_dead"
 {
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityCastRange"				"600"
+	"AbilityCooldown"				"60"
+	"MaxLevel"						"1"
+	
+	"AbilityTextureName" 			"dark_troll_warlord_raise_dead"
 
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"summon_interval"		"60"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"40"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"summon_hp"				"500"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_skeletal_mage_raise_dead"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"units/raise_dead.lua"
+					"Function"		"RaiseDead"
+				}
+			}
+	
+			"ThinkInterval"  	"%summon_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"units/raise_dead.lua"
+					"Function"		"RaiseDead"
+				}
+			}
+		}
+
+		"modifier_raise_dead"
+		{
+			"IsHidden"		"1"
+			"States"
+			{
+				"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
 }
 
 "abomination_disease_cloud"
