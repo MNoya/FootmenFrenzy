@@ -247,7 +247,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"MaxLevel"						"1"
 	
-	"AbilityTextureName" 			"furion_wrath_of_nature"
+	"AbilityTextureName" 			"druid_of_the_talon_faerie_fire"
 
 	"AbilitySpecial"
 	{
@@ -517,11 +517,18 @@
 	
 			"OnAttackLanded"
 			{
-				"ApplyModifier"
+				"Random"
 				{
-					"ModifierName"	"modifier_ensnared_debuff"
-					"Target" 		"TARGET"
-					"Duration"		"%duration"
+					"Chance" "%chance"
+					"OnSuccess"
+					{
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_ensnared_debuff"
+							"Target" 		"TARGET"
+							"Duration"		"%duration"
+						}
+					}
 				}
 			}
 		}
@@ -771,15 +778,15 @@
 				}
 			}
 	
-			"ThinkInterval"  	"%summon_interval"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"units/raise_dead.lua"
-					"Function"		"RaiseDead"
-				}
-			}
+			//"ThinkInterval"  	"%summon_interval"
+			//"OnIntervalThink"
+			//{
+			//	"RunScript"
+			//	{
+			//		"ScriptFile"	"units/raise_dead.lua"
+			//		"Function"		"RaiseDead"
+			//	}
+			//}
 		}
 
 		"modifier_raise_dead"
@@ -788,6 +795,25 @@
 			"States"
 			{
 				"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+		
+		"modifier_raise_dead_cast_animation"
+		{
+			"IsHidden"	"1"
+			"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+			"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_ENABLED"
+			"DelayedAction"
+			{
+				"Delay"     "1"
+				"Action"    
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_raise_dead_cast_animation"
+						"Target" 		"CASTER"
+					}
+				}
 			}
 		}
 	}

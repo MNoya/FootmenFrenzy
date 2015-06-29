@@ -5168,7 +5168,7 @@
 		"HealthBarOffset"			"140"
 		"SelectionGroup"            "Human_Militia"
 		"SoundSet"					"Hero_LegionCommander"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/hero_legion_commander.vsndevts"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
 		
 		"PathfindingSearchDepthScale" "0.5"
 		
