@@ -1007,21 +1007,21 @@ function MakePlayerLose( hero )
     -- If there are still heroes alive and they belong to different teams, it means there are at least 2 teams "alive"
     local winnerTeamID = nil
     local winConditionFailed = false
-    for _,hero in pairs(allHeroes) do
-        print("Checking ",hero:GetPlayerOwnerID())
-        if not hero.lost then
+    for _,h in pairs(allHeroes) do
+        print("Checking ",h:GetPlayerOwnerID())
+        if not h.lost then
             if not winConditionFailed then
-                print(hero:GetPlayerOwnerID().." is still playing, checking others")
-                winnerTeamID = hero:GetTeamNumber() -- Possible winning team
+                print(h:GetPlayerOwnerID()," is still playing, checking others")
+                winnerTeamID = h:GetTeamNumber() -- Possible winning team
                 for _,otherHero in pairs(allHeroes) do
                     -- If it's a different hero, from a different team, both alive and playing, break
-                    if (otherHero ~= hero) and (otherHero:GetTeamNumber() ~= hero:GetTeamNumber()) and (not otherHero.lost) then
-                        print(" "..otherHero:GetPlayerOwnerID().." is still in play and has a different team than "..hero:GetPlayerOwnerID())
+                    if (otherHero ~= h) and (otherHero:GetTeamNumber() ~= h:GetTeamNumber()) and (not otherHero.lost) then
+                        print(otherHero:GetPlayerOwnerID()," is still in play and has a different team than ",h:GetPlayerOwnerID())
                         winConditionFailed = true
                         winnerTeamID = nil
                         break                    
                     elseif otherHero.lost then
-                        print(" "..otherHero:GetPlayerOwnerID().." lost")
+                        print(otherHero:GetPlayerOwnerID()," lost")
                     end
                 end
             else
@@ -1032,7 +1032,7 @@ function MakePlayerLose( hero )
             print("   This hero lost")
         end
     end
-    if winnerTeamID then
+    if winnerTeamID and not winConditionFailed then
         print(winnerTeamID.." is the Winner")
         GameRules:SetGameWinner(winnerTeamID)
     end
