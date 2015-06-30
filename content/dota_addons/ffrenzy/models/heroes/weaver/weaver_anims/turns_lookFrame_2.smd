@@ -1,0 +1,64 @@
+// Created by Crowbar 0.24.0.0
+version 1
+nodes
+  0 "Root_0" -1
+  1 "thigh_A_R" 0
+  2 "ArbitraryChain0_0" 0
+  3 "Spine_0" 0
+  4 "thigh_A_L" 0
+  5 "knee_A_R" 1
+  6 "ankle_A_R" 5
+  7 "toeBall_A_R" 6
+  8 "ArbitraryChain0_1" 2
+  9 "thigh_R" 3
+  10 "Spine_1" 3
+  11 "thigh_L" 3
+  12 "knee_R" 9
+  13 "ankle_R" 12
+  14 "toeBall_R" 13
+  15 "Spine_2" 10
+  16 "clavicle_R" 15
+  17 "clavicle_L" 15
+  18 "Spine_3" 15
+  19 "bicep_R" 16
+  20 "elbow_R" 19
+  21 "wrist_R" 20
+  22 "Thumb_0_R" 21
+  23 "Mid_0_R" 21
+  24 "Index_0_R" 21
+  25 "Ring_0_R" 21
+  26 "Mid_1_R" 23
+  27 "Index_1_R" 24
+  28 "bicep_L" 17
+  29 "elbow_L" 28
+  30 "wrist_L" 29
+  31 "Index_0_L" 30
+  32 "Ring_0_L" 30
+  33 "Mid_0_L" 30
+  34 "Thumb_0_L" 30
+  35 "Index_1_L" 31
+  36 "Mid_1_L" 33
+  37 "Head_0" 18
+  38 "rant2_0" 37
+  39 "lant1_0" 37
+  40 "Head_1" 37
+  41 "rant2_1" 38
+  42 "rant2_2" 41
+  43 "lant1_1" 39
+  44 "lant1_2" 43
+  45 "mandibleR4_0" 40
+  46 "mandibleL3_0" 40
+  47 "knee_L" 11
+  48 "ankle_L" 47
+  49 "toeBall_L" 48
+  50 "knee_A_L" 4
+  51 "ankle_A_L" 50
+  52 "toeBall_A_L" 51
+end
+skeleton
+  time 0
+    3 0.000000 0.000000 0.000000 -0.224285 -0.029687 -0.444092
+    10 0.000002 -0.000002 0.000000 -0.334613 -0.061024 -0.625272
+    15 0.000002 -0.000001 0.000001 -0.334613 -0.061024 -0.625272
+    18 -0.000002 -0.000001 0.000004 0.000000 0.000000 0.000000
+end

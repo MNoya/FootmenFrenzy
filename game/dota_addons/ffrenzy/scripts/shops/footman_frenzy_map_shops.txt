@@ -56,6 +56,7 @@
 	"misc"
 	{
 		"item"			"item_summon_durant"
+		//"item"			"item_summon_arphaxad"
 	}	
 	
 	// Level 1 - Green Recipes

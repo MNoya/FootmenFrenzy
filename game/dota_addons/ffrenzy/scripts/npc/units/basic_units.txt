@@ -31,7 +31,7 @@
 
 	// Abilities
 	//----------------------------------------------------------------
-	"Ability1"					"human_defend"
+	//"Ability1"					"human_defend"
 	
 	// Armor
 	//----------------------------------------------------------------
@@ -113,7 +113,7 @@
 		"AttachWearables"
 		{
 			"Wearable1"		{	"ItemDef"		"63"		} //helm
-			//"Wearable2"		{	"ItemDef"		"6791"		} //shoulder
+			"Wearable2"		{	"ItemDef"		"64"		} //shoulder
 			"Wearable3" 	{	"ItemDef"		"65"		} //bracer
 			"Wearable4"		{	"ItemDef"		"66"		} //weapon
 			"Wearable5"		{	"ItemDef"		"67"		} //shield

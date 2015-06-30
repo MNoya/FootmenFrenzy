@@ -86,10 +86,10 @@
 		"DisableClumpingBehavior"	"1"
 		"AttachWearables"
 		{
-			"Wearable1"		{	"ItemDef"		"2"		}
-			"Wearable2"		{	"ItemDef"		"3"		}
-			"Wearable3" 	{	"ItemDef"		"4"		}
-			"Wearable4"		{	"ItemDef"		"5"		}
+			"Wearable1"		{	"ItemDef"		"4008"		}
+			"Wearable2"		{	"ItemDef"		"4009"		}
+			"Wearable3" 	{	"ItemDef"		"4010"		}
+			"Wearable4"		{	"ItemDef"		"4004"		}
 		}
 	}
 }

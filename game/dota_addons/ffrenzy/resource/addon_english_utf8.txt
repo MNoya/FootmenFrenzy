@@ -1170,8 +1170,9 @@
 		"DOTA_Tooltip_ability_durant_cripple_Description"                             		"Cripple the target, slowing their attack speed, movement speed, and reducing their damage."
 		"DOTA_Tooltip_ability_durant_cripple_attackspeed_slow"								"ATTACK SPEED SLOW:"
 		"DOTA_Tooltip_ability_durant_cripple_movespeed_slow"								"MOVEMENT SLOW PERCENT:"
-		"DOTA_Tooltip_ability_durant_cripple_damage_loss"									"DAMAGE LOSS:"
-		"DOTA_Tooltip_ability_durant_cripple_duration"										"DURATION:"
+		"DOTA_Tooltip_ability_durant_cripple_damage_loss"									"DAMAGE PERCENT LOSS:"
+		"DOTA_Tooltip_ability_durant_cripple_hero_duration"									"HERO DURATION:"
+		"DOTA_Tooltip_ability_durant_cripple_creep_duration"								"CREEP DURATION:"
 		
 		"DOTA_Tooltip_ability_durant_curse"                                         		"Curse"
 		"DOTA_Tooltip_ability_durant_curse_Description"                             		"Curses the target, giving them a chance to miss their attacks."

@@ -469,6 +469,12 @@
 	"MaxLevel"						"1"
 	
 	"AbilityTextureName" 			"huskar_berserkers_blood"
+	
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_huskar/huskar_berserker_blood_hero_effect.vpcf"
+		"particle"	"particles/units/heroes/hero_huskar/huskar_berserkers_blood_glow.vpcf"
+	}
 
 	"AbilitySpecial"
 	{

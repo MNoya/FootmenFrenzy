@@ -7837,7 +7837,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_loss"			"-30"
+				"damage_loss"			"-50"
 			}
 			"03"
 			{
@@ -7846,8 +7846,13 @@
 			}
 			"04"
 			{
+				"var_type"				"FIELD_FLOAT"
+				"creep_duration"		"60"
+			}
+			"05"
+			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"10"
+				"hero_duration"				"10"
 			}
 		}
 		
@@ -7863,8 +7868,25 @@
 			"ApplyModifier"
 			{
 				"ModifierName"	"modifier_cripple"
-				"Target" 		"TARGET"
-				"Duration"		"%duration"
+				"Target"
+				{
+					"Center"	"TARGET"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"		"DOTA_UNIT_TARGET_HERO"
+				}
+				"Duration"		"%hero_duration"
+			}
+			
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_cripple"
+				"Target"
+				{
+					"Center"	"TARGET"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"		"DOTA_UNIT_TARGET_BASIC"
+				}
+				"Duration"		"%creep_duration"
 			}
 			"FireEffect"
 			{
@@ -7890,7 +7912,7 @@
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movespeed_slow"
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attackspeed_slow"
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage_loss"
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"		"%damage_loss"
 				}
 			}
 		}
@@ -13989,7 +14011,7 @@
 	"doom_guard_cripple"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"doom_guard_cripple"
+		"AbilityTextureName"			"durant_cripple"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -13999,9 +14021,9 @@
 	
 		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"10.0"
+		"AbilityCooldown"				"30.0"
 	
-		"AbilityManaCost"				"125"
+		"AbilityManaCost"				"75"
 		
 		"AbilitySpecial"
 		{
@@ -14013,7 +14035,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_movement_speed"		"-75"
+				"bonus_movement_speed"		"-50"
 			}
 			"02"
 			{
@@ -14034,16 +14056,23 @@
 	
 		"precache"
 		{
-			"particle" 	"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
-			"soundfile" "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+			"particle"			"particles/durant_cripple.vpcf"
+			"soundfile" 		"soundevents/game_sounds_items.vsndevts"
 		}
 	
 		"OnSpellStart"
 		{
 			"FireSound"
 			{
-				"EffectName"	"Hero_Pugna.Decrepify"
+				"EffectName"	"DOTA_Item.DiffusalBlade.Activate"
 				"Target" 		"TARGET"
+			}
+			
+			"FireEffect"
+			{
+				"EffectName"        "particles/durant_cripple.vpcf"
+				"EffectAttachType"  "attach_hitloc"
+				"Target"            "TARGET"
 			}
 			
 			"ApplyModifier"
@@ -14077,21 +14106,15 @@
 			{
 				"IsDebuff"			"1"
 		
-				"EffectName"		"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
-				"EffectAttachType"	"follow_origin"
+				//"EffectName"        "particles/durant_cripple.vpcf"
+				//"EffectAttachType"	"follow_origin"
 		
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
 				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movement_speed" 
 				    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_reduction_pct"
-				}
-	
-				"States"
-				{
-					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
-				}			
+				}		
 			}
 		}	
 	}
@@ -15812,6 +15835,7 @@
 					"MODIFIER_STATE_HEXED"		"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_EVADE_DISABLED"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_BLOCK_DISABLED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SILENCED"	"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
 		}
@@ -18707,6 +18731,12 @@
 		"MaxLevel"						"1"
 		
 		"AbilityTextureName" 			"huskar_berserkers_blood"
+		
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_huskar/huskar_berserker_blood_hero_effect.vpcf"
+			"particle"	"particles/units/heroes/hero_huskar/huskar_berserkers_blood_glow.vpcf"
+		}
 	
 		"AbilitySpecial"
 		{

@@ -391,7 +391,7 @@
 "doom_guard_cripple"
 {
 	"BaseClass"             		"ability_datadriven"
-	"AbilityTextureName"			"doom_guard_cripple"
+	"AbilityTextureName"			"durant_cripple"
 	"MaxLevel" 						"1"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -401,9 +401,9 @@
 
 	"AbilityCastRange"				"800"
 	"AbilityCastPoint"				"0.3"
-	"AbilityCooldown"				"10.0"
+	"AbilityCooldown"				"30.0"
 
-	"AbilityManaCost"				"125"
+	"AbilityManaCost"				"75"
 	
 	"AbilitySpecial"
 	{
@@ -415,7 +415,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"-75"
+			"bonus_movement_speed"		"-50"
 		}
 		"02"
 		{
@@ -436,16 +436,23 @@
 
 	"precache"
 	{
-		"particle" 	"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
-		"soundfile" "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+		"particle"			"particles/durant_cripple.vpcf"
+		"soundfile" 		"soundevents/game_sounds_items.vsndevts"
 	}
 
 	"OnSpellStart"
 	{
 		"FireSound"
 		{
-			"EffectName"	"Hero_Pugna.Decrepify"
+			"EffectName"	"DOTA_Item.DiffusalBlade.Activate"
 			"Target" 		"TARGET"
+		}
+		
+		"FireEffect"
+		{
+			"EffectName"        "particles/durant_cripple.vpcf"
+			"EffectAttachType"  "attach_hitloc"
+			"Target"            "TARGET"
 		}
 		
 		"ApplyModifier"
@@ -479,21 +486,15 @@
 		{
 			"IsDebuff"			"1"
 	
-			"EffectName"		"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
-			"EffectAttachType"	"follow_origin"
+			//"EffectName"        "particles/durant_cripple.vpcf"
+			//"EffectAttachType"	"follow_origin"
 	
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
 			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movement_speed" 
 			    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_reduction_pct"
-			}
-
-			"States"
-			{
-				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
-			}			
+			}		
 		}
 	}	
 }

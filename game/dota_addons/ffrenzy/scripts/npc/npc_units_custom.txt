@@ -2076,7 +2076,7 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"human_defend"
+		//"Ability1"					"human_defend"
 		
 		// Armor
 		//----------------------------------------------------------------
@@ -2158,7 +2158,7 @@
 			"AttachWearables"
 			{
 				"Wearable1"		{	"ItemDef"		"63"		} //helm
-				//"Wearable2"		{	"ItemDef"		"6791"		} //shoulder
+				"Wearable2"		{	"ItemDef"		"64"		} //shoulder
 				"Wearable3" 	{	"ItemDef"		"65"		} //bracer
 				"Wearable4"		{	"ItemDef"		"66"		} //weapon
 				"Wearable5"		{	"ItemDef"		"67"		} //shield
@@ -5257,7 +5257,7 @@
 			{
 				"Wearable1"		{	"ItemDef"		"431"		}
 				"Wearable2"		{	"ItemDef"		"432"		}
-				"Wearable3" 	{	"ItemDef"		"433"		}
+				//"Wearable3" 	{	"ItemDef"		"433"		}
 				"Wearable4"		{	"ItemDef"		"434"		}
 				"Wearable5"		{	"ItemDef"		"435"		}
 			}
@@ -5625,6 +5625,101 @@
 	}
 	
 	
+	"npc_arphaxad"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"						"models/heroes/oracle/oracle.vmdl"		// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Oracle"													// Name of sound set.
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_oracle.vsndevts"
+		"IdleSoundLoop"				"Hero_Oracle.IdleLoop"
+		"Level"						"1"
+		"ModelScale" 				"0.84"
+		"CanBeDominated"			"0"
+		
+	
+		"precache"
+		{
+			"model"	"models/heroes/oracle/oracle.vmdl"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_oracle.vsndevts"
+			//"particle" "particles/neutral_fx/satyr_trickster_projectile.vpcf"
+		}
+	
+		"Ability1"					""			// Ability 1.
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					"neutral_spell_immunity"
+	
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"2"								// Physical protection.
+	
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"20"									// Damage range min.
+		"AttackDamageMax"			"20"									// Damage range max.
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0"									// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"700"									// Range within a target can be acquired.
+		"AttackRange"				"600"									// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"									// Speed of projectile.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"0"		// Gold earned min.
+		"BountyGoldMax"				"0"		// Gold earned max.
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"190"
+		"FormationRank"				"1"
+	
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"350"
+		"MovementTurnRate"			"0.6"
+	
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"525"		// Base health.
+		"StatusHealthRegen"			"0.5"			// Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"0.5"		// Mana regeneration rate.
+	
+		// Vision
+		//-------------------------------------------------------------------------------------------------------------
+		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"									// Range of vision at night time.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"		{	"ItemDef"		"546"		}
+				//"Wearable2"		{	"ItemDef"		"547"		}
+				//"Wearable3" 	{	"ItemDef"		"548"		}
+				"Wearable4"		{	"ItemDef"		"549"		}
+				//"Wearable5"		{	"ItemDef"		"550"		}
+			}
+		}
+	
+	}
+	
+	
 	//------------------------------------------------------------------------------------
 	//- Units for keeper_force_of_nature ability 								 	-
 	//------------------------------------------------------------------------------------
@@ -5862,11 +5957,14 @@
 			"DisableClumpingBehavior"	"1"
 			"AttachWearables"
 			{
-				"Wearable1"		{	"ItemDef"		"21"		}
+				"Wearable1"		{	"ItemDef"		"4504"		}
 				"Wearable2"		{	"ItemDef"		"22"		}
 				"Wearable3" 	{	"ItemDef"		"23"		}
 				"Wearable4"		{	"ItemDef"		"24"		}
 				"Wearable5"		{	"ItemDef"		"25"		}
+				//"Wearable6"		{	"ItemDef"		""		}
+				//"Wearable6"		{	"ItemDef"		"6517"		}
+				//"Wearable7"		{	"ItemDef"		"363"		}
 			}
 		}
 	}
@@ -6325,10 +6423,10 @@
 			"DisableClumpingBehavior"	"1"
 			"AttachWearables"
 			{
-				"Wearable1"		{	"ItemDef"		"2"		}
-				"Wearable2"		{	"ItemDef"		"3"		}
-				"Wearable3" 	{	"ItemDef"		"4"		}
-				"Wearable4"		{	"ItemDef"		"5"		}
+				"Wearable1"		{	"ItemDef"		"4008"		}
+				"Wearable2"		{	"ItemDef"		"4009"		}
+				"Wearable3" 	{	"ItemDef"		"4010"		}
+				"Wearable4"		{	"ItemDef"		"4004"		}
 			}
 		}
 	}

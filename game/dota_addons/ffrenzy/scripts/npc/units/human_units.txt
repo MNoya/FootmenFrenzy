@@ -185,7 +185,7 @@
 		{
 			"Wearable1"		{	"ItemDef"		"431"		}
 			"Wearable2"		{	"ItemDef"		"432"		}
-			"Wearable3" 	{	"ItemDef"		"433"		}
+			//"Wearable3" 	{	"ItemDef"		"433"		}
 			"Wearable4"		{	"ItemDef"		"434"		}
 			"Wearable5"		{	"ItemDef"		"435"		}
 		}

@@ -315,25 +315,28 @@ function GameMode:PostLoadPrecache()
     PrecacheUnitByNameAsync("human_militia", function(...) end)
     PrecacheUnitByNameAsync("human_spell_breaker", function(...) end)
     PrecacheUnitByNameAsync("human_knight", function(...) end)
-    PrecacheUnitByNameAsync("human_siege_engine", function(...) end)
+    --PrecacheUnitByNameAsync("human_siege_engine", function(...) end)
 
     PrecacheUnitByNameAsync("nightelf_archer", function(...) end)
     PrecacheUnitByNameAsync("nightelf_huntress", function(...) end)
     PrecacheUnitByNameAsync("nightelf_druid_of_the_talon", function(...) end)
     PrecacheUnitByNameAsync("nightelf_dryad", function(...) end)
-    PrecacheUnitByNameAsync("nightelf_glaive_thrower", function(...) end)
+    --PrecacheUnitByNameAsync("nightelf_glaive_thrower", function(...) end)
 
     PrecacheUnitByNameAsync("orc_grunt", function(...) end)
     PrecacheUnitByNameAsync("orc_troll_headhunter", function(...) end)
     PrecacheUnitByNameAsync("orc_raider", function(...) end)
     PrecacheUnitByNameAsync("orc_tauren", function(...) end)
-    PrecacheUnitByNameAsync("orc_kodo_beast", function(...) end)
+    --PrecacheUnitByNameAsync("orc_kodo_beast", function(...) end)
 
     PrecacheUnitByNameAsync("undead_ghoul", function(...) end)
     PrecacheUnitByNameAsync("undead_crypt_fiend", function(...) end)
     PrecacheUnitByNameAsync("undead_skeletal_mage", function(...) end)
     PrecacheUnitByNameAsync("undead_abomination", function(...) end)
-    PrecacheUnitByNameAsync("undead_meat_wagon", function(...) end)
+    --PrecacheUnitByNameAsync("undead_meat_wagon", function(...) end)
+	
+	PrecacheUnitByNameAsync("npc_durant", function(...) end)
+	PrecacheUnitByNameAsync("npc_arphaxad", function(...) end)
 
 end
 
