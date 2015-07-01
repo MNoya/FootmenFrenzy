@@ -61,9 +61,9 @@ local filmmaker = false
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
-    testing = false
+    testing = true
     testingUnits = false
-    testingLevels = false
+    testingLevels = true
 	filmmaker = false
 end
 
@@ -841,10 +841,10 @@ function GameMode:OnPlayerPickHero(keys)
 	for k, v in pairs(hero:GetChildren()) do 
 		if v:GetClassname() == "dota_item_wearable" then
 			local model = v:GetModelName()
-			if not string.match(model, "horse") and not string.match(model, "mount") and not string.match(model, "ogre_head") and not string.match(model, "goblin_body") and not string.match(model, "goblin_head") then
-				v:SetRenderColor(GameRules.TeamColors[teamID][1],GameRules.TeamColors[teamID][2],GameRules.TeamColors[teamID][3])
-				print(v:GetModelName())
-			end
+			--if not string.match(model, "horse") and not string.match(model, "mount") and not string.match(model, "ogre_head") and not string.match(model, "goblin_body") and not string.match(model, "goblin_head") then
+				--v:SetRenderColor(GameRules.TeamColors[teamID][1],GameRules.TeamColors[teamID][2],GameRules.TeamColors[teamID][3])
+				--print(v:GetModelName())
+			--end
 			if string.match(model, "undying_helmet") or string.match(model, "undying_armor") then v:RemoveSelf() end
 		end 
 	end 
@@ -905,7 +905,7 @@ function GameMode:OnPlayerPickHero(keys)
             end
         end
         if testingLevels then
-            for i=1,5 do
+            for i=1,25 do
                 hero:HeroLevelUp(true)
             end
         end
@@ -998,7 +998,7 @@ function MakePlayerLose( hero )
 	print("Making Player Lose")
     hero:ForceKill(false)
     hero.lost = true
-    hero:SetRespawnsDisabled(false)
+    hero:SetRespawnsDisabled(true)
     
     -- check for win condition
     local allHeroes = HeroList:GetAllHeroes()
