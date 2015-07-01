@@ -836,8 +836,7 @@ function GameMode:OnPlayerPickHero(keys)
 
     -- Player Color = Team Color
     PlayerResource:SetCustomPlayerColor(playerID, GameRules.TeamColors[teamID].x, GameRules.TeamColors[teamID].y, GameRules.TeamColors[teamID].z)
-	
-	print (hero)
+
 	for k, v in pairs(hero:GetChildren()) do 
 		if v:GetClassname() == "dota_item_wearable" then
 			local model = v:GetModelName()

@@ -23,6 +23,16 @@ function GameMode:FilterExecuteOrder( filterTable )
 
     if units and (order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION or order_type == DOTA_UNIT_ORDER_ATTACK_MOVE) and numUnits > 1 then
         
+        -- Get buildings out of the units table
+        local _units = {}
+        for n, unit_index in pairs(units) do 
+            local unit = EntIndexToHScript(unit_index)
+            if not unit:IsBuilding() and not IsCustomBuilding(unit) then
+                _units[#_units+1] = unit_index
+            end
+        end
+        units = _units
+
         local x = tonumber(filterTable["position_x"])
         local y = tonumber(filterTable["position_y"])
         local z = tonumber(filterTable["position_z"])
@@ -34,7 +44,7 @@ function GameMode:FilterExecuteOrder( filterTable )
         local SQUARE_FACTOR = 1.5 --1 is a perfect square, higher numbers will increase
 
         local navPoints = {}
-        local first_unit = EntIndexToHScript(units["0"])
+        local first_unit = EntIndexToHScript(units[1])
         local origin = first_unit:GetAbsOrigin()
 
         local point = Vector(x,y,z) -- initial goal
@@ -119,15 +129,13 @@ function GameMode:FilterExecuteOrder( filterTable )
             if unitsByRank[i] then
                 for _,unit_index in pairs(unitsByRank[i]) do
                     local unit = EntIndexToHScript(unit_index)
-                    if not unit:IsBuilding() and not IsCustomBuilding(unit) then
-                        --print("Issuing a New Movement Order to unit index: ",unit_index)
+                    --print("Issuing a New Movement Order to unit index: ",unit_index)
 
-                        local pos = navPoints[tonumber(n)+1]
-                        --print("Unit Number "..n.." moving to ", pos)
-                        n = n+1
-                        
-                        ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = order_type, Position = pos, Queue = false})
-                    end 
+                    local pos = navPoints[tonumber(n)+1]
+                    --print("Unit Number "..n.." moving to ", pos)
+                    n = n+1
+                    
+                    ExecuteOrderFromTable({ UnitIndex = unit_index, OrderType = order_type, Position = pos, Queue = false})
                 end
             end
         end

@@ -17,7 +17,7 @@ function Precache( context )
 
 	-- Models can also be precached by folder or individually
 	-- PrecacheModel should generally used over PrecacheResource for individual models
-	PrecacheResource("model_folder", "particles/heroes/antimage", context)
+	PrecacheResource("model_folder", "models/items/juggernaut/", context)
 	PrecacheResource("model", "particles/heroes/viper/viper.vmdl", context)
 	PrecacheModel("models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_troll_skeleton_fx.vmdl", context)
 	PrecacheModel("models/heroes/pedestal/effigy_pedestal_ti5_dire.vmdl", context)
@@ -32,6 +32,7 @@ function Precache( context )
 	-- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
 	-- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
 	PrecacheUnitByNameSync("npc_dota_hero_luna", context)
+	PrecacheUnitByNameSync("npc_dota_hero_juggernaut", context)
 
 	----------------------
 	PrecacheUnitByNameSync("human_barracks", context)
