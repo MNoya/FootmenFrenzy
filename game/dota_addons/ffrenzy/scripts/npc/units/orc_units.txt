@@ -200,8 +200,10 @@
 	"ModelScale"				"0.7"
 	"Level"						"3"
 	"HealthBarOffset"			"140"
-	"SoundSet"					"Hero_Chen"
-	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
+	"SoundSet"					"Hero_DragonKnight"
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+	//"SoundSet"					"Hero_Chen"
+	//"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
 	
 	"PathfindingSearchDepthScale" "0.5"
 	
@@ -219,8 +221,8 @@
 	//----------------------------------------------------------------
 	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-	"AttackDamageMin"			"23.0"
-	"AttackDamageMax"			"27.0"
+	"AttackDamageMin"			"29.0"
+	"AttackDamageMax"			"31.0"
 	"AttackRate"				"1.85"
 	"AttackAnimationPoint"		"0.5"
 	"AttackAcquisitionRange"	"500"
@@ -271,12 +273,12 @@
 		"DisableClumpingBehavior"	"1"
 		"AttachWearables"
 		{
-			"Wearable1"		{	"ItemDef"		"220"		}
-			"Wearable2"		{	"ItemDef"		"221"		}
+			"Wearable1"		{	"ItemDef"		"220"		}//
+			"Wearable2"		{	"ItemDef"		"4392"		}//
 			"Wearable3" 	{	"ItemDef"		"222"		}
 			"Wearable4"		{	"ItemDef"		"223"		}
 			"Wearable5"		{	"ItemDef"		"224"		}
-			"Wearable6"		{	"ItemDef"		"225"		}
+			//"Wearable6"		{	"ItemDef"		"225"		}
 		}
 	}
 }
@@ -370,7 +372,7 @@
 			"Wearable1"		{	"ItemDef"		"459"		} //Totem
 			"Wearable2"		{	"ItemDef"		"460"		} //Bracers
 			"Wearable3" 	{	"ItemDef"		"461"		} //Belt
-			"Wearable4"		{	"ItemDef"		"5640"		} //Helm of Impasse
+			//"Wearable4"		{	"ItemDef"		"5640"		} //Helm of Impasse
 		}
 	}
 }

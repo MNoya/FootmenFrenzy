@@ -530,9 +530,22 @@
 					{
 						"ApplyModifier"
 						{
-							"ModifierName"	"modifier_ensnared_debuff"
-							"Target" 		"TARGET"
-							"Duration"		"%duration"
+							"ModifierName"	"modifier_raider_toss"
+							"Target" 		"CASTER"
+							"Duration"		"0.3"
+						}
+						"DelayedAction"
+						{
+							"Delay"     "0.6"
+							"Action"    
+							{
+								"ApplyModifier"
+								{
+									"ModifierName"	"modifier_ensnared_debuff"
+									"Target" 		"TARGET"
+									"Duration"		"%duration"
+								}
+							}
 						}
 					}
 				}
@@ -548,6 +561,11 @@
 			{
 				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
 			}
+		}
+		"modifier_raider_toss"
+		{
+			"IsHidden"	"1"
+			"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_2"
 		}
 	}
 }

@@ -5446,11 +5446,12 @@
 			"DisableClumpingBehavior"	"1"
 			"AttachWearables"	
 			{
-				"Wearable1"		{	"ItemDef"	"181"	}
+				"Wearable1"		{	"ItemDef"	"4959"	} //5980
 				"Wearable2"		{	"ItemDef"	"183"	}
 				"Wearable3"		{	"ItemDef"	"184"	}
 				"Wearable4"		{	"ItemDef"	"185"	}
 				"Wearable5"		{	"ItemDef"	"186"	}
+				"Wearable6"		{	"ItemDef"	"4958"	}
 			}
 		}
 	
@@ -6094,8 +6095,8 @@
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackDamageMin"			"35.0"
-		"AttackDamageMax"			"41.0"
+		"AttackDamageMin"			"26.0"
+		"AttackDamageMax"			"28.0"
 		"AttackRate"				"1.75"
 		"AttackAnimationPoint"		"0.6"
 		"AttackAcquisitionRange"	"600"
@@ -6537,8 +6538,10 @@
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"HealthBarOffset"			"140"
-		"SoundSet"					"Hero_Chen"
-		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
+		"SoundSet"					"Hero_DragonKnight"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+		//"SoundSet"					"Hero_Chen"
+		//"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
 		
 		"PathfindingSearchDepthScale" "0.5"
 		
@@ -6556,8 +6559,8 @@
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackDamageMin"			"23.0"
-		"AttackDamageMax"			"27.0"
+		"AttackDamageMin"			"29.0"
+		"AttackDamageMax"			"31.0"
 		"AttackRate"				"1.85"
 		"AttackAnimationPoint"		"0.5"
 		"AttackAcquisitionRange"	"500"
@@ -6608,12 +6611,12 @@
 			"DisableClumpingBehavior"	"1"
 			"AttachWearables"
 			{
-				"Wearable1"		{	"ItemDef"		"220"		}
-				"Wearable2"		{	"ItemDef"		"221"		}
+				"Wearable1"		{	"ItemDef"		"220"		}//
+				"Wearable2"		{	"ItemDef"		"4392"		}//
 				"Wearable3" 	{	"ItemDef"		"222"		}
 				"Wearable4"		{	"ItemDef"		"223"		}
 				"Wearable5"		{	"ItemDef"		"224"		}
-				"Wearable6"		{	"ItemDef"		"225"		}
+				//"Wearable6"		{	"ItemDef"		"225"		}
 			}
 		}
 	}
@@ -6707,7 +6710,7 @@
 				"Wearable1"		{	"ItemDef"		"459"		} //Totem
 				"Wearable2"		{	"ItemDef"		"460"		} //Bracers
 				"Wearable3" 	{	"ItemDef"		"461"		} //Belt
-				"Wearable4"		{	"ItemDef"		"5640"		} //Helm of Impasse
+				//"Wearable4"		{	"ItemDef"		"5640"		} //Helm of Impasse
 			}
 		}
 	}
@@ -9452,7 +9455,7 @@
 				"Wearable4"		{	"ItemDef"		"261"		}
 				"Wearable5"		{	"ItemDef"		"262"		}
 				"Wearable6"		{	"ItemDef"		"470"		}
-				"Wearable7"		{	"ItemDef"		"4007"		} //Hook slot
+				"Wearable7"		{	"ItemDef"		"47"		} //Hook slot
 			}
 		}
 	}
