@@ -8,10 +8,10 @@
 //2	N/A	N/A	8	70	Unit	N/A	20 bonus damage	3
 //3	N/A	N/A	8	70	Unit	N/A	30 bonus damage	5
 
-// BUG: Orb doesn't fire on Magic Immune targets
+// BUG: Datadriven Orb doesn't fire on Magic Immune targets
 "potm_searing_arrows"
 {
-	"BaseClass"             		"ability_datadriven"
+	"BaseClass"             		"clinkz_searing_arrows"
 	"AbilityTextureName"			"potm_searing_arrows"
 	"MaxLevel" 						"4"
 
@@ -20,75 +20,82 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_BUILDING"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
 	"AbilityCastPoint"          	"0"
     "AbilityCastRange"          	"600 700 700 700"
 
 	"AbilityManaCost"				"8"
-	"AbilityDamage"					"10 20 30 40"
 
 	"precache"
 	{
-		"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
-		"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
-		"soundfile"				"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
+	 	"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+	 	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+	 	"soundfile"				"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
 	}
-	
+
 	"AbilitySpecial"
 	{
 		"01"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"bonus_range"		"0 100 100 100"
+			"var_type"				"FIELD_INTEGER"
+			"damage_bonus"			"10 20 30 40"
 		}
 	}
 
-	"Modifiers"
-	{
-		"modifier_snake_searing_arrow"
-		{
-			"Passive"               "1"
-			"IsHidden"				"1"
-			"TextureName"			"potm_searing_arrows"
+	// "precache"
+	// {
+	// 	"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+	// 	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+	// 	"soundfile"				"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
+	// }
+	
+	// "Modifiers"
+	// {
+	// 	"modifier_snake_searing_arrow"
+	// 	{
+	// 		"Passive"               "1"
+	// 		"IsHidden"				"1"
+	// 		"TextureName"			"potm_searing_arrows"
 
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"		"%bonus_range"
-			}
+	// 		"Properties"
+	// 		{
+	// 			"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"		"%bonus_range"
+	// 		}
 
-			"Orb"
-			{
-				"Priority"			"DOTA_ORB_PRIORITY_DEFAULT"
-				"ProjectileName"    "particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
-				"CastAttack"		"1"
-			}
-			"OnOrbFire"
-			{
-				"SpendMana"
-				{
-					"Mana"    		"%AbilityManaCost"
-				}
-				"FireSound"
-				{
-					"EffectName"	"Hero_Clinkz.SearingArrows"
-					"Target"		"CASTER"
-				}
-			}
+	// 		"Orb"
+	// 		{
+	// 			"Priority"			"DOTA_ORB_PRIORITY_DEFAULT"
+	// 			"ProjectileName"    "particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+	// 			"CastAttack"		"1"
+	// 		}
+	// 		"OnOrbFire"
+	// 		{
+	// 			"SpendMana"
+	// 			{
+	// 				"Mana"    		"%AbilityManaCost"
+	// 			}
+	// 			"FireSound"
+	// 			{
+	// 				"EffectName"	"Hero_Clinkz.SearingArrows"
+	// 				"Target"		"CASTER"
+	// 			}
+	// 		}
 			
-			"OnOrbImpact"
-			{
-				"Damage"
-				{
-					"Type"          "DAMAGE_TYPE_PHYSICAL"
-					"Damage"        "%AbilityDamage"
-					"Target"		"TARGET"
-				}
-				"FireSound"
-				{
-					"EffectName"	"Hero_Clinkz.SearingArrows.Impact"
-					"Target"		"CASTER"
-				}
-			}
-		}
-	}
+	// 		"OnOrbImpact"
+	// 		{
+	// 			"Damage"
+	// 			{
+	// 				"Type"          "DAMAGE_TYPE_PHYSICAL"
+	// 				"Damage"        "%AbilityDamage"
+	// 				"Target"		"TARGET"
+	// 			}
+	// 			"FireSound"
+	// 			{
+	// 				"EffectName"	"Hero_Clinkz.SearingArrows.Impact"
+	// 				"Target"		"CASTER"
+	// 			}
+	// 		}
+	// 	}
+	// }
 }

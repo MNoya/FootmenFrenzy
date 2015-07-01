@@ -8198,9 +8198,9 @@
 			"particle"	"particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
 			"particle"	"particles/units/heroes/hero_warlock/warlock_rain_of_chaos_explosion.vpcf"
 			"particle"	"particles/units/heroes/hero_earthshaker/temp_eruption_dirt.vpcf"
-			"particle"	"particles/dire_fx/dire_lava_falling_rocks.vpcf"
 			"particle"	"particles/units/heroes/hero_earthshaker/earthshaker_echoslam_start_fallback_mid.vpcf"
 			"particle"	"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_echoslam_start_egset.vpcf"
+			"particle"  "particles/econ/items/leshrac/leshrac_tormented_staff/leshrac_split_tormented.vpcf"
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
 		}
 		
@@ -8311,29 +8311,54 @@
 	
 				"OnCreated"
 				{
+					// Custom Building Damage
+					"RunScript"
+					{
+						"ScriptFile"	"buildings/damage.lua"
+						"Function"		"DoBuildingDamage"
+						"Target"
+						{
+							"Center"  	"TARGET"
+							"Radius" 	"%radius"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+							"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						}
+						"Damage"		"%building_damage_per_sec"
+					}
+					
 					"FireSound"
 					{
 						"EffectName"	"Hero_Leshrac.Split_Earth"
 						"Target" 		"TARGET"
 					}
 	
-					"AttachEffect"
+					"FireEffect"
 					{
-						"EffectName"        "particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_echoslam_start_egset.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"            "TARGET"
+						"EffectName"		"particles/units/heroes/hero_earthshaker/temp_eruption_dirt.vpcf"
+						"EffectAttachType" 	"follow_origin"
+						"Target" 			"TARGET"
 					}
-					
 	
 					"AttachEffect"
 					{
-						"Target"			"TARGET"
-						"EffectAttachType" 	"follow_origin"
-						"EffectName"		"particles/units/heroes/hero_earth_spirit/espirit_spawn.vpcf"
-						"ControlPointEntities"
+						"Target"	"TARGET"
+						"EffectAttachType" "follow_origin"
+						"EffectName"	"particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+						"ControlPoints"
 						{
-							"TARGET"	"attach_origin"
-							"TARGET"	"attach_origin"
+							"01"		"%radius 1 %radius"
+						}
+					}
+	
+					"AttachEffect"
+					{
+						"Target"	"TARGET"
+						"EffectAttachType" "follow_origin"
+						"EffectName"	"particles/econ/items/leshrac/leshrac_tormented_staff/leshrac_split_tormented.vpcf"
+						"ControlPoints"
+						{
+							"01"		"%radius 1 %radius"
 						}
 					}
 	
@@ -8341,14 +8366,22 @@
 					{
 						"Target"			"TARGET"
 						"EffectAttachType" 	"follow_origin"
-						"EffectName"		"particles/dire_fx/dire_lava_falling_rocks.vpcf"
+						"EffectName"		"particles/units/heroes/hero_leshrac/leshrac_pulse_nova.vpcf"
+						"ControlPoints"
+						{
+							"01"	"%radius 0 %radius"
+						}
 					}
 	
 					"AttachEffect"
 					{
 						"Target"			"TARGET"
 						"EffectAttachType" 	"follow_origin"
-						"EffectName"		"particles/units/heroes/hero_leshrac/leshrac_pulse_nova.vpcf"
+						"EffectName"		"particles/units/heroes/hero_earthshaker/earthshaker_echoslam_start_fallback_mid.vpcf"
+						"ControlPoints"
+						{
+							"01"	"1 0 0"
+						}		
 					}
 				}
 	
@@ -8377,12 +8410,7 @@
 						"Target" 		"TARGET"
 					}
 	
-					"FireEffect"
-					{
-						"EffectName"		"particles/units/heroes/hero_warlock/warlock_rain_of_chaos_explosion.vpcf"
-						"EffectAttachType" 	"follow_origin"
-						"Target" 			"TARGET"
-					}
+					
 					"FireEffect"
 					{
 						"EffectName"		"particles/units/heroes/hero_earthshaker/temp_eruption_dirt.vpcf"
@@ -8396,7 +8424,18 @@
 						"EffectName"	"particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
 						"ControlPoints"
 						{
-							"01"		"%radius 50 50"
+							"01"		"%radius 1 %radius"
+						}
+					}
+	
+					"AttachEffect"
+					{
+						"Target"	"TARGET"
+						"EffectAttachType" "follow_origin"
+						"EffectName"	"particles/econ/items/leshrac/leshrac_tormented_staff/leshrac_split_tormented.vpcf"
+						"ControlPoints"
+						{
+							"01"		"%radius 1 %radius"
 						}
 					}
 	
@@ -15066,10 +15105,10 @@
 	//2	N/A	N/A	8	70	Unit	N/A	20 bonus damage	3
 	//3	N/A	N/A	8	70	Unit	N/A	30 bonus damage	5
 	
-	// BUG: Orb doesn't fire on Magic Immune targets
+	// BUG: Datadriven Orb doesn't fire on Magic Immune targets
 	"potm_searing_arrows"
 	{
-		"BaseClass"             		"ability_datadriven"
+		"BaseClass"             		"clinkz_searing_arrows"
 		"AbilityTextureName"			"potm_searing_arrows"
 		"MaxLevel" 						"4"
 	
@@ -15078,77 +15117,84 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_BUILDING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	
 		"AbilityCastPoint"          	"0"
 	    "AbilityCastRange"          	"600 700 700 700"
 	
 		"AbilityManaCost"				"8"
-		"AbilityDamage"					"10 20 30 40"
 	
 		"precache"
 		{
-			"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
-			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
-			"soundfile"				"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
+		 	"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+		 	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+		 	"soundfile"				"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
 		}
-		
+	
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_range"		"0 100 100 100"
+				"var_type"				"FIELD_INTEGER"
+				"damage_bonus"			"10 20 30 40"
 			}
 		}
 	
-		"Modifiers"
-		{
-			"modifier_snake_searing_arrow"
-			{
-				"Passive"               "1"
-				"IsHidden"				"1"
-				"TextureName"			"potm_searing_arrows"
+		// "precache"
+		// {
+		// 	"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+		// 	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+		// 	"soundfile"				"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
+		// }
+		
+		// "Modifiers"
+		// {
+		// 	"modifier_snake_searing_arrow"
+		// 	{
+		// 		"Passive"               "1"
+		// 		"IsHidden"				"1"
+		// 		"TextureName"			"potm_searing_arrows"
 	
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"		"%bonus_range"
-				}
+		// 		"Properties"
+		// 		{
+		// 			"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"		"%bonus_range"
+		// 		}
 	
-				"Orb"
-				{
-					"Priority"			"DOTA_ORB_PRIORITY_DEFAULT"
-					"ProjectileName"    "particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
-					"CastAttack"		"1"
-				}
-				"OnOrbFire"
-				{
-					"SpendMana"
-					{
-						"Mana"    		"%AbilityManaCost"
-					}
-					"FireSound"
-					{
-						"EffectName"	"Hero_Clinkz.SearingArrows"
-						"Target"		"CASTER"
-					}
-				}
+		// 		"Orb"
+		// 		{
+		// 			"Priority"			"DOTA_ORB_PRIORITY_DEFAULT"
+		// 			"ProjectileName"    "particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+		// 			"CastAttack"		"1"
+		// 		}
+		// 		"OnOrbFire"
+		// 		{
+		// 			"SpendMana"
+		// 			{
+		// 				"Mana"    		"%AbilityManaCost"
+		// 			}
+		// 			"FireSound"
+		// 			{
+		// 				"EffectName"	"Hero_Clinkz.SearingArrows"
+		// 				"Target"		"CASTER"
+		// 			}
+		// 		}
 				
-				"OnOrbImpact"
-				{
-					"Damage"
-					{
-						"Type"          "DAMAGE_TYPE_PHYSICAL"
-						"Damage"        "%AbilityDamage"
-						"Target"		"TARGET"
-					}
-					"FireSound"
-					{
-						"EffectName"	"Hero_Clinkz.SearingArrows.Impact"
-						"Target"		"CASTER"
-					}
-				}
-			}
-		}
+		// 		"OnOrbImpact"
+		// 		{
+		// 			"Damage"
+		// 			{
+		// 				"Type"          "DAMAGE_TYPE_PHYSICAL"
+		// 				"Damage"        "%AbilityDamage"
+		// 				"Target"		"TARGET"
+		// 			}
+		// 			"FireSound"
+		// 			{
+		// 				"EffectName"	"Hero_Clinkz.SearingArrows.Impact"
+		// 				"Target"		"CASTER"
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 	// Priestess of the Moon Starfall
 	// Author: Noya
@@ -17134,8 +17180,9 @@
 	
 		"precache"
 		{
-			"particle" 	"particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
-			"particle"	"particles/units/heroes/hero_magnataur/magnataur_shockwave_cast.vpcf"
+			"particle" 	"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil.vpcf"
+			"particle"	"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_cast.vpcf"
+			"particle"  "particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_hit.vpcf"
 			"soundfile" "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
 		}
 		
@@ -17189,7 +17236,7 @@
 			"LinearProjectile"
 			{
 			    "Target"      	"POINT"
-			    "EffectName" 	"particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
+			    "EffectName" 	"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil.vpcf"
 			    "MoveSpeed"   	"%shock_speed"
 			    "StartRadius"   "%shock_width"
 			    "StartPosition" "CASTER"
@@ -17215,6 +17262,13 @@
 				"Damage"		 "%AbilityDamage"
 			}
 	
+			"FireEffect"
+			{
+				"EffectName"        "particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_hit.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "TARGET"
+			}
+	
 			"FireSound"
 			{
 				"EffectName"	"Hero_Magnataur.ShockWave.Target"
@@ -17232,7 +17286,7 @@
 				{
 					"AttachEffect"
 					{
-						"EffectName"		"particles/units/heroes/hero_magnataur/magnataur_shockwave_cast.vpcf"
+						"EffectName"		"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_cast.vpcf"
 						"EffectAttachType" 	"attach_attack1"
 						"Target" 			"CASTER"
 						"ControlPointEntities"

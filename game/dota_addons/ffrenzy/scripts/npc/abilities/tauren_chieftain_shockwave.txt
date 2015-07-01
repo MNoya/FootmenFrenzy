@@ -27,8 +27,9 @@
 
 	"precache"
 	{
-		"particle" 	"particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
-		"particle"	"particles/units/heroes/hero_magnataur/magnataur_shockwave_cast.vpcf"
+		"particle" 	"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil.vpcf"
+		"particle"	"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_cast.vpcf"
+		"particle"  "particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_hit.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
 	}
 	
@@ -82,7 +83,7 @@
 		"LinearProjectile"
 		{
 		    "Target"      	"POINT"
-		    "EffectName" 	"particles/units/heroes/hero_magnataur/magnataur_shockwave.vpcf"
+		    "EffectName" 	"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil.vpcf"
 		    "MoveSpeed"   	"%shock_speed"
 		    "StartRadius"   "%shock_width"
 		    "StartPosition" "CASTER"
@@ -108,6 +109,13 @@
 			"Damage"		 "%AbilityDamage"
 		}
 
+		"FireEffect"
+		{
+			"EffectName"        "particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_hit.vpcf"
+			"EffectAttachType"  "follow_origin"
+			"Target"            "TARGET"
+		}
+
 		"FireSound"
 		{
 			"EffectName"	"Hero_Magnataur.ShockWave.Target"
@@ -125,7 +133,7 @@
 			{
 				"AttachEffect"
 				{
-					"EffectName"		"particles/units/heroes/hero_magnataur/magnataur_shockwave_cast.vpcf"
+					"EffectName"		"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil_cast.vpcf"
 					"EffectAttachType" 	"attach_attack1"
 					"Target" 			"CASTER"
 					"ControlPointEntities"
