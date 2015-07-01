@@ -61,9 +61,9 @@ local filmmaker = false
 
 -- Making sure the testing values never go to the main client
 if not Convars:GetBool("developer") then
-    testing = true
+    testing = false
     testingUnits = false
-    testingLevels = true
+    testingLevels = false
 	filmmaker = false
 end
 
