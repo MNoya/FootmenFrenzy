@@ -109,6 +109,11 @@
 					"ModifierName"	"channelling_animation"
 					"Target"		"CASTER"
 				}
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/dark_ranger/life_drain.lua"
+					"Function"		"CheckRange"
+				}
 			}
 		}
 

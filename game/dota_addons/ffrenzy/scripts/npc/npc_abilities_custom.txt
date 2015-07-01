@@ -211,9 +211,14 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"200"
+				"damage_per_second_aoe"	"3 6.5 10 13.5"
 			}
 			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"200"
+			}
+			"06"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"projectile_speed"	"900"
@@ -274,7 +279,7 @@
 		
 			"ApplyModifier"
 			{
-				"ModifierName"	"modifier_acid_bomb"
+				"ModifierName"	"modifier_acid_bomb_aoe"
 				"Target"
 				{
 					"Center"  	"TARGET"
@@ -283,7 +288,18 @@
 					"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 				}
 				"Duration"		"%duration"
-			}						
+			}		
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_acid_bomb_aoe"
+				"Target"		"TARGET"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_acid_bomb"
+				"Target"		"TARGET"
+				"Duration"		"%duration"
+			}
 		}
 	
 		"Modifiers"
@@ -308,6 +324,42 @@
 						"Target"		"TARGET"
 						"Type"			"DAMAGE_TYPE_MAGICAL"
 						"Damage"		"%damage_per_second"
+					}
+	
+					"FireEffect"
+					{
+						"EffectName"        "particles/msg_fx/msg_poison.vpcf"
+						"EffectAttachType"  "follow_overhead"
+						"Target"            "TARGET"
+						"ControlPoints"
+						{
+							"01"	"9 %damage_per_second 6"
+							"02"	"1 3 0"
+							"03"	"170 0 250"
+						}					
+					}									
+				}			
+			}
+			"modifier_acid_bomb_aoe"
+			{
+				"IsDebuff"			"1"
+		
+				"StatusEffectName"		"particles/status_fx/status_effect_maledict.vpcf"
+				"StatusEffectPriority"	"10"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_reduction"
+				}		
+	
+				"ThinkInterval"  "1.0"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"		"TARGET"
+						"Type"			"DAMAGE_TYPE_MAGICAL"
+						"Damage"		"%damage_per_second_aoe"
 					}
 	
 					"FireEffect"
@@ -628,20 +680,21 @@
 									"16"	"255 255 0"
 								}					
 							}
-	
 							"RemoveModifier"
 							{
 								"ModifierName"	"modifier_healing_spray_caster"
 								"Target" 		"TARGET"
-							}						
+							}	
+							
 						}
 					}
-					
-					 
 				}		
 			}
 		}	
 	}
+	
+	
+	
 	// Alchemist Transmute
 	// Author: Noya
 	// Date: 25.01.2015.
@@ -752,7 +805,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"45 80 110 140"
+				"wave_damage"			"30 40 50 60"
 			}
 			"05"
 			{
@@ -2871,7 +2924,7 @@
 		"AbilityCooldown"				"180.0"
 	
 		"AbilityManaCost"				"100"
-		"AbilityDamage"					"110"
+		"AbilityDamage"					"110 130 150"
 	
 		"precache"
 		{
@@ -2884,7 +2937,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"bladestorm_damage_tick"	"0.2 0.3 0.4"
+				"bladestorm_damage_tick"	"0.2"
 			}
 			"02"
 			{
@@ -6219,6 +6272,11 @@
 					{
 						"ModifierName"	"channelling_animation"
 						"Target"		"CASTER"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/dark_ranger/life_drain.lua"
+						"Function"		"CheckRange"
 					}
 				}
 			}
@@ -14208,7 +14266,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"45"
+				"wave_damage"			"25"
 			}
 			"05"
 			{
@@ -14582,7 +14640,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"wave_damage"			"45 80 110 140"
+				"wave_damage"			"25 30 35 40"
 			}
 			"05"
 			{

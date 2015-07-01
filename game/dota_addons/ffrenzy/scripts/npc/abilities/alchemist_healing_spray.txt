@@ -201,17 +201,18 @@
 								"16"	"255 255 0"
 							}					
 						}
-
 						"RemoveModifier"
 						{
 							"ModifierName"	"modifier_healing_spray_caster"
 							"Target" 		"TARGET"
-						}						
+						}	
+						
 					}
 				}
-				
-				 
 			}		
 		}
 	}	
 }
+
+
+

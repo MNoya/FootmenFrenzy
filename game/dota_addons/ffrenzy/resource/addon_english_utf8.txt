@@ -309,6 +309,7 @@
 		"DOTA_Tooltip_ability_alchemist_acid_bomb_armor_reduction"                        "ARMOR REDUCTION:"
 		"DOTA_Tooltip_ability_alchemist_acid_bomb_duration"                               "DURATION:"
 		"DOTA_Tooltip_ability_alchemist_acid_bomb_damage_per_second"                      "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_ability_alchemist_acid_bomb_damage_per_second_aoe"                  "DAMAGE PER SECOND AOE:"
 		"DOTA_Tooltip_ability_alchemist_acid_bomb_radius"                                 "RADIUS:"
 		"DOTA_Tooltip_ability_alchemist_acid_bomb_projectile_speed"                       "PROJECTILE SPEED:"
 		
@@ -1207,10 +1208,10 @@
 		"DOTA_Tooltip_ability_side_upgrade_tier1_human_Description"                       "<font color='#ffad33'>1050</font> Gold Cost\nRiflemen have a ranged attack."
 
 		"DOTA_Tooltip_ability_upgrade_tier2_human"                                        "Upgrade To Militia"
-		"DOTA_Tooltip_ability_upgrade_tier2_human_Description"                            "<font color='#ffad33'>1400</font> Gold Cost\nMilitia are melee attackers that spawn 2 at a time."
+		"DOTA_Tooltip_ability_upgrade_tier2_human_Description"                            "<font color='#ffad33'>1400</font> Gold Cost\nMilitia are melee attackers."
 
 		"DOTA_Tooltip_ability_side_upgrade_tier2_human"                                   "Switch To Militia"
-		"DOTA_Tooltip_ability_side_upgrade_tier2_human_Description"                       "<font color='#ffad33'>1400</font> Gold Cost\nMilitia are melee attackers that spawn 2 at a time."
+		"DOTA_Tooltip_ability_side_upgrade_tier2_human_Description"                       "<font color='#ffad33'>1400</font> Gold Cost\nMilitia are melee attackers."
 
 		"DOTA_Tooltip_ability_upgrade_tier3_human"                                        "Upgrade To Spell Breakers"
 		"DOTA_Tooltip_ability_upgrade_tier3_human_Description"                            "<font color='#ffad33'>2000</font> Gold Cost\nSpell Breakers have a ranged attack with mana burn."
@@ -1249,10 +1250,10 @@
 		"DOTA_Tooltip_ability_side_upgrade_tier3_nightelf_Description"                    "<font color='#ffad33'>2000</font> Gold Cost\nDruids have a ranged attack."
 
 		"DOTA_Tooltip_ability_upgrade_tier4_nightelf"                                     "Upgrade To Dryads"
-		"DOTA_Tooltip_ability_upgrade_tier4_nightelf_Description"                         "<font color='#ffad33'>4000</font> Gold Cost\nDryads have a ranged attack and spawn 2 at a time."
+		"DOTA_Tooltip_ability_upgrade_tier4_nightelf_Description"                         "<font color='#ffad33'>4000</font> Gold Cost\nDryads have a ranged attack."
 
 		"DOTA_Tooltip_ability_side_upgrade_tier4_nightelf"                                "Switch To Dryads"
-		"DOTA_Tooltip_ability_side_upgrade_tier4_nightelf_Description"                    "<font color='#ffad33'>4000</font> Gold Cost\nDryads have a ranged attack and spawn 2 at a time."
+		"DOTA_Tooltip_ability_side_upgrade_tier4_nightelf_Description"                    "<font color='#ffad33'>4000</font> Gold Cost\nDryads have a ranged attack."
 
 		"DOTA_Tooltip_ability_upgrade_tier5_nightelf"                                     "Upgrade Tier5 Nightelf"
 		"DOTA_Tooltip_ability_upgrade_tier5_nightelf_Description"                         ""
@@ -1303,10 +1304,10 @@
 		"DOTA_Tooltip_ability_side_upgrade_tier2_undead_Description"                      "<font color='#ffad33'>1400</font> Gold Cost\nCrypt Fiends have a ranged attack."
 
 		"DOTA_Tooltip_ability_upgrade_tier3_undead"                                       "Upgrade To Skeletal Mages"
-		"DOTA_Tooltip_ability_upgrade_tier3_undead_Description"                           "<font color='#ffad33'>2000</font> Gold Cost\nSkeletal Mages have a ranged attack and spawn 2 at a time."
+		"DOTA_Tooltip_ability_upgrade_tier3_undead_Description"                           "<font color='#ffad33'>2000</font> Gold Cost\nSkeletal Mages have a ranged attack."
 
 		"DOTA_Tooltip_ability_side_upgrade_tier3_undead"                                  "Switch To Skeletal Mages"
-		"DOTA_Tooltip_ability_side_upgrade_tier3_undead_Description"                      "<font color='#ffad33'>2000</font> Gold Cost\nSkeletal Mages have a ranged attack and spawn 2 at a time."
+		"DOTA_Tooltip_ability_side_upgrade_tier3_undead_Description"                      "<font color='#ffad33'>2000</font> Gold Cost\nSkeletal Mages have a ranged attack."
 
 		"DOTA_Tooltip_ability_upgrade_tier4_undead"                                       "Upgrade To Abominations"
 		"DOTA_Tooltip_ability_upgrade_tier4_undead_Description"                           "<font color='#ffad33'>4000</font> Gold Cost\nAbominations are powerful melee attackers."

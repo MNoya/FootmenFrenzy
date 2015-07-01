@@ -21,7 +21,7 @@
 	"AbilityCooldown"				"180.0"
 
 	"AbilityManaCost"				"100"
-	"AbilityDamage"					"110"
+	"AbilityDamage"					"110 130 150"
 
 	"precache"
 	{
@@ -34,7 +34,7 @@
 		"01"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"bladestorm_damage_tick"	"0.2 0.3 0.4"
+			"bladestorm_damage_tick"	"0.2"
 		}
 		"02"
 		{

@@ -54,9 +54,9 @@ local team_c_counter = 0
 local team_d_counter = 0
 
 -- Change these at will
-local testing = false
+local testing = true
 local testingUnits = false
-local testingLevels = false
+local testingLevels = true
 local filmmaker = false
 
 -- Making sure the testing values never go to the main client

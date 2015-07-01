@@ -18,7 +18,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_crown_of_kings"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"1150"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -53,7 +52,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -82,7 +80,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_belt_of_giant_strength"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"350"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -117,7 +114,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -143,7 +139,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_boots_of_quelthalas"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"350"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -178,7 +173,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -204,7 +198,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_wizards_robe"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"350"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -239,7 +232,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -266,7 +258,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilityTextureName" 			"item_quaithes_mask"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		"ItemCost"						"250"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -301,7 +292,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -362,7 +352,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -425,7 +414,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -486,7 +474,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -547,7 +534,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -613,7 +599,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{

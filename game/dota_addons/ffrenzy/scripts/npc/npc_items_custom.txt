@@ -20,7 +20,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_crown_of_kings"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"1150"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -55,7 +54,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -84,7 +82,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_belt_of_giant_strength"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"350"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -119,7 +116,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -145,7 +141,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_boots_of_quelthalas"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"350"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -180,7 +175,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -206,7 +200,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_wizards_robe"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"350"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -241,7 +234,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -268,7 +260,6 @@
 			//-------------------------------------------------------------------------------------------------------------
 			
 			"AbilityTextureName" 			"item_quaithes_mask"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 			"ItemCost"						"250"
 			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -303,7 +294,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -364,7 +354,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -427,7 +416,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 					
 					"Properties"
 					{
@@ -488,7 +476,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 					
 					"Properties"
 					{
@@ -549,7 +536,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 					
 					"Properties"
 					{
@@ -615,7 +601,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 					
 					"Properties"
 					{
@@ -711,7 +696,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -805,7 +789,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -885,16 +868,6 @@
 			{}		
 		}
 		
-		"Modifiers"
-		{
-			"modifier_item_potion_of_health"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				
-			}
-		}
 	}
 	
 	
@@ -970,16 +943,6 @@
 			{}	
 		}
 		
-		"Modifiers"
-		{
-			"modifier_item_mana_stone"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				
-			}
-		}
 	}
 	///////////////////////////////////////////////////
 	//Use Id's 2070-2099
@@ -1864,7 +1827,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 	
 		// Item Info
@@ -1903,7 +1866,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -1923,7 +1885,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 	
 		// Item Info
@@ -1968,7 +1930,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -1989,7 +1950,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 	
 		// Item Info
@@ -2034,7 +1995,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -2055,7 +2015,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_sphere"
 	
 		// Item Info
@@ -2122,7 +2082,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 	
 		// Item Info
@@ -2161,7 +2121,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -2181,7 +2140,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 	
 		// Item Info
@@ -2220,7 +2179,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				"Properties"
 				{
@@ -2240,7 +2198,7 @@
 	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"item_datadriven"
 	
 		// Item Info
@@ -2299,7 +2257,6 @@
 				"Passive"			"1"
 				"IsHidden"			"1"
 		
-				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
@@ -5534,7 +5491,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -5601,7 +5557,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				}
 				"modifier_item_scourge_bone_chimes_lifesteal_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
 				{
@@ -5703,7 +5658,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -5776,7 +5730,6 @@
 				{
 					"Passive"			"1"
 					"IsHidden"			"1"
-					"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 					"Properties"
 					{
@@ -5875,7 +5828,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				
 				
 				"OnCreated"

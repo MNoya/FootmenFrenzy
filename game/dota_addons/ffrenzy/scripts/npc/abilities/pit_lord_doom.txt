@@ -549,7 +549,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"wave_damage"			"45"
+			"wave_damage"			"25"
 		}
 		"05"
 		{

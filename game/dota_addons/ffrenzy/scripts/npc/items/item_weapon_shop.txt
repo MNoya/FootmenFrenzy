@@ -53,7 +53,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -120,7 +119,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			}
 			"modifier_item_scourge_bone_chimes_lifesteal_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
 			{
@@ -222,7 +220,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -295,7 +292,6 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 				"Properties"
 				{
@@ -394,7 +390,6 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 			
 			"OnCreated"

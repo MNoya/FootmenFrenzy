@@ -31,5 +31,5 @@ function HealingSprayEnd( event )
 	caster:RemoveModifierByName("modifier_healing_spray_channelling")
 	
 	local healing_spray_dummy_pointer = caster.healing_spray_dummy
-	Timers:CreateTimer(0.4,function() healing_spray_dummy_pointer:RemoveSelf() end)
+	Timers:CreateTimer(0.7,function() healing_spray_dummy_pointer:RemoveSelf() end)
 end

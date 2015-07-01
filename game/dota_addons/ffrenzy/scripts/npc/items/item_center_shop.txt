@@ -84,7 +84,6 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 			"Properties"
 			{
@@ -178,7 +177,6 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			
 			"Properties"
 			{
@@ -258,16 +256,6 @@
 		{}		
 	}
 	
-	"Modifiers"
-	{
-		"modifier_item_potion_of_health"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-			
-		}
-	}
 }
 
 
@@ -343,14 +331,4 @@
 		{}	
 	}
 	
-	"Modifiers"
-	{
-		"modifier_item_mana_stone"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-			
-		}
-	}
 }
