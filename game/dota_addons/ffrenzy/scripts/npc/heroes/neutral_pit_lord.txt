@@ -6,6 +6,7 @@
 	// General
 	//----------------------------------------------------------------
 	"override_hero"				"npc_dota_hero_undying"	 // Placeholder
+	"model"						"models/heroes/abyssal_underlord/abyssal_underlord.vmdl"
 	"FormationRank"				"0"
 	
 	
@@ -83,6 +84,15 @@
 	
 	// Creature Data
 	//----------------------------------------------------------------
+	
+	"Creature"
+	{					
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"	""		}
+			
+		}
+	}
 	
 }
 

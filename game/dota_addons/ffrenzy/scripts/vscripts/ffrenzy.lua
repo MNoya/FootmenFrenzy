@@ -837,6 +837,7 @@ function GameMode:OnPlayerPickHero(keys)
     -- Player Color = Team Color
     PlayerResource:SetCustomPlayerColor(playerID, GameRules.TeamColors[teamID].x, GameRules.TeamColors[teamID].y, GameRules.TeamColors[teamID].z)
 	
+	print (hero)
 	for k, v in pairs(hero:GetChildren()) do 
 		if v:GetClassname() == "dota_item_wearable" then
 			local model = v:GetModelName()
@@ -844,6 +845,7 @@ function GameMode:OnPlayerPickHero(keys)
 				v:SetRenderColor(GameRules.TeamColors[teamID][1],GameRules.TeamColors[teamID][2],GameRules.TeamColors[teamID][3])
 				print(v:GetModelName())
 			end
+			if string.match(model, "undying_helmet") or string.match(model, "undying_armor") then v:RemoveSelf() end
 		end 
 	end 
     
