@@ -996,10 +996,7 @@ function MakePlayerLose( hero )
 	print("Making Player Lose")
     hero:ForceKill(false)
     hero.lost = true
-    Timers:CreateTimer(function()
-        hero:SetTimeUntilRespawn(999)
-        return 1
-    end)
+    hero:SetRespawnsDisabled(false)
     
     -- check for win condition
     local allHeroes = HeroList:GetAllHeroes()
