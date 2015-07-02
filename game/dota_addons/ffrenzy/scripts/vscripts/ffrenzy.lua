@@ -55,7 +55,7 @@ local team_d_counter = 0
 
 -- Change these at will
 local testing = false
-local testingUnits = false
+local testingUnits = true
 local testingLevels = false
 local filmmaker = false
 

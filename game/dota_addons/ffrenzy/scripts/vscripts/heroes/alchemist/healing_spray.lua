@@ -33,3 +33,15 @@ function HealingSprayEnd( event )
 	local healing_spray_dummy_pointer = caster.healing_spray_dummy
 	Timers:CreateTimer(0.7,function() healing_spray_dummy_pointer:RemoveSelf() end)
 end
+
+function ApplyHeal(event)
+	local units = event.target_entities
+	local heal = event.Heal -- "Heal" "%wave_heal"
+ 
+	for _,unit in pairs(units) do
+		print("Healing "..unit:GetUnitName().." for "..heal)
+		unit:Heal(heal, caster)
+	-- PopupHeal
+	end
+
+end

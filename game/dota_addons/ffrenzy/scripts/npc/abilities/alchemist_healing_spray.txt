@@ -163,9 +163,11 @@
 				{
 					"Delay"     "0.3"
 					"Action"    
-					{	
-						"Heal"
+					{		
+						"RunScript"
 						{
+							"ScriptFile"	"heroes/alchemist/healing_spray.lua"
+							"Function"		"ApplyHeal"
 							"Target"
 							{
 								"Center"  	"TARGET"
@@ -174,8 +176,9 @@
 								"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 								"Flags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 							}
-							"HealAmount"	"%wave_heal"
-						}					
+							"Heal"			"%wave_heal"
+						}
+						
 
 						"FireSound"
 						{
