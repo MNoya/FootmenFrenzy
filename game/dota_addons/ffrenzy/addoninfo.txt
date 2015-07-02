@@ -1,14 +1,14 @@
 "AddonInfo"
 {
 	"TeamCount" 	"10"
-	maps			"classic free_for_all"
+	maps			"classic" //free_for_all"
 	"classic"
 	{
 		"MaxPlayers"		"8"
 	}
 	
-	"free_for_all"
-	{
-		"MaxPlayers"       "10"
-	}
+	//"free_for_all"
+	//{
+	//	"MaxPlayers"       "10"
+	//}
 }
