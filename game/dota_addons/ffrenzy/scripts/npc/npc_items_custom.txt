@@ -1107,11 +1107,11 @@
 						"ModifierName"	"modifier_summoned"
 						"Target" 		"TARGET"
 					}
-					"RunScript"
-					{
-						"ScriptFile"	"units/arphaxad/arphaxad.lua"
-						"Function"		"OnCreated"
-					}
+					//"RunScript"
+					//{
+					//	"ScriptFile"	"units/arphaxad/arphaxad.lua"
+					//	"Function"		"OnCreated"
+					//}
 				}
 			}
 			"SpendCharge"

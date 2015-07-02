@@ -15,7 +15,7 @@ function SpawnUnit( event )
 	for k, v in pairs(unit:GetChildren()) do 
 		if v:GetClassname() == "dota_item_wearable" then
 			local model = v:GetModelName()
-			print(v:GetModelName())
+			--print(v:GetModelName())
 			if (not string.match(model, "luna_head") and not string.match(model, "dragon_knight/weapon") and not string.match(model, "weaver_head") 
 			and not string.match(model, "weaver_legs") and not string.match(model, "weaver_arms") and not string.match(model, "weapon") and not string.match(model, "windrunner_bow") 
 			and not string.match(model, "huskar_spear") and not string.match(model, "huskar_dagger") and not string.match(model, "mount") and not string.match(model, "windrunner_quiver") 

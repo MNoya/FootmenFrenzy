@@ -1,5 +1,5 @@
 function OnCreated (event)
-{
+
 	local arphaxad = event.target
 	
 	for k, v in pairs(arphaxad:GetChildren()) do 
@@ -11,4 +11,4 @@ function OnCreated (event)
 			end
 		end 
 	end 
-}
+end

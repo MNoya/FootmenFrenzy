@@ -1,0 +1,130 @@
+"arphaxad_heal"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"arphaxad_heal"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"1.0"
+
+	"AbilityManaCost"				"5"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_amount"			"25"
+		}
+	}
+	
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+		"soundfile" 		"soundevents/game_sounds_creeps.vsndevts"
+	}
+	
+	
+	"OnSpellStart"
+	{
+		"Heal"
+		{
+			"Target"		"TARGET"
+			"HealAmount"	"%heal_amount"
+		}
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+			"EffectAttachType"  "attach_hitloc"
+			"Target"            "TARGET"
+		}
+		"FireSound"
+		{
+			"EffectName"	"n_creep_ForestTrollHighPriest.Heal"
+			"Target" 		"TARGET"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_unit_spawned"
+		{
+			"Passive" 			"1"
+			"IsHidden" 			"1"
+			"ThinkInterval"		"1"
+            "OnIntervalThink"
+         	{
+				"RunScript"
+				{
+					"ScriptFile"    "units/arphaxad/heal.lua"
+					"Function"      "AutoCast"
+				}
+			}
+		}
+	}
+}
+
+
+"arphaxad_dispel"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"arphaxad_dispel"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"1.0"
+
+	"AbilityManaCost"				"75"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"200"
+		}
+	}
+	
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+		"soundfile" 		"soundevents/game_sounds_creeps.vsndevts"
+	}
+	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"    "units/arphaxad/dispel.lua"
+			"Function"      "Cast"
+		}
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+			"EffectAttachType"  "attach_hitloc"
+			"Target"            "TARGET"
+		}
+		"FireSound"
+		{
+			"EffectName"	"n_creep_ForestTrollHighPriest.Heal"
+			"Target" 		"TARGET"
+		}
+	}
+	
+	"Modifiers"
+	{
+	}
+}

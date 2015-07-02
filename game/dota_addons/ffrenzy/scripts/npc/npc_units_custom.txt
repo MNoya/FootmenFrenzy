@@ -5647,7 +5647,7 @@
 			//"particle" "particles/neutral_fx/satyr_trickster_projectile.vpcf"
 		}
 	
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"arphaxad_heal"			// Ability 1.
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					"neutral_spell_immunity"
