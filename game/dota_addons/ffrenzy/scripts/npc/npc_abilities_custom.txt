@@ -19962,7 +19962,7 @@
 			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"move_speed_slow"	"-50"
+				"move_speed_slow"	"-30"
 			}
 		}
 	

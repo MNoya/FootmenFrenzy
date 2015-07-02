@@ -54,7 +54,7 @@ local team_c_counter = 0
 local team_d_counter = 0
 
 -- Change these at will
-local testing = false
+local testing = true
 local testingUnits = true
 local testingLevels = false
 local filmmaker = false
@@ -936,10 +936,10 @@ function GameMode:OnPlayerPickHero(keys)
         Timers:CreateTimer(function()
             --Spawn_Position(hero)
             --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
-            PlayerResource:SetCameraTarget(playerID, building)
-            Timers:CreateTimer(1, function() 
-                PlayerResource:SetCameraTarget(playerID, nil)
-            end)
+            --PlayerResource:SetCameraTarget(playerID, building)
+            --Timers:CreateTimer(1, function() 
+                --PlayerResource:SetCameraTarget(playerID, nil)
+            --end)
             
             -- Teach the epic spawn_footman ability
             building:AddAbility("spawn_footman")

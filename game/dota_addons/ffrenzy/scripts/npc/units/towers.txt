@@ -5,12 +5,13 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/wooden_sentry_tower001.vmdl"
 	"ModelScale"				"0.7"
 	"Level"						"1"
 	"HealthBarOffset"			"200"
 	"HasInventory"				"1"
+	"MinimapIconSize"			"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -75,7 +76,7 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/tower_good.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
@@ -102,8 +103,8 @@
 	"AttackDamageMax"			"80.0"
 	"AttackRate"				"0.9"
 	"AttackAnimationPoint"		"0.3"
-	"AttackAcquisitionRange"	"700"
-	"AttackRange"				"700"
+	"AttackAcquisitionRange"	"1200"
+	"AttackRange"				"1200"
 	"ProjectileModel"			"particles/units/heroes/hero_mirana/mirana_base_attack.vpcf"	
 	"ProjectileSpeed"			"1800"
 	
@@ -150,7 +151,7 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/tower001.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
@@ -177,8 +178,8 @@
 	"AttackDamageMax"			"111.0"
 	"AttackRate"				"2.5"
 	"AttackAnimationPoint"		"0.3"
-	"AttackAcquisitionRange"	"700"
-	"AttackRange"				"700"
+	"AttackAcquisitionRange"	"1200"
+	"AttackRange"				"1200"
 	"ProjectileModel"			"particles/units/heroes/hero_techies/techies_base_attack.vpcf"
 	"ProjectileSpeed"			"700"
 	
@@ -225,7 +226,7 @@
 {
 	// General
 	//----------------------------------------------------------------
-	"BaseClass"					"npc_dota_creature"
+	"BaseClass"					"npc_dota_building"
 	"Model"						"models/props_structures/tower_dragon_white.vmdl"
 	"ModelScale"				"1"
 	"Level"						"1"
@@ -252,8 +253,8 @@
 	"AttackDamageMax"			"130.0"
 	"AttackRate"				"1"
 	"AttackAnimationPoint"		"0.3"
-	"AttackAcquisitionRange"	"800"
-	"AttackRange"				"800"
+	"AttackAcquisitionRange"	"1200"
+	"AttackRange"				"1200"
 	"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"
 	"ProjectileSpeed"			"1500"
 	
