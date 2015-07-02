@@ -113,6 +113,63 @@
 			}
 		}		
 	}
+	"ability_goldxp_granter"
+	{
+		"BaseClass"          			    "ability_datadriven"
+		"AbilityName"           			"ability_goldxp_granter"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		"Modifiers"
+		{
+			"modifier_ability_goldxp_granter"
+			{
+				"IsHidden"				"1"
+				"Passive"				"1"
+				
+				"Aura"					"modifier_get_xp"
+				"Aura_Radius"			"900"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+				"Aura_ApplyToCaster"	"0"
+				"Aura_Flags"    		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+	
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+	
+				"ThinkInterval"	"1"
+	
+				"OnIntervalThink"
+				{
+					"GrantXPGold"
+					{
+						"Target"
+						{
+							"Center"		"CASTER"
+							"radius"		"1000"
+							"Types"			"DOTA_UNIT_TARGET_HERO"
+							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+						}
+						"XPAmount"		"8"
+						"SplitEvenly"	"0"
+						"GoldAmount"	"4"
+						"ReliableGold"	"0"
+					}
+				}
+			}
+	
+			"modifier_get_xp"
+			{
+				"Passive"       "1"
+				"EffectName"	""
+				"TextureName"	"custom_games_xp_coin"
+			}
+		}
+	}
 	// AbilityName
 	// Author: 
 	// Date: 13.1.2015.
@@ -149,6 +206,65 @@
 				"var_type"		"FIELD_INTEGER"
 				"value"			"900"
 			}
+		}
+	}
+	"ability_mana_granter"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityTextureName"			""
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"regen"					"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"900"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_mana_granter"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
+				"Aura" 					"modifier_mana_granter_buff"
+				"Aura_Radius" 			"%radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO"
+				"Aura_ApplyToCaster"	"0"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+	
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			
+			"modifier_mana_granter_buff"
+			{
+				"Passive"			"1"
+				"IsHidden"			"0"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%regen"
+				}
+			
+			}
+		
 		}
 	}
 	// Alchemist Acid Bomb
@@ -827,6 +943,65 @@
 					}
 				}
 			}
+		}
+	}
+	
+	
+	"arphaxad_dispel"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arphaxad_dispel"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+	
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"1.0"
+	
+		"AbilityManaCost"				"75"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"200"
+			}
+		}
+		
+		"precache"
+		{
+			"particle"			"particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+			"soundfile" 		"soundevents/game_sounds_creeps.vsndevts"
+		}
+		
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"    "units/arphaxad/dispel.lua"
+				"Function"      "Cast"
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+				"EffectAttachType"  "attach_hitloc"
+				"Target"            "TARGET"
+			}
+			"FireSound"
+			{
+				"EffectName"	"n_creep_ForestTrollHighPriest.Heal"
+				"Target" 		"TARGET"
+			}
+		}
+		
+		"Modifiers"
+		{
 		}
 	}
 	// Archmage Blizzard
@@ -7890,57 +8065,6 @@
 	{
 		"BaseClass" 		"ability_datadriven"
 		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
-	
-	"dummy_mana"
-	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"AbilityTextureName"			""
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"regen"					"10"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"900"
-			}
-		}
-		
-		"Modifiers"
-		{
-			"modifier_building_regen"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				
-				"Aura" 					"modifier_building_regen_aura"
-				"Aura_Radius" 			"%radius"
-				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_BOTH"
-				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO"
-				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-			}
-			
-			"modifier_building_regen_aura"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%regen"
-				}
-			
-			}
-		
-		}
 	}
 	"durant_cripple"
 	{

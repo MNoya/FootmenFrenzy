@@ -81,31 +81,41 @@ function GameMode:InitGameMode()
 
     -- MultiTeam
     GameRules.TeamColors = {}
-    GameRules.TeamColors[DOTA_TEAM_GOODGUYS] = Vector(61, 210, 150) --  Teal
-    GameRules.TeamColors[DOTA_TEAM_BADGUYS]  = Vector(243, 201, 9 ) --  Yellow
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_1] = Vector(197, 77, 168) --  Pink
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_2] = Vector(255, 108, 0 ) --  Orange
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_3] = Vector( 52, 85, 255) --  Blue
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_4] = Vector(101, 212, 19) --  Green
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_5] = Vector(129, 83, 54 ) --  Brown
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_6] = Vector(27, 192, 216) --  Cyan
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_7] = Vector(199, 228, 13) --  Olive
-    GameRules.TeamColors[DOTA_TEAM_CUSTOM_8] = Vector(140, 42, 244) --  Purple
+    GameRules.TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }    -- Teal - Team #2
+    GameRules.TeamColors[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }     -- Yellow - Team #3
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_1] = { 197, 77, 168 }    -- Pink - Team #6
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }     -- Orange - Team #7
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }     -- Blue - Team #8
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_4] = { 101, 212, 19 }    -- Green - Team #9
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_5] = { 129, 83, 54 }     -- Brown - Team #10
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_6] = { 27, 192, 216 }    -- Cyan - Team #11
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_7] = { 199, 228, 13 }    -- Olive - Team #12
+    GameRules.TeamColors[DOTA_TEAM_CUSTOM_8] = { 140, 42, 244 }    -- Purple - Team #13
 
-    SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, 61, 210, 150 ) --  Teal
-    SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, 243, 201, 9 )   --  Yellow
-    SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, 197, 77, 168 ) --  Pink
-    SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_2, 255, 108, 0 )  --  Orange
+    for team = 0, (DOTA_TEAM_COUNT-1) do
+        color = GameRules.TeamColors[ team ]
+        if color then
+            SetTeamCustomHealthbarColor( team, color[1], color[2], color[3] )
+        end
+    end
     
     self.m_VictoryMessages = {}
     self.m_VictoryMessages[DOTA_TEAM_GOODGUYS] = "#VictoryMessage_GoodGuys"
     self.m_VictoryMessages[DOTA_TEAM_BADGUYS] = "#VictoryMessage_BadGuys"
     self.m_VictoryMessages[DOTA_TEAM_CUSTOM_1] = "#VictoryMessage_Custom1"
     self.m_VictoryMessages[DOTA_TEAM_CUSTOM_2] = "#VictoryMessage_Custom2"
+    self.m_VictoryMessages[DOTA_TEAM_CUSTOM_3] = "#VictoryMessage_Custom3"
+    self.m_VictoryMessages[DOTA_TEAM_CUSTOM_4] = "#VictoryMessage_Custom4"
+    self.m_VictoryMessages[DOTA_TEAM_CUSTOM_5] = "#VictoryMessage_Custom5"
+    self.m_VictoryMessages[DOTA_TEAM_CUSTOM_6] = "#VictoryMessage_Custom6"
+    self.m_VictoryMessages[DOTA_TEAM_CUSTOM_7] = "#VictoryMessage_Custom7"
+    self.m_VictoryMessages[DOTA_TEAM_CUSTOM_8] = "#VictoryMessage_Custom8"
 
     self.m_GatheredShuffledTeams = {}
     self.m_PlayerTeamAssignments = {}
     self.m_NumAssignedPlayers = 0
+
+    GameRules.PlayersOnTeam = {}
 
     GameMode:GatherValidTeams()
     
@@ -175,8 +185,6 @@ function GameMode:InitGameMode()
     GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
     GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
 	
-	CreateUnitByName("dummy_mana", Vector(0, 0, 0), false, nil, nil, 4)
-
     -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
     --Convars:RegisterCommand( "command_example", Dynamic_Wrap(dotacraft, 'ExampleConsoleCommand'), "A console command example", 0 )
 
@@ -463,47 +471,33 @@ function GameMode:OnThink()
     return 1
 end
 
-
----------------------------------------------------------------------------
--- Helper functions
----------------------------------------------------------------------------
-function ShuffledList( list )
-    local result = {}
-    local count = #list
-    for i = 1, count do
-        local pick = RandomInt( 1, #list )
-        result[ #result + 1 ] = list[ pick ]
-        table.remove( list, pick )
-    end
-    return result
-end
-
-function TableCount( t )
-    local n = 0
-    for _ in pairs( t ) do
-        n = n + 1
-    end
-    return n
-end
-
-
 ---------------------------------------------------------------------------
 -- Scan the map to see which teams have spawn points
 ---------------------------------------------------------------------------
 function GameMode:GatherValidTeams()
     print( "GatherValidTeams:" )
-
+   
     local foundTeams = {}
     for _, playerStart in pairs( Entities:FindAllByClassname( "info_player_start_dota" ) ) do
         foundTeams[  playerStart:GetTeam() ] = true
     end
 
-    print( "GatherValidTeams - Found spawns for a total of " .. TableCount(foundTeams) .. " teams" )
+    local numTeams = TableCount(foundTeams)
+    print( "GatherValidTeams - Found spawns for a total of " .. numTeams .. " teams" )
     
     local foundTeamsList = {}
     for t, _ in pairs( foundTeams ) do
         table.insert( foundTeamsList, t )
     end
+
+    if numTeams == 0 then
+        print( "GatherValidTeams - NO team spawns detected, defaulting to GOOD/BAD" )
+        table.insert( foundTeamsList, DOTA_TEAM_GOODGUYS )
+        table.insert( foundTeamsList, DOTA_TEAM_BADGUYS )
+        numTeams = 2
+    end
+
+    local maxPlayersPerValidTeam = math.floor( 10 / numTeams )
 
     self.m_GatheredShuffledTeams = ShuffledList( foundTeamsList )
 
@@ -511,11 +505,17 @@ function GameMode:GatherValidTeams()
     for _, team in pairs( self.m_GatheredShuffledTeams ) do
         print( " - " .. team .. " ( " .. GetTeamName( team ) .. " )" )
     end
-    
-    GameRules:SetCustomGameTeamMaxPlayers( 2, 2 )
-    GameRules:SetCustomGameTeamMaxPlayers( 3, 2 )
-    GameRules:SetCustomGameTeamMaxPlayers( 6, 2 )
-    GameRules:SetCustomGameTeamMaxPlayers( 7, 2 )
+
+    print( "Setting up teams:" )
+    for team = 0, (DOTA_TEAM_COUNT-1) do
+        local maxPlayers = 0
+        if ( nil ~= TableFindKey( foundTeamsList, team ) ) then
+            maxPlayers = maxPlayersPerValidTeam
+        end
+        print( " - " .. team .. " ( " .. GetTeamName( team ) .. " ) -> max players = " .. tostring(maxPlayers) )
+        GameRules:SetCustomGameTeamMaxPlayers( team, maxPlayers )
+        GameRules.PlayersOnTeam[team] = 0
+    end
     
 end
 
@@ -527,7 +527,7 @@ end
 -- Get the color associated with a given teamID
 ---------------------------------------------------------------------------
 function GameMode:ColorForTeam( teamID )
-    local color = self.m_TeamColors[ teamID ]
+    local color = GameRules.TeamColors[ teamID ]
     if color == nil then
         color = { 255, 255, 255 } -- default to white
     end
@@ -832,10 +832,12 @@ function GameMode:OnPlayerPickHero(keys)
     local player = EntIndexToHScript(keys.player)
     local playerID = hero:GetPlayerID()
     local teamID = PlayerResource:GetTeam(playerID)
-    local teamCounter = 0
+    GameRules.PlayersOnTeam[teamID] = GameRules.PlayersOnTeam[teamID] + 1
+    local teamPlayerN = GameRules.PlayersOnTeam[teamID]
 
     -- Player Color = Team Color
-    PlayerResource:SetCustomPlayerColor(playerID, GameRules.TeamColors[teamID].x, GameRules.TeamColors[teamID].y, GameRules.TeamColors[teamID].z)
+    local color = GameMode:ColorForTeam( teamID )
+    PlayerResource:SetCustomPlayerColor( playerID, color[1], color[2], color[3] )
 
 	for k, v in pairs(hero:GetChildren()) do 
 		if v:GetClassname() == "dota_item_wearable" then
@@ -848,39 +850,22 @@ function GameMode:OnPlayerPickHero(keys)
 		end 
 	end 
     
-    if teamID == 2 then 
-        teamCounter = team_a_counter
-    else 
-        if teamID == 3 then
-            teamCounter = team_b_counter
-        else 
-            if teamID == 6 then
-                teamCounter = team_c_counter
-            else 
-                if teamID == 7 then
-                    teamCounter = team_d_counter
-                end
-            end
-        end
-    end
-
     -- Initialize Variables for Tracking
     hero.units = {} -- This keeps the handle of all the units of the player army
     hero.upgrades = {} -- This keeps the name of all the upgrades researched, so each unit can check and upgrade itself on spawn
     hero.towers = {} -- Towers (possible to enable building more towers later)
 
     -- Define where to put the player/team
-    -- Choose a Position
-    local position_name = "team_"..teamID.."_player_position_"..teamCounter
-    local base_position_entity = Entities:FindByName(nil, position_name)
-    local tower_a_position_name = "team_"..teamID.."_tower_a_player_"..teamCounter
-    local tower_a_position_entity = Entities:FindByName(nil, tower_a_position_name)
-    local tower_b_position_name = "team_"..teamID.."_tower_b_player_"..teamCounter
-    local tower_b_position_entity = Entities:FindByName(nil, tower_b_position_name)
+    -- Find Base Position (name format: team_6_pos_2 for the second player on team custom1)
+    local base_position_name = "team_"..teamID.."_pos_"..teamPlayerN
+    local base_position_entity = Entities:FindByName(nil, base_position_name)
+
+    -- Find Tower Positions (name format: team_6_tower_pos_2 for the towers of the second player on team custom1)
+    local tower_position_name = "team_"..teamID.."_tower_pos_"..teamPlayerN
+    local tower_position_entities = Entities:FindAllByName(tower_position_name)
+
     if base_position_entity then
         local base_position = base_position_entity:GetAbsOrigin()
-        local tower_a_position = tower_a_position_entity:GetAbsOrigin()
-        local tower_b_position = tower_b_position_entity:GetAbsOrigin()
         local pedestal = Entities:CreateByClassname("prop_dynamic")
         base_position.z = 172
         pedestal:SetAbsOrigin(base_position)
@@ -915,20 +900,16 @@ function GameMode:OnPlayerPickHero(keys)
             end
 		end
         
-        local tower = CreateUnitByName("human_scout_tower", tower_a_position, true, hero, hero, hero:GetTeamNumber())
-        tower:RemoveModifierByName("modifier_invulnerable")
-        tower:SetOwner(hero)
-        tower:SetControllableByPlayer(playerID, true)
-        tower:SetAbsOrigin(tower_a_position)
-        
-        local tower2 = CreateUnitByName("human_scout_tower", tower_b_position, true, hero, hero, hero:GetTeamNumber())
-        tower2:RemoveModifierByName("modifier_invulnerable")
-        tower2:SetOwner(hero)
-        tower2:SetControllableByPlayer(playerID, true)
-        tower2:SetAbsOrigin(tower_b_position)
-        
-        table.insert(hero.towers, tower1)
-        table.insert(hero.towers, tower2)
+        for _,v in pairs(tower_position_entities) do
+            local tower_position = v:GetAbsOrigin()
+            local tower = CreateUnitByName("human_scout_tower", tower_position, true, hero, hero, hero:GetTeamNumber())
+            tower:RemoveModifierByName("modifier_invulnerable")
+            tower:SetOwner(hero)
+            tower:SetControllableByPlayer(playerID, true)
+            tower:SetAbsOrigin(tower_position)
+
+            table.insert(hero.towers, tower)
+        end 
 
         CreateUnitByName("dummy_vision", Vector(0, 0, 100), false, hero, hero, hero:GetTeamNumber())
 
@@ -951,20 +932,6 @@ function GameMode:OnPlayerPickHero(keys)
         print("No Base Position found for player "..playerID)   
     end
     
-    
-    if teamID == 2 then 
-        team_a_counter = team_a_counter + 1
-        else if teamID == 3 then
-            team_b_counter = team_b_counter + 1
-            else if teamID == 6 then
-                team_c_counter = team_c_counter + 1
-                else if teamID == 7 then
-                    team_d_counter = team_d_counter + 1
-                end
-            end
-        end
-    end
-
     -- Defeat check for this player
     hero.lost = false
     Timers:CreateTimer(function()

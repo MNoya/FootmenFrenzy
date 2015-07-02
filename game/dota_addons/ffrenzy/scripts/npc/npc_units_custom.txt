@@ -4461,13 +4461,25 @@
 	{
 		"BaseClass"					"npc_dota_creature"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"Model"						"models/development/invisiblebox.vmdl"
 		"VisionDaytimeRange"		"0"	
 		"VisionNighttimeRange"		"0"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-		"AbilityLayout"				"4"
-		"Ability1"					"dummy_passive"
-		"Ability2"					"dummy_mana"
+		"Ability1"					"ability_mana_granter"
+	}
+	
+	"dummy_goldxp"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/development/invisiblebox.vmdl"
+		"Ability1"					"ability_goldxp_granter"
+		"Ability2"					"ability_mana_granter"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"BountyXP"					"0"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"StatusHealth"				"5000"
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
 	}
 	//=================================================================================
 	//	Unit for far_seer_feral_spirit

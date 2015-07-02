@@ -1,0 +1,59 @@
+"ability_mana_granter"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	"AbilityTextureName"			""
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"regen"					"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"900"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_mana_granter"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			
+			"Aura" 					"modifier_mana_granter_buff"
+			"Aura_Radius" 			"%radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_BOTH"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO"
+			"Aura_ApplyToCaster"	"0"
+			"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+
+			"States"
+			{
+				"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+		
+		"modifier_mana_granter_buff"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%regen"
+			}
+		
+		}
+	
+	}
+}

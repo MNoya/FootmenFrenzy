@@ -1,4 +1,3 @@
--- Experimenting with Filter Orders
 function GameMode:FilterExecuteOrder( filterTable )
     --[[for k, v in pairs( filterTable ) do
         print("Order: " .. k .. " " .. tostring(v) )
@@ -21,7 +20,17 @@ function GameMode:FilterExecuteOrder( filterTable )
         end
     end
 
-    if units and (order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION or order_type == DOTA_UNIT_ORDER_ATTACK_MOVE) and numUnits > 1 then
+    if order_type == DOTA_UNIT_ORDER_PURCHASE_ITEM or order_type == DOTA_UNIT_ORDER_SELL_ITEM then
+        local purchaser = EntIndexToHScript(units["0"])
+        print(purchaser:GetUnitName().." order item purchase/sell")
+        if OnEnemyShop(purchaser) then
+            print(" Order denied")
+            return false
+        else
+            print(" Order allowed")
+        end
+
+    elseif units and (order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION or order_type == DOTA_UNIT_ORDER_ATTACK_MOVE) and numUnits > 1 then
         
         -- Get buildings out of the units table
         local _units = {}
@@ -233,4 +242,23 @@ function RemoveElementFromTable(table, element)
     end
 
     return new_table
+end
+
+
+-- Returns wether the unit is trying to buy from an enemy shop
+function OnEnemyShop( unit )
+    local teamID = unit:GetTeamNumber()
+    local position = unit:GetAbsOrigin()
+    local own_base_name = "team_"..teamID
+    local nearby_entities = Entities:FindAllByNameWithin("team_*", position, 1000)
+
+    if (#nearby_entities > 0) then
+        for k,ent in pairs(nearby_entities) do
+            if not string.match(ent:GetName(), own_base_name) then
+                print("OnEnemyShop true")
+                return true
+            end
+        end
+    end
+    return false
 end

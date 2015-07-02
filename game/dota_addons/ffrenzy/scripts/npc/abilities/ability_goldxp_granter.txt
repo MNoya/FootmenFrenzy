@@ -1,0 +1,57 @@
+"ability_goldxp_granter"
+{
+	"BaseClass"          			    "ability_datadriven"
+	"AbilityName"           			"ability_goldxp_granter"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"Modifiers"
+	{
+		"modifier_ability_goldxp_granter"
+		{
+			"IsHidden"				"1"
+			"Passive"				"1"
+			
+			"Aura"					"modifier_get_xp"
+			"Aura_Radius"			"900"
+			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+			"Aura_ApplyToCaster"	"0"
+			"Aura_Flags"    		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+
+			"States"
+			{
+				"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+
+			"ThinkInterval"	"1"
+
+			"OnIntervalThink"
+			{
+				"GrantXPGold"
+				{
+					"Target"
+					{
+						"Center"		"CASTER"
+						"radius"		"1000"
+						"Types"			"DOTA_UNIT_TARGET_HERO"
+						"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+					}
+					"XPAmount"		"8"
+					"SplitEvenly"	"0"
+					"GoldAmount"	"4"
+					"ReliableGold"	"0"
+				}
+			}
+		}
+
+		"modifier_get_xp"
+		{
+			"Passive"       "1"
+			"EffectName"	""
+			"TextureName"	"custom_games_xp_coin"
+		}
+	}
+}

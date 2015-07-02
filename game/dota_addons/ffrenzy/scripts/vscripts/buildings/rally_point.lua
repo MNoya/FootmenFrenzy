@@ -12,6 +12,7 @@ function SpawnUnit( event )
 	
 	
 	-- Wearables
+	local color = GameMode:ColorForTeam( teamID )
 	for k, v in pairs(unit:GetChildren()) do 
 		if v:GetClassname() == "dota_item_wearable" then
 			local model = v:GetModelName()
@@ -22,7 +23,7 @@ function SpawnUnit( event )
 			and not string.match(model, "furion_staff") and not string.match(model, "furion_horns") and not string.match(model, "blood_chaser") and not string.match(model, "pugna_head")
 			and not string.match(model, "pugna_shoulder") and not string.match(model, "buttercup") and not string.match(model, "leftarm") and not string.match(model, "righthook")
 			and not string.match(model, "enchantress_hair") and not string.match(model, "knight_mace") and not string.match(model, "horse_foretold") ) then
-				v:SetRenderColor(GameRules.TeamColors[teamID][1],GameRules.TeamColors[teamID][2],GameRules.TeamColors[teamID][3])
+				v:SetRenderColor(color[1], color[2], color[3])
 			end
 		end 
 	end 
@@ -78,10 +79,11 @@ function SetRallyPoint( event )
 		-- Make a flag dummy
 		caster.flag = CreateUnitByName("dummy_unit", point, false, caster, caster, caster:GetTeamNumber())
 
+		local color = GameMode:ColorForTeam( caster:GetTeamNumber() )
 		local particle = ParticleManager:CreateParticleForTeam("particles/rally_flag.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster.flag, caster:GetTeamNumber())
 		ParticleManager:SetParticleControl(particle, 0, point) -- Position
 		ParticleManager:SetParticleControl(particle, 1, caster:GetAbsOrigin()) --Orientation
-		ParticleManager:SetParticleControl(particle, 15, GameRules.TeamColors[caster:GetTeamNumber()]) --Color
+		ParticleManager:SetParticleControl(particle, 15, Vector(color[1], color[2], color[3])) --Color
 
 		--DebugDrawLine(caster:GetAbsOrigin(), point, 255, 255, 255, false, 10)
 
