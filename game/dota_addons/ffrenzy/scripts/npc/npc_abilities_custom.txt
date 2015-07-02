@@ -3288,7 +3288,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 	
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"5.0"
+		"AbilityCooldown"				"20.0"
 	
 		"AbilityManaCost"				"75"
 	
@@ -3303,12 +3303,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"20 35 50 75"
+				"duration"			"20"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_movespeed"	"10 40 100 150"
+				"bonus_movespeed"	"10 20 30 40"
 			}
 			"03"
 			{
