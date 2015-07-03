@@ -120,6 +120,7 @@
 		"modifier_silenced"
 		{
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 
 			"EffectName"		"particles/generic_gameplay/generic_silenced.vpcf"
 			"EffectAttachType"	"follow_overhead"

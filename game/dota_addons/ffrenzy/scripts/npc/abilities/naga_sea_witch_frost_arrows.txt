@@ -113,6 +113,7 @@
 		"modifier_frost_arrows_slow"
 		{
 			"IsDebuff" 			"1"
+			"IsPurgable"	"1"
 			"TextureName"		"naga_sea_witch_frost_arrows"
 			"Properties"
 			{

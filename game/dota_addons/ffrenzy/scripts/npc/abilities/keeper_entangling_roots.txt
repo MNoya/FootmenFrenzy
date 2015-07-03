@@ -87,6 +87,7 @@
 		"modifier_entangling_roots"
 		{
 			"IsDebuff"		"1"
+			"IsPurgable"	"1"
 			"States"
 			{
 				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"

@@ -96,6 +96,7 @@
 		"modifier_cripple"
 		{
 			"IsDebuff"		"1"
+			"IsPurgable"	"1"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movespeed_slow"
@@ -173,6 +174,7 @@
 		"modifier_curse"
 		{
 			"IsDebuff"		"1"
+			"IsPurgable"	"1"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MISS_PERCENTAGE"	"%miss_chance"

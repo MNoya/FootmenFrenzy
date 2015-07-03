@@ -101,6 +101,7 @@
 		"modifier_hex"
 		{
 			"IsDebuff"	"1"
+			"IsPurgable"	"1"
 			"Duration"	"%duration"
 
 			"OnCreated"

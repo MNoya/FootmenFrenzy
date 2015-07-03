@@ -76,6 +76,7 @@
 		"modifier_howl_of_terror"
 		{
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 	
 			"EffectName"		"particles/custom/vengeful_wave_of_terror_recipient_reduction.vpcf"
 			"EffectAttachType"	"follow_origin"

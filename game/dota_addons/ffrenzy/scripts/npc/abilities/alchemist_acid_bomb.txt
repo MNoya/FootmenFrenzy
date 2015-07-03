@@ -154,6 +154,7 @@
 		"modifier_acid_bomb"
 		{
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 	
 			"StatusEffectName"		"particles/status_fx/status_effect_maledict.vpcf"
 			"StatusEffectPriority"	"10"
@@ -190,6 +191,7 @@
 		"modifier_acid_bomb_aoe"
 		{
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 	
 			"StatusEffectName"		"particles/status_fx/status_effect_maledict.vpcf"
 			"StatusEffectPriority"	"10"

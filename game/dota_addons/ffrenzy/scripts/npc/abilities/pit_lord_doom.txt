@@ -485,6 +485,7 @@
 		"modifier_cripple"
 		{
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 	
 			//"EffectName"        "particles/durant_cripple.vpcf"
 			//"EffectAttachType"	"follow_origin"
@@ -750,6 +751,7 @@
 		{
 			"IsHidden"	"0"
 			"IsDebuff"	"1"
+			"IsPurgable"	"1"
 			"Duration"	"%burn_duration"
 			"OnCreated"
 			{

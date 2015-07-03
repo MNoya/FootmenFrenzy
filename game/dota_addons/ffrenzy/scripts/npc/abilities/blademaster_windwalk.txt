@@ -80,6 +80,7 @@
 		"modifier_windwalk"
 		{
 			"IsBuff"			"1"
+			"IsPurgable"	"1"
 			"Duration"          "%duration"
 			//"EffectName"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
 			//"EffectAttachType"	"follow_origin"

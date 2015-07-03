@@ -128,6 +128,7 @@
 			"Passive"			"0"
 			"IsHidden"			"0"
 			"IsDebuff"			"1"
+			"IsPurgable"		"1"
 	
 			"EffectName"		"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
 			"EffectAttachType"	"follow_origin"

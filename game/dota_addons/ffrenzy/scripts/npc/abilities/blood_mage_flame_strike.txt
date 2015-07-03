@@ -226,6 +226,7 @@
 		"modifier_flame_strike_first_burn"
 		{
 			"IsDebuff"	"1"
+			"IsPurgable"	"1"
 
 			"ThinkInterval"	"1"
 			"OnIntervalThink"
@@ -242,6 +243,7 @@
 		"modifier_flame_strike_second_burn"
 		{
 			"IsDebuff"	"1"
+			"IsPurgable"	"1"
 
 			"ThinkInterval"	"1"
 			"OnIntervalThink"

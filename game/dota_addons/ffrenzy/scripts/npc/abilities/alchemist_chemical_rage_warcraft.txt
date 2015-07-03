@@ -86,6 +86,7 @@
 		"modifier_chemical_rage_warcraft"
 		{
 			"IsBuff"	"1"
+			"IsPurgable"	"1"
 			"IsHidden"	"1"
 			"Duration"	"%duration"
 

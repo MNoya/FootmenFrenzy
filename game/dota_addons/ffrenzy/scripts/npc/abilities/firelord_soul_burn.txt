@@ -92,6 +92,7 @@
 		"modifier_soul_burn"
 		{
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 	
 			"EffectName"		"particles/units/heroes/hero_axe/axe_battle_hunger.vpcf"
 			"EffectAttachType"	"follow_overhead"

@@ -142,6 +142,7 @@
 		"modifier_frost_nova_slow"
 		{
 			"IsDebuff"		"1"
+			"IsPurgable"	"1"
 
 			"StatusEffectName"		"particles/status_fx/status_effect_frost_lich.vpcf"
 			"StatusEffectPriority"	"10"

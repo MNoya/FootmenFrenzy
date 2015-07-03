@@ -272,6 +272,7 @@
 		{
 			"IsHidden"	"0"
 			"IsDebuff"	"1"
+			"IsPurgable"	"1"
 			"Duration"	"%burn_duration"
 			"OnCreated"
 			{

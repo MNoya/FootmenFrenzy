@@ -47,6 +47,8 @@
 	{
 		"modifier_paladin_divine_shield"
 		{
+			"IsBuff"	"1"
+			"IsPurgable"	"1"
 			"EffectName"			"particles/units/heroes/hero_omniknight/omniknight_repel_buff.vpcf"
 			"EffectAttachType"	"follow_origin"
 

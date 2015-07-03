@@ -648,6 +648,7 @@
 		"modifier_windwalk"
 		{
 			"IsBuff"			"1"
+			"IsPurgable"	"1"
 			"Duration"          "%duration"
 
 			"Properties"

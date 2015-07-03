@@ -112,6 +112,7 @@
 		"modifier_breath_fire_burn"
 		{	
 			"IsDebuff"			"1"
+			"IsPurgable"	"1"
 			"Duration"			"%burn_duration"
 
 			"EffectName"		"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn_creep.vpcf"

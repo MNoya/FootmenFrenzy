@@ -97,6 +97,7 @@
 		"modifier_incinerate_stack"
 		{
 			"IsDebuff"	"1"
+			"IsPurgable"	"1"
 
 			"OnDeath"
 			{
