@@ -77,7 +77,7 @@
 	"AbilityTextureName"			"arphaxad_dispel"
 	"MaxLevel" 						"1"
 
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
@@ -87,6 +87,7 @@
 	"AbilityCooldown"				"1.0"
 
 	"AbilityManaCost"				"75"
+	"AOERadius"						"%radius"
 	
 	"AbilitySpecial"
 	{
@@ -99,32 +100,41 @@
 	
 	"precache"
 	{
-		"particle"			"particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
-		"soundfile" 		"soundevents/game_sounds_creeps.vsndevts"
+		"particle"			"particles/arphaxad_dispel_main.vpcf"
+		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_oracle.vsndevts"
 	}
 	
 	
 	"OnSpellStart"
 	{
+		"FireEffect"
+		{
+			"EffectName"        "particles/arphaxad_dispel_main.vpcf"
+			"EffectAttachType"  "world_origin"
+			"TargetPoint"       "POINT"
+			//"ControlPoints"
+			//{
+			//	"01"	"1 0 0"
+			//}
+		}
+		"FireSound"
+		{
+			"EffectName"	"Hero_Oracle.PurifyingFlames.Damage"
+			"Target" 		"TARGET"
+		}
+		
 		"RunScript"
 		{
 			"ScriptFile"    "units/arphaxad/dispel.lua"
 			"Function"      "Cast"
+			"Target"
+			{
+				"Center"  	"POINT"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
 		}
-		"FireEffect"
-		{
-			"EffectName"        "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
-			"EffectAttachType"  "attach_hitloc"
-			"Target"            "TARGET"
-		}
-		"FireSound"
-		{
-			"EffectName"	"n_creep_ForestTrollHighPriest.Heal"
-			"Target" 		"TARGET"
-		}
-	}
-	
-	"Modifiers"
-	{
+		
 	}
 }
