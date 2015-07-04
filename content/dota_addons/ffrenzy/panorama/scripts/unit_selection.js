@@ -66,6 +66,13 @@ function IsCustomBuilding( entityIndex ){
 		return false
 }
 
+function OnNPCSpawned ( event ){
+	var npcIndex = event.entindex
+	var unitName = Entities.GetUnitName( npcIndex )
+	if (unitName.indexOf("base") != -1){
+		GameUI.SelectUnit(npcIndex, true);		
+	}
+}
 
 function OnUpdateQueryUnit( event )
 {
@@ -73,6 +80,7 @@ function OnUpdateQueryUnit( event )
 }
 
 (function () {
+	GameEvents.Subscribe( "npc_spawned", OnNPCSpawned );
 	GameEvents.Subscribe( "dota_player_update_selected_unit", OnUpdateSelectedUnit );
 	GameEvents.Subscribe( "dota_player_update_query_unit", OnUpdateQueryUnit );
 })();

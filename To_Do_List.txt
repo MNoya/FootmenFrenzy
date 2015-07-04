@@ -6,8 +6,4 @@
 
 -creep-items
 
--make it so when group selecting units, buildings don't get selected.  possible?
-
 -max units maybe
-
--base upgrade doesnt replace unit, instead switches model, ups hp, switches wearables, switches abilities so is not unselected when upgraded
