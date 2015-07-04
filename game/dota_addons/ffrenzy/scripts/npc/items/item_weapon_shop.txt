@@ -3,394 +3,378 @@
 /////////////////////////////////////////////////
 
 
-	//=================================================================================================================
-	// Claws of Attack
-	//=================================================================================================================
-	"item_claws_of_attack"
-	{
-		"ID"							"2011"
+//=================================================================================================================
+// Claws of Attack
+//=================================================================================================================
+"item_claws_of_attack"
+{
+	"ID"							"2011"
 
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_claws_of_attack"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------	
+	"AbilityTextureName" 			"item_claws_of_attack"
 
-		"ItemCost"						"500"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
+	"ItemCost"						"500"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"20"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"20"
 		}
 		
-		"Modifiers"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_claws_of_attack_datadriven"
 		{
-			"modifier_item_claws_of_attack_datadriven"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+			}
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Scourge Bone Chimes
+//=================================================================================================================
+"item_scourge_bone_chimes"
+{
+	"ID"							"2012"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------	
+	"AbilityTextureName" 			"item_scourge_bone_chimes"
+
+	"ItemCost"						"450"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"aura_radius"				"900"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"lifesteal_aura_percent"	"15"
+		}		
+	}
+	
+	
+	"Modifiers"
+	{
+		"modifier_item_scourge_bone_chimes_datadriven"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+		}
+		"modifier_item_scourge_bone_chimes_lifesteal_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+		
+			"Aura" 					"modifier_item_scourge_bone_chimes_lifesteal_aura"
+			"Aura_Radius" 			"%aura_radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_MELEE_ONLY"
+			"Aura_ApplyToCaster" 	"1"
+		}
+		"modifier_item_scourge_bone_chimes_lifesteal_aura"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
 			
-				"Properties"
+			"OnAttackLanded"
+			{
+				"RunScript"
 				{
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+					"ScriptFile"			"items/item_scourge_bone_chimes.lua"
+					"Function"				"modifier_item_scourge_bone_chimes"
+				}
+			}
+		}
+		"modifier_item_scourge_bone_chimes_lifesteal"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			
+			"OnDealDamage"
+			{
+				"Lifesteal"
+				{
+					"Target"			"ATTACKER"
+					"LifestealPercent"	"%lifesteal_aura_percent"
 				}
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Totem of Might
+//=================================================================================================================
+"item_totem_of_might"
+{
+	"ID"							"2013"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_totem_of_might"
+
+	"ItemCost"						"1200"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	
-	//=================================================================================================================
-	// Scourge Bone Chimes
-	//=================================================================================================================
-	"item_scourge_bone_chimes"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2012"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_scourge_bone_chimes"
-
-		"ItemCost"						"450"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-			{
-				"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"aura_radius"				"900"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"lifesteal_aura_percent"	"15"
-			}
-			
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"5"
 		}
 		
-		
-		"Modifiers"
+		"02"
 		{
-			"modifier_item_scourge_bone_chimes_datadriven"
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"10"
+		}		
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_totem_of_might_datadriven"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-			}
-			"modifier_item_scourge_bone_chimes_lifesteal_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-			
-				"Aura" 					"modifier_item_scourge_bone_chimes_lifesteal_aura"
-				"Aura_Radius" 			"%aura_radius"
-				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_MELEE_ONLY"
-				"Aura_ApplyToCaster" 	"1"
-			}
-			"modifier_item_scourge_bone_chimes_lifesteal_aura"
-			{
-				"Passive"			"0"
-				"IsHidden"			"1"
-				
-				"OnAttackLanded"
-				{
-					"RunScript"
-					{
-						"ScriptFile"			"items/item_scourge_bone_chimes.lua"
-						"Function"				"modifier_item_scourge_bone_chimes"
-					}
-				}
-			}
-			"modifier_item_scourge_bone_chimes_lifesteal"
-			{
-				"Passive"			"0"
-				"IsHidden"			"1"
-				
-				"OnDealDamage"
-				{
-					"Lifesteal"
-					{
-						"Target"			"ATTACKER"
-						"LifestealPercent"	"%lifesteal_aura_percent"
-					}
-				}
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agility"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Maul of Corruption
+//=================================================================================================================
+"item_maul_of_corruption"
+{
+	"ID"							"2014"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_maul_of_corruption"
+
+	"ItemCost"						"850"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	
-	//=================================================================================================================
-	// Totem of Might
-	//=================================================================================================================
-	"item_totem_of_might"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2013"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_totem_of_might"
-
-		"ItemCost"						"1200"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"5"
-			}
-			
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"10"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"5"
 		}
 		
-		"Modifiers"
+		"02"
 		{
-			"modifier_item_totem_of_might_datadriven"
+			"var_type"				"FIELD_INTEGER"
+			"corruption_armor"		"-5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"corruption_duration"	"10.0"
+		}			
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_maul_of_corruption_datadriven"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-			
-				"Properties"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"						"%bonus_damage"
+			}
+		
+			"Orb"
+			{
+				"Priority"				"DOTA_ORB_PRIORITY_ITEM"
+				"ProjectileName"		"particles/items_fx/desolator_projectile.vpcf"
+				"CastAttack"			"0"
+			}
+
+			"OnOrbImpact"
+			{
+				"ApplyModifier"
 				{
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agility"
+					"Target"			"TARGET"
+					"ModifierName"		"modifier_item_maul_of_corruption_datadriven_corruption"
 				}
+			
+				"FireSound"
+				{
+					"EffectName"		"Item_Desolator.Target"
+					"Target"			"TARGET"
+				}
+			}
+		}
+		"modifier_item_maul_of_corruption_datadriven_corruption"
+		{
+			"Duration"				"%corruption_duration"
+			"Passive"				"0"
+			"IsHidden"				"0"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%corruption_armor"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Berserker's Axe
+//=================================================================================================================
+"item_berserkers_axe"
+{
+	"ID"							"2015"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
 	
+	"AbilityTextureName" 			"item_berserkers_axe"
+
+	"ItemCost"						"850"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
 	
-	//=================================================================================================================
-	// Maul of Corruption
-	//=================================================================================================================
-	"item_maul_of_corruption"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2014"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_maul_of_corruption"
-
-		"ItemCost"						"850"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"5"
-			}
-			
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"corruption_armor"		"-5"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"corruption_duration"	"10.0"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"cleave_damage_percent"	"10"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"cleave_radius"					"250"
 		}
 		
-		"Modifiers"
-		{
-			"modifier_item_maul_of_corruption_datadriven"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-			
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"						"%bonus_damage"
-				}
-			
-				"Orb"
-				{
-					"Priority"				"DOTA_ORB_PRIORITY_ITEM"
-					"ProjectileName"		"particles/items_fx/desolator_projectile.vpcf"
-					"CastAttack"			"0"
-				}
-	
-				"OnOrbImpact"
-				{
-					"ApplyModifier"
-					{
-						"Target"			"TARGET"
-						"ModifierName"		"modifier_item_maul_of_corruption_datadriven_corruption"
-					}
-				
-					"FireSound"
-					{
-						"EffectName"		"Item_Desolator.Target"
-						"Target"			"TARGET"
-					}
-				}
-			}
-			"modifier_item_maul_of_corruption_datadriven_corruption"
-			{
-				"Duration"				"%corruption_duration"
-				"Passive"				"0"
-				"IsHidden"				"0"
-			
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%corruption_armor"
-				}
-			}
-		}
 	}
 	
-	
-	//=================================================================================================================
-	// Berserker's Axe
-	//=================================================================================================================
-	"item_berserkers_axe"
+	"Modifiers"
 	{
-		"ID"							"2015"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_berserkers_axe"
-
-		"ItemCost"						"850"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent"	"10"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"cleave_radius"					"250"
-			}
-			
-		}
-		
-		"Modifiers"
-		{
 		"modifier_item_berserkers_axe_datadriven"
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
 			
 			"OnCreated"
 			{
@@ -456,5 +440,5 @@
 				}
 			}
 		}
-		}
 	}
+}

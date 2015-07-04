@@ -51,7 +51,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_hp"
@@ -115,7 +115,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_HEALTH_BONUS"			"%bonus_hp"
@@ -180,7 +180,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" 			"%spell_resist"
@@ -231,29 +231,26 @@
 			"block_cooldown"		"120"
 		}
 		"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"0"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_health_regen"	"0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_mana_regen"		"0"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"		"0"
-			}
-		
-	}
-	
-	
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana_regen"		"0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"		"0"
+		}	
+	}	
 }
 
 
@@ -306,7 +303,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" "%bonus_damage"
@@ -354,8 +351,7 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"bonus_mana_regen_percentage"	"5000"
-		}
-		
+		}	
 	}
 	
 	"Modifiers"
@@ -364,7 +360,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
@@ -387,8 +383,7 @@
 	"BaseClass" 					"item_datadriven"
 
 	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-		
+	//-------------------------------------------------------------------------------------------------------------		
 	"AbilityTextureName" 			"item_plate_of_the_storm_lord"
 
 	"ItemCost"						"1500"
@@ -441,7 +436,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-	
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"

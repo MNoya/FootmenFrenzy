@@ -52,7 +52,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-			
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
@@ -104,8 +104,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_strength"		"10"
-			}
-			
+			}		
 		}
 		
 		"Modifiers"
@@ -114,7 +113,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-			
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_strength"
@@ -136,8 +135,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------		
 		"AbilityTextureName" 			"item_boots_of_quelthalas"
 
 		"ItemCost"						"350"
@@ -148,8 +146,6 @@
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
 		"SideShop" 						"1"
-	
-		
 
 		"UIPickupSound"					"Item.PickUpGemShop"
 		"UIDropSound"					"Item.DropGemShop"
@@ -173,7 +169,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-			
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agility"
@@ -195,8 +191,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------	
 		"AbilityTextureName" 			"item_wizards_robe"
 
 		"ItemCost"						"350"
@@ -232,7 +227,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-			
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intelligence"
@@ -255,8 +250,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------		
 		"AbilityTextureName" 			"item_quaithes_mask"
 
 		"ItemCost"						"250"
@@ -267,8 +261,6 @@
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
 		"SideShop" 						"1"
-	
-		
 
 		"UIPickupSound"					"Item.PickUpGemShop"
 		"UIDropSound"					"Item.DropGemShop"
@@ -282,8 +274,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_mana_regen_percentage"	"100"
-			}
-			
+			}			
 		}
 		
 		"Modifiers"
@@ -292,7 +283,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-			
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
@@ -315,8 +306,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------	
 		"AbilityTextureName" 			"item_circlet_of_royalty"
 
 		"ItemCost"						"350"
@@ -328,8 +318,6 @@
 		"ItemQuality"					"weapons_armor"
 		"SideShop" 						"1"
 	
-		
-
 		"UIPickupSound"					"Item.PickUpGemShop"
 		"UIDropSound"					"Item.DropGemShop"
 		"WorldDropSound"				"Item.DropGemWorld"
@@ -342,8 +330,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_all_stats"		"2"
-			}
-			
+			}			
 		}
 		
 		"Modifiers"
@@ -352,7 +339,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-			
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
@@ -377,8 +364,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------		
 		"AbilityTextureName" 			"item_precept_of_mana"
 
 		"ItemCost"						"450"
@@ -390,8 +376,6 @@
 		"ItemQuality"					"weapons_armor"
 		"SideShop" 						"1"
 	
-		
-
 		"UIPickupSound"					"Item.PickUpGemShop"
 		"UIDropSound"					"Item.DropGemShop"
 		"WorldDropSound"				"Item.DropGemWorld"
@@ -404,8 +388,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_mana"			"200"
-			}
-			
+			}			
 		}
 		
 		"Modifiers"
@@ -414,7 +397,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MANA_BONUS"			"%bonus_mana"
@@ -437,8 +420,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------		
 		"AbilityTextureName" 			"item_ring_of_regeneration"
 
 		"ItemCost"						"350"
@@ -449,8 +431,6 @@
 		"ItemShopTags"					"weapons_armor"
 		"ItemQuality"					"weapons_armor"
 		"SideShop" 						"1"
-	
-		
 
 		"UIPickupSound"					"Item.PickUpGemShop"
 		"UIDropSound"					"Item.DropGemShop"
@@ -474,7 +454,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_health_regen"
@@ -497,8 +477,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------		
 		"AbilityTextureName" 			"item_ring_of_steel"
 
 		"ItemCost"						"200"
@@ -524,8 +503,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"6"
-			}
-			
+			}		
 		}
 		
 		"Modifiers"
@@ -534,7 +512,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
@@ -556,8 +534,7 @@
 		"BaseClass" 					"item_datadriven"
 
 		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
+		//-------------------------------------------------------------------------------------------------------------	
 		"AbilityTextureName" 			"item_medallion_of_glim"
 
 		"ItemCost"						"350"
@@ -599,7 +576,7 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
-				
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"

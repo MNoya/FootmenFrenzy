@@ -16,8 +16,7 @@
 	"BaseClass" 					"item_datadriven"
 
 	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-		
+	//-------------------------------------------------------------------------------------------------------------		
 	"AbilityTextureName" 			"item_health_stone"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
@@ -32,7 +31,6 @@
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
 	"SecretShop" 					"1"
-
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
 	"UIDropSound"					"Item.DropGemShop"
@@ -84,7 +82,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%hp_regen"
@@ -137,14 +135,12 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"mana_regen"				"25"
-		}
-		
+		}		
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"mana_restored"			"400"
-		}
-		
+		}		
 	}
 	
 	"OnSpellStart"
@@ -177,7 +173,7 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_regen"
@@ -297,14 +293,12 @@
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
-	{
-		
+	{		
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"mana_restored"			"400"
-		}
-		
+		}		
 	}
 	
 	"OnSpellStart"
