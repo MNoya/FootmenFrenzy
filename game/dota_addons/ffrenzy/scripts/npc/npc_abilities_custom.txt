@@ -8156,27 +8156,6 @@
 			}
 		}
 	}
-	
-	"dummy_empty1"
-	{
-		"BaseClass" 		"ability_datadriven"
-		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
-	"dummy_empty2"
-	{
-		"BaseClass" 		"ability_datadriven"
-		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
-	"dummy_empty3"
-	{
-		"BaseClass" 		"ability_datadriven"
-		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
-	"dummy_empty4"
-	{
-		"BaseClass" 		"ability_datadriven"
-		"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	}
 	"durant_cripple"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -18761,7 +18740,7 @@
 								"Target"
 								{
 									"Center"		"TARGET"
-									"Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+									"Types"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 									"Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 								}
 								"ModifierName"		"modifier_rifleman_headshot_debuff"

@@ -82,7 +82,6 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%hp_regen"
@@ -173,7 +172,6 @@
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
-			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_regen"
@@ -320,6 +318,303 @@
 		{
 			"Target" 		"UNIT"
 			"EffectName" 	"DOTA_Item.ClarityPotion.Activate"
+		}
+		"SpendCharge"
+		{}	
+	}
+	
+}
+
+
+//=================================================================================================================
+// Scroll of Speed
+//=================================================================================================================
+"item_scroll_of_speed"
+{
+	"ID"							"2059"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_scroll_of_speed"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+	"ItemCost"						"100"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{		
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_speed"			"400"
+		}	
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"600"
+		}	
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"45"
+		}			
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"			"modifier_scroll_of_speed"
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+			"Duration"		"%duration"
+		}
+		"FireEffect"
+		{
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+			"EffectName"			"particles/items_fx/drum_of_endurance_buff_b.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 		"UNIT"
+			"EffectName" 	"DOTA_Item.DoE.Activate"
+		}
+		"SpendCharge"
+		{}	
+	}
+	
+	"Modifiers"
+	{
+		"modifier_scroll_of_speed"
+		{
+			"IsBuff"			"1"
+			"IsPurgable"		"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_speed"
+			}
+		}
+	}
+	
+}
+
+
+//=================================================================================================================
+// Scroll of the Beast
+//=================================================================================================================
+"item_scroll_of_the_beast"
+{
+	"ID"							"2060"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_scroll_of_the_beast"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+	"ItemCost"						"600"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{		
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage_pct"		"75"
+		}	
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"600"
+		}	
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"45"
+		}			
+	}
+	
+	"precache"
+	{
+		"particle"			"particles/scroll_of_the_beast.vpcf"
+		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"			"modifier_scroll_of_the_beast"
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+			"Duration"		"%duration"
+		}
+		"FireEffect"
+		{
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+			"EffectName"			"particles/scroll_of_the_beast.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 		"UNIT"
+			"EffectName" 	"Hero_LoneDruid.BattleCry.Bear"
+		}
+		"SpendCharge"
+		{}	
+	}
+	
+	"Modifiers"
+	{
+		"modifier_scroll_of_the_beast"
+		{
+			"IsBuff"			"1"
+			"IsPurgable"		"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%bonus_damage_pct"
+			}
+		}
+	}
+	
+}
+
+
+//=================================================================================================================
+// Scroll of Darkness
+//=================================================================================================================
+"item_scroll_of_darkness"
+{
+	"ID"							"2061"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		
+	"AbilityTextureName" 			"item_scroll_of_animate_dead"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+	"ItemCost"						"300"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"secretshop"
+	"ItemQuality"					"secretshop"
+	"ItemInitialCharges" 			"1"
+	"ItemPermanent" 				"0"
+	"SecretShop" 					"1"
+
+	
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"60"
+		}			
+	}
+	
+	"precache"
+	{
+		"particle"			"particles/scroll_of_the_beast.vpcf"
+		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"    "items/scroll_of_darkness.lua"
+			"Function"      "Cast"
+		}
+		"FireEffect"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"particles/scroll_of_the_beast.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+		"FireSound"
+		{
+			"Target" 		"UNIT"
+			"EffectName" 	"Hero_LoneDruid.BattleCry.Bear"
 		}
 		"SpendCharge"
 		{}	

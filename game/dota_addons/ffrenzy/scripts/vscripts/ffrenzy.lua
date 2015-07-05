@@ -55,7 +55,7 @@ local team_d_counter = 0
 
 -- Change these at will
 local testing = true
-local testingUnits = true
+local testingUnits = false
 local testingLevels = true
 local filmmaker = false
 
@@ -345,6 +345,8 @@ function GameMode:PostLoadPrecache()
 	
 	PrecacheUnitByNameAsync("npc_durant", function(...) end)
 	PrecacheUnitByNameAsync("npc_arphaxad", function(...) end)
+	
+	PrecacheItemByNameAsync("item_scroll_of_the_beast", function(...) end)
 
 end
 

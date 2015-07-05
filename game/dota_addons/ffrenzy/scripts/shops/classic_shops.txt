@@ -139,5 +139,8 @@
 		"item"				"item_mana_stone"
 		"item"				"item_potion_of_health"
 		"item"				"item_potion_of_mana"
+		"item"				"item_scroll_of_speed"
+		"item"				"item_scroll_of_the_beast"
+		"item"				"item_scroll_of_darkness"
 	}
 }
