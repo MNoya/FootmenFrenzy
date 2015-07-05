@@ -5661,7 +5661,7 @@
 	
 		"Ability1"					"arphaxad_heal"			// Ability 1.
 		"Ability2"					"arphaxad_dispel"
-		"Ability3"					""
+		"Ability3"					"arphaxad_inner_fire"
 		"Ability4"					"neutral_spell_immunity"
 	
 		// Armor
@@ -5674,10 +5674,10 @@
 		"AttackDamageMin"			"20"									// Damage range min.
 		"AttackDamageMax"			"20"									// Damage range max.
 		"AttackRate"				"1.7"									// Speed of attack.
-		"AttackAnimationPoint"		"0"									// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"		"0.3"									// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"									// Range within a target can be acquired.
 		"AttackRange"				"600"									// Range within a target can be attacked.
-		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"									// Speed of projectile.
 	
 		// Bounty

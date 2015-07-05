@@ -4,6 +4,9 @@ function Cast (event)
 	local targets = event.target_entities
 	local teamID = caster:GetTeamNumber()
 	local radius = ability:GetLevelSpecialValueFor( "radius", ability:GetLevel() - 1 )
+	local damage = ability:GetLevelSpecialValueFor( "damage" , ability:GetLevel() - 1 )
+	
+	
 	
 	for _,unit in pairs (targets) do
 		if unit:GetTeamNumber() == teamID then
@@ -14,7 +17,12 @@ function Cast (event)
 			unit:Purge(true, false, false, false, false)
 		end
 		if unit:IsSummoned() then
-			ApplyDamage({ victim = unit, attacker = event.target, damage = damage, damage_type = abilityDamageType}) 
+			ApplyDamage({ victim = unit, attacker = caster, damage = damage, damage_type = abilityDamageType}) 
 		end
 	end
+end
+
+function Sound (event)
+	EmitSoundOnLocationWithCaster(event.target_points[1], "Hero_Oracle.PurifyingFlames.Damage", event.caster)
+
 end

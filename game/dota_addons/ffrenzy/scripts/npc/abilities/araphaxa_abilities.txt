@@ -53,7 +53,7 @@
 	
 	"Modifiers"
 	{
-		"modifier_unit_spawned"
+		"modifier_arphax_heal_unit_spawned"
 		{
 			"Passive" 			"1"
 			"IsHidden" 			"1"
@@ -81,6 +81,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
 	"AbilityCastRange"				"700"
 	"AbilityCastPoint"				"0.3"
@@ -95,6 +96,11 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"radius"				"200"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"200"
 		}
 	}
 	
@@ -112,15 +118,6 @@
 			"EffectName"        "particles/arphaxad_dispel_main.vpcf"
 			"EffectAttachType"  "world_origin"
 			"TargetPoint"       "POINT"
-			//"ControlPoints"
-			//{
-			//	"01"	"1 0 0"
-			//}
-		}
-		"FireSound"
-		{
-			"EffectName"	"Hero_Oracle.PurifyingFlames.Damage"
-			"Target" 		"TARGET"
 		}
 		
 		"RunScript"
@@ -136,5 +133,118 @@
 			}
 		}
 		
+		"RunScript"
+		{
+			"ScriptFile"    "units/arphaxad/dispel.lua"
+			"Function"      "Sound"
+			"Target"		"POINT"
+		}
+		
+	}
+}
+
+
+"arphaxad_inner_fire"
+{
+	"BaseClass"             		"ability_datadriven"
+	"AbilityTextureName"			"arphaxad_inner_fire"
+	"MaxLevel" 						"1"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"1.0"
+
+	"AbilityManaCost"				"5"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage_percent"	"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"60"
+		}
+	}
+	
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_clinkz/clinkz_body_arm_fire.vpcf"
+		"particle"			"particles/units/heroes/hero_clinkz/clinkz_windwalk.vpcf"
+		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_batrider.vsndevts"
+	}
+	
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_inner_fire"
+			"Target"		"TARGET"
+			"Duration"		"%duration"
+		}
+		"FireSound"
+		{
+			"EffectName"	"Hero_Batrider.Firefly.Cast"
+			"Target" 		"TARGET"
+		}
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_clinkz/clinkz_windwalk.vpcf"
+			"EffectAttachType"  "attach_hitloc"
+			"Target"            "TARGET"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_inner_fire"
+		{
+			"IsBuff"		"1"
+			"IsPurgable"	"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"		"%bonus_damage_percent"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+			}
+			
+			"OnCreated"
+			{
+				
+				"AttachEffect"
+				{
+					"EffectName"        "particles/units/heroes/hero_clinkz/clinkz_body_arm_fire.vpcf"
+					"EffectAttachType"  "attach_hitloc"
+					"Target"            "TARGET"
+				}
+			}
+		}
+		"modifier_arphax_fire_unit_spawned"
+		{
+			"Passive" 			"1"
+			"IsHidden" 			"1"
+			"ThinkInterval"		"1"
+            "OnIntervalThink"
+         	{
+				"RunScript"
+				{
+					"ScriptFile"    "units/arphaxad/inner_fire.lua"
+					"Function"      "AutoCast"
+				}
+			}
+		}
 	}
 }

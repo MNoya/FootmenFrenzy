@@ -80,12 +80,6 @@
 			"ModifierName"	"modifier_blizzard_channelling"
 			"Target" 		"CASTER"
 		}
-				
-		//"FireSound"
-		//{
-		//	"EffectName"	"hero_Crystal.freezingField.wind"
-		//	"Target"		"CASTER"
-		//}
 	}
 
 	"OnChannelFinish"
@@ -123,12 +117,6 @@
 		{
 			"OnCreated"
 			{
-				//"RunScript"
-				//{
-				//	"ScriptFile"	"heroes/archmage/blizzard.lua"
-				//	"Function"		"BlizzardWaveStart"
-				//	"Target"		"POINT"
-				//}
 				"ApplyModifier"
          		{
 					"ModifierName"	"modifier_blizzard_thinker"
@@ -138,12 +126,6 @@
 			"ThinkInterval"  "%wave_interval"
 			"OnIntervalThink"
 			{
-				//"RunScript"
-				//{
-				//	"ScriptFile"	"heroes/archmage/blizzard.lua"
-				//	"Function"		"BlizzardWaveStart"
-				//	"Target"		"POINT"
-				//}
 				"ApplyModifier"
          		{
 					"ModifierName"	"modifier_blizzard_thinker"

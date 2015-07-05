@@ -201,6 +201,7 @@
 		"tinker_pocket_factory_building3"                                                 "Pocket Factory"
 		
 		"npc_durant"																		"Durant"
+		"npc_arphaxad"                                                                    "Arphaxad"
 
 		
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -292,7 +293,10 @@
 		"DOTA_Tooltip_ability_item_potion_of_mana_Description"								"Consumable for <font color='#ffad33'>400</font> Mana"
 		
 		"DOTA_Tooltip_ability_item_summon_durant"											"Summon Durant"
-		"DOTA_Tooltip_ability_item_summon_durant_Description"								"Consumable to summon a minion with strong spells"
+		"DOTA_Tooltip_ability_item_summon_durant_Description"								"Consume to summon a minion with strong single target debuff spells"
+		
+		"DOTA_Tooltip_ability_item_summon_arphaxad"											"Summon Arphaxad"
+		"DOTA_Tooltip_ability_item_summon_arphaxad_Description"								"Consume to summon a minion with strong healing spells"
 		
 		
 		
@@ -1185,6 +1189,22 @@
 		"DOTA_Tooltip_ability_durant_mana_clutch_mana_burn"									"MANA BURN:"
 		"DOTA_Tooltip_ability_durant_mana_clutch_mana_regen"								"AURA MANA REGEN:"
 		"DOTA_Tooltip_ability_durant_mana_clutch_duration"									"MAX DURATION:"
+		
+		
+		"DOTA_Tooltip_ability_arphaxad_heal"                                              "Heal"
+		"DOTA_Tooltip_ability_arphaxad_heal_Description"                                  "Heal the target.  Autocast will only heal heroes and Arphaxad."
+		"DOTA_Tooltip_ability_arphaxad_heal_heal_amount"                                  "HEAL AMOUNT:"
+
+		"DOTA_Tooltip_ability_arphaxad_dispel"                                            "Dispel"
+		"DOTA_Tooltip_ability_arphaxad_dispel_Description"                                "Removes positive buffs from enemies and negative buffs from allies.  Also deals damage to summoned units."
+		"DOTA_Tooltip_ability_arphaxad_dispel_radius"                                     "RADIUS:"
+		"DOTA_Tooltip_ability_arphaxad_dispel_damage"										"DAMAGE:"
+
+		"DOTA_Tooltip_ability_arphaxad_inner_fire"                                        "Inner Fire"
+		"DOTA_Tooltip_ability_arphaxad_inner_fire_Description"                            "Increases the damage and armor of the target.  Autocast will cast the ability on heroes and regular units when Arphaxad is in combat."
+		"DOTA_Tooltip_ability_arphaxad_inner_fire_bonus_armor"                            "BONUS ARMOR:"
+		"DOTA_Tooltip_ability_arphaxad_inner_fire_bonus_damage_percent"                   "BONUS DAMAGE PERCENT:"
+		"DOTA_Tooltip_ability_arphaxad_inner_fire_duration"                               "DURATION:"
 		
 		
 		

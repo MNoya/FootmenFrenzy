@@ -987,6 +987,12 @@
 						"ModifierName"	"modifier_summoned"
 						"Target" 		"TARGET"
 					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
 				}
 			}
 			"SpendCharge"
@@ -1002,14 +1008,6 @@
 				"States"
 				{
 					"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"mechanics.lua"
-						"Function"		"SetNoCorpse"
-					}
 				}
 			}
 		}
@@ -1078,11 +1076,12 @@
 						"ModifierName"	"modifier_summoned"
 						"Target" 		"TARGET"
 					}
-					//"RunScript"
-					//{
-					//	"ScriptFile"	"units/arphaxad/arphaxad.lua"
-					//	"Function"		"OnCreated"
-					//}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
 				}
 			}
 			"SpendCharge"
@@ -1098,14 +1097,6 @@
 				"States"
 				{
 					"MODIFIER_STATE_DOMINATED"		"MODIFIER_STATE_VALUE_ENABLED"
-				}
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"ScriptFile"	"mechanics.lua"
-						"Function"		"SetNoCorpse"
-					}
 				}
 			}
 		}
