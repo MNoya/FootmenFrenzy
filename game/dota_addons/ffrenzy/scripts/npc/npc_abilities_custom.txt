@@ -221,7 +221,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"regen"					"10"
+				"regen"					"5"
 			}
 			"02"
 			{
@@ -7527,10 +7527,10 @@
 	
 		"AbilityCastRange"				"700"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"10.0"
+		"AbilityCooldown"				"20.0"
 	
 		"AbilityManaCost"				"110"
-		"AbilityDamage"					"75 125 200 275"
+		"AbilityDamage"					"75 125 175 225"
 	
 		"precache"
 		{
@@ -17569,10 +17569,10 @@
 	
 		"AbilityCastRange"				"700"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"8.0"
+		"AbilityCooldown"				"20.0"
 	
 		"AbilityManaCost"				"100"
-		"AbilityDamage"					"75 130 200 270"
+		"AbilityDamage"					"75 125 175 225"
 	
 		"precache"
 		{

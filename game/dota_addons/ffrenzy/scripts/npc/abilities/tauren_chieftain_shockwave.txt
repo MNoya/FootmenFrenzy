@@ -20,10 +20,10 @@
 
 	"AbilityCastRange"				"700"
 	"AbilityCastPoint"				"0.3"
-	"AbilityCooldown"				"8.0"
+	"AbilityCooldown"				"20.0"
 
 	"AbilityManaCost"				"100"
-	"AbilityDamage"					"75 130 200 270"
+	"AbilityDamage"					"75 125 175 225"
 
 	"precache"
 	{

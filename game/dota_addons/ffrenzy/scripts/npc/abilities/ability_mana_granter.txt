@@ -11,7 +11,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"regen"					"10"
+			"regen"					"5"
 		}
 		"02"
 		{
