@@ -3936,7 +3936,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"first_strike_dps"		"45 80 110 140"
+				"first_strike_dps"		"30 40 50 60"
 			}
 			"03"
 			{

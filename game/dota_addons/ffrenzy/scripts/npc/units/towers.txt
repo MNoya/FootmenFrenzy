@@ -81,6 +81,7 @@
 	"ModelScale"				"1"
 	"Level"						"1"
 	"HealthBarOffset"			"200"
+	"MinimapIconSize"			"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -156,6 +157,7 @@
 	"ModelScale"				"1"
 	"Level"						"1"
 	"HealthBarOffset"			"200"
+	"MinimapIconSize"			"1"
 	
 	// Abilities
 	//----------------------------------------------------------------
@@ -231,6 +233,7 @@
 	"ModelScale"				"1"
 	"Level"						"1"
 	"HealthBarOffset"			"140"
+	"MinimapIconSize"			"1"
 	
 	// Abilities
 	//----------------------------------------------------------------

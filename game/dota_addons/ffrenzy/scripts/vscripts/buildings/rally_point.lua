@@ -8,44 +8,53 @@ function SpawnUnit( event )
 	local position = GetInitialRallyPoint( event )
 	local teamID = caster:GetTeam()
 	
-	local unit = CreateUnitByName(unit_name, position, true, owner, owner, caster:GetTeamNumber())
+	--FindUnitsInRadius(teamID, Vector(0,0,0), nil, 5000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BASIC,  DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+	
+	local unit_count = 0
+	for _ in pairs(hero.units) do unit_count = unit_count + 1 end
+	print(unit_count)
+	
+	if unit_count < 75 then
+	
+		local unit = CreateUnitByName(unit_name, position, true, owner, owner, caster:GetTeamNumber())
 	
 	
 	-- Wearables
-	local color = GameMode:ColorForTeam( teamID )
-	for k, v in pairs(unit:GetChildren()) do 
-		if v:GetClassname() == "dota_item_wearable" then
-			local model = v:GetModelName()
-			--print(v:GetModelName())
-			if (not string.match(model, "luna_head") and not string.match(model, "dragon_knight/weapon") and not string.match(model, "weaver_head") 
-			and not string.match(model, "weaver_legs") and not string.match(model, "weaver_arms") and not string.match(model, "weapon") and not string.match(model, "windrunner_bow") 
-			and not string.match(model, "huskar_spear") and not string.match(model, "huskar_dagger") and not string.match(model, "mount") and not string.match(model, "windrunner_quiver") 
-			and not string.match(model, "furion_staff") and not string.match(model, "furion_horns") and not string.match(model, "blood_chaser") and not string.match(model, "pugna_head")
-			and not string.match(model, "pugna_shoulder") and not string.match(model, "buttercup") and not string.match(model, "leftarm") and not string.match(model, "righthook")
-			and not string.match(model, "enchantress_hair") and not string.match(model, "knight_mace") and not string.match(model, "horse_foretold") ) then
-				v:SetRenderColor(color[1], color[2], color[3])
-			end
+		local color = GameMode:ColorForTeam( teamID )
+		for k, v in pairs(unit:GetChildren()) do 
+			if v:GetClassname() == "dota_item_wearable" then
+				local model = v:GetModelName()
+				--print(v:GetModelName())
+				if (not string.match(model, "luna_head") and not string.match(model, "dragon_knight/weapon") and not string.match(model, "weaver_head") 
+				and not string.match(model, "weaver_legs") and not string.match(model, "weaver_arms") and not string.match(model, "weapon") and not string.match(model, "windrunner_bow") 
+				and not string.match(model, "huskar_spear") and not string.match(model, "huskar_dagger") and not string.match(model, "mount") and not string.match(model, "windrunner_quiver") 
+				and not string.match(model, "furion_staff") and not string.match(model, "furion_horns") and not string.match(model, "blood_chaser") and not string.match(model, "pugna_head")
+				and not string.match(model, "pugna_shoulder") and not string.match(model, "buttercup") and not string.match(model, "leftarm") and not string.match(model, "righthook")
+				and not string.match(model, "enchantress_hair") and not string.match(model, "knight_mace") and not string.match(model, "horse_foretold") ) then
+					v:SetRenderColor(color[1], color[2], color[3])
+				end
+			end 
 		end 
-	end 
 
-	-- Make sure the unit gets stuck
-	FindClearSpaceForUnit(unit, position, true)
-	unit:AddNewModifier(caster, nil, "modifier_phased", { duration = 0.03 })
+		-- Make sure the unit gets stuck
+		FindClearSpaceForUnit(unit, position, true)
+		unit:AddNewModifier(caster, nil, "modifier_phased", { duration = 0.03 })
 
-	-- Add to hero.units table
-	unit:SetOwner(hero)
-	unit:SetControllableByPlayer(playerID, true)
-	table.insert(hero.units, unit)
+		-- Add to hero.units table
+		unit:SetOwner(hero)
+		unit:SetControllableByPlayer(playerID, true)
+		table.insert(hero.units, unit)
 	
-	-- Put the passive skill on cooldown (just for looks)
-	local ability = event.ability
-	ability:StartCooldown(10)
+		-- Put the passive skill on cooldown (just for looks)
+		local ability = event.ability
+		ability:StartCooldown(10)
 
-	-- Move to Rally Point
-	if caster.flag then
-		local position = caster.flag:GetAbsOrigin()
-		Timers:CreateTimer(0.05, function() unit:MoveToPosition(position) end)
-		--print(unit:GetUnitName().." moving to position",position)
+		-- Move to Rally Point
+		if caster.flag then
+			local position = caster.flag:GetAbsOrigin()
+			Timers:CreateTimer(0.05, function() unit:MoveToPosition(position) end)
+			--print(unit:GetUnitName().." moving to position",position)
+		end
 	end
 end
 
