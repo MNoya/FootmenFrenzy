@@ -7527,7 +7527,7 @@
 	
 		"AbilityCastRange"				"700"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"20.0"
+		"AbilityCooldown"				"10.0"
 	
 		"AbilityManaCost"				"110"
 		"AbilityDamage"					"75 125 175 225"
@@ -17569,7 +17569,7 @@
 	
 		"AbilityCastRange"				"700"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"20.0"
+		"AbilityCooldown"				"8.0"
 	
 		"AbilityManaCost"				"100"
 		"AbilityDamage"					"75 125 175 225"
