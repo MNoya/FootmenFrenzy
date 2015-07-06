@@ -347,6 +347,7 @@ function GameMode:PostLoadPrecache()
 	PrecacheUnitByNameAsync("npc_arphaxad", function(...) end)
 	
 	PrecacheItemByNameAsync("item_scroll_of_the_beast", function(...) end)
+	PrecacheItemByNameAsync("item_scroll_of_darkness", function(...) end)
 
 end
 

@@ -594,8 +594,8 @@
 	
 	"precache"
 	{
-		"particle"			"particles/scroll_of_the_beast.vpcf"
-		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+		"particle"			"particles/scroll_of_darkness.vpcf"
+		"soundfile" 		"soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
 	}
 	
 	"OnSpellStart"
@@ -605,16 +605,16 @@
 			"ScriptFile"    "items/scroll_of_darkness.lua"
 			"Function"      "Cast"
 		}
-		"FireEffect"
-		{
-			"Target"				"CASTER"
-			"EffectName"			"particles/scroll_of_the_beast.vpcf"
-			"EffectAttachType"		"follow_origin"
-		}
+		//"AttachEffect"
+		//{
+		//	"Target"				"CASTER"
+		//	"EffectName"			"particles/scroll_of_darkness.vpcf"
+		//	"EffectAttachType"		"follow_origin"
+		//}
 		"FireSound"
 		{
 			"Target" 		"UNIT"
-			"EffectName" 	"Hero_LoneDruid.BattleCry.Bear"
+			"EffectName" 	"Hero_Nightstalker.Darkness"
 		}
 		"SpendCharge"
 		{}	

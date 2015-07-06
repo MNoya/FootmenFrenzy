@@ -199,6 +199,63 @@
 		"tinker_pocket_factory_building1"                                                 "Pocket Factory"
 		"tinker_pocket_factory_building2"                                                 "Pocket Factory"
 		"tinker_pocket_factory_building3"                                                 "Pocket Factory"
+		"npc_water_elemental_4"                                                           "Water Elemental 4"
+		"human_base_tier1"                                                                "Human Base Tier1"
+		"nightelf_base_tier1"                                                             "Nightelf Base Tier1"
+		"orc_base_tier1"                                                                  "Orc Base Tier1"
+		"undead_base_tier1"                                                               "Undead Base Tier1"
+		"human_base_tier2"                                                                "Human Base Tier2"
+		"nightelf_base_tier2"                                                             "Nightelf Base Tier2"
+		"orc_base_tier2"                                                                  "Orc Base Tier2"
+		"undead_base_tier2"                                                               "Undead Base Tier2"
+		"human_base_tier3"                                                                "Human Base Tier3"
+		"nightelf_base_tier3"                                                             "Nightelf Base Tier3"
+		"orc_base_tier3"                                                                  "Orc Base Tier3"
+		"undead_base_tier3"                                                               "Undead Base Tier3"
+		"human_base_tier4"                                                                "Human Base Tier4"
+		"nightelf_base_tier4"                                                             "Nightelf Base Tier4"
+		"orc_base_tier4"                                                                  "Orc Base Tier4"
+		"undead_base_tier4"                                                               "Undead Base Tier4"
+		"human_base_tier5"                                                                "Human Base Tier5"
+		"nightelf_base_tier5"                                                             "Nightelf Base Tier5"
+		"orc_base_tier5"                                                                  "Orc Base Tier5"
+		"undead_base_tier5"                                                               "Undead Base Tier5"
+		"npc_beastmaster_raging_bear2"                                                    "Beastmaster Raging Bear2"
+		"npc_beastmaster_raging_quilbeast2"                                               "Beastmaster Raging Quilbeast2"
+		"npc_beastmaster_spirit_hawk2"                                                    "Beastmaster Spirit Hawk2"
+		"npc_phoenix2"                                                                    "Phoenix2"
+		"npc_phoenix3"                                                                    "Phoenix3"
+		"npc_carrion_beetle_4"                                                            "Carrion Beetle 4"
+		"npc_black_arrow_minion_4"                                                        "Black Arrow Minion 4"
+		"npc_dread_lord_inferno2"                                                         "Dread Lord Inferno2"
+		"npc_dread_lord_inferno3"                                                         "Dread Lord Inferno3"
+		"dummy_unit"                                                                      "Dummy Unit"
+		"dummy_unit_vulnerable"                                                           "Dummy Unit Vulnerable"
+		"dummy_vision"                                                                    "Dummy Vision"
+		"dummy_vision600"                                                                 "Dummy Vision600"
+		"dummy_vision700"                                                                 "Dummy Vision700"
+		"dummy_vision1200"                                                                "Dummy Vision1200"
+		"dummy_vision2000"                                                                "Dummy Vision2000"
+		"dummy_vision4000"                                                                "Dummy Vision4000"
+		"npc_dummy_blank"                                                                 "Dummy Blank"
+		"dummy_mana"                                                                      "Dummy Mana"
+		"dummy_goldxp"                                                                    "Dummy Goldxp"
+		"npc_far_seer_calamity_wolf"                                                      "Far Seer Calamity Wolf"
+		"firelord_lava_spawn4"                                                            "Firelord Lava Spawn4"
+		"npc_earth_panda2"                                                                "Earth Panda2"
+		"npc_earth_panda3"                                                                "Earth Panda3"
+		"npc_fire_panda2"                                                                 "Fire Panda2"
+		"npc_fire_panda3"                                                                 "Fire Panda3"
+		"npc_storm_panda2"                                                                "Storm Panda2"
+		"npc_storm_panda3"                                                                "Storm Panda3"
+		"npc_doom_guard2"                                                                 "Doom Guard2"
+		"npc_doom_guard3"                                                                 "Doom Guard3"
+		"npc_potm_owl_4"                                                                  "Potm Owl 4"
+		"npc_serpent_ward_4"                                                              "Serpent Ward 4"
+		"undead_skeletal_mage_skeleton_warrior"                                           "Undead Skeletal Mage Skeleton Warrior"
+		"tinker_pocket_factory_building4"                                                 "Tinker Pocket Factory Building4"
+		"npc_avatar_of_vengeance2"                                                        "Avatar Of Vengeance2"
+		"npc_avatar_of_vengeance3"                                                        "Avatar Of Vengeance3"
 		
 		"npc_durant"																		"Durant"
 		"npc_arphaxad"                                                                    "Arphaxad"
@@ -297,6 +354,19 @@
 		
 		"DOTA_Tooltip_ability_item_summon_arphaxad"											"Summon Arphaxad"
 		"DOTA_Tooltip_ability_item_summon_arphaxad_Description"								"Consume to summon a minion with strong healing spells"
+		
+		"DOTA_Tooltip_ability_item_scroll_of_speed"											"Scroll of Speed"
+		"DOTA_Tooltip_ability_item_scroll_of_speed_Description"								"Increases movement speed of nearby allies"
+		"DOTA_Tooltip_ability_item_scroll_of_speed_duration"								"DURATION:"
+		
+		"DOTA_Tooltip_ability_item_scroll_of_the_beast"										"Scroll of the Beast"
+		"DOTA_Tooltip_ability_item_scroll_of_the_beast_Description"							"Increases attack damage of nearby allies"
+		"DOTA_Tooltip_ability_item_scroll_of_the_beast_duration"							"DURATION:"
+		"DOTA_Tooltip_ability_item_scroll_of_the_beast_bonus_damage_pct"					"BONUS DAMAGE PERCENT:"
+		
+		"DOTA_Tooltip_ability_item_scroll_of_darkness"										"Scroll of Darkness"
+		"DOTA_Tooltip_ability_item_scroll_of_darkness_Description"							"Disables enemy vision in the center of the map and forces night time."
+		"DOTA_Tooltip_ability_item_scroll_of_darkness_duration"								"DURATION:"
 		
 		
 		
@@ -1821,8 +1891,19 @@
 	
 	
 	// ******************** ABILITY MODIFIERS ********************
+		
+		
+		"DOTA_Tooltip_modifier_get_xp"                                                    "Get Xp"
+		"DOTA_Tooltip_modifier_get_xp_Description"                                        ""
+
+		"DOTA_Tooltip_modifier_mana_granter_buff"                                         "Mana Granter Buff"
+		"DOTA_Tooltip_modifier_mana_granter_buff_Description"                             ""
+
 		"DOTA_Tooltip_modifier_acid_bomb"                                                 "Acid Bomb"
 		"DOTA_Tooltip_modifier_acid_bomb_Description"                                     ""
+
+		"DOTA_Tooltip_modifier_acid_bomb_aoe"                                             "Acid Bomb Aoe"
+		"DOTA_Tooltip_modifier_acid_bomb_aoe_Description"                                 ""
 
 		"DOTA_Tooltip_modifier_healing_spray_channelling"                                 "Healing Spray Channelling"
 		"DOTA_Tooltip_modifier_healing_spray_channelling_Description"                     ""
@@ -1832,6 +1913,9 @@
 
 		"DOTA_Tooltip_modifier_healing_spray_caster"                                      "Healing Spray Caster"
 		"DOTA_Tooltip_modifier_healing_spray_caster_Description"                          ""
+
+		"DOTA_Tooltip_modifier_inner_fire"                                                "Inner Fire"
+		"DOTA_Tooltip_modifier_inner_fire_Description"                                    ""
 
 		"DOTA_Tooltip_modifier_blizzard_wave"                                             "Blizzard Wave"
 		"DOTA_Tooltip_modifier_blizzard_wave_Description"                                 ""

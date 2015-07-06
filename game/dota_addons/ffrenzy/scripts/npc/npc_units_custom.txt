@@ -4299,7 +4299,9 @@
 		"VisionNighttimeRange"		"1800"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
-		"Ability1"					"dummy_passive"
+		"Ability1"					"dummy_vision"
+		"StatusHealth"				"999999"		// Base health.
+		"StatusHealthRegen"			"999999"
 	}
 	
 	
