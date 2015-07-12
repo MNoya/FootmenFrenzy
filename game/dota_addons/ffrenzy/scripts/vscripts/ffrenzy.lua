@@ -420,23 +420,14 @@ function GameMode:OnGameRulesStateChange(keys)
     print("[FFrenzy] GameRules State Changed")
     --DeepPrintTable(keys)
     
-    if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-    
-    end
-
-    -- MultiTeam Thinker
-    if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
-        GameRules:GetGameModeEntity():SetThink( "EnsurePlayersOnCorrectTeam", self, 0 )
-        GameRules:GetGameModeEntity():SetThink( "BroadcastPlayerTeamAssignments", self, 1 )
-    end
     -----------------------------------
-
     local newState = GameRules:State_Get()
     if newState == DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD then
         self.bSeenWaitForPlayers = true
     elseif newState == DOTA_GAMERULES_STATE_INIT then
         Timers:RemoveTimer("alljointimer")
     elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
+        GameRules.TimeAtHeroSelection = GameRules:GetGameTime()
         local et = 6
         if self.bSeenWaitForPlayers then
             et = .01
@@ -876,7 +867,7 @@ function GameMode:OnPlayerPickHero(keys)
         pedestal:SetModelScale(2)
 
         -- Create the base building
-        local building = CreateUnitByName("human_barracks", base_position, true, hero, hero, hero:GetTeamNumber())
+        building = CreateUnitByName("human_barracks", base_position, true, hero, hero, hero:GetTeamNumber())
         building:RemoveModifierByName("modifier_invulnerable")
         building:SetOwner(hero)
         building:SetControllableByPlayer(playerID, true)
@@ -917,19 +908,36 @@ function GameMode:OnPlayerPickHero(keys)
         CreateUnitByName("dummy_vision", Vector(0, 0, 100), false, hero, hero, hero:GetTeamNumber())
 
         -- Move the hero close by
-        Timers:CreateTimer(function()
-            --Spawn_Position(hero)
-            --FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
-            --PlayerResource:SetCameraTarget(playerID, building)
-            --Timers:CreateTimer(1, function() 
-                --PlayerResource:SetCameraTarget(playerID, nil)
-            --end)
+        --local front_position =
+        FindClearSpaceForUnit(hero, base_position+RandomVector(300), true)
             
-            -- Teach the epic spawn_footman ability
-            building:AddAbility("spawn_footman")
-            local ability = building:FindAbilityByName("spawn_footman")
-            ability:SetLevel(1)
+        -- Teach the epic spawn_footman ability
+        building:AddAbility("spawn_footman")
+        local ability = building:FindAbilityByName("spawn_footman")
+        ability:SetLevel(1)
 
+        PlayerResource:SetCameraTarget(playerID, building)
+
+        Timers:CreateTimer(0.04, function() 
+            -- Move the hero on front of the main building
+            local new_pos = building:GetAbsOrigin() + building:GetForwardVector() * 300
+            FindClearSpaceForUnit(hero, new_pos, true)
+            PlayerResource:SetCameraTarget(playerID, nil)
+
+            -- Add footmen per time passed previous to the pick
+            local time = GameRules:GetGameTime() - GameRules.TimeAtHeroSelection
+            local extra_footmen_count = math.floor(time/10)
+            print("Creating additional footmen at time "..time,extra_footmen_count)
+
+            local table = {}
+            table.caster = building
+            table.UnitName = "human_footman"
+            table.ability = ability
+            if extra_footmen_count > 0 then
+                for i=0,extra_footmen_count do
+                    SpawnUnit( table )
+                end
+            end
         end)
     else
         print("No Base Position found for player "..playerID)   

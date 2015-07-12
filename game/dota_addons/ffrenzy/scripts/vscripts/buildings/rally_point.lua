@@ -12,7 +12,6 @@ function SpawnUnit( event )
 	
 	local unit_count = 0
 	for _ in pairs(hero.units) do unit_count = unit_count + 1 end
-	print(unit_count)
 	
 	if unit_count < 75 then
 	
@@ -83,7 +82,13 @@ function SetRallyPoint( event )
 		local forwardVec = Vector(0,0,0) - origin
 		forwardVec = forwardVec:Normalized()
 
-		local point = event.target_points[1]
+		local point
+		if event.target_points then
+			point = event.target_points[1]
+		else
+			caster:SetForwardVector( ( Vector(0,0,0) - caster:GetAbsOrigin() ):Normalized() )
+			point = caster:GetAbsOrigin() + caster:GetForwardVector() * 200
+		end
 
 		-- Make a flag dummy
 		caster.flag = CreateUnitByName("dummy_unit", point, false, caster, caster, caster:GetTeamNumber())

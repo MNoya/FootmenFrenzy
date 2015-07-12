@@ -6,6 +6,7 @@ require( 'utilities' )
 require( 'orders' )
 require( 'physics' )
 require( 'popups' )
+require( 'buildings/rally_point' )
 
 function Precache( context )
 	print("[ffrenzy] Performing pre-load precache")
