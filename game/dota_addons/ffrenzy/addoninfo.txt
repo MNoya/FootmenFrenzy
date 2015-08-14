@@ -4,7 +4,7 @@
 	maps			"classic" //free_for_all"
 	"classic"
 	{
-		"MaxPlayers"		"8"
+		"MaxPlayers"		"12"
 	}
 	
 	//"free_for_all"

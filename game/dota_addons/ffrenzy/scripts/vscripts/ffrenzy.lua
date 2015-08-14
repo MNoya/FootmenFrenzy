@@ -491,7 +491,7 @@ function GameMode:GatherValidTeams()
         numTeams = 2
     end
 
-    local maxPlayersPerValidTeam = math.floor( 10 / numTeams )
+    local maxPlayersPerValidTeam = math.floor( 12 / numTeams )
 
     self.m_GatheredShuffledTeams = ShuffledList( foundTeamsList )
 
