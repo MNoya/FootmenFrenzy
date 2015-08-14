@@ -40,12 +40,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"target_damage"			"100 200 300 400"
+				"target_damage"			"75 150 225 300"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_amount"			"200 400 600 800"
+				"heal_amount"			"150 300 450 600"
 			}
 		}
 	

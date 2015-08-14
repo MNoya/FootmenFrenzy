@@ -355,6 +355,7 @@
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
 	"SecretShop" 					"1"
+	"AbilityCooldown"				"120"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
@@ -462,6 +463,7 @@
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
 	"SecretShop" 					"1"
+	"AbilityCooldown"				"120"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
@@ -575,6 +577,7 @@
 	"ItemInitialCharges" 			"1"
 	"ItemPermanent" 				"0"
 	"SecretShop" 					"1"
+	"AbilityCooldown"				"120"
 
 	
 	"UIPickupSound"					"Item.PickUpGemShop"
