@@ -2,586 +2,586 @@
 //Use Id's 2026-2039
 //////////////////////////////////////////////////
 
-	//=================================================================================================================
-	// Crown of Kings
-	//=================================================================================================================
-	"item_crown_of_kings"
-	{
-		"ID"							"2026"
+//=================================================================================================================
+// Crown of Kings
+//=================================================================================================================
+"item_crown_of_kings"
+{
+	"ID"							"2026"
 
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_crown_of_kings"
-
-		"ItemCost"						"1150"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
 	
-		
+	"AbilityTextureName" 			"item_crown_of_kings"
 
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	"ItemCost"						"1150"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"7"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"7"
 		}
 		
-		"Modifiers"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_crown_of_kings_datadriven"
 		{
-			"modifier_item_crown_of_kings_datadriven"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-				}
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Belt of Giant Strength
+//=================================================================================================================
+"item_belt_of_giant_strength"
+{
+	"ID"							"2027"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
 	
+	"AbilityTextureName" 			"item_belt_of_giant_strength"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
 	
-	//=================================================================================================================
-	// Belt of Giant Strength
-	//=================================================================================================================
-	"item_belt_of_giant_strength"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2027"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		
-		"AbilityTextureName" 			"item_belt_of_giant_strength"
-
-		"ItemCost"						"350"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"10"
+		}		
+	}
 	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	"Modifiers"
+	{
+		"modifier_item_belt_of_giant_strength_datadriven"
 		{
-			"01"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"10"
-			}		
-		}
-		
-		"Modifiers"
-		{
-			"modifier_item_belt_of_giant_strength_datadriven"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_strength"
-				}
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_strength"
 			}
 		}
 	}
+}
+
+//=================================================================================================================
+// Boots of Quelthalas
+//=================================================================================================================
+"item_boots_of_quelthalas"
+{
+	"ID"							"2028"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_boots_of_quelthalas"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	//=================================================================================================================
-	// Boots of Quelthalas
-	//=================================================================================================================
-	"item_boots_of_quelthalas"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2028"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------		
-		"AbilityTextureName" 			"item_boots_of_quelthalas"
-
-		"ItemCost"						"350"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"10"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"10"
 		}
 		
-		"Modifiers"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_boots_of_quelthalas_datadriven"
 		{
-			"modifier_item_boots_of_quelthalas_datadriven"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agility"
-				}
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agility"
 			}
 		}
 	}
+}
+
+//=================================================================================================================
+// Wizard's Robe
+//=================================================================================================================
+"item_wizards_robe"
+{
+	"ID"							"2029"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------	
+	"AbilityTextureName" 			"item_wizards_robe"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
 	
-	//=================================================================================================================
-	// Wizard's Robe
-	//=================================================================================================================
-	"item_wizards_robe"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2029"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------	
-		"AbilityTextureName" 			"item_wizards_robe"
-
-		"ItemCost"						"350"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_intelligence"	"10"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intelligence"	"10"
 		}
 		
-		"Modifiers"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_wizards_robe_datadriven"
 		{
-			"modifier_item_wizards_robe_datadriven"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intelligence"
-				}
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intelligence"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Quaithe's Mask
+//=================================================================================================================
+"item_quaithes_mask"
+{
+	"ID"							"2030"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_quaithes_mask"
+
+	"ItemCost"						"250"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	
-	//=================================================================================================================
-	// Quaithe's Mask
-	//=================================================================================================================
-	"item_quaithes_mask"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2030"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------		
-		"AbilityTextureName" 			"item_quaithes_mask"
-
-		"ItemCost"						"250"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_mana_regen_percentage"	"100"
-			}			
-		}
-		
-		"Modifiers"
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana_regen_percentage"	"100"
+		}			
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_quaithes_mask_datadriven"
 		{
-			"modifier_item_quaithes_mask_datadriven"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
-				}
+				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"		"%bonus_mana_regen_percentage"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Circlet of Royalty
+//=================================================================================================================
+"item_circlet_of_royalty"
+{
+	"ID"							"2031"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------	
+	"AbilityTextureName" 			"item_circlet_of_royalty"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	
-	//=================================================================================================================
-	// Circlet of Royalty
-	//=================================================================================================================
-	"item_circlet_of_royalty"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2031"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------	
-		"AbilityTextureName" 			"item_circlet_of_royalty"
-
-		"ItemCost"						"350"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"2"
+		}			
+	}
 	
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	"Modifiers"
+	{
+		"modifier_item_circlet_of_royalty_datadriven"
 		{
-			"01"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"2"
-			}			
-		}
-		
-		"Modifiers"
-		{
-			"modifier_item_circlet_of_royalty_datadriven"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-				}
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Precept of Mana
+//=================================================================================================================
+"item_precept_of_mana"
+{
+	"ID"							"2032"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_precept_of_mana"
+
+	"ItemCost"						"450"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	
-	//=================================================================================================================
-	// Precept of Mana
-	//=================================================================================================================
-	"item_precept_of_mana"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2032"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------		
-		"AbilityTextureName" 			"item_precept_of_mana"
-
-		"ItemCost"						"450"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana"			"200"
+		}			
+	}
 	
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	"Modifiers"
+	{
+		"modifier_item_precept_of_mana_datadriven"
 		{
-			"01"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"200"
-			}			
-		}
-		
-		"Modifiers"
-		{
-			"modifier_item_precept_of_mana_datadriven"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MANA_BONUS"			"%bonus_mana"
-				}
+				"MODIFIER_PROPERTY_MANA_BONUS"			"%bonus_mana"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Ring of Regeneration
+//=================================================================================================================
+"item_ring_of_regeneration"
+{
+	"ID"							"2033"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_ring_of_regeneration"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	
-	//=================================================================================================================
-	// Ring of Regeneration
-	//=================================================================================================================
-	"item_ring_of_regeneration"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2033"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------		
-		"AbilityTextureName" 			"item_ring_of_regeneration"
-
-		"ItemCost"						"350"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_health_regen"	"3"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"3"
 		}
 		
-		"Modifiers"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_ring_of_regeneration_datadriven"
 		{
-			"modifier_item_ring_of_regeneration_datadriven"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_health_regen"
-				}
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_health_regen"
 			}
 		}
 	}
+}
+
+
+//=================================================================================================================
+// Ring of Protection
+//=================================================================================================================
+"item_ring_of_steel"
+{
+	"ID"							"2034"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------		
+	"AbilityTextureName" 			"item_ring_of_steel"
+
+	"ItemCost"						"200"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
 	
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
 	
-	//=================================================================================================================
-	// Ring of Protection
-	//=================================================================================================================
-	"item_ring_of_steel"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2034"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------		
-		"AbilityTextureName" 			"item_ring_of_steel"
-
-		"ItemCost"						"200"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"6"
+		}		
+	}
 	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	"Modifiers"
+	{
+		"modifier_item_ring_of_steel_datadriven"
 		{
-			"01"
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"6"
-			}		
-		}
-		
-		"Modifiers"
-		{
-			"modifier_item_ring_of_steel_datadriven"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
-				}
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
 			}
 		}
 	}
+}
+
+//=================================================================================================================
+// Medallion of Glim
+//=================================================================================================================
+"item_medallion_of_glim"
+{
+	"ID"							"2035"
+
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" 					"item_datadriven"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------	
+	"AbilityTextureName" 			"item_medallion_of_glim"
+
+	"ItemCost"						"350"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemShopTags"					"weapons_armor"
+	"ItemQuality"					"weapons_armor"
+	"SideShop" 						"1"
+
 	
-	//=================================================================================================================
-	// Medallion of Glim
-	//=================================================================================================================
-	"item_medallion_of_glim"
+
+	"UIPickupSound"					"Item.PickUpGemShop"
+	"UIDropSound"					"Item.DropGemShop"
+	"WorldDropSound"				"Item.DropGemWorld"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
 	{
-		"ID"							"2035"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass" 					"item_datadriven"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------	
-		"AbilityTextureName" 			"item_medallion_of_glim"
-
-		"ItemCost"						"350"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemKillable"                  "1"
-		"ItemSellable"                  "1"
-		"ItemDroppable"                 "1"
-		"ItemShopTags"					"weapons_armor"
-		"ItemQuality"					"weapons_armor"
-		"SideShop" 						"1"
-	
-		
-
-		"UIPickupSound"					"Item.PickUpGemShop"
-		"UIDropSound"					"Item.DropGemShop"
-		"WorldDropSound"				"Item.DropGemWorld"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"01"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"4"
-			}
-			
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"100"
-			}
-			
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"4"
 		}
 		
-		"Modifiers"
+		"02"
 		{
-			"modifier_item_medallion_of_glim_datadriven"
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana"			"100"
+		}
+		
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_medallion_of_glim_datadriven"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
 			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
-					"MODIFIER_PROPERTY_MANA_BONUS"						"%bonus_mana"
-				}
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_MANA_BONUS"						"%bonus_mana"
 			}
 		}
 	}
+}

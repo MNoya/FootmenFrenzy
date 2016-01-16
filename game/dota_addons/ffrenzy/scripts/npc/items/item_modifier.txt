@@ -15,12 +15,12 @@
        {
              "modifier_make_unselectable"
              {
-                 "Passive"               "1"
-                 "IsHidden"              "1"
-                 "States"
-                 {
-                         "MODIFIER_STATE_UNSELECTABLE"
-                  }
+                "Passive"               "1"
+                "IsHidden"              "1"
+                "States"
+                {
+                    "MODIFIER_STATE_UNSELECTABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+                }
              }
         }   
 }
