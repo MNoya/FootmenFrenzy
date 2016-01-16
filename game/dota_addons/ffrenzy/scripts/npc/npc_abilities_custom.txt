@@ -116,7 +116,7 @@
 	"ability_goldxp_granter"
 	{
 		"BaseClass"          			    "ability_datadriven"
-		"AbilityName"           			"ability_goldxp_granter"
+		"AbilityTextureName"           		"ability_goldxp_granter"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	
 		"Modifiers"
@@ -212,7 +212,7 @@
 	{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"AbilityTextureName"			""
+		"AbilityTextureName"			"ability_mana_granter"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -261,10 +261,8 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%regen"
-				}
-			
-			}
-		
+				}		
+			}	
 		}
 	}
 	// Alchemist Acid Bomb
