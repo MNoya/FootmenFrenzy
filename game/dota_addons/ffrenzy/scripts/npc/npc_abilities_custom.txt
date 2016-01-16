@@ -117,11 +117,11 @@
 	{
 		"BaseClass"          			    "ability_datadriven"
 		"AbilityTextureName"           		"ability_goldxp_granter"
-		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 	
 		"Modifiers"
 		{
-			"modifier_ability_goldxp_granter"
+			"modifier_goldxp_granter"
 			{
 				"IsHidden"				"1"
 				"Passive"				"1"
@@ -150,7 +150,7 @@
 						"Target"
 						{
 							"Center"		"CASTER"
-							"radius"		"1000"
+							"Radius"		"1000"
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}
@@ -166,7 +166,7 @@
 			{
 				"Passive"       "1"
 				"EffectName"	""
-				"TextureName"	"custom_games_xp_coin"
+				"TextureName"	"ability_goldxp_granter"
 			}
 		}
 	}
