@@ -6,15 +6,16 @@ content/dota_addons/ffrenzy/materials/overviews/*
 game/dota_addons/ffrenzy/materials/overviews/*
 game/dota_addons/ffrenzy/resource/overviews/*
 
-
-# Ignore all compiled particles
+# Compiled formats
 *.vpcf_c
-
-#Ignore all compiled mats
-*.vmat_c
-
-#Ignore all compiled sounds
 *.vsndevts_c
-
-# Map Files
+*.vsnd_c
+*.vmat_c
+*.vjs_c
+*.vxml_c
+*.vcss_c
 *.vpk
+
+# Commit panorama compiled textures
+!game/dota_addons/dotacraft/panorama/images/*.vtex_c
+!game/dota_addons/dotacraft/panorama/images/custom_game/*.vtex_c
