@@ -6,6 +6,7 @@ require( 'utilities' )
 require( 'orders' )
 require( 'physics' )
 require( 'popups' )
+--require( 'statcollection/init' )
 require( 'buildings/rally_point' )
 
 function Precache( context )
