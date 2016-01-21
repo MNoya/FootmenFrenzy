@@ -55,13 +55,19 @@ function BuildPlayersArray()
             if not PlayerResource:IsBroadcaster(playerID) then
 
                 local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+                local upgrades = hero.upgrades
 
                 table.insert(players, {
                     -- steamID32 required in here
                     steamID32 = PlayerResource:GetSteamAccountID(playerID),
-
-                    -- Example functions for generic stats are defined in statcollection/lib/utilities.lua
-                    -- Add player values here as someValue = GetSomePlayerValue(),
+                    hn = hero:GetInternalName(),-- Internal hero name
+                    hk = hero:GetKills(),
+                    uk = hero:GetLastHits(),
+                    w = upgrades["upgrade_weapon"] or 0,
+                    a = upgrades["upgrade_armor"] or 0,
+                    r = hero:GetRacialUpgradeCount(),
+                    b = hero.base_name,
+                    hi = GetItemList(hero),
                 })
             end
         end

@@ -875,6 +875,7 @@ function GameMode:OnPlayerPickHero(keys)
 
         -- Add the base building to the player handle.
         hero.base = building
+        hero.base_name = building:GetUnitName()
         
         --test units
         if testingUnits then
@@ -1026,7 +1027,7 @@ end
 
 -- A player killed another player in a multi-team context
 function GameMode:OnTeamKillCredit(keys)
-    print ('[FFrenzy] OnTeamKillCredit')
+    --print ('[FFrenzy] OnTeamKillCredit')
     --DeepPrintTable(keys)
 
     local killerPlayer = PlayerResource:GetPlayer(keys.killer_userid)
@@ -1037,7 +1038,7 @@ end
 
 -- An entity died
 function GameMode:OnEntityKilled( keys )
-    print( '[FFrenzy] OnEntityKilled Called' )
+    --print( '[FFrenzy] OnEntityKilled Called' )
     --DeepPrintTable( keys )
 
     -- The Unit that was Killed

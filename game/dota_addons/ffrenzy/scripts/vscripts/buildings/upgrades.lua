@@ -21,6 +21,8 @@ function UpgradeBuilding( event )
         caster:RemoveSelf()
     end
 
+    hero.base_name = new_unit
+
 	local building = CreateUnitByName(new_unit, position, true, hero, hero, hero:GetTeamNumber())
 	building:SetOwner(hero)
 	building:SetControllableByPlayer(playerID, true)
