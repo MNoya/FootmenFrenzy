@@ -3,6 +3,7 @@
 	// General
 	//----------------------------------------------------------------
 	"override_hero"				"npc_dota_hero_elder_titan"
+	"InternalName"				"Tauren Chieftain"
 	"FormationRank"				"0"
 	
 	// Abilities

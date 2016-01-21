@@ -7,6 +7,7 @@
 	// General
 	//----------------------------------------------------------------
 	"override_hero"				"npc_dota_hero_mirana"
+	"InternalName"				"Priestess of the Moon"
 	"FormationRank"				"2"
 	
 	// Abilities

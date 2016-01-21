@@ -6,6 +6,7 @@
 	// General
 	//----------------------------------------------------------------
 	"override_hero"				"npc_dota_hero_zuus"
+	"InternalName"				"Mountain King"
 	"FormationRank"				"0"
 	
 	// Abilities
