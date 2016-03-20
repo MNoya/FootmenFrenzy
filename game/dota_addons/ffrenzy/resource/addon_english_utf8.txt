@@ -274,8 +274,8 @@
 		"DOTA_Tooltip_ability_item_orb_of_lightning"										"Orb of Lightning"
 		"DOTA_Tooltip_ability_item_orb_of_lightning_Description"							"+ <font color='#ffad33'>5</font> Damage\n+ <font color='#ffad33'>15</font>&#37; chance to purge on hit."
 		
-		"DOTA_Tooltip_ability_item_scourge_bone_chimes"										"Scourge Bone Chimes"
-		"DOTA_Tooltip_ability_item_scourge_bone_chimes_Description"							"+ <font color='#ffad33'>15</font>&#37; Life steal to all melee allies within 900 range."
+		"DOTA_Tooltip_ability_item_blood_lords_mask"										"Blood Lord's Mask"
+		"DOTA_Tooltip_ability_item_blood_lords_mask_Description"							"+ <font color='#ffad33'>15</font>&#37; Life steal to all melee allies within 900 range."
 		
 		"DOTA_Tooltip_ability_item_totem_of_might"											"Totem of Might"
 		"DOTA_Tooltip_ability_item_totem_of_might_Description"								"+ <font color='#ffad33'>5</font> Damage\n+ <font color='#ffad33'>10</font> Agility"

@@ -17,7 +17,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------	
-	"AbilityTextureName" 			"item_claws_of_attack"
+	"AbilityTextureName" 			"item_blades_of_attack"
 
 	"ItemCost"						"500"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -63,7 +63,7 @@
 //=================================================================================================================
 // Scourge Bone Chimes
 //=================================================================================================================
-"item_scourge_bone_chimes"
+"item_blood_lords_mask"
 {
 	"ID"							"2012"
 
@@ -74,7 +74,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------	
-	"AbilityTextureName" 			"item_scourge_bone_chimes"
+	"AbilityTextureName" 			"item_blood_lords_mask"
 
 	"ItemCost"						"450"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"

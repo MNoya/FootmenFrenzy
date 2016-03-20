@@ -106,7 +106,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 		
-	"AbilityTextureName" 			"item_mana_stone"
+	"AbilityTextureName" 			"item_void_stone"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 

@@ -117,7 +117,7 @@
 		"item"			"item_claws_of_attack"
 		"item"			"item_orb_of_frost"
 		"item"			"item_orb_of_lightning"
-		"item"			"item_scourge_bone_chimes"
+		"item"			"item_blood_lords_mask"
 		"item"			"item_totem_of_might"
 		"item"			"item_maul_of_corruption"
 		"item"			"item_berserkers_axe"
