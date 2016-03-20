@@ -43,12 +43,6 @@
 	"HealthBarOffset"			"215"
 	"FormationRank"				"0"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"300"		// Experience earn.
-	"BountyGoldMin"				"300"		// Gold earned min.
-	"BountyGoldMax"				"300"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -119,12 +113,6 @@
 	"RingRadius"				"70"
 	"HealthBarOffset"			"215"
 	"FormationRank"				"0"
-
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"300"		// Experience earn.
-	"BountyGoldMin"				"300"		// Gold earned min.
-	"BountyGoldMax"				"300"		// Gold earned max.
 
 	// Movement
 	//----------------------------------------------------------------
@@ -197,12 +185,6 @@
 	"HealthBarOffset"			"215"
 	"FormationRank"				"0"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"300"		// Experience earn.
-	"BountyGoldMin"				"300"		// Gold earned min.
-	"BountyGoldMax"				"300"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -273,12 +255,6 @@
 	"RingRadius"				"70"
 	"HealthBarOffset"			"215"
 	"FormationRank"				"0"
-
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"300"		// Experience earn.
-	"BountyGoldMin"				"300"		// Gold earned min.
-	"BountyGoldMax"				"300"		// Gold earned max.
 
 	// Movement
 	//----------------------------------------------------------------
@@ -353,12 +329,6 @@
 	"HealthBarOffset"			"125"
 	"FormationRank"				"2"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"59"		// Experience earn.
-	"BountyGoldMin"				"26"		// Gold earned min.
-	"BountyGoldMax"				"38"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -422,12 +392,6 @@
 	//----------------------------------------------------------------
 	"HealthBarOffset"			"125"
 	"FormationRank"				"2"
-
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"59"		// Experience earn.
-	"BountyGoldMin"				"26"		// Gold earned min.
-	"BountyGoldMax"				"38"		// Gold earned max.
 
 	// Movement
 	//----------------------------------------------------------------
@@ -493,12 +457,6 @@
 	"HealthBarOffset"			"125"
 	"FormationRank"				"2"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"59"		// Experience earn.
-	"BountyGoldMin"				"26"		// Gold earned min.
-	"BountyGoldMax"				"38"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -562,12 +520,6 @@
 	//----------------------------------------------------------------
 	"HealthBarOffset"			"125"
 	"FormationRank"				"2"
-
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"59"		// Experience earn.
-	"BountyGoldMin"				"26"		// Gold earned min.
-	"BountyGoldMax"				"38"		// Gold earned max.
 
 	// Movement
 	//----------------------------------------------------------------
@@ -637,12 +589,6 @@
 	"HealthBarOffset"			"165"
 	"FormationRank"				"1"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"77"		// Experience earn.
-	"BountyGoldMin"				"30"		// Gold earned min.
-	"BountyGoldMax"				"30"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
@@ -710,12 +656,6 @@
 	"HealthBarOffset"			"165"
 	"FormationRank"				"1"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"77"		// Experience earn.
-	"BountyGoldMin"				"40"		// Gold earned min.
-	"BountyGoldMax"				"40"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
@@ -782,12 +722,6 @@
 	"HealthBarOffset"			"165"
 	"FormationRank"				"1"
 
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"77"		// Experience earn.
-	"BountyGoldMin"				"50"		// Gold earned min.
-	"BountyGoldMax"				"50"		// Gold earned max.
-
 	// Movement
 	//----------------------------------------------------------------
 	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
@@ -853,12 +787,6 @@
 	//----------------------------------------------------------------
 	"HealthBarOffset"			"165"
 	"FormationRank"				"1"
-
-	// Bounty
-	//----------------------------------------------------------------
-	"BountyXP"					"77"		// Experience earn.
-	"BountyGoldMin"				"50"		// Gold earned min.
-	"BountyGoldMax"				"50"		// Gold earned max.
 
 	// Movement
 	//----------------------------------------------------------------
