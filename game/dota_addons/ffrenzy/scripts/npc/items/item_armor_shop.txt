@@ -17,7 +17,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	
-	"AbilityTextureName" 			"item_crown_of_kings"
+	"AbilityTextureName" 			"item_helm_of_iron_will"
 
 	"ItemCost"						"1150"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -79,7 +79,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	
-	"AbilityTextureName" 			"item_belt_of_giant_strength"
+	"AbilityTextureName" 			"item_belt_of_strength"
 
 	"ItemCost"						"350"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -136,7 +136,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------		
-	"AbilityTextureName" 			"item_boots_of_quelthalas"
+	"AbilityTextureName" 			"item_boots_of_elves"
 
 	"ItemCost"						"350"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -192,7 +192,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------	
-	"AbilityTextureName" 			"item_wizards_robe"
+	"AbilityTextureName" 			"item_mantle"
 
 	"ItemCost"						"350"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -251,7 +251,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------		
-	"AbilityTextureName" 			"item_quaithes_mask"
+	"AbilityTextureName" 			"item_sobi_mask"
 
 	"ItemCost"						"250"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -307,7 +307,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------	
-	"AbilityTextureName" 			"item_circlet_of_royalty"
+	"AbilityTextureName" 			"item_circlet"
 
 	"ItemCost"						"350"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -365,7 +365,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------		
-	"AbilityTextureName" 			"item_precept_of_mana"
+	"AbilityTextureName" 			"item_energy_booster"
 
 	"ItemCost"						"450"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -421,7 +421,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------		
-	"AbilityTextureName" 			"item_ring_of_regeneration"
+	"AbilityTextureName" 			"item_ring_of_health"
 
 	"ItemCost"						"350"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -478,7 +478,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------		
-	"AbilityTextureName" 			"item_ring_of_steel"
+	"AbilityTextureName" 			"item_ring_of_protection"
 
 	"ItemCost"						"200"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -535,7 +535,7 @@
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------	
-	"AbilityTextureName" 			"item_medallion_of_glim"
+	"AbilityTextureName" 			"item_medallion_of_courage"
 
 	"ItemCost"						"350"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"

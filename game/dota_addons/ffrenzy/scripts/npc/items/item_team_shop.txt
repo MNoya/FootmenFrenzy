@@ -18,7 +18,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 		
-	"AbilityTextureName" 			"item_periapt_of_vitality"
+	"AbilityTextureName" 			"item_vitality_booster"
 
 	"ItemCost"						"2500"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -141,7 +141,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 		
-	"AbilityTextureName" 			"item_runed_bracers"
+	"AbilityTextureName" 			"item_runed_bracer"
 
 	"ItemCost"						"1400"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
@@ -206,7 +206,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 		
-	"AbilityTextureName" 			"item_amulet_of_spell_shield"
+	//"AbilityTextureName" 			//"item_amulet_of_spell_shield"
 
 	"ItemCost"						"500"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
