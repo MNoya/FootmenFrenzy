@@ -1,5 +1,5 @@
 -- Required files to be visible from anywhere
-require( 'timers' )
+require( 'libraries/timers' )
 require( 'ffrenzy' )
 require( 'upgrades' )
 require( 'utilities' )
