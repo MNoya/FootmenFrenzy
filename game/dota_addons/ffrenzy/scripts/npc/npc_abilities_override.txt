@@ -239,6 +239,19 @@
 	"item_solar_crest"			"REMOVE"
 	"item_lotus_orb"			"REMOVE"
 	"item_crimson_guard"			"REMOVE"
+
+	//NEW ITEMS 6.87
+    "item_recipe_bloodthorn"      "REMOVE"
+	"item_bloodthorn"      "REMOVE"
+	"item_wind_lace"      "REMOVE"
+	"item_infused_raindrop"      "REMOVE"
+	"item_blight_stone"      "REMOVE"
+	"item_recipe_echo_sabre"      "REMOVE"
+	"item_echo_sabre"      "REMOVE"
+	"item_tome_of_knowledge"      "REMOVE"
+	"item_recipe_hurricane_pike"      "REMOVE"
+	"item_hurricane_pike"      "REMOVE"
+	"item_banana"      "REMOVE"
 	
   
   	"item_halloween_candy_corn"			"REMOVE"
@@ -262,5 +275,7 @@
 	"item_winter_greevil_treat"			"REMOVE"
 	"item_winter_greevil_garbage"			"REMOVE"
 	"item_winter_greevil_chewy"			"REMOVE"
+
+
 	
 }
